@@ -1,0 +1,826 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* fal_website_blocks
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e-20160401\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 07:29+0000\n"
+"PO-Revision-Date: 2016-06-01 07:29+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_contact_us
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_maps_bar
+msgid "(086)-755-86586490"
+msgstr "(086)-755-86586490"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "- Experience in concept Developmet for the website"
+msgstr "- Experience in concept Developmet for the website"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "- Expert knowlegde of HTML5 and Css"
+msgstr "- Expert knowlegde of HTML5 and Css"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "- JQUERY, Javascrpt, AJAX and JASON"
+msgstr "- JQUERY, Javascrpt, AJAX and JASON"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "- Photoshop Design"
+msgstr "- Photoshop Design"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "- Responsive progamming skills"
+msgstr "- Responsive progamming skills"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "- Resposive Progamming Skill- Understanding PHP and My SQL"
+msgstr "- Resposive Progamming Skill- Understanding PHP and My SQL"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "- Understanding User Experience"
+msgstr "- Understanding User Experience"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "- Understanding User Interface"
+msgstr "- Understanding User Interface"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "1. Management of the finance department"
+msgstr "1. Management of the finance department"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "2. Produce reporting and performance indicators, conduct financial analysis"
+msgstr "2. Produce reporting and performance indicators, conduct financial analysis"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_contact_us
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_maps_bar
+msgid "21/F, On Hing Building 1 On  Hing Terrace Central Hongkong , China HongKong China"
+msgstr "21/F, On Hing Building 1 On  Hing Terrace Central Hongkong , China HongKong China"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "3. Develop a suitable financial management"
+msgstr "3. Develop a suitable financial management"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover
+msgid "50%"
+msgstr "50%"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover
+msgid "70%"
+msgstr "70%"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover
+msgid "90%"
+msgstr "90%"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.place_into_bar
+msgid "<span class=\"fa-stack\"> <i class=\"fa fa-paper-plane fa-stack-1x\"/> </span> Custom Web Falinwa"
+msgstr "<span class=\"fa-stack\"> <i class=\"fa fa-paper-plane fa-stack-1x\"/> </span> Custom Web Falinwa"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "A front-end developer architects and develops websites and applications using web technologies (i.e. HTML, CSS, and JavaScript) which run natively in a web browser or act as compilation input for non-web browser environments (e.g. PhoneGap or Tidesdk).We offer you the opportunity to join a popular open source project and receive technical and functional Odoo training before you started work on the project.  Also, a great experience in state-of-the-art web technologies and agile development in a nice working atmosphere with a young and passionate team.\n"
+"                  And last but not least, we will offer you a full-time job with an attractive salary and benefits package after the internship program."
+msgstr "A front-end developer architects and develops websites and applications using web technologies (i.e. HTML, CSS, and JavaScript) which run natively in a web browser or act as compilation input for non-web browser environments (e.g. PhoneGap or Tidesdk).We offer you the opportunity to join a popular open source project and receive technical and functional Odoo training before you started work on the project.  Also, a great experience in state-of-the-art web technologies and agile development in a nice working atmosphere with a young and passionate team.\n"
+"                  And last but not least, we will offer you a full-time job with an attractive salary and benefits package after the internship program."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover-2
+msgid "A wine bar implemented Odoo Online two years ago. From Inventory to Point of Sales, discover how they are managing and selling their wines...."
+msgstr "A wine bar implemented Odoo Online two years ago. From Inventory to Point of Sales, discover how they are managing and selling their wines...."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_about_us
+msgid "ABOUT US"
+msgstr "TENTANG KAMI"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+msgid "Administrative support"
+msgstr "Administrative support"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "Already in more than 5th semester in college."
+msgstr "Already in more than 5th semester in college."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+msgid "An increasing number of businesses are now realising the benefits of outsourcing functions such as bookkeeping and payroll, saving valuable time and money that could be put to better use elsewhere within their organisation."
+msgstr "An increasing number of businesses are now realising the benefits of outsourcing functions such as bookkeeping and payroll, saving valuable time and money that could be put to better use elsewhere within their organisation."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_four_hover_table
+msgid "App Development"
+msgstr "App Development"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_three_bar
+msgid "Back End Developer"
+msgstr "Back End Developer"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_three_bar
+msgid "Bussiness Plan"
+msgstr "Bussiness Plan"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_contact_us
+msgid "CONTACT US"
+msgstr "HUBUNGI KAMI"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_contact_us
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_img_01_static
+msgid "CONTACT US TODAY !"
+msgstr "CONTACT US TODAY !"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "Can do a development with any programing language"
+msgstr "Can do a development with any programing language"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+msgid "Creating the business plan"
+msgstr "Creating the business plan"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover-2
+msgid "DISCOVER"
+msgstr "DISCOVER"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "Defining the scope / procedures of each member of finance department.\n"
+"                          Training concepts / tables used for financial management of the company.\n"
+"                          Checking job done / correction and explanation.\n"
+"                          Quarterly maintenance.\n"
+"                          If the finance department consists of several persons, CFO FALINWA will rely on an internal assistant to the company. For technical questions, employees can ask questions directly to the CFO FALINWA (email, phone)."
+msgstr "Defining the scope / procedures of each member of finance department.\n"
+"                          Training concepts / tables used for financial management of the company.\n"
+"                          Checking job done / correction and explanation.\n"
+"                          Quarterly maintenance.\n"
+"                          If the finance department consists of several persons, CFO FALINWA will rely on an internal assistant to the company. For technical questions, employees can ask questions directly to the CFO FALINWA (email, phone)."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_testimonial
+msgid "Don Know"
+msgstr "Don Know"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_web_builder_static
+msgid "Drishti Tech has signed an Agreement with OpenERP S.A. via its Indian Subsidiary Tiny ERP pvt ltd to become an Odoo Gold Partner. Our quick growth to the pinnacle of Odoo Partnership levels has been attributed solely on the performance and dedication of our strong team.\n"
+"              Along with this honour comes a very clear responsibility, which Drishti intends to surpass. The company is expanding its resource strength to cater to a much larger variety of industries and geographies. We are focused on Enterprise grade adoption of Odoo and have achieved great success and experience working with large businesses. Our target customers are clearly identified by those requiring large scale ERP deployments but have becoming distrusting of the large license fees charged by legacy players. We have also developed a team dedicated to support other Odoo partners deliver high quality, reliable and on time products to their customers. Start up partners leverage tremendous value working with us to understand how to manage projects.\n"
+"\n"
+"              Another major change in our strategy will be the deployment of Odoo for Start Up businesses. Leveraging the Odoo SAAS will make it possible for start ups to enjoy the benefits of a thoroughbred ERP.\n"
+"\n"
+"              The company is geared to take Odoo services to the next level and humbly understands its responsibility of leading the Odoo marketspace in India.  .\n"
+"              ."
+msgstr "Drishti Tech has signed an Agreement with OpenERP S.A. via its Indian Subsidiary Tiny ERP pvt ltd to become an Odoo Gold Partner. Our quick growth to the pinnacle of Odoo Partnership levels has been attributed solely on the performance and dedication of our strong team.\n"
+"              Along with this honour comes a very clear responsibility, which Drishti intends to surpass. The company is expanding its resource strength to cater to a much larger variety of industries and geographies. We are focused on Enterprise grade adoption of Odoo and have achieved great success and experience working with large businesses. Our target customers are clearly identified by those requiring large scale ERP deployments but have becoming distrusting of the large license fees charged by legacy players. We have also developed a team dedicated to support other Odoo partners deliver high quality, reliable and on time products to their customers. Start up partners leverage tremendous value working with us to understand how to manage projects.\n"
+"\n"
+"              Another major change in our strategy will be the deployment of Odoo for Start Up businesses. Leveraging the Odoo SAAS will make it possible for start ups to enjoy the benefits of a thoroughbred ERP.\n"
+"\n"
+"              The company is geared to take Odoo services to the next level and humbly understands its responsibility of leading the Odoo marketspace in India.  .\n"
+"              ."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "During the first intervention, a significant time should be given to the team for both the train and get them used to the new organization. The presence in the offices of external CFO is rare, it is important to establish from the start a relationship of trust between the team and the external CFO."
+msgstr "During the first intervention, a significant time should be given to the team for both the train and get them used to the new organization. The presence in the offices of external CFO is rare, it is important to establish from the start a relationship of trust between the team and the external CFO."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+msgid "ERP provides an integrated real-time view of core business processes, using common databases maintained by a database management system. ERP systems track business resources—cash, raw materials, production capacity—and the status of business commitments: orders, purchase orders, and payroll. The applications that make up the system share data across the various departments (manufacturing, purchasing, sales, accounting, etc.) that entered the data. ERP facilitates information flow between all business functions, and manages connections to outside stakeholders. Though early ERP systems focused on large enterprises, smaller enterprises increasingly use ERP system."
+msgstr "ERP provides an integrated real-time view of core business processes, using common databases maintained by a database management system. ERP systems track business resources—cash, raw materials, production capacity—and the status of business commitments: orders, purchase orders, and payroll. The applications that make up the system share data across the various departments (manufacturing, purchasing, sales, accounting, etc.) that entered the data. ERP facilitates information flow between all business functions, and manages connections to outside stakeholders. Though early ERP systems focused on large enterprises, smaller enterprises increasingly use ERP system."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_contact_us
+msgid "Email Address"
+msgstr "Email Address"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_three_bar
+msgid "Exp 1 years"
+msgstr "Exp 1 years"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_three_bar
+msgid "Exp 2 years"
+msgstr "Exp 2 years"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_three_bar
+msgid "Exp 4 years"
+msgstr "Exp 4 years"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_background_parallax
+msgid "Falinwa is a consulting firm with expertise in Finance, Information System, and Business Intelligence. We are Odoo silver partner in China and choosen as Top Three Best Starter 2014 on Asia Pacific. Our strength is to well understand your business model and your job in order to propose an adapted ERP solution at a competitive cost."
+msgstr "Falinwa is a consulting firm with expertise in Finance, Information System, and Business Intelligence. We are Odoo silver partner in China and choosen as Top Three Best Starter 2014 on Asia Pacific. Our strength is to well understand your business model and your job in order to propose an adapted ERP solution at a competitive cost."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_odoo_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_web_builder_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_language
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_tabs
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover
+msgid "Falinwa.com"
+msgstr "Falinwa.com"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_contact_us
+msgid "Find out how we can help you !"
+msgstr "Find out how we can help you !"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_three_bar
+msgid "Front End Developer"
+msgstr "Front End Developer"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover-2
+msgid "GRANITY 01"
+msgstr "GRANITY 01"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_img_01_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_banner_us
+msgid "Get your inside sales (CRM) fully integrated with online sales (eCommerce), in-store sales (Point of Sale) and marketplaces like eBay and Amazon."
+msgstr "Get your inside sales (CRM) fully integrated with online sales (eCommerce), in-store sales (Point of Sale) and marketplaces like eBay and Amazon."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_four_hover_table
+msgid "Graphic Design"
+msgstr "Graphic Design"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_tabs
+msgid "HOW WE WORK ?"
+msgstr "HOW WE WORK ?"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover
+msgid "HTML"
+msgstr "HTML"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_about_us
+msgid "I am Hans Yonanthan, <br/>\n"
+"                      <span>CEO FALINWA.COM</span>"
+msgstr "I am Hans Yonanthan, <br/>\n"
+"                      <span>CEO FALINWA.COM</span>"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_testimonial
+msgid "Important person, some Company"
+msgstr "Important person, some Company"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+msgid "Inspire Design  IT is an innovative and experienced company that offers a variety of ERP and web design solutions for every kind of business.\n"
+"                          Inspire Design  IT had been developed since 2006 by Lisa Huang, an entrepreneur woman that settle in Surabaya, Indonesia.\n"
+"                          \n"
+"                          Inspire has planned, created and launched successful websites and OpenERP system since our inception, for different types of companies. Our strength lies in the ability to translate a customer’s vision into a dynamic system, and the knowledge of current system standards and practices needed to be a trusted business partner for public and private companies.\n"
+"                          With our team’s combined experience in business analysis, python programming , functionality expertise, graphic design, and website developer you can be confident that whatever your project demands, our team can deliver on time and on budget!"
+msgstr "Inspire Design  IT is an innovative and experienced company that offers a variety of ERP and web design solutions for every kind of business.\n"
+"                          Inspire Design  IT had been developed since 2006 by Lisa Huang, an entrepreneur woman that settle in Surabaya, Indonesia.\n"
+"                          \n"
+"                          Inspire has planned, created and launched successful websites and OpenERP system since our inception, for different types of companies. Our strength lies in the ability to translate a customer’s vision into a dynamic system, and the knowledge of current system standards and practices needed to be a trusted business partner for public and private companies.\n"
+"                          With our team’s combined experience in business analysis, python programming , functionality expertise, graphic design, and website developer you can be confident that whatever your project demands, our team can deliver on time and on budget!"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+msgid "Inspire Design  IT provides custom OpenERP system, web application services, e-Commerce Storefronts, website development and other interactive web-based solutions to organizations around the globe. Inspire Design  IT supports large and small customers alike. We provide a competitive edge because our solutions are agile and flexible allowing our clients to react, on their own, to competitive threats and changes in the marketplace."
+msgstr "Inspire Design  IT provides custom OpenERP system, web application services, e-Commerce Storefronts, website development and other interactive web-based solutions to organizations around the globe. Inspire Design  IT supports large and small customers alike. We provide a competitive edge because our solutions are agile and flexible allowing our clients to react, on their own, to competitive threats and changes in the marketplace."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+msgid "Inspire Design IT is proud to say customer satisfaction is one of our proven commodities. We deliver on time and on budget. How do we know this? Because a majority of our clients still partner with us today as they continue to realize our speed to market, low Total Cost of Ownership (TCO) and quick Return On Investment (ROI).\n"
+"                          Through the journey, Inspire Design  IT is expanding its service to ERP Software. Enterprise resource planning (ERP) is business management software—usually a suite of integrated applications—that a company can use to store and manage data from every stage of business, including:"
+msgstr "Inspire Design IT is proud to say customer satisfaction is one of our proven commodities. We deliver on time and on budget. How do we know this? Because a majority of our clients still partner with us today as they continue to realize our speed to market, low Total Cost of Ownership (TCO) and quick Return On Investment (ROI).\n"
+"                          Through the journey, Inspire Design  IT is expanding its service to ERP Software. Enterprise resource planning (ERP) is business management software—usually a suite of integrated applications—that a company can use to store and manage data from every stage of business, including:"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "Interest for enterprise application development."
+msgstr "Interest for enterprise application development."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_odoo_static
+msgid "InventERP is a comprehensive suite of business applications including Sales, CRM, Project Management, Warehouse management, Manufacturing, Financial management, and Human Resources, just to name a few.\n"
+"              The key to continued sales success is effective Customer Relationship Management, and that is precisely the main topic of the book you are reading. InventERP’s CRM and Sales features are flexible and highly developed to assist you in managing all aspects of partner relationships.\n"
+"              InventERP can share information with the most common email clients, calendars and mobile phones, allowing your staff to build on previous productivity and experience by continuing to use familiar email and office systems, now connected to inventERP. In a few clicks, your sales person can transfer necessary information to the inventERP software. You can link important emails to the CRM directly from your current mailbox and even reply from your own mailbox and have the answer stored in your CRM automatically."
+msgstr "InventERP is a comprehensive suite of business applications including Sales, CRM, Project Management, Warehouse management, Manufacturing, Financial management, and Human Resources, just to name a few.\n"
+"              The key to continued sales success is effective Customer Relationship Management, and that is precisely the main topic of the book you are reading. InventERP’s CRM and Sales features are flexible and highly developed to assist you in managing all aspects of partner relationships.\n"
+"              InventERP can share information with the most common email clients, calendars and mobile phones, allowing your staff to build on previous productivity and experience by continuing to use familiar email and office systems, now connected to inventERP. In a few clicks, your sales person can transfer necessary information to the inventERP software. You can link important emails to the CRM directly from your current mailbox and even reply from your own mailbox and have the answer stored in your CRM automatically."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover
+msgid "JAVASCRIPT"
+msgstr "JAVASCRIPT"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_background_parallax
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "JOBS OFFER"
+msgstr "KARIR"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_background_parallax
+msgid "Join us, we offer you an extraordinary chance to learn, to develop and to be part of an exciting experience and team"
+msgstr "Join us, we offer you an extraordinary chance to learn, to develop and to be part of an exciting experience and team"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "Junior Front End Developer"
+msgstr "Junior Front End Developer"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_img_01_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_banner_us
+msgid "Lorem Ipsum Sit ,dolor ame"
+msgstr "Lorem Ipsum Sit ,dolor ame"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_about_us
+msgid "Lorem ipsum dolor sit amet,  sed nisl malesuada eleifend. malesuada, vitae commodo arcu aliquam. Curabitur vestibulum  malesuada lacus, et facilisis tellus varius vel. Praesent quis lectus cmollis, tincidunt massa ac, malesuada lacus. Maecenas placerat\n"
+"                porttitor ante, vitae ornare turpis volutpat at. Lorem ipsum dolor sit amet,  sed nisl malesuada eleifend. malesuada, vitae commodo\n"
+"                arcu aliquam. Curabitur vestibulum malesuada lacus, et facilisis tellus varius vel. Praesent quis lectus\n"
+"                mollis, tincidunt massa ac, malesuada lacus. Maecenas placerat porttitor ante, vitae ornare turpis volutpat at.\n"
+"                Lorem ipsum dolor sit amet,  sed nisl malesuada eleifend. malesuada, vitae commodo arcu aliquam. Curabitur vestibulum malesuada"
+msgstr "Lorem ipsum dolor sit amet,  sed nisl malesuada eleifend. malesuada, vitae commodo arcu aliquam. Curabitur vestibulum  malesuada lacus, et facilisis tellus varius vel. Praesent quis lectus cmollis, tincidunt massa ac, malesuada lacus. Maecenas placerat\n"
+"                porttitor ante, vitae ornare turpis volutpat at. Lorem ipsum dolor sit amet,  sed nisl malesuada eleifend. malesuada, vitae commodo\n"
+"                arcu aliquam. Curabitur vestibulum malesuada lacus, et facilisis tellus varius vel. Praesent quis lectus\n"
+"                mollis, tincidunt massa ac, malesuada lacus. Maecenas placerat porttitor ante, vitae ornare turpis volutpat at.\n"
+"                Lorem ipsum dolor sit amet,  sed nisl malesuada eleifend. malesuada, vitae commodo arcu aliquam. Curabitur vestibulum malesuada"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_four_hover_table
+msgid "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+msgstr "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_testimonial
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tellus eu tortor vehicula suscipit nec vitae tortor. Curabitur sit amet turpis ac diam gravida laoreet. Sed mauris ligula, gravida finibus tincidunt a, sodales non erat. Maecenas at, suscipit metus"
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tellus eu tortor vehicula suscipit nec vitae tortor. Curabitur sit amet turpis ac diam gravida laoreet. Sed mauris ligula, gravida finibus tincidunt a, sodales non erat. Maecenas at, suscipit metus"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores mollitia"
+msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores mollitia"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "MUST HAVE"
+msgstr "MUST HAVE"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "Major in Engineering, IS/IT, or Computer Science."
+msgstr "Major in Engineering, IS/IT, or Computer Science."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_contact_us
+msgid "Message"
+msgstr "Message"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover
+msgid "My name is one"
+msgstr "My name is one"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "NICE TO HAVE"
+msgstr "NICE TO HAVE"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_contact_us
+msgid "Name"
+msgstr "Nama"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_three_bar
+msgid "Nicholas loves taking on challenges. With his 5-year experience as Commercial Director in the software industry, Xavier has helped Odoo to get where it is today. Xavier is, among other things, in charge of the partners' network recruitment and development"
+msgstr "Nicholas loves taking on challenges. With his 5-year experience as Commercial Director in the software industry, Xavier has helped Odoo to get where it is today. Xavier is, among other things, in charge of the partners' network recruitment and development"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_about_us
+msgid "Nicolas created FALINWA Limited in July 2009 in Hong Kong and its branch FALINWA China in November 2011. Nicolas is the sole shareholder and director.\n"
+"                              Nicolas has a double financial mathematics curriculum (Ph.D. in June 2007 at the University of Nice) and business school (EDHEC 2002). This training provides him a solid foundation in corporate finance and financial markets.\n"
+"                              After his thesis done, he took the path of Africa and microcredit rather than the trading rooms of London by envy and ethical choice. One project led to the creation f an e-commerce jewelry and Tuareg objects - artetiq.com.\n"
+"                              Arrived in China in late 2008, Nicolas studied Mandarin in a semester before creating FALINWA and start the first mission in July 2009.\n"
+"                              Nicolas 6 years of rich and disparate experiences both in the trades (consulting, higher education, research, training, fair trade) and countries (China, Niger, Finland, France) gave an accomplished and singular vision to his work as consultant"
+msgstr "Nicolas created FALINWA Limited in July 2009 in Hong Kong and its branch FALINWA China in November 2011. Nicolas is the sole shareholder and director.\n"
+"                              Nicolas has a double financial mathematics curriculum (Ph.D. in June 2007 at the University of Nice) and business school (EDHEC 2002). This training provides him a solid foundation in corporate finance and financial markets.\n"
+"                              After his thesis done, he took the path of Africa and microcredit rather than the trading rooms of London by envy and ethical choice. One project led to the creation f an e-commerce jewelry and Tuareg objects - artetiq.com.\n"
+"                              Arrived in China in late 2008, Nicolas studied Mandarin in a semester before creating FALINWA and start the first mission in July 2009.\n"
+"                              Nicolas 6 years of rich and disparate experiences both in the trades (consulting, higher education, research, training, fair trade) and countries (China, Niger, Finland, France) gave an accomplished and singular vision to his work as consultant"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_about_us
+msgid "Nicolas created FALINWA Limited in July 2009 in Hong Kong and its branch FALINWA China in November 2011. Nicolas is the sole shareholder and director.\n"
+"                              Nicolas has a double financial mathematics curriculum (Ph.D. in June 2007 at the University of Nice) and business school (EDHEC 2002). This training provides him a solid foundation in corporate finance and financial markets.\n"
+"                              After his thesis done, he took the path of Africa and microcredit rather than the trading rooms of London by envy and ethical choice. One project led to the creation of an e-commerce jewelry and Tuareg objects - artetiq.com.\n"
+"                              Arrived in China in late 2008, Nicolas studied Mandarin in a semester before creating FALINWA and start the first mission in July 2009.\n"
+"                              Nicolas 6 years of rich and disparate experiences both in the trades (consulting, higher education, research, training, fair trade) and countries (China, Niger, Finland, France) gave an accomplished and singular vision to his work as consultant"
+msgstr "Nicolas created FALINWA Limited in July 2009 in Hong Kong and its branch FALINWA China in November 2011. Nicolas is the sole shareholder and director.\n"
+"                              Nicolas has a double financial mathematics curriculum (Ph.D. in June 2007 at the University of Nice) and business school (EDHEC 2002). This training provides him a solid foundation in corporate finance and financial markets.\n"
+"                              After his thesis done, he took the path of Africa and microcredit rather than the trading rooms of London by envy and ethical choice. One project led to the creation of an e-commerce jewelry and Tuareg objects - artetiq.com.\n"
+"                              Arrived in China in late 2008, Nicolas studied Mandarin in a semester before creating FALINWA and start the first mission in July 2009.\n"
+"                              Nicolas 6 years of rich and disparate experiences both in the trades (consulting, higher education, research, training, fair trade) and countries (China, Niger, Finland, France) gave an accomplished and singular vision to his work as consultant"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_odoo_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_web_builder_static
+msgid "ODOO GOLD PARTNER"
+msgstr "ODOO GOLD PARTNER"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover
+msgid "OUR TEAM"
+msgstr "TIM KAMI"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "OUTSOURCED CFO"
+msgstr "OUTSOURCED CFO"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_odoo_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_web_builder_static
+msgid "OUTSOURCED CFO / CIO"
+msgstr "OUTSOURCED CFO / CIO"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_odoo_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_web_builder_static
+msgid "OUTSOURCED FINANCIAL TASK FORCE"
+msgstr "OUTSOURCED FINANCIAL TASK FORCE"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_odoo_static
+msgid "Odoo (OpenERP) – Simply The best ERP System in Falinwa – Odoo includes the following modules and features:"
+msgstr "Odoo (OpenERP) – Simply The best ERP System in Falinwa – Odoo includes the following modules and features:"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_tabs
+msgid "Odoo Gold Partner"
+msgstr "Odoo Gold Partner"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_web_builder_static
+msgid "Odoo Gold Partnership"
+msgstr "Odoo Gold Partnership"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_odoo_static
+msgid "Odoo is the fastest evolving business software in the world. Odoo has now a complete suite of business applications covering all business needs, from Website/Ecommerce down to manufacturing, inventory and accounting, all seamlessly integrated. It is the first time ever a software editor managed to reach such a functional coverage."
+msgstr "Odoo is the fastest evolving business software in the world. Odoo has now a complete suite of business applications covering all business needs, from Website/Ecommerce down to manufacturing, inventory and accounting, all seamlessly integrated. It is the first time ever a software editor managed to reach such a functional coverage."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_web_builder_static
+msgid "Odoo's e-Commerce software is unlike anything you have ever seen before. Get an awesome catalog of products and great product description pages.\n"
+"              \n"
+"              It's full-featured, integrated with your management software, fully customizable and super easy.\n"
+"              Produce customer invoices in just a few clicks. Control sales and cash in real time and use Odoo's powerful reporting to make smarter decisions and improve your online store's efficiency.\n"
+"              \n"
+"              No more hassle with integrating a variety of software: get all your sales and inventory operations automatically posted in your G/L."
+msgstr "Odoo's e-Commerce software is unlike anything you have ever seen before. Get an awesome catalog of products and great product description pages.\n"
+"              \n"
+"              It's full-featured, integrated with your management software, fully customizable and super easy.\n"
+"              Produce customer invoices in just a few clicks. Control sales and cash in real time and use Odoo's powerful reporting to make smarter decisions and improve your online store's efficiency.\n"
+"              \n"
+"              No more hassle with integrating a variety of software: get all your sales and inventory operations automatically posted in your G/L."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_web_builder_static
+msgid "Odoo's unique 'edit inline' and building blocks approach makes creating product pages surprisingly easy. \"Do you want to change the price of a product? Or to put it in bold? Do you want to add a banner for a specific product?\" Just click and change. What you see is what you get. Really.\n"
+"                    Drag and Drop well-designed 'Building Blocks' to create beautiful product pages. Your customers will love i."
+msgstr "Odoo's unique 'edit inline' and building blocks approach makes creating product pages surprisingly easy. \"Do you want to change the price of a product? Or to put it in bold? Do you want to add a banner for a specific product?\" Just click and change. What you see is what you get. Really.\n"
+"                    Drag and Drop well-designed 'Building Blocks' to create beautiful product pages. Your customers will love i."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_contact_us
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_maps_bar
+msgid "Office Falinwa China"
+msgstr "Office Falinwa China"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+msgid "Office Partner Falinwa China"
+msgstr "Office Partner Falinwa China"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_odoo_static
+msgid "OpenERP S.A. is the software vendor of the Odoo product (formerly OpenERP). OpenERP S.A. is a company founded in 2002 by Fabien Pinckaers, its current CEO. It has now 250 employees, 6 offices (Belgium, US San Francisco, US New York, Luxembourg, India,  Hong Kong) and activities in 110 countries with a vast partner network of more than 500 official partners."
+msgstr "OpenERP S.A. is the software vendor of the Odoo product (formerly OpenERP). OpenERP S.A. is a company founded in 2002 by Fabien Pinckaers, its current CEO. It has now 250 employees, 6 offices (Belgium, US San Francisco, US New York, Luxembourg, India,  Hong Kong) and activities in 110 countries with a vast partner network of more than 500 official partners."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+msgid "Organizations consider the ERP system a vital organizational tool because it integrates varied organizational systems and facilitates error-free transactions and production. However, ERP system development is different from traditional systems development. ERP systems run on a variety of computer hardware and network configurations, typically using a database as an information repository."
+msgstr "Organizations consider the ERP system a vital organizational tool because it integrates varied organizational systems and facilitates error-free transactions and production. However, ERP system development is different from traditional systems development. ERP systems run on a variety of computer hardware and network configurations, typically using a database as an information repository."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_contact_us
+msgid "Outsourced CFO 's aim is to help your company successfully navigate it's financial function and bussiness environment"
+msgstr "Outsourced CFO 's aim is to help your company successfully navigate it's financial function and bussiness environment"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_tabs
+msgid "Outsourced CFO / CIO"
+msgstr "Outsourced CFO / CIO"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_tabs
+msgid "Outsourced Financial Task Force"
+msgstr "Outsourced Financial Task Force"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+msgid "PARTNER 00"
+msgstr "PARTNER 00"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+msgid "PARTNER 01"
+msgstr "PARTNER 01"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+msgid "PARTNER 02"
+msgstr "PARTNER 02"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover
+msgid "PYTHON"
+msgstr "PYTHON"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_testimonial
+msgid "Pablo Napp"
+msgstr "Pablo Napp"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_contact_us
+msgid "Phone"
+msgstr "Phone"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+msgid "Product planning, cost and development<br/>\n"
+"                          Manufacturing<br/>\n"
+"                          Marketing and sales<br/>\n"
+"                          Inventory management<br/>\n"
+"                          Shipping and payment<br/>"
+msgstr "Product planning, cost and development<br/>\n"
+"                          Manufacturing<br/>\n"
+"                          Marketing and sales<br/>\n"
+"                          Inventory management<br/>\n"
+"                          Shipping and payment<br/>"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "Qualifications"
+msgstr "Qualifications"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover-2
+msgid "REFERENCES AND PARTNERSHIP"
+msgstr "REFERENCES AND PARTNERSHIP"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_tabs
+msgid "Read more"
+msgstr "Read more"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_background_parallax
+msgid "Read more..."
+msgstr "Read more..."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_four_hover_table
+msgid "Social Marketing"
+msgstr "Social Marketing"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+msgid "Study funding"
+msgstr "Study funding"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "Subject"
+msgstr "Judul"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_testimonial
+msgid "TESTIMONIAL CLIENT"
+msgstr "TESTIMONIAL CLIENT"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "The analysis associated with these tables allows the Director to get an outside perspective on the health and development of the company. As any CFO, CFO FALINWA becomes a privileged partner of the director."
+msgstr "The analysis associated with these tables allows the Director to get an outside perspective on the health and development of the company. As any CFO, CFO FALINWA becomes a privileged partner of the director."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "The establishment of an external financial management often involves the overhaul of the financial management of the company and the development of a responsive enterprise solution. The work of setting up bases is performed early collaboration through an assignment of one or two months - Mission to understanding the company, its stakeholders and its operation, develop custom tools and integrate the Director financial FALINWA in running the business. Excel is the preferred software as it adapts to the needs of a large number of SMEs. The establishment of an ERP Odoo type can also be studied."
+msgstr "The establishment of an external financial management often involves the overhaul of the financial management of the company and the development of a responsive enterprise solution. The work of setting up bases is performed early collaboration through an assignment of one or two months - Mission to understanding the company, its stakeholders and its operation, develop custom tools and integrate the Director financial FALINWA in running the business. Excel is the preferred software as it adapts to the needs of a large number of SMEs. The establishment of an ERP Odoo type can also be studied."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "The management of the finance department is done in tandem with management (or management assistant) which is operational and FALINWA leader who acts as a functional head. This dual management - and its inclusion in the organization - is important for the legitimacy of financial management to the finance department. During the first intervention, a significant time should be given to the team for both the train and get them used to the new organization. The presence in the offices of external CFO is rare, it is important to establish from the start a relationship of trust between the team and the external CFO.\n"
+"                          The role of the CFO FALINWA as a functional leader is:"
+msgstr "The management of the finance department is done in tandem with management (or management assistant) which is operational and FALINWA leader who acts as a functional head. This dual management - and its inclusion in the organization - is important for the legitimacy of financial management to the finance department. During the first intervention, a significant time should be given to the team for both the train and get them used to the new organization. The presence in the offices of external CFO is rare, it is important to establish from the start a relationship of trust between the team and the external CFO.\n"
+"                          The role of the CFO FALINWA as a functional leader is:"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+msgid "The same applies to the function of a finance director. You may find it difficult to run your business while trying to keep an eye on your finances at the same time, but may not have resources to employ a full-time finance director or your requirements may only cover a very specific period of time."
+msgstr "The same applies to the function of a finance director. You may find it difficult to run your business while trying to keep an eye on your finances at the same time, but may not have resources to employ a full-time finance director or your requirements may only cover a very specific period of time."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "The second role of the CFO is to produce FALINWA for management of reports, allowing to have an overview of the health of the business and performance indicators to better assess the axes of development possible.\n"
+"                          The summary tables are made by the CFO FALINWA for the following reasons:"
+msgstr "The second role of the CFO is to produce FALINWA for management of reports, allowing to have an overview of the health of the business and performance indicators to better assess the axes of development possible.\n"
+"                          The summary tables are made by the CFO FALINWA for the following reasons:"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+msgid "This is where our outsourced finance director service can help. Outsourcing ensures that important duties are taken care of without the additional cost and burden of taking on more staff, leaving you free to do what you do best – running your business.This is where our outsourced finance director service can help. Outsourcing ensures that important duties are taken care of without the additional cost and burden of taking on more staff, leaving you free to do what you do best – running your business.This is where our outsourced finance director service can help. Outsourcing ensures that important duties are taken care of without the additional cost and burden of taking on more staff, leaving you free to do what you do best – running your business."
+msgstr "This is where our outsourced finance director service can help. Outsourcing ensures that important duties are taken care of without the additional cost and burden of taking on more staff, leaving you free to do what you do best – running your business.This is where our outsourced finance director service can help. Outsourcing ensures that important duties are taken care of without the additional cost and burden of taking on more staff, leaving you free to do what you do best – running your business.This is where our outsourced finance director service can help. Outsourcing ensures that important duties are taken care of without the additional cost and burden of taking on more staff, leaving you free to do what you do best – running your business."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_jobs_static
+msgid "VALUES"
+msgstr "VALUES"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+msgid "Venture capital FALINWA"
+msgstr "Venture capital FALINWA"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "Verification, consolidation and correction tables managed by the finance department.\n"
+"                          Management of confidential information: integration costs of salaries, margin calculations, ...\n"
+"                          IT and financial skills: the production of summary tables requires both a mastery of computer skills and a clear vision of the synthesis.\n"
+"                          The purpose of performance indicators - illustrated with graphic - is to report to the director only relevant information for decision making: overall health of the business, cash flow statement, margin projects, variable costs and fixed the company by cost ..."
+msgstr "Verification, consolidation and correction tables managed by the finance department.\n"
+"                          Management of confidential information: integration costs of salaries, margin calculations, ...\n"
+"                          IT and financial skills: the production of summary tables requires both a mastery of computer skills and a clear vision of the synthesis.\n"
+"                          The purpose of performance indicators - illustrated with graphic - is to report to the director only relevant information for decision making: overall health of the business, cash flow statement, margin projects, variable costs and fixed the company by cost ..."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_odoo_static
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_services_00
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_web_builder_static
+msgid "WEBSITE BUILDER AND E-COMMERCE"
+msgstr "WEBSITE BUILDER AND E-COMMERCE"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_about_us
+msgid "WELCOME TO FALINWA"
+msgstr "WELCOME TO FALINWA"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_background_parallax
+msgid "We are HIRING<br/>\n"
+"                        <span>BACK END DEVELOPER</span>"
+msgstr "We are HIRING<br/>\n"
+"                        <span>BACK END DEVELOPER</span>"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_background_parallax
+msgid "We are HIRING<br/>\n"
+"                        <span>FRONT END DEVELOPER</span>"
+msgstr "We are HIRING<br/>\n"
+"                        <span>FRONT END DEVELOPER</span>"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_tabs
+msgid "We grow brands by making decisions that are rooted  in business strategy"
+msgstr "We grow brands by making decisions that are rooted  in business strategy"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_background_parallax
+msgid "We offer you the opportunity to join a popular open source project and receive technical and functional Odoo training before you started work on the project.  Also, a great experience in state-of-the-art web technologies and agile development in a nice working atmosphere with a young and passionate team.\n"
+"                        And last but not least, we will offer you a full-time job with an attractive salary"
+msgstr "We offer you the opportunity to join a popular open source project and receive technical and functional Odoo training before you started work on the project.  Also, a great experience in state-of-the-art web technologies and agile development in a nice working atmosphere with a young and passionate team.\n"
+"                        And last but not least, we will offer you a full-time job with an attractive salary"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three_table_hover
+msgid "Web Developer"
+msgstr "Web Developer"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_four_hover_table
+msgid "Web Development"
+msgstr "Web Development"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_tabs
+msgid "Website Builder and E-commerce"
+msgstr "Website Builder and E-commerce"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_tabs
+msgid "With dozens of ready to use templates and much more added options, now you can create almost anythingthat comes to your mind. Control you have never seen before.With dozens of ready to use templates and much more added options, now you can create almost anything  that comes to your mind. Combination of advanced content importers,  different layouts, header styles, post types, gives you a freedom  and control you have never seen before..."
+msgstr "With dozens of ready to use templates and much more added options, now you can create almost anythingthat comes to your mind. Control you have never seen before.With dozens of ready to use templates and much more added options, now you can create almost anything  that comes to your mind. Combination of advanced content importers,  different layouts, header styles, post types, gives you a freedom  and control you have never seen before..."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_tabs
+msgid "With dozens of ready to use templates and much more added options,now you can create almost anythingthat comes to your mind. Control ou have never seen before.With dozens of ready to use templates and much more added options, now you can create almost anything that comes to your mind. Combination of advanced content importers, different layouts, header styles, post types, gives you a freedom and control you have never seen before..."
+msgstr "With dozens of ready to use templates and much more added options,now you can create almost anythingthat comes to your mind. Control ou have never seen before.With dozens of ready to use templates and much more added options, now you can create almost anything that comes to your mind. Combination of advanced content importers, different layouts, header styles, post types, gives you a freedom and control you have never seen before..."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_tabs
+msgid "With dozens of ready to use templates and much more added options,now you can create almost anythingthat comes to your mind. Control you have never seen before.With dozens of ready to use templates and much more added options, now you can create almost anything that comes to your mind. Combination of advanced content importers, different layouts, header styles, post types, gives you a freedom  and control you have never seen before..."
+msgstr "With dozens of ready to use templates and much more added options,now you can create almost anythingthat comes to your mind. Control you have never seen before.With dozens of ready to use templates and much more added options, now you can create almost anything that comes to your mind. Combination of advanced content importers, different layouts, header styles, post types, gives you a freedom  and control you have never seen before..."
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_banner_us
+msgid "__My name is Hans Yonathan<br/>\n"
+"                    General Manager Falinwa.com"
+msgstr "__My name is Hans Yonathan<br/>\n"
+"                    General Manager Falinwa.com"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+msgid "falinwa.com"
+msgstr "falinwa.com"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_language
+msgid "language Falinwa.com"
+msgstr "language Falinwa.com"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_background_parallax
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_three
+msgid "more +"
+msgstr "more +"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_partner_00
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_contact_us
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_content_maps_bar
+msgid "nrc@falinwa.com"
+msgstr "nrc@falinwa.com"
+
+#. module: fal_website_blocks
+#: model:ir.ui.view,arch_db:fal_website_blocks.snippet_block_cfo_static
+msgid "the same time, but may not have resources to employ a full-time finance director or your requirements may only cover a very specific period of time."
+msgstr "the same time, but may not have resources to employ a full-time finance director or your requirements may only cover a very specific period of time."
+

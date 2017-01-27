@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <template id="fal_invoice_report" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@class='page']/p[@t-if='o.fiscal_position_id.note']" position="after">
+            <div class='row' t-if="o.fal_company_code != 'FR'"> 
+                <div class="col-xs-4 pull-right">
+                    <strong>Financial Manager:</strong>
+                </div><br/>
+                <br />
+                <div class="col-xs-4 pull-right">
+                    <strong>Project Manager:</strong>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <div class='row' t-if="o.fal_company_code == 'FR' and o.fal_use_late_payment_statement">
+                <p>
+                    <i><span style="font-size:10px;">
+                    Falinwa France will be entitled to invoice late payment fees from the first day of late payment without prior notice.
+                    The applicable rate shall be the European Central Bank (ECB) interest rate applied in its current refinancing operation, plus an increment of 10 percentage points. Besides, Falinwa France will also be entitled to obtain from the Client a 40 EUR lump-sum as compensation for recovery costs.
+                    </span></i>
+                </p>
+            </div>
+        </xpath>
+
+        <xpath expr="//p[@t-if='o.payment_term_id']" position="attributes">
+            <attribute name="t-if">o.payment_term_id and o.fal_company_code != 'FR'</attribute>
+        </xpath>
+    </template>
+
+  </data>
+</openerp>

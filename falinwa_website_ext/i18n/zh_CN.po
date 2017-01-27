@@ -1,0 +1,85 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* falinwa_website_ext
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e-20160401\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 05:34+0000\n"
+"PO-Revision-Date: 2016-06-01 05:34+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.header_custom_falinwa-2
+msgid "<span class=\"sr-only\">Toggle navigation</span>\n"
+"                <span class=\"icon-bar\"/>\n"
+"                <span class=\"icon-bar\"/>\n"
+"                <span class=\"icon-bar\"/>\n"
+"                <span class=\"icon-bar\"/>"
+msgstr "<span class=\"sr-only\">Toggle navigation</span>\n"
+"                <span class=\"icon-bar\"/>\n"
+"                <span class=\"icon-bar\"/>\n"
+"                <span class=\"icon-bar\"/>\n"
+"                <span class=\"icon-bar\"/>"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.header_custom_falinwa-2
+msgid "ABOUT US"
+msgstr "ABOUT US"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.header_custom_falinwa-2
+msgid "CONTACT US"
+msgstr "CONTACT US"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.footer_fal_one
+msgid "Copyright © FALINWA Limited"
+msgstr "Copyright © FALINWA Limited"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.header_custom_falinwa-2
+msgid "Falinwa.com"
+msgstr "Falinwa.com"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.header_custom_falinwa-2
+msgid "HOME"
+msgstr "HOME"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.header_custom_falinwa-2
+msgid "JOBS OFFER"
+msgstr "JOBS OFFER"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.header_custom_falinwa-2
+msgid "MENU"
+msgstr "MENU"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.header_custom_falinwa-2
+msgid "OUR TEAM"
+msgstr "OUR TEAM"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.header_custom_falinwa-2
+msgid "REFERENCES AND PARTNERSHIPS"
+msgstr "REFERENCES AND PARTNERSHIPS"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.header_custom_falinwa-2
+msgid "SERVICES"
+msgstr "SERVICES"
+
+#. module: falinwa_website_ext
+#: model:ir.ui.view,arch_db:falinwa_website_ext.header_custom_falinwa-2
+msgid "logo Falinwa.com"
+msgstr "logo Falinwa.com"
+

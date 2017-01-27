@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="invoice_supplier_form_falaamext" model="ir.ui.view">
+            <field name="name">account.invoice.supplier.form.falaamext</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page/field[@name='invoice_line_ids']/tree/field[@name='account_analytic_id']" position="attributes">
+                    <attribute name="domain">[('account_type', '=', 'normal')]</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="invoice_form_falaamext" model="ir.ui.view">
+            <field name="name">account.invoice.form.falaamext</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page/field[@name='invoice_line_ids']/tree/field[@name='account_analytic_id']" position="attributes">
+                    <attribute name="domain">[('account_type', '=', 'normal')]</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

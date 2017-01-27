@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+  
+    <template id="snippet_three" name="Button More">
+      <section class="snippet_three">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-12">
+              <div align="center">
+                <div class="center-100-px">
+                  <a href="">
+                    <div class="more-plus">more +</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <template id="snippet_about_us" name="About Us">
+      <section class="snippet_about_us intro-section">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-12 wow fadeInDown animated" data-wow-delay="1s">
+              <div class="title-About-us">WELCOME TO FALINWA</div>
+              <div class="detail-About-us">Lorem ipsum dolor sit amet,  sed nisl malesuada eleifend. malesuada, vitae commodo arcu aliquam. Curabitur vestibulum  malesuada lacus, et facilisis tellus varius vel. Praesent quis lectus cmollis, tincidunt massa ac, malesuada lacus. Maecenas placerat
+                porttitor ante, vitae ornare turpis volutpat at. Lorem ipsum dolor sit amet,  sed nisl malesuada eleifend. malesuada, vitae commodo
+                arcu aliquam. Curabitur vestibulum malesuada lacus, et facilisis tellus varius vel. Praesent quis lectus
+                mollis, tincidunt massa ac, malesuada lacus. Maecenas placerat porttitor ante, vitae ornare turpis volutpat at.
+                Lorem ipsum dolor sit amet,  sed nisl malesuada eleifend. malesuada, vitae commodo arcu aliquam. Curabitur vestibulum malesuada</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <template id="snippet_tabs" name="Tabs">
+      <section class="snippet_tabs intro-section">
+        <div class="color-ddd wow fadeInDown"  data-wow-delay="1s">
+          <div class="container">
+            <div align="center" class="title-About-us">HOW WE WORK ?</div>
+            <div class="row">
+              <div class="col-sm-12 col-xs-12 col-md-offset-2-xustom">
+                <ul class="nav nav-tabs re-custom-tabs">
+                  <li class="active custom-tabs">
+                    <a data-toggle="tab" href="#home">Odoo Gold Partner</a>
+                  </li>
+                  <li class="custom-tabs">
+                    <a data-toggle="tab" href="#menu1">Website Builder and E-commerce</a>
+                  </li>
+                  <li class="custom-tabs">
+                    <a data-toggle="tab" href="#menu2">Outsourced CFO / CIO</a>
+                  </li>
+                  <li class="custom-tabs">
+                    <a data-toggle="tab" href="#menu3">Outsourced Financial Task Force</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="tab-content m-top-one">
+                  <div id="home" class="tab-pane fade in active">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img src="/fal_website_blocks/static/src/img/snippet/SALE.jpg" alt="Falinwa.com" title="Falinwa.com" class="img-responsive"/>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="title-service">We grow brands by making decisions that are rooted  in business strategy</div>
+                        <div class="detail-services">With dozens of ready to use templates and much more added options,now you can create almost anythingthat comes to your mind. Control ou have never seen before.With dozens of ready to use templates and much more added options, now you can create almost anything that comes to your mind. Combination of advanced content importers, different layouts, header styles, post types, gives you a freedom and control you have never seen before...</div>
+                        <div align="left" class="more-href">
+                          <a href="">Read more</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="menu1" class="tab-pane fade">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img src="/fal_website_blocks/static/src/img/snippet/SALE.jpg" alt="Falinwa.com" title="Falinwa.com" class="img-responsive"/>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="title-service">We grow brands by making decisions that are rooted  in business strategy</div>
+                        <div class="detail-services">With dozens of ready to use templates and much more added options, now you can create almost anythingthat comes to your mind. Control you have never seen before.With dozens of ready to use templates and much more added options, now you can create almost anything  that comes to your mind. Combination of advanced content importers,  different layouts, header styles, post types, gives you a freedom  and control you have never seen before...</div>
+                        <div align="left" class="more-href">
+                          <a href="">Read more</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="menu2" class="tab-pane fade">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img src="/fal_website_blocks/static/src/img/snippet/coding_illustration_smaller1-608x400.jpg" alt="Falinwa.com" title="Falinwa.com" class="img-responsive"/>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="title-service">We grow brands by making decisions that are rooted  in business strategy</div>
+                        <div class="detail-services">With dozens of ready to use templates and much more added options, now you can create almost anythingthat comes to your mind. Control you have never seen before.With dozens of ready to use templates and much more added options, now you can create almost anything  that comes to your mind. Combination of advanced content importers,  different layouts, header styles, post types, gives you a freedom  and control you have never seen before...</div>
+                        <div align="left" class="more-href">
+                          <a href="">Read more</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="menu3" class="tab-pane fade">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img src="/fal_website_blocks/static/src/img/snippet/solution.jpg" alt="Falinwa.com" title="Falinwa.com" class="img-responsive"/>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="title-service">We grow brands by making decisions that are rooted  in business strategy</div>
+                        <div class="detail-services">With dozens of ready to use templates and much more added options,now you can create almost anythingthat comes to your mind. Control you have never seen before.With dozens of ready to use templates and much more added options, now you can create almost anything that comes to your mind. Combination of advanced content importers, different layouts, header styles, post types, gives you a freedom  and control you have never seen before...</div>
+                        <div align="left" class="more-href">
+                          <a href="">Read more</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <template id="snippet_four_hover_table" name="Four Hover Table">
+      <section class="snippet_four_hover_table">
+        <div class="m-top-bottom-20px">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-service fadeinleft animated fadeInLeft wow" data-wow-delay="1s">
+                  <div class="icon">
+                    <span class="icon-fa">
+                      <i class="fa fa-desktop fa-icon-00"></i>
+                    </span>
+                  </div>
+                  <h3>
+                    <a href="">Web Development</a>
+                  </h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                </div>
+              </div>
+              <!-- /.end single-service column -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-service fadeinleft animated fadeInLeft wow" data-wow-delay="1s">
+                  <div class="icon">
+                    <span class="icon-fa">
+                      <i class="fa fa-book fa-icon-00"></i>
+                    </span>
+                  </div>
+                  <h3>
+                    <a href="">Graphic Design</a>
+                  </h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                </div>
+              </div>
+              <!-- /.end single-service column -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-service fadeinleft animated fadeInLeft wow" data-wow-delay="1s">
+                  <div class="icon">
+                    <span class="icon-fa">
+                      <i class="fa fa-asterisk fa-icon-00"></i>
+                    </span>
+                  </div>
+                  <h3>
+                    <a href="">Social Marketing</a>
+                  </h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                </div>
+              </div>
+              <!-- /.end single-service column -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-service fadeinleft animated fadeInLeft wow" data-wow-delay="1s">
+                  <div class="icon">
+                    <span class="icon-fa">
+                      <i class="fa fa-tablet"></i>
+                    </span>
+                  </div>
+                  <h3>
+                    <a href="">App Development</a>
+                  </h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                </div>
+              </div>
+              <!-- /.end single-service column -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <template id="snippet_three_table_hover" name="Three Table Hover">
+      <section class="snippet_three_table_hover intro-section">
+        <div align="center" class="title-About-us">OUR TEAM</div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div data-wow-offset="10" class="team-member wow fadeIn animated" data-wow-delay="1s">
+                <figure>
+                  <img class="img-responsive" alt="" src="/fal_website_blocks/static/src/img/snippet/lauren-cox.jpg"/>
+                </figure>
+                <div class="nama-team-fl">My name is one</div>
+                <div class="job-team-fl">Web Developer</div>
+                <p align="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores mollitia</p>
+                <div class="skill">
+                  <div class="fl basic-skill">HTML</div>
+                  <div class="progress custom-00-progress-bar">
+                    <div class="progress-bar custom-00-progress-bar2">
+                      <img src="/fal_website_blocks/static/src/img/snippet/pg-70.png"/>
+                    </div>
+                  </div>
+                  <div class="fr range-skill">70%</div>
+                  <div class="clear"></div>
+                </div>
+                <div class="skill">
+                  <div class="fl basic-skill">PYTHON</div>
+                  <div class="progress custom-00-progress-bar">
+                    <div class="progress-bar custom-00-progress-bar2">
+                      <img src="/fal_website_blocks/static/src/img/snippet/pg-90.png"/>
+                    </div>
+                  </div>
+                  <div class="fr range-skill">90%</div>
+                  <div class="clear"></div>
+                </div>
+                <div class="skill">
+                  <div class="fl basic-skill">JAVASCRIPT</div>
+                  <div class="progress custom-00-progress-bar">
+                    <div class="progress-bar custom-00-progress-bar2">
+                      <img src="/fal_website_blocks/static/src/img/snippet/pg-50.png"/>
+                    </div>
+                  </div>
+                  <div class="fr range-skill">50%</div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <!-- /.team-member -->
+            </div>
+            <!-- /.col-md-4 -->
+            <div class="col-md-4">
+              <div data-wow-offset="10" class="team-member wow fadeIn animated" data-wow-delay="1s">
+                <figure>
+                  <img class="img-responsive" alt="Falinwa.com" src="/fal_website_blocks/static/src/img/snippet/jessie-barnett.jpg"/>
+                </figure>
+                <div class="nama-team-fl">My name is one</div>
+                <div class="job-team-fl">Web Developer</div>
+                <p align="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores mollitia</p>
+                <div class="skill">
+                  <div class="fl basic-skill">HTML</div>
+                  <div class="progress custom-00-progress-bar">
+                    <div class="progress-bar custom-00-progress-bar2">
+                      <img src="/fal_website_blocks/static/src/img/snippet/pg-70.png"/>
+                    </div>
+                  </div>
+                  <div class="fr range-skill">70%</div>
+                  <div class="clear"></div>
+                </div>
+                <div class="skill">
+                  <div class="fl basic-skill">PYTHON</div>
+                  <div class="progress custom-00-progress-bar">
+                    <div class="progress-bar custom-00-progress-bar2">
+                      <img src="/fal_website_blocks/static/src/img/snippet/pg-90.png"/>
+                    </div>
+                  </div>
+                  <div class="fr range-skill">90%</div>
+                  <div class="clear"></div>
+                </div>
+                <div class="skill">
+                  <div class="fl basic-skill">JAVASCRIPT</div>
+                  <div class="progress custom-00-progress-bar">
+                    <div class="progress-bar custom-00-progress-bar2">
+                      <img src="/fal_website_blocks/static/src/img/snippet/pg-50.png"/>
+                    </div>
+                  </div>
+                  <div class="fr range-skill">50%</div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <!-- /.team-member -->
+            </div>
+            <!-- /.col-md-4 -->
+            <div class="col-md-4">
+              <div data-wow-offset="10" class="team-member wow fadeIn animated" data-wow-delay="1s">
+                <figure>
+                  <img class="img-responsive" alt="Falinwa.com" src="/fal_website_blocks/static/src/img/snippet/terry-fletcher.jpg"/>
+                </figure>
+                <div class="nama-team-fl">My name is one</div>
+                <div class="job-team-fl">Web Developer</div>
+                <p align="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores mollitia</p>
+                <div class="skill">
+                  <div class="fl basic-skill">HTML</div>
+                  <div class="progress custom-00-progress-bar">
+                    <div class="progress-bar custom-00-progress-bar2">
+                      <img src="/fal_website_blocks/static/src/img/snippet/pg-70.png"/>
+                    </div>
+                  </div>
+                  <div class="fr range-skill">70%</div>
+                  <div class="clear"></div>
+                </div>
+                <div class="skill">
+                  <div class="fl basic-skill">PYTHON</div>
+                  <div class="progress custom-00-progress-bar">
+                    <div class="progress-bar custom-00-progress-bar2">
+                      <img src="/fal_website_blocks/static/src/img/snippet/pg-90.png"/>
+                    </div>
+                  </div>
+                  <div class="fr range-skill">90%</div>
+                  <div class="clear"></div>
+                </div>
+                <div class="skill">
+                  <div class="fl basic-skill">JAVASCRIPT</div>
+                  <div class="progress custom-00-progress-bar">
+                    <div class="progress-bar custom-00-progress-bar2">
+                      <img src="/fal_website_blocks/static/src/img/snippet/pg-50.png"/>
+                    </div>
+                  </div>
+                  <div class="fr range-skill">50%</div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <!-- /.team-member -->
+            </div>
+            <!-- /.col-md-4 -->
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_background_parallax" name="Background Parallax">
+      <section class="snippet_background_parallax intro-section">
+        <div class="back-00" style="background: rgba(0, 0, 0, 0) url('/fal_website_blocks/static/src/img/snippet/back.jpg') repeat fixed center center / cover ;">
+          <div align="center" class="title-About-us p-top-20">JOBS OFFER</div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="txt">Falinwa is a consulting firm with expertise in Finance, Information System, and Business Intelligence. We are Odoo silver partner in China and choosen as Top Three Best Starter 2014 on Asia Pacific. Our strength is to well understand your business model and your job in order to propose an adapted ERP solution at a competitive cost.
+                  <p>Join us, we offer you an extraordinary chance to learn, to develop and to be part of an exciting experience and team</p>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="trans-jobs fadeinleft animated fadeInLeft wow" data-wow-delay="1s">
+                      <div class="title-job-00">We are HIRING
+                        <br/>
+                        <span>FRONT END DEVELOPER</span>
+                      </div>
+                      <div class="subject0jobs" align="center">We offer you the opportunity to join a popular open source project and receive technical and functional Odoo training before you started work on the project.  Also, a great experience in state-of-the-art web technologies and agile development in a nice working atmosphere with a young and passionate team.
+                        And last but not least, we will offer you a full-time job with an attractive salary
+                        <a class="green-000" href="">Read more...</a>
+                      </div>
+                      <div align="center">
+                        <img src="/fal_website_blocks/static/src/img/snippet/1.png"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="trans-jobs fadeinleft animated fadeInLeft wow" data-wow-delay="1s">
+                      <div class="title-job-00">We are HIRING
+                        <br/>
+                        <span>BACK END DEVELOPER</span>
+                      </div>
+                      <div class="subject0jobs" align="center">We offer you the opportunity to join a popular open source project and receive technical and functional Odoo training before you started work on the project.  Also, a great experience in state-of-the-art web technologies and agile development in a nice working atmosphere with a young and passionate team.
+                        And last but not least, we will offer you a full-time job with an attractive salary
+                        <a class="green-000" href="">Read more...</a>
+                      </div>
+                      <div align="center">
+                        <img src="/fal_website_blocks/static/src/img/snippet/2.png" height="109"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div align="center">
+            <div class="center-100-px">
+              <a href="team.html">
+                <div class="more-plus none-b">more +</div>
+              </a>
+            </div>
+            <div class="p-bottom-20"></div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_three_table_hover-2" name="Three Table Hover">
+      <section class="snippet_three_table_hover-2 intro-section" id="enam">
+        <div class="container wow fadeInDown animated" data-wow-delay="1s">
+          <div align="center" class="title-About-us p-top-20">REFERENCES AND PARTNERSHIP</div>
+          <div class="row">
+            <div class="col-md-4 wow fadeInLeft animated" data-wow-delay="1s">
+              <div class="custom-col-one-4">
+                <div class="title-partner-00">GRANITY 01</div>
+                <div>
+                  <img  class="img-responsive img-fal-partner" src="/fal_website_blocks/static/src/img/snippet/solution.jpg"/>
+                </div>
+                <div align="center" class="p-top-bottom-10">
+                  <div class="nama-partner-00">A wine bar implemented Odoo Online two years ago. From Inventory to Point of Sales, discover how they are managing and selling their wines....</div>
+                  <div class="cover-bottom">
+                    <div class="fl">
+                      <img src="/fal_website_blocks/static/src/img/snippet/image_small.png"/>
+                    </div>
+                    <div class="fr discover">
+                      <a href="partner.html">DISCOVER</a>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 wow fadeInLeft animated" data-wow-delay="1s">
+              <div class="custom-col-one-4">
+                <div class="title-partner-00">GRANITY 01</div>
+                <div>
+                  <img  class="img-responsive img-fal-partner" src="/fal_website_blocks/static/src/img/snippet/solution.jpg"/>
+                </div>
+                <div align="center" class="p-top-bottom-10">
+                  <div class="nama-partner-00">A wine bar implemented Odoo Online two years ago. From Inventory to Point of Sales, discover how they are managing and selling their wines....</div>
+                  <div class="cover-bottom">
+                    <div class="fl">
+                      <img src="/fal_website_blocks/static/src/img/snippet/image_small.png"/>
+                    </div>
+                    <div class="fr discover">
+                      <a href="">DISCOVER</a>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 wow fadeInLeft animated" data-wow-delay="1s">
+              <div class="custom-col-one-4">
+                <div class="title-partner-00">GRANITY 01</div>
+                <div>
+                  <img  class="img-responsive img-fal-partner" src="/fal_website_blocks/static/src/img/snippet/solution.jpg"/>
+                </div>
+                <div align="center" class="p-top-bottom-10">
+                  <div class="nama-partner-00">A wine bar implemented Odoo Online two years ago. From Inventory to Point of Sales, discover how they are managing and selling their wines....</div>
+                  <div class="cover-bottom">
+                    <div class="fl">
+                      <img src="/fal_website_blocks/static/src/img/snippet/image_small.png"/>
+                    </div>
+                    <div class="fr discover">
+                      <a href="">DISCOVER</a>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_contact_us" name="Contact Us">
+      <section class="snippet_contact_us intro-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 wow fadeInDown animated" data-wow-delay="1s">
+              <div class="title-About-us p-top-20 o_default_snippet_text" align="center">CONTACT US</div>
+              <form name="" action="" method="post" class="wpcf7-form">
+                <div id="name">
+                  <span class="wpcf7-form-control-wrap your-name">
+                    <input name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" type="text"/>
+                  </span>
+                </div>
+                <div id="mail">
+                  <span class="wpcf7-form-control-wrap your-email">
+                    <input name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email Address" type="email"/>
+                  </span>
+                </div>
+                <div id="subject">
+                  <span class="wpcf7-form-control-wrap your-subject">
+                    <input name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Phone" type="text"/>
+                  </span>
+                </div>
+                <div id="comment-text">
+                  <span class="wpcf7-form-control-wrap your-message">
+                    <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Message"/>
+                  </span>
+                  <br/>
+                  <input value="Submit" class="wpcf7-form-control wpcf7-submit" type="submit"/>
+                </div>
+              </form>
+            </div>
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12 xs-custom-fal animated fadeInLeft wow" data-wow-delay="1s">
+                <div class="address-one o_default_snippet_text">Office Falinwa China</div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-phone custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">(086)-755-86586490</div>
+                  <div class="clear"/>
+                </div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-map-marker custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">21/F, On Hing Building 1 On Hing Terrace Central Hongkong , China HongKong China</div>
+                  <div class="clear"/>
+                </div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-mail-reply custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">nrc@falinwa.com</div>
+                  <div class="clear"/>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12 xs-custom-fal animated fadeInLeft wow" data-wow-delay="1s">
+                <div class="address-one o_default_snippet_text">Office Falinwa China</div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-phone custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">(086)-755-86586490</div>
+                  <div class="clear"/>
+                </div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-map-marker custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">21/F, On Hing Building 1 On Hing Terrace Central Hongkong , China HongKong China</div>
+                  <div class="clear"/>
+                </div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-mail-reply custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">nrc@falinwa.com</div>
+                  <div class="clear"/>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12 xs-custom-fal animated fadeInLeft wow" data-wow-delay="1s">
+                <div class="address-one o_default_snippet_text">Office Falinwa China</div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-phone custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">(086)-755-86586490</div>
+                  <div class="clear"/>
+                </div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-map-marker custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">21/F, On Hing Building 1 On Hing Terrace Central Hongkong , China HongKong China</div>
+                  <div class="clear"/>
+                </div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-mail-reply custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">nrc@falinwa.com</div>
+                  <div class="clear"/>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12 xs-custom-fal animated fadeInLeft wow" data-wow-delay="1s">
+                <div class="address-one o_default_snippet_text">Office Falinwa China</div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-phone custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">(086)-755-86586490</div>
+                  <div class="clear"/>
+                </div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-map-marker custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">21/F, On Hing Building 1 On Hing Terrace Central Hongkong , China HongKong China</div>
+                  <div class="clear"/>
+                </div>
+                <div class="address-fal">
+                  <div class="address-fal-00">
+                    <i class="fa fa-mail-reply custom-item-fal"/>
+                  </div>
+                  <div class="address-fal-01 o_default_snippet_text">nrc@falinwa.com</div>
+                  <div class="clear"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_slider-animation" name="Effect Slider">
+      <section class="snippet_slider-animation">
+        <div style="width:100%; height:auto;">
+          <div id="carousel-example-generic" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <!-- First slide -->
+              <div class="item active deepskyblue">
+                <img src="/fal_website_blocks/static/src/img/snippet/business-01.jpg"/>
+              </div>
+              <!-- /.item -->
+              <!-- Second slide -->
+              <div class="item deepskyblue">
+                <img src="/fal_website_blocks/static/src/img/snippet/business-01.jpg"/>
+              </div>
+              <!-- /.item -->
+              <!-- Third slide -->
+              <div class="item deepskyblue">
+                <img src="/fal_website_blocks/static/src/img/snippet/business-01.jpg"/>
+              </div>
+              <!-- /.item -->
+            </div>
+            <!-- /.carousel-inner -->
+          </div>
+          <!-- /.carousel -->
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_content_about_us" name="Content About Us">
+      <section class="content_about_us">
+        <div class="oe_structure">
+          <div class="container wow fadeInDown"  data-wow-delay="1s">
+            <div class="title-About-us p-top-30" align="center">ABOUT US</div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-lg-4 custom-fal-colsx">
+                    <div class="img00-fal-about-us-001">
+                      <img src="/fal_website_blocks/static/src/img/snippet/people01.png" class="img-responsive img00-fal-about-us"/>
+                    </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="fl kutip">
+                      <img src="/fal_website_blocks/static/src/img/snippet/kutio.png"/>
+                    </div>
+                    <div class="fl about-us-fal-title-name">I am Mr. CEO,
+                      <br/>
+                      <span>CEO FALINWA.COM</span>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="back-green">
+                      <div id="sidebar-carousel-1" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators grey bottom-custom-one">
+                          <li data-target="#sidebar-carousel-1" data-slide-to="0" class="active"></li>
+                          <li data-target="#sidebar-carousel-1" data-slide-to="1"></li>
+                          <li data-target="#sidebar-carousel-1" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <a href="" data-lightbox="image-1" title="">
+                              <div class="about-us-artikel">Nicolas created FALINWA Limited in July 2009 in Hong Kong and its branch FALINWA China in November 2011. Nicolas is the sole shareholder and director.
+                                Nicolas has a double financial mathematics curriculum (Ph.D. in June 2007 at the University of Nice) and business school (EDHEC 2002). This training provides him a solid foundation in corporate finance and financial markets.
+                                After his thesis done, he took the path of Africa and microcredit rather than the trading rooms of London by envy and ethical choice. One project led to the creation f an e-commerce jewelry and Tuareg objects - artetiq.com.
+                                Arrived in China in late 2008, Nicolas studied Mandarin in a semester before creating FALINWA and start the first mission in July 2009.
+                                Nicolas 6 years of rich and disparate experiences both in the trades (consulting, higher education, research, training, fair trade) and countries (China, Niger, Finland, France) gave an accomplished and singular vision to his work as consultant</div>
+                            </a>
+                          </div>
+                          <div class="item">
+                            <a href="" data-lightbox="image-2" title="">
+                              <div class="about-us-artikel">Nicolas created FALINWA Limited in July 2009 in Hong Kong and its branch FALINWA China in November 2011. Nicolas is the sole shareholder and director.
+                                Nicolas has a double financial mathematics curriculum (Ph.D. in June 2007 at the University of Nice) and business school (EDHEC 2002). This training provides him a solid foundation in corporate finance and financial markets.
+                                After his thesis done, he took the path of Africa and microcredit rather than the trading rooms of London by envy and ethical choice. One project led to the creation of an e-commerce jewelry and Tuareg objects - artetiq.com.
+                                Arrived in China in late 2008, Nicolas studied Mandarin in a semester before creating FALINWA and start the first mission in July 2009.
+                                Nicolas 6 years of rich and disparate experiences both in the trades (consulting, higher education, research, training, fair trade) and countries (China, Niger, Finland, France) gave an accomplished and singular vision to his work as consultant</div>
+                            </a>
+                          </div>
+                          <div class="item">
+                            <a href="" data-lightbox="image-3" title="">
+                              <div class="about-us-artikel">Nicolas created FALINWA Limited in July 2009 in Hong Kong and its branch FALINWA China in November 2011. Nicolas is the sole shareholder and director.
+                                Nicolas has a double financial mathematics curriculum (Ph.D. in June 2007 at the University of Nice) and business school (EDHEC 2002). This training provides him a solid foundation in corporate finance and financial markets.
+                                After his thesis done, he took the path of Africa and microcredit rather than the trading rooms of London by envy and ethical choice. One project led to the creation of an e-commerce jewelry and Tuareg objects - artetiq.com.
+                                Arrived in China in late 2008, Nicolas studied Mandarin in a semester before creating FALINWA and start the first mission in July 2009.
+                                Nicolas 6 years of rich and disparate experiences both in the trades (consulting, higher education, research, training, fair trade) and countries (China, Niger, Finland, France) gave an accomplished and singular vision to his work as consultant</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grib">
+                        <img src="/fal_website_blocks/static/src/img/snippet/grib.png"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_content_banner_us" name="Banner Static">
+      <section class="content_banner_us">
+        <div class="banner-section000">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="position-x01">
+                  <div class="title-section-banner000 animated fadeInLeft wow animated" data-wow-delay="1s">Lorem Ipsum Sit ,dolor ame</div>
+                  <div class="sub-title-section-banner000 animated fadeInLeft wow animated" data-wow-delay="1s">Get your inside sales (CRM) fully integrated with online sales (eCommerce), in-store sales (Point of Sale) and marketplaces like eBay and Amazon.</div>
+                  <div class="fl re-xustom-old animated fadeInLeft wow animated" data-wow-delay="1s">
+                    <img src="/fal_website_blocks/static/src/img/snippet/old.png"/>
+                  </div>
+                  <div class="fl xestum-old0-1 animated fadeInLeft wow animated" data-wow-delay="1s">__My name is Hans Yonathan
+                    <br/>
+                    General Manager Falinwa.com</div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_content_three_bar" name="Three bar">
+      <section class="content_three_bar">
+        <div class="container">
+          <div class="row">
+            <div class="m-top-bottom-40px">
+              <div class="col-md-4 animated fadeInLeft wow animated" data-wow-delay="1s">
+                <div align="center">
+                  <img src="/fal_website_blocks/static/src/img/snippet/bar-1.png" class="img-responsive"/>
+                </div>
+                <div class="xs-fl-bar">
+                  <div class="title-bar-aboutus">Bussiness Plan</div>
+                  <div class="exp-bar-aboutus">Exp 4 years</div>
+                  <div class="detail-bar-00">Nicholas loves taking on challenges. With his 5-year experience as Commercial Director in the software industry, Xavier has helped Odoo to get where it is today. Xavier is, among other things, in charge of the partners' network recruitment and development</div>
+                </div>
+              </div>
+              <div class="col-md-4 animated fadeInLeft wow animated" data-wow-delay="1s">
+                <div align="center">
+                  <img src="/fal_website_blocks/static/src/img/snippet/bar-2.png" class="img-responsive"/>
+                </div>
+                <div class="xs-fl-bar">
+                  <div class="title-bar-aboutus">Front End Developer</div>
+                  <div class="exp-bar-aboutus">Exp 1 years</div>
+                  <div class="detail-bar-00">Nicholas loves taking on challenges. With his 5-year experience as Commercial Director in the software industry, Xavier has helped Odoo to get where it is today. Xavier is, among other things, in charge of the partners' network recruitment and development</div>
+                </div>
+              </div>
+              <div class="col-md-4 animated fadeInLeft wow animated" data-wow-delay="1s">
+                <div align="center">
+                  <img src="/fal_website_blocks/static/src/img/snippet/bar-3.png" class="img-responsive"/>
+                </div>
+                <div class="xs-fl-bar">
+                  <div class="title-bar-aboutus">Back End Developer</div>
+                  <div class="exp-bar-aboutus">Exp 2 years</div>
+                  <div class="detail-bar-00">Nicholas loves taking on challenges. With his 5-year experience as Commercial Director in the software industry, Xavier has helped Odoo to get where it is today. Xavier is, among other things, in charge of the partners' network recruitment and development</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_content_maps_bar" name="Maps Static Bar">
+      <section class="content_maps_bar">
+        <div class="back-f9 m-top-bottom-40px">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 ">
+                <div class="in-peta" style="background:url(/fal_website_blocks/static/src/img/snippet/world.gif);">
+                  <div class="row">
+                    <div class="martop">
+                      <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="panel-edit animated fadeInLeft wow animated" data-wow-delay="1s">
+                          <div class="address-one">Office Falinwa China</div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-phone custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">(086)-755-86586490</div>
+                            <div class="clear"></div>
+                          </div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-map-marker custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">21/F, On Hing Building 1 On  Hing Terrace Central Hongkong , China HongKong China</div>
+                            <div class="clear"></div>
+                          </div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-mail-reply custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">nrc@falinwa.com</div>
+                            <div class="clear"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="panel-edit animated fadeInLeft wow animated" data-wow-delay="1s">
+                          <div class="address-one">Office Falinwa China</div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-phone custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">(086)-755-86586490</div>
+                            <div class="clear"></div>
+                          </div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-map-marker custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">21/F, On Hing Building 1 On  Hing Terrace Central Hongkong , China HongKong China</div>
+                            <div class="clear"></div>
+                          </div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-mail-reply custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">nrc@falinwa.com</div>
+                            <div class="clear"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="panel-edit animated fadeInLeft wow animated" data-wow-delay="1s">
+                          <div class="address-one">Office Falinwa China</div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-phone custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">(086)-755-86586490</div>
+                            <div class="clear"></div>
+                          </div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-map-marker custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">21/F, On Hing Building 1 On  Hing Terrace Central Hongkong , China HongKong China</div>
+                            <div class="clear"></div>
+                          </div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-mail-reply custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">nrc@falinwa.com</div>
+                            <div class="clear"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="panel-edit animated fadeInLeft wow animated" data-wow-delay="1s">
+                          <div class="address-one">Office Falinwa China</div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-phone custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">(086)-755-86586490</div>
+                            <div class="clear"></div>
+                          </div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-map-marker custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">21/F, On Hing Building 1 On  Hing Terrace Central Hongkong , China HongKong China</div>
+                            <div class="clear"></div>
+                          </div>
+                          <div class="address-fal">
+                            <div class="address-fal-00" align="center">
+                              <i class="fa fa-mail-reply custom-item-fal"></i>
+                            </div>
+                            <div class="address-fal-01">nrc@falinwa.com</div>
+                            <div class="clear"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_block_contact_us" name="Block Contact Us">
+      <section class="block_contact_us">
+        <div class="container wow fadeInDown"  data-wow-delay="1s">
+          <div class="row">
+            <div class="col-md-12 back-f9-00 m-top-bottom-40px">
+              <div class="col-md-10">
+                <div class="title-block-direct">Find out how we can help you !</div>
+                <div class="title-block-direct-00">Outsourced CFO 's aim is to help your company successfully navigate it's financial function and bussiness environment</div>
+              </div>
+              <div class="col-md-2">
+                <a href="">
+                  <div class="bg-00" align="center">CONTACT US TODAY !</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_block_partner_testimonial" name="Block Testimonial">
+      <section class="block_partner_testimonial wow fadeInDown"  data-wow-delay="1s">
+        <article>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="title-About-us p-bottom-40" align="center">TESTIMONIAL CLIENT</div>
+                <div class="col-md-6">
+                  <div class="quote">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.</p>
+                  </div>
+                  <div class="student">
+                    <div class="photo round-image">
+                      <img src="/fal_website_blocks/static/src/img/snippet/old.png"/>
+                    </div>
+                    <p>Don Know</p>
+                    <p>Important person, some Company</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="quote">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.</p>
+                  </div>
+                  <div class="student">
+                    <div class="photo round-image">
+                      <img src="/fal_website_blocks/static/src/img/snippet/old.png"/>
+                    </div>
+                    <p>Pablo Napp</p>
+                    <p>Important person, some Company</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </template>
+    
+    <template id="snippet_block_services_00" name="Block Services">
+      <section class="block_services_00 wow fadeInDown"  data-wow-delay="1s">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="m-top-bottom-40px">
+                  <div class="title-About-us p-bottom-40" align="center">OUTSOURCED FINANCIAL TASK FORCE</div>
+                  <div class="col-md-5">
+                    <div class="link-services">
+                      <a href="">OUTSOURCED FINANCIAL TASK FORCE</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">OUTSOURCED CFO / CIO</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">ODOO GOLD PARTNER</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">WEBSITE BUILDER AND E-COMMERCE</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div>
+                      <img src="/fal_website_blocks/static/src/img/snippet/sales_cfo.jpg" class="img-responsive" title="Falinwa.com" alt="Falinwa.com"/>
+                    </div>
+                    <div class="detail-partner-artikel-00 p-bottom-20 p-top-30">
+                      <p>An increasing number of businesses are now realising the benefits of outsourcing functions such as bookkeeping and payroll, saving valuable time and money that could be put to better use elsewhere within their organisation.</p>
+                      <p>The same applies to the function of a finance director. You may find it difficult to run your business while trying to keep an eye on your finances at the same time, but may not have resources to employ a full-time finance director or your requirements may only cover a very specific period of time.</p>
+                      <p>This is where our outsourced finance director service can help. Outsourcing ensures that important duties are taken care of without the additional cost and burden of taking on more staff, leaving you free to do what you do best – running your business.This is where our outsourced finance director service can help. Outsourcing ensures that important duties are taken care of without the additional cost and burden of taking on more staff, leaving you free to do what you do best – running your business.This is where our outsourced finance director service can help. Outsourcing ensures that important duties are taken care of without the additional cost and burden of taking on more staff, leaving you free to do what you do best – running your business.</p>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="p-bottom-40 fadeInDown animated wow"  data-wow-delay="1s">
+                  <div class="col-lg-3">
+                    <div class="block-trans" align="center" style="background:url(/fal_website_blocks/static/src/img/snippet/transparan-green.png);">
+                      <div class="trans-icons" align="center">
+                        <i class="fa fa-suitcase fa-custom-trans-icon"></i>
+                      </div>
+                      <div class="icon-title-trans-00" align="center">Creating the business plan</div>
+                    </div>
+                    <div class="p-bottom-30 p-top-20 detail-partner-artikel-00" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tellus eu tortor vehicula suscipit nec vitae tortor. Curabitur sit amet turpis ac diam gravida laoreet. Sed mauris ligula, gravida finibus tincidunt a, sodales non erat. Maecenas at, suscipit metus</div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="block-trans" align="center" style="background:url(/fal_website_blocks/static/src/img/snippet/transparan-green.png);">
+                      <div class="trans-icons" align="center">
+                        <i class="fa fa-book fa-custom-trans-icon"></i>
+                      </div>
+                      <div class="icon-title-trans-00" align="center">Study funding</div>
+                    </div>
+                    <div class="p-bottom-30 p-top-20 detail-partner-artikel-00" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tellus eu tortor vehicula suscipit nec vitae tortor. Curabitur sit amet turpis ac diam gravida laoreet. Sed mauris ligula, gravida finibus tincidunt a, sodales non erat. Maecenas at, suscipit metus</div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="block-trans" align="center" style="background:url(/fal_website_blocks/static/src/img/snippet/transparan-green.png);">
+                      <div class="trans-icons" align="center">
+                        <i class="fa fa-area-chart fa-custom-trans-icon"></i>
+                      </div>
+                      <div class="icon-title-trans-00" align="center">Administrative support</div>
+                    </div>
+                    <div class="p-bottom-30 p-top-20 detail-partner-artikel-00" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tellus eu tortor vehicula suscipit nec vitae tortor. Curabitur sit amet turpis ac diam gravida laoreet. Sed mauris ligula, gravida finibus tincidunt a, sodales non erat. Maecenas at, suscipit metus</div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="block-trans" align="center" style="background:url(/fal_website_blocks/static/src/img/snippet/transparan-green.png);">
+                      <div class="trans-icons" align="center">
+                        <i class="fa fa-money fa-custom-trans-icon"></i>
+                      </div>
+                      <div class="icon-title-trans-00" align="center">Venture capital FALINWA</div>
+                    </div>
+                    <div class="p-bottom-30 p-top-20 detail-partner-artikel-00" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tellus eu tortor vehicula suscipit nec vitae tortor. Curabitur sit amet turpis ac diam gravida laoreet. Sed mauris ligula, gravida finibus tincidunt a, sodales non erat. Maecenas at, suscipit metus</div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_block_image_static" name="Block Image Static">
+      <section class="block_image_static">
+        <div class="static-img000">
+          <img class="img-responsive static-img" width="100%" src="/fal_website_blocks/static/src/img/snippet/cfo.jpg"/>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_block_cfo_static" name="Block Cfo Static">
+      <section class="block_cfo_static">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="m-top-bottom-40px">
+                  <div class="title-About-us p-bottom-40" align="center">OUTSOURCED CFO</div>
+                  <div class="col-md-5">
+                    <div class="link-services">
+                      <a href="">OUTSOURCED FINANCIAL TASK FORCE</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">OUTSOURCED CFO / CIO</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">ODOO GOLD PARTNER</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">WEBSITE BUILDER AND E-COMMERCE</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div>
+                      <img src="/fal_website_blocks/static/src/img/snippet/cfo-3.jpg" class="img-responsive" title="Falinwa.com" alt="Falinwa.com"/>
+                    </div>
+                    <div class="detail-partner-artikel-00 p-bottom-20 p-top-30">the same time, but may not have resources to employ a full-time finance director or your requirements may only cover a very specific period of time.
+                      <p>During the first intervention, a significant time should be given to the team for both the train and get them used to the new organization. The presence in the offices of external CFO is rare, it is important to establish from the start a relationship of trust between the team and the external CFO.</p>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="f8f5f5-padd">
+                <div class="row">
+                  <div class="col-md-12" align="center">
+                    <img src="/fal_website_blocks/static/src/img/snippet/peoople-think.png"/>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="detail-partner-artikel-00 p-bottom-20 p-top-20">
+                      <div class="block-cfo" align="left">
+                        <p>
+                          <p class="bold-000-ft">1. Management of the finance department</p>
+                          <p>The management of the finance department is done in tandem with management (or management assistant) which is operational and FALINWA leader who acts as a functional head. This dual management - and its inclusion in the organization - is important for the legitimacy of financial management to the finance department. During the first intervention, a significant time should be given to the team for both the train and get them used to the new organization. The presence in the offices of external CFO is rare, it is important to establish from the start a relationship of trust between the team and the external CFO.
+                            The role of the CFO FALINWA as a functional leader is:</p>
+                          <p>Defining the scope / procedures of each member of finance department.
+                            Training concepts / tables used for financial management of the company.
+                            Checking job done / correction and explanation.
+                            Quarterly maintenance.
+                            If the finance department consists of several persons, CFO FALINWA will rely on an internal assistant to the company. For technical questions, employees can ask questions directly to the CFO FALINWA (email, phone).</p>
+                        </p>
+                        <p>
+                          <p class="bold-000-ft">2. Produce reporting and performance indicators, conduct financial analysis</p>
+                          <p>The second role of the CFO is to produce FALINWA for management of reports, allowing to have an overview of the health of the business and performance indicators to better assess the axes of development possible.
+                            The summary tables are made by the CFO FALINWA for the following reasons:</p>
+                          <p>Verification, consolidation and correction tables managed by the finance department.
+                            Management of confidential information: integration costs of salaries, margin calculations, ...
+                            IT and financial skills: the production of summary tables requires both a mastery of computer skills and a clear vision of the synthesis.
+                            The purpose of performance indicators - illustrated with graphic - is to report to the director only relevant information for decision making: overall health of the business, cash flow statement, margin projects, variable costs and fixed the company by cost ...</p>
+                          <p>The analysis associated with these tables allows the Director to get an outside perspective on the health and development of the company. As any CFO, CFO FALINWA becomes a privileged partner of the director.</p>
+                        </p>
+                        <p>
+                          <p class="bold-000-ft">3. Develop a suitable financial management</p>
+                          <p>The establishment of an external financial management often involves the overhaul of the financial management of the company and the development of a responsive enterprise solution. The work of setting up bases is performed early collaboration through an assignment of one or two months - Mission to understanding the company, its stakeholders and its operation, develop custom tools and integrate the Director financial FALINWA in running the business. Excel is the preferred software as it adapts to the needs of a large number of SMEs. The establishment of an ERP Odoo type can also be studied.</p>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_block_jobs_static" name="Block Jobs Static">
+      <section class="block_jobs_static">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="fadeInDown animated wow m-top-bottom-40px"  data-wow-delay="1s">
+                <div class="title-About-us p-bottom-40" align="center">JOBS OFFER</div>
+                <div class="jobs-text-00">Junior Front End Developer</div>
+                <div class="jobs-text-01">A front-end developer architects and develops websites and applications using web technologies (i.e. HTML, CSS, and JavaScript) which run natively in a web browser or act as compilation input for non-web browser environments (e.g. PhoneGap or Tidesdk).We offer you the opportunity to join a popular open source project and receive technical and functional Odoo training before you started work on the project.  Also, a great experience in state-of-the-art web technologies and agile development in a nice working atmosphere with a young and passionate team.
+                  And last but not least, we will offer you a full-time job with an attractive salary and benefits package after the internship program.</div>
+                <div class="jobs-text-02">Qualifications</div>
+                <div class="p-bottom-20">
+                  <p>- Responsive progamming skills</p>
+                  <p>- Expert knowlegde of HTML5 and Css</p>
+                  <p>- JQUERY, Javascrpt, AJAX and JASON</p>
+                  <p>- Experience in concept Developmet for the website</p>
+                  <p>- Resposive Progamming Skill- Understanding PHP and My SQL</p>
+                  <p>- Photoshop Design</p>
+                  <p>- Understanding User Interface</p>
+                  <p>- Understanding User Experience</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="custom-col-one-4 border-green-000 fadeInLeft wow animated" data-wow-delay="1s">
+                  <div class="box-jobs-00" align="center">MUST HAVE</div>
+                  <div class="jobs-box-00">Major in Engineering, IS/IT, or Computer Science.</div>
+                  <div class="jobs-box-00">Already in more than 5th semester in college.</div>
+                  <div class="jobs-box-00">Interest for enterprise application development.</div>
+                  <div class="jobs-box-00">Can do a development with any programing language</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="custom-col-one-4 border-green-000 fadeInLeft wow animated" data-wow-delay="1s">
+                  <div class="box-jobs-00" align="center">NICE TO HAVE</div>
+                  <div class="jobs-box-00">Major in Engineering, IS/IT, or Computer Science.</div>
+                  <div class="jobs-box-00">Already in more than 5th semester in college.</div>
+                  <div class="jobs-box-00">Interest for enterprise application development.</div>
+                  <div class="jobs-box-00">Can do a development with any programing language</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="custom-col-one-4 border-green-000 fadeInLeft wow animated" data-wow-delay="1s">
+                  <div class="box-jobs-00" align="center">VALUES</div>
+                  <div class="jobs-box-00">Major in Engineering, IS/IT, or Computer Science.</div>
+                  <div class="jobs-box-00">Already in more than 5th semester in college.</div>
+                  <div class="jobs-box-00">Interest for enterprise application development.</div>
+                  <div class="jobs-box-00">Can do a development with any programing language</div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="wow fadeInDown"  data-wow-delay="1s">
+                  <div class="p-top-30 p-bottom-40" align="center"></div>
+                  <form name="" action="" method="post" class="wpcf7-form">
+                    <div id="name">
+                      <span class="wpcf7-form-control-wrap your-name">
+                        <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name"/>
+                      </span>
+                    </div>
+                    <div id="mail">
+                      <span class="wpcf7-form-control-wrap your-email">
+                        <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email Address"/>
+                      </span>
+                    </div>
+                    <div id="subject">
+                      <span class="wpcf7-form-control-wrap your-subject">
+                        <input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Phone"/>
+                      </span>
+                    </div>
+                    <div id="comment-text">
+                      <span class="wpcf7-form-control-wrap your-message">
+                        <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Subject"></textarea>
+                      </span>
+                    </div>
+                    <div id="comment-text">
+                      <span class="wpcf7-form-control-wrap your-message">
+                        <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Message"></textarea>
+                      </span>
+                      <br/>
+                      <div align="center">
+                        <input type="file" style="text-align:center" />
+                      </div>
+                      <br/>
+                      <input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit"/>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="p-bottom-40"></div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_block_img_01_static" name="Block Image Static 01">
+      <section class="block_image_static_01">
+        <div class="banner-section000">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="position-x01">
+                  <div  data-wow-delay="1s" class="title-section-banner000 animated fadeInLeft wow animated o_default_snippet_text animated animated">Lorem Ipsum Sit ,dolor ame</div>
+                  <div  data-wow-delay="1s" class="sub-title-section-banner000 animated fadeInLeft wow animated o_default_snippet_text animated animated">Get your inside sales (CRM) fully integrated with online sales (eCommerce), in-store sales (Point of Sale) and marketplaces like eBay and Amazon.</div>
+                  <div data-wow-delay="1s" class="fl re-xustom-old animated fadeInLeft wow animated animated animated animated">
+                    <a href="">
+                      <div align="center" style="padding:12px;" class="bg-00 o_default_snippet_text">CONTACT US TODAY !</div>
+                    </a>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_block_odoo_static" name="Block Odoo Static 01">
+      <section class="block_odoo_static">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="p-top-30 p-bottom-10">
+                  <div align="center" class="title-About-us p-bottom-40">ODOO GOLD PARTNER</div>
+                  <div class="col-md-5">
+                    <div class="link-services">
+                      <a href="">OUTSOURCED FINANCIAL TASK FORCE</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">OUTSOURCED CFO / CIO</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">ODOO GOLD PARTNER</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">WEBSITE BUILDER AND E-COMMERCE</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div>
+                      <img alt="Falinwa.com" title="Falinwa.com" class="img-responsive" src="/fal_website_blocks/static/src/img/snippet/ir_attachment_s57.png"/>
+                    </div>
+                    <div class="detail-partner-artikel-00 p-bottom-20 p-top-30">
+                      <p>OpenERP S.A. is the software vendor of the Odoo product (formerly OpenERP). OpenERP S.A. is a company founded in 2002 by Fabien Pinckaers, its current CEO. It has now 250 employees, 6 offices (Belgium, US San Francisco, US New York, Luxembourg, India,  Hong Kong) and activities in 110 countries with a vast partner network of more than 500 official partners.</p>
+                      <p>Odoo is the fastest evolving business software in the world. Odoo has now a complete suite of business applications covering all business needs, from Website/Ecommerce down to manufacturing, inventory and accounting, all seamlessly integrated. It is the first time ever a software editor managed to reach such a functional coverage.</p>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="p-bottom-40 p-top-20">
+                <div align="center">
+                  <img src="/fal_website_blocks/static/src/img/snippet/odoo00.png" class="img-responsive"/>
+                </div>
+                <div class="p-top-20" align="left">InventERP is a comprehensive suite of business applications including Sales, CRM, Project Management, Warehouse management, Manufacturing, Financial management, and Human Resources, just to name a few.
+                  The key to continued sales success is effective Customer Relationship Management, and that is precisely the main topic of the book you are reading. InventERP’s CRM and Sales features are flexible and highly developed to assist you in managing all aspects of partner relationships.
+                  InventERP can share information with the most common email clients, calendars and mobile phones, allowing your staff to build on previous productivity and experience by continuing to use familiar email and office systems, now connected to inventERP. In a few clicks, your sales person can transfer necessary information to the inventERP software. You can link important emails to the CRM directly from your current mailbox and even reply from your own mailbox and have the answer stored in your CRM automatically.</div>
+              </div>
+              <div class="p-bottom-40 animated fadeInLeft wow" data-wow-delay="1s">
+                <div class="title-About-us">Odoo (OpenERP) – Simply The best ERP System in Falinwa – Odoo includes the following modules and features:</div>
+                <div class="row">
+                  <div class="col-md-3 m-bottom-20" align="center">
+                    <img src="/fal_website_blocks/static/src/img/snippet/E-invoice_inventERP.jpg"/>
+                  </div>
+                  <div class="col-md-3 m-bottom-20" align="center">
+                    <img src="/fal_website_blocks/static/src/img/snippet/EmployeeAprasial_inventERP.jpg"/>
+                  </div>
+                  <div class="col-md-3 m-bottom-20" align="center">
+                    <img src="/fal_website_blocks/static/src/img/snippet/ExpenseManagement_inventERP.jpg"/>
+                  </div>
+                  <div class="col-md-3 m-bottom-20" align="center">
+                    <img src="/fal_website_blocks/static/src/img/snippet/payrol_inventERP.jpg"/>
+                  </div>
+                  <div class="col-md-3 m-bottom-20" align="center">
+                    <img src="/fal_website_blocks/static/src/img/snippet/PointofSales_inventERP.jpg"/>
+                  </div>
+                  <div class="col-md-3 m-bottom-20" align="center">
+                    <img src="/fal_website_blocks/static/src/img/snippet/projectManagement_inventERP.jpg"/>
+                  </div>
+                  <div class="col-md-3 m-bottom-20" align="center">
+                    <img src="/fal_website_blocks/static/src/img/snippet/Accounting_InventERP.jpg"/>
+                  </div>
+                  <div class="col-md-3 m-bottom-20" align="center">
+                    <img src="/fal_website_blocks/static/src/img/snippet/Assets_inventERP.jpg"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_block_web_builder_static" name="Block Web Static">
+      <section class="block_web_builder_static">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="p-top-30 p-bottom-10">
+                  <div align="center" class="title-About-us p-bottom-40">ODOO GOLD PARTNER</div>
+                  <div class="col-md-5">
+                    <div class="link-services">
+                      <a href="">OUTSOURCED FINANCIAL TASK FORCE</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">OUTSOURCED CFO / CIO</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">ODOO GOLD PARTNER</a>
+                    </div>
+                    <div class="link-services">
+                      <a href="">WEBSITE BUILDER AND E-COMMERCE</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div>
+                      <img alt="Falinwa.com" title="Falinwa.com" class="img-responsive" src="/fal_website_blocks/static/src/img/snippet/making-websites.png"/>
+                    </div>
+                    <div class="detail-partner-artikel-00 p-bottom-20 p-top-30">
+                      <p>Odoo's unique 'edit inline' and building blocks approach makes creating product pages surprisingly easy. "Do you want to change the price of a product? Or to put it in bold? Do you want to add a banner for a specific product?" Just click and change. What you see is what you get. Really.
+                        Drag and Drop well-designed 'Building Blocks' to create beautiful product pages. Your customers will love i.</p>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="p-bottom-40 p-top-20 animated fadeInLeft wow" data-wow-delay="1s">
+                <div align="center">
+                  <img src="/fal_website_blocks/static/src/img/snippet/de5204_6b1308eccb1b697cd8079a0be4699d80.png" class="img-responsive"/>
+                </div>
+                <div class="p-top-20 animated fadeInLeft wow" data-wow-delay="1s" align="left">Odoo's e-Commerce software is unlike anything you have ever seen before. Get an awesome catalog of products and great product description pages.
+                  It's full-featured, integrated with your management software, fully customizable and super easy.
+                  Produce customer invoices in just a few clicks. Control sales and cash in real time and use Odoo's powerful reporting to make smarter decisions and improve your online store's efficiency.
+                  No more hassle with integrating a variety of software: get all your sales and inventory operations automatically posted in your G/L.</div>
+              </div>
+              <div>
+                <div class="title-About-us p-bottom-30 animated fadeInLeft wow" data-wow-delay="1s" align="center" style="text-transform:uppercase">Odoo Gold Partnership</div>
+                <div align="center animated fadeInLeft wow" data-wow-delay="1s">
+                  <img src="/fal_website_blocks/static/src/img/snippet/banFR.jpg" class="img-responsive"/>
+                </div>
+                <div class="p-top-20 animated fadeInLeft wow" data-wow-delay="1s" align="left">Drishti Tech has signed an Agreement with OpenERP S.A. via its Indian Subsidiary Tiny ERP pvt ltd to become an Odoo Gold Partner. Our quick growth to the pinnacle of Odoo Partnership levels has been attributed solely on the performance and dedication of our strong team.
+                  Along with this honour comes a very clear responsibility, which Drishti intends to surpass. The company is expanding its resource strength to cater to a much larger variety of industries and geographies. We are focused on Enterprise grade adoption of Odoo and have achieved great success and experience working with large businesses. Our target customers are clearly identified by those requiring large scale ERP deployments but have becoming distrusting of the large license fees charged by legacy players. We have also developed a team dedicated to support other Odoo partners deliver high quality, reliable and on time products to their customers. Start up partners leverage tremendous value working with us to understand how to manage projects.
+                  Another major change in our strategy will be the deployment of Odoo for Start Up businesses. Leveraging the Odoo SAAS will make it possible for start ups to enjoy the benefits of a thoroughbred ERP.
+                  The company is geared to take Odoo services to the next level and humbly understands its responsibility of leading the Odoo marketspace in India.  .
+                  .</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_block_image_odoo_static" name="Block Image odoo Static">
+      <section class="block_image_odoo_static">
+        <div class="m-top-bottom-40px animated fadeInLeft wow" data-wow-delay="1s" style="background:#6abf28; padding:30px 0;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div>
+                  <img src="/fal_website_blocks/static/src/img/snippet/oke2.gif" class="img-responsive"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_block_image_odoo_test0003" name="Parallax static animate">
+      <section class="parallax s_parallax"
+            style="background-image: url('/fal_website_blocks/static/src/img/snippet/laptop_sale2.png')"
+            data-scroll-background-ratio="1">
+        <div>
+          <div class="oe_structure"/>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="position-x01">
+                  <div class="title-section-banner000 animated fadeInLeft wow animated" data-wow-delay="1s">Lorem Ipsum Sit ,dolor ame</div>
+                  <div class="sub-title-section-banner000 animated fadeInLeft wow animated" data-wow-delay="1s">Get your inside sales (CRM) fully integrated with online sales (eCommerce), in-store sales (Point of Sale) and marketplaces like eBay and Amazon.</div>
+                  <div class="fl re-xustom-old animated fadeInLeft wow animated" data-wow-delay="1s">
+                    <img src="/fal_website_blocks/static/src/img/snippet/old.png"/>
+                  </div>
+                  <div class="fl xestum-old0-1 animated fadeInLeft wow animated" data-wow-delay="1s">__My name is Hans Yonathan
+                    <br/>
+                    General Manager Falinwa.com</div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <template id="snippet_block_image_odoo_test0004" name="Parallax static home team">
+      <section class="parallax s_parallax"
+            style="background-image: url('/fal_website_blocks/static/src/img/snippet/back.jpg')"
+            data-scroll-background-ratio="1">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div align="center" class="title-About-us p-top-20">JOBS OFFER</div>
+              <div class="txt">Falinwa is a consulting firm with expertise in Finance, Information System, and Business Intelligence. We are Odoo silver partner in China and choosen as Top Three Best Starter 2014 on Asia Pacific. Our strength is to well understand your business model and your job in order to propose an adapted ERP solution at a competitive cost.
+                <p>Join us, we offer you an extraordinary chance to learn, to develop and to be part of an exciting experience and team</p>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <div class="trans-jobs fadeinleft animated fadeInLeft wow" data-wow-delay="1s">
+                    <div class="title-job-00">We are HIRING
+                      <br/>
+                      <span>FRONT END DEVELOPER</span>
+                    </div>
+                    <div class="subject0jobs" align="center">We offer you the opportunity to join a popular open source project and receive technical and functional Odoo training before you started work on the project.  Also, a great experience in state-of-the-art web technologies and agile development in a nice working atmosphere with a young and passionate team.
+                      And last but not least, we will offer you a full-time job with an attractive salary
+                      <a class="green-000" href="">Read more...</a>
+                    </div>
+                    <div align="center">
+                      <img src="/fal_website_blocks/static/src/img/snippet/1.png"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="trans-jobs fadeinleft animated fadeInLeft wow" data-wow-delay="1s">
+                    <div class="title-job-00">We are HIRING
+                      <br/>
+                      <span>BACK END DEVELOPER</span>
+                    </div>
+                    <div class="subject0jobs" align="center">We offer you the opportunity to join a popular open source project and receive technical and functional Odoo training before you started work on the project.  Also, a great experience in state-of-the-art web technologies and agile development in a nice working atmosphere with a young and passionate team.
+                      And last but not least, we will offer you a full-time job with an attractive salary
+                      <a class="green-000" href="">Read more...</a>
+                    </div>
+                    <div align="center">
+                      <img src="/fal_website_blocks/static/src/img/snippet/2.png" height="109"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div align="center">
+          <div class="center-100-px">
+            <a href="team.html">
+              <div class="more-plus none-b">more +</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </template>
+    
+    <record model="ir.attachment">
+      <field name="name">Chart_25</field>
+      <field name="datas_fname">pg-25.png</field>
+      <field name="res_model">ir.ui.view</field>
+      <field name="type">url</field>
+      <field name="url">/fal_website_blocks/static/src/img/snippet/pg-25.png</field>
+    </record>
+    
+    <record model="ir.attachment">
+      <field name="name">Chart_50</field>
+      <field name="datas_fname">pg-50.png</field>
+      <field name="res_model">ir.ui.view</field>
+      <field name="type">url</field>
+      <field name="url">/fal_website_blocks/static/src/img/snippet/pg-50.png</field>
+    </record>
+    
+    <record model="ir.attachment">
+      <field name="name">Chart_70</field>
+      <field name="datas_fname">pg-70.png</field>
+      <field name="res_model">ir.ui.view</field>
+      <field name="type">url</field>
+      <field name="url">/fal_website_blocks/static/src/img/snippet/pg-70.png</field>
+    </record>
+    
+    <record model="ir.attachment">
+      <field name="name">Chart_75</field>
+      <field name="datas_fname">pg-75.png</field>
+      <field name="res_model">ir.ui.view</field>
+      <field name="type">url</field>
+      <field name="url">/fal_website_blocks/static/src/img/snippet/pg-75.png</field>
+    </record>
+    
+     <record model="ir.attachment">
+      <field name="name">Chart_80</field>
+      <field name="datas_fname">pg-80.png</field>
+      <field name="res_model">ir.ui.view</field>
+      <field name="type">url</field>
+      <field name="url">/fal_website_blocks/static/src/img/snippet/pg-80.png</field>
+    </record>
+    
+    <record model="ir.attachment">
+      <field name="name">Chart_90</field>
+      <field name="datas_fname">pg-90.png</field>
+      <field name="res_model">ir.ui.view</field>
+      <field name="type">url</field>
+      <field name="url">/fal_website_blocks/static/src/img/snippet/pg-90.png</field>
+    </record>
+    
+    <record model="ir.attachment">
+      <field name="name">Chart_100</field>
+      <field name="datas_fname">pg-100.png</field>
+      <field name="res_model">ir.ui.view</field>
+      <field name="type">url</field>
+      <field name="url">/fal_website_blocks/static/src/img/snippet/pg-100.png</field>
+    </record>
+    
+    <template id="fal_css_sss" inherit_id="website.assets_frontend" name="Assets for Interactive Map" active="True" customize_show="True">
+      <xpath expr="." position="inside">
+        <link rel="stylesheet" type="text/css" href="/fal_website_blocks/static/src/css/one.css"  t-ignore="true"/>
+        <link rel="stylesheet" type="text/css" href="/fal_website_blocks/static/src/css/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="/fal_website_blocks/static/src/css/ninja-slider.css"/>
+        <script src="/fal_website_blocks/static/src/js/custom.js"></script>
+        <script src="/fal_website_blocks/static/src/js/wow.min.js"></script>
+        <script src="/fal_website_blocks/static/src/js/jquery.easings.min.js"></script>
+        <script src="/fal_website_blocks/static/src/js/scrolling-nav.js"></script>
+      </xpath>
+    </template>
+    
+    <template id="place_into_bar" inherit_id="website.snippets" name="Place into bar">
+      <xpath expr="//div[@id='snippet_effect']" position="after">
+        <div id="fal_blocks" class="o_panel">
+          <div class="o_panel_header">
+            <span class="fa-stack">
+              <i class="fa fa-paper-plane fa-stack-1x"></i>
+            </span>
+            Custom Web Falinwa</div>
+          <div class="o_panel_body">
+            <t t-snippet="fal_website_blocks.snippet_three"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/icon_read_more.png"/>
+            <t t-snippet="fal_website_blocks.snippet_tabs"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/icon_read_tabs.png"/>
+            <t t-snippet="fal_website_blocks.snippet_four_hover_table"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/icon_read_four_04_.png"/>
+            <t t-snippet="fal_website_blocks.snippet_three_table_hover"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/icon_read_team_three.png"/>
+            <t t-snippet="fal_website_blocks.snippet_background_parallax"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/icon_parralax_.png"/>
+            <t t-snippet="fal_website_blocks.snippet_three_table_hover-2"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/icon_read_three_partnership_.png"/>
+            <t t-snippet="fal_website_blocks.snippet_contact_us"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/page-section-contact-us.png"/>
+            <t t-snippet="fal_website_blocks.snippet_about_us"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/about_static.png"/>
+            <t t-snippet="fal_website_blocks.snippet_slider-animation"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/image-slider.png"/>
+            <t t-snippet="fal_website_blocks.snippet_content_about_us"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/page-section-about-us.png"/>
+            <t t-snippet="fal_website_blocks.snippet_content_banner_us"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/image-animate-full-static.png"/>
+            <t t-snippet="fal_website_blocks.snippet_content_three_bar"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/icon_read_three_image__.png"/>
+            <t t-snippet="fal_website_blocks.snippet_content_maps_bar"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/maps-static.png"/>
+            <t t-snippet="fal_website_blocks.snippet_block_contact_us"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/contact-static.png"/>
+            <t t-snippet="fal_website_blocks.snippet_block_partner_testimonial"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/icon-testimonial.png"/>
+            <t t-snippet="fal_website_blocks.snippet_block_services_00"
+       t-thumbnail="/fal_website_blocks/static/src/img/snippet/block-static.png"/>
+          </div>
+        </div>
+      </xpath>
+    </template>
+    
+  </data>
+</openerp>

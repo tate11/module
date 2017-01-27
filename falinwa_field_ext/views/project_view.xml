@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_analytic_account_form_fal_fieldext" model="ir.ui.view">
+            <field name="name">analytic.analytic.account.form.fal.fieldext</field>
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <group name="main" position="inside">
+                        <field name="description" nolabel="1" placeholder="Put description in here.."/>
+                    </group>
+                </data>
+            </field>
+        </record>
+
+        <record id="edit_project_fal_fieldext" model="ir.ui.view">
+            <field name="name">project.project.form.fal.fieldext</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="partner_id" position="after">
+                        <field name="description" placeholder="Put description in here.."/>
+                        <field name="analytic_account_id"/>
+                        <field name="code"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+
+        <record id="view_project_project_filter_fal_fieldext" model="ir.ui.view">
+            <field name="name">project.project.filter.fal.fieldext</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project_project_filter"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="name" position="attributes">
+                        <attribute name="filter_domain">['|','|',('name','ilike',self), ('code','ilike',self),('complete_name','ilike',self)]</attribute>
+                    </field>
+                </data>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
