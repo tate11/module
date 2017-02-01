@@ -16,15 +16,12 @@ class purchase_order(models.Model):
         track_visibility='onchange'
     )
 
-    _defaults = {
-        'fal_user_id': lambda obj, cr, uid, context: uid,
-    }
-
-    def onchange_partner_id(self, cr, uid, ids, part, context=None):
+    @api.multi
+    def onchange_partner_id(self,part):
         res = super(purchase_order, self).\
-            onchange_partner_id(cr, uid, ids, part, context=context)
-        partner = self.pool.get('res.partner').\
-            browse(cr, uid, part, context=context)
+            onchange_partner_id(part)
+        partner = self.env['res.partner'].\
+            browse(part)
         res['value']['fal_partner_contact_person_id'] =\
             partner.child_ids and partner.child_ids[0].id or False
         return res

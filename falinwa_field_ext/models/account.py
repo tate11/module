@@ -83,18 +83,47 @@ class account_analytic_account(models.Model):
 
     description = fields.Text('Description')
 
-    @api.cr_uid_id_context
-    def project_create(self, cr, uid, analytic_account_id, vals, context=None):
+    @api.multi
+    def project_create(self, vals):
         '''
         Give Classic project a check when this called
         '''
-        res = super(account_analytic_account, self).\
-            project_create(cr, uid, analytic_account_id, vals, context)
+        res = super(analytic_account_id, self).\
+            project_create(self, vals)
         if res:
             project_pool = self.pool.get('project.project')
-            project_pool.write(cr, uid, res, {'classic_project': True})
+            project_pool.write(self, res, {'classic_project': True})
             return res
         return False
 
+    # @api.multi
+    # def project_create(self, vals):
+    #     '''
+    #     This function is called at the time of analytic account creation and is used to create a project automatically linked to it if the conditions are meet.
+    #     '''
+    #     self.ensure_one()
+    #     Project = self.env['project.project']
+    #     project = Project.with_context(active_test=False).search([('analytic_account_id', '=', self.id)])
+    #     if not project and self._trigger_project_creation(vals):
+    #         project_values = {
+    #             'name': vals.get('name'),
+    #             'analytic_account_id': self.id,
+    #             'use_tasks': True,
+    #         }
+    #         return Project.create(project_values).id
+    #     return False
+
+    # @api.model
+    # def project_create(self, analytic_account_id):
+    #     '''
+    #     Give Classic project a check when this called
+    #     '''
+    #     res = super(account_analytic_account, self).\
+    #         project_create(self, analytic_account_id)
+    #     if res:
+    #         project_pool = self.env['project.project']
+    #         project_pool.write({'classic_project': True})
+    #         return res
+    #     return False
 
 # end of account_analytic_account()

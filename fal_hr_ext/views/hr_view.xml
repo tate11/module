@@ -30,6 +30,7 @@
                         <field name="phone_contact"/>
                     </field>
                     <field name="birthday" position="after">
+                        <field name="age"/>
                         <field name="hukou_place"/>
                     </field>
                 </data>

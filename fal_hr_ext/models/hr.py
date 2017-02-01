@@ -1,5 +1,8 @@
 # -*- coding:utf-8 -*-
-from odoo import fields, models, _
+from odoo import fields, models, api, _
+from dateutil.relativedelta import relativedelta
+from datetime import datetime
+from datetime import date
 
 
 class hr_employee(models.Model):
@@ -20,8 +23,19 @@ class hr_employee(models.Model):
         'employee_id',
         string='Children'
     )
+    age = fields.Char(string='Age')
 
 # end of hr_employee()
+
+    @api.onchange('birthday')
+    def set_age(self):
+        for rec in self:
+            if rec.birthday:
+                dt = rec.birthday
+                d1 = datetime.strptime(dt, "%Y-%m-%d").date()
+                d2 = date.today()
+                rd = relativedelta(d2, d1)
+                rec.age = str(rd.years) + ' years ' + str(rd.months) + ' months'
 
 
 class hr_employee_child(models.Model):
