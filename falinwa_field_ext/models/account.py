@@ -25,18 +25,6 @@ class account_invoice(models.Model):
             result[invoice.id] = ";".join(temp)
         return result
 
-    # @api.multi
-    # def _get_effective_payment_dates(self):
-    #     result = {}
-    #     for invoice in self:
-    #         temp = []
-    #         for payment in invoice.payment_ids:
-    #             temp.append(payment.payment_date)
-    #         result[invoice.id] = ";".join(temp)
-    #         print result
-    #         print '============================'
-    #     invoice.fal_effective_payment_dates = result
-
     fal_risk_level = fields.Integer(
         'Risk Level',
         size=1,
@@ -83,47 +71,17 @@ class account_analytic_account(models.Model):
 
     description = fields.Text('Description')
 
+
     @api.multi
-    def project_create(self, vals):
+    def project_create(self, analytic_account_id):
         '''
         Give Classic project a check when this called
         '''
-        res = super(analytic_account_id, self).\
-            project_create(self, vals)
+        res = super(account_analytic_account, self).project_create(analytic_account_id)
         if res:
-            project_pool = self.pool.get('project.project')
-            project_pool.write(self, res, {'classic_project': True})
+            project_pool = self.env['project.project']
+            project_pool.write(res, {'classic_project': True})
             return res
         return False
-
-    # @api.multi
-    # def project_create(self, vals):
-    #     '''
-    #     This function is called at the time of analytic account creation and is used to create a project automatically linked to it if the conditions are meet.
-    #     '''
-    #     self.ensure_one()
-    #     Project = self.env['project.project']
-    #     project = Project.with_context(active_test=False).search([('analytic_account_id', '=', self.id)])
-    #     if not project and self._trigger_project_creation(vals):
-    #         project_values = {
-    #             'name': vals.get('name'),
-    #             'analytic_account_id': self.id,
-    #             'use_tasks': True,
-    #         }
-    #         return Project.create(project_values).id
-    #     return False
-
-    # @api.model
-    # def project_create(self, analytic_account_id):
-    #     '''
-    #     Give Classic project a check when this called
-    #     '''
-    #     res = super(account_analytic_account, self).\
-    #         project_create(self, analytic_account_id)
-    #     if res:
-    #         project_pool = self.env['project.project']
-    #         project_pool.write({'classic_project': True})
-    #         return res
-    #     return False
 
 # end of account_analytic_account()

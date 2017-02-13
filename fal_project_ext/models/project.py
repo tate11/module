@@ -29,11 +29,11 @@ class project_task_type(models.Model):
         'Default for Project Opportunities',
         help="If you check this field, this stage will be proposed by \
         default on each new Project Opportunities. \
-        It will not assign this stage to existing Project Opportunities."),
+        It will not assign this stage to existing Project Opportunities.")
     case_default = fields.Boolean(
         'Default for New Projects',
         help="If you check this field, this stage will be proposed by default on each \
-        new project. It will not assign this stage to existing projects."),
+        new project. It will not assign this stage to existing projects.")
 
 # end of project_task_type()
 
@@ -54,15 +54,16 @@ class task(models.Model):
         res = super(task, self).onchange_project(id, project_id)
         return {}
 
-    def write(self, cr, uid, ids, vals, context=None):
-        if isinstance(ids, (int, long)):
-            ids = [ids]
+    @api.multi
+    def write(self, vals):
+        if isinstance(self.ids, (int, long)):
+            ids = [self.ids]
         if vals and not 'kanban_state' in vals and 'stage_id' in vals:
-            for t in self.browse(cr, uid, ids, context=context):
+            for t in self.browse(self.ids):
                 vals['kanban_state'] = t.kanban_state
-                super(task, self).write(cr, uid, [t.id], vals, context=context)
+                super(task, self).write(vals)
         else:
-            result = super(task, self).write(cr, uid, ids, vals, context=context)
+            result = super(task, self).write(vals)
         return True
 
 # end of task()
