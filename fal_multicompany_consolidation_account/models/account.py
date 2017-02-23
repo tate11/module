@@ -1,5 +1,4 @@
-from odoo import fields, models, api
-from openerp.tools.translate import _
+from odoo import fields, models, api, _
 
 
 class account_account(models.Model):

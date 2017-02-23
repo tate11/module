@@ -1,7 +1,7 @@
 from odoo import fields, models, api, _
 
-import openerp.addons.decimal_precision as dp
-from openerp.tools import DEFAULT_SERVER_DATE_FORMAT, DEFAULT_SERVER_DATETIME_FORMAT, DATETIME_FORMATS_MAP, float_compare
+import odoo.addons.decimal_precision as dp
+from odoo.tools import DEFAULT_SERVER_DATE_FORMAT, DEFAULT_SERVER_DATETIME_FORMAT, DATETIME_FORMATS_MAP, float_compare
 import time
 
 
@@ -12,19 +12,26 @@ class bank_balance_computation_wizard(models.TransientModel):
     state = fields.Selection([
         ('draft', 'Draft'),
         ('done', 'Done')],
-        'Done', required=True,
-        default='draft')
+        string='Done',
+        required=True,
+        default='draft'
+    )
     date_start = fields.Date('Start Date')
     date_stop = fields.Date('End Date')
     target_moves = fields.Selection([
         ('posted', 'All Posted Entries'),
         ('all', 'All Entries')],
-        'Target Moves', required=True,
-        default='posted')
+        string='Target Moves',
+        required=True,
+        default='posted'
+    )
     temp = fields.One2many(
         'bank.balances.line',
         'wizard_id',
-        'Temp', readonly=True)
+        string='Temp',
+        readonly=True,
+        default='_get_default_temp'
+    )
 
     @api.multi
     def _check_duration(self):
@@ -82,10 +89,6 @@ class bank_balance_computation_wizard(models.TransientModel):
                 'bank_currency_id': bank_account_id.currency_id and bank_account_id.currency_id.id or bank_account_id.company_id.currency_id.id,
             }))
         return temp
-
-    _defaults = {
-        'temp': _get_default_temp,
-    }
 
     @api.multi
     def filter_bank_balance(self):

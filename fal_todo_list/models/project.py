@@ -6,18 +6,18 @@ class project(models.Model):
     _name = "project.project"
     _inherit = "project.project"
 
-    project_todo_list = fields.Boolean('To do list')
+    project_todo_list = fields.Boolean(
+        'To do list',
+        default='_get_type_common'
+    )
     classic_project = fields.Boolean('Classic Project')
 
     def _get_type_common(self):
         ids = super(project, self)._get_type_common()
         if context.get('default_project_todo_list', False):
-            ids = self.pool.get('project.task.type').search([('todolist_default', '=', 1)])
+            ids = self.env['project.task.type'].search([('todolist_default', '=', 1)])
         return ids
 
-    _defaults = {
-        'type_ids': _get_type_common,
-    }
 # end of project()
 
 

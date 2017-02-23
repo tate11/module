@@ -8,19 +8,18 @@ class account_bank_statement_line(models.Model):
 
     product_id = fields.Many2one('product.product', 'Product')
 
+
     @api.onchange('product_id')
-    def _onchange_product_id(self):
+    def onchange_product_id(self):
+        val = {'name': '', 'account_id' : False}
         if self.product_id:
-            if not self.name:
-                self.name = self.product_id.display_name or ''
-            self.unit_amount = self.product_id.\
-                price_compute('standard_price')[self.product_id.id]
-            self.product_uom_id = self.product_id.uom_id
-            self.tax_ids = self.product_id.supplier_taxes_id
-            account = self.product_id.\
-                product_tmpl_id._get_product_accounts()['expense']
-            if account:
-                self.account_id = account
+            product = self.env['product.product']
+            val['name'] = product.description or product.name
+            if product.categ_id.property_account_general_id:
+                val['account_id'] = product.categ_id.property_account_general_id or False
+            if product.property_account_general_id:
+                val['account_id'] = product.property_account_general_id or False
+        return {'value': val}
 
 # end of account_bank_statement_line()
 

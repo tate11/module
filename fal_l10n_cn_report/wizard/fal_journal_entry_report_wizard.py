@@ -1,7 +1,7 @@
 from odoo import fields, models, api, _
 from datetime import datetime, date, timedelta
-from openerp.exceptions import UserError, ValidationError
-from openerp.tools import DEFAULT_SERVER_DATE_FORMAT
+from odoo.exceptions import UserError, ValidationError
+from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
 
 
 class fal_journal_entry_report_wizard(models.TransientModel):

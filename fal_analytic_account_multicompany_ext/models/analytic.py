@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import fields, models, api
-from openerp.tools.translate import _
+from odoo import fields, models, api, _
 
 
 class AccountAnalytic(models.Model):

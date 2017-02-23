@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import fields, models, api, _
-import openerp.addons.decimal_precision as dp
+import odoo.addons.decimal_precision as dp
 import time
 
 
@@ -8,10 +8,11 @@ class account_invoice(models.Model):
     _name = 'account.invoice'
     _inherit = 'account.invoice'
 
-    def _get_payment_ids_fal(self, cr, uid, ids, context=None):
+    @api.multi
+    @api.depends('account.move.line')
+    def _get_payment_ids_fal(self):
         result = {}
-        for move in self.pool.get('account.move.line').\
-                browse(cr, uid, ids, context=context):
+        for move in self:
             result[move.invoice_id.id] = True
         return result.keys()
 
@@ -26,22 +27,28 @@ class account_invoice(models.Model):
         return result
 
     fal_risk_level = fields.Integer(
-        'Risk Level',
+        string='Risk Level',
         size=1,
-        help="Risk Level define in number 1 - 9")
+        help="Risk Level define in number 1 - 9"
+    )
     fal_risk_level_name = fields.Char(
         'Risk Level Name',
         size=64,
-        help="Risk Level Name")
+        help="Risk Level Name"
+    )
     fal_effective_payment_dates = fields.Char(
         compute='_get_effective_payment_dates',
         string='Effective Payment Dates',
-        help="The efective payment dates.")
+        help="The efective payment dates.",
+        store=True
+    )
     fal_use_late_payment_statement = fields.Boolean(
-        'Use late payment statement')
+        'Use late payment statement'
+    )
     fal_company_code = fields.Many2one(
         'company_id.code',
-        string='Company Code')
+        string='Company Code'
+    )
 
 # end of account_invoice()
 

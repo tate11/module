@@ -18,18 +18,18 @@ class account_asset_asset(models.Model):
     _name = 'account.asset.asset'
     _inherit = 'account.asset.asset'
 
-    # def _compute_board_amount(self, i, residual_amount, amount_to_depr, undone_dotation_number, posted_depreciation_line_ids, total_days, depreciation_date):
-    #     res = super(account_asset_asset, self)._compute_board_amount(i, residual_amount, amount_to_depr, undone_dotation_number, posted_depreciation_line_ids, total_days, depreciation_date)
-    #     if self.prorata and self.simple_prorata:
-    #         res = 0
-    #         if i == undone_dotation_number:
-    #             res = residual_amount
-    #         else:
-    #             if self.method == 'linear':
-    #                 res = amount_to_depr / (undone_dotation_number - len(posted_depreciation_line_ids))
-    #             elif self.method == 'degressive':
-    #                 res = residual_amount * self.method_progress_factor
-    #     return res
+    def _compute_board_amount(self, i, residual_amount, amount_to_depr, undone_dotation_number, posted_depreciation_line_ids, total_days, depreciation_date):
+        res = super(account_asset_asset, self)._compute_board_amount(i, residual_amount, amount_to_depr, undone_dotation_number, posted_depreciation_line_ids, total_days, depreciation_date)
+        if self.prorata and self.simple_prorata:
+            res = 0
+            if i == undone_dotation_number:
+                res = residual_amount
+            else:
+                if self.method == 'linear':
+                    res = amount_to_depr / (undone_dotation_number - len(posted_depreciation_line_ids))
+                elif self.method == 'degressive':
+                    res = residual_amount * self.method_progress_factor
+        return res
 
     @api.multi
     @api.depends('depreciation_line_ids')

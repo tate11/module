@@ -47,10 +47,22 @@ class easy_exporting_wizard(models.TransientModel):
     def onchange_model_id(self, model_id):
         res = {}
         model_obj = self.env['ir.model']
-        res['value'] = {'resource': False, 'template_id': False, 'temp': '', 'filter_ids': [], 'temp_filter_ids': ''}
+        res['value'] = {
+            'resource': False,
+            'template_id': False,
+            'temp': '',
+            'filter_ids': [],
+            'temp_filter_ids': ''
+        }
         if model_id:
             model = model_obj.browse(model_id)
-            res['value'] = {'resource': model.model, 'template_id': False, 'temp': '', 'filter_ids': [], 'temp_filter_ids': ''}
+            res['value'] = {
+                'resource': model.model,
+                'template_id': False,
+                'temp': '',
+                'filter_ids': [],
+                'temp_filter_ids': ''
+            }
         return res
 
     @api.multi
@@ -90,49 +102,4 @@ class easy_exporting_wizard(models.TransientModel):
         res['value'] = {'temp_domain': out}
         return res
 
-    """
-    def action_next(self, cr, uid, ids, context=None):
-        if context is None:
-            context = {}
-        data_wizard = self.browse(cr, uid, ids, context)[0]
-        object_obj = self.pool.get(data_wizard.model_id.model)
-        obj_ids = object_obj.search(cr, uid, [], context=context)
-        temp_field = []
-        for field in data_wizard.template_id.export_fields:
-            temp_field.append(field.name)
-        export = object_obj.read(cr, uid, obj_ids, temp_field, context=context)
-        out=base64.encodestring(str(export))
-        #print export
-
-        #modif start
-        fp = StringIO()
-        writer = csv.writer(fp, quoting=csv.QUOTE_ALL)
-        writer.writerow([name.encode('utf-8') for name in temp_field])
-        for data in export:
-            row = []
-            for l,d in data.items():
-                if isinstance(d, basestring):
-                    d = d.replace('\n',' ').replace('\t',' ')
-                    try:
-                        d = d.encode('utf-8')
-                    except UnicodeError:
-                        pass
-                if d is False: d = None
-                row.append(d)
-            writer.writerow(row)
-        fp.seek(0)
-        data = fp.read()
-        fp.close()
-        #print data
-        self.write(cr, uid, ids, {'state': 'done', 'temp_file':data, 'temp_file_name': data_wizard.model_id.model + '.csv'})
-        return {
-            'type': 'ir.actions.act_window',
-            'res_model': 'easy.exporting.wizard',
-            'view_mode': 'form',
-            'view_type': 'form',
-            'res_id': ids[0],
-            'views': [(False, 'form')],
-            'target': 'new',
-             }
-    """
 # end of easy_exporting_wizard()
