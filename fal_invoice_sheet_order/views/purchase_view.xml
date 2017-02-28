@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        
+
         <record model="ir.ui.view" id="purchase_order_form_fal_iso">
             <field name="name">purchase.order.form.fal.iso</field>
             <field name="model">purchase.order</field>
@@ -16,6 +16,6 @@
                 </data>
             </field>
         </record>
-        
+
     </data>
 </odoo>

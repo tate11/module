@@ -1,4 +1,4 @@
-from odoo import fields, models, api, _
+from odoo import fields, models, api, exceptions, _
 
 import odoo.addons.decimal_precision as dp
 from odoo.tools import DEFAULT_SERVER_DATE_FORMAT, DEFAULT_SERVER_DATETIME_FORMAT, DATETIME_FORMATS_MAP, float_compare
@@ -30,7 +30,7 @@ class bank_balance_computation_wizard(models.TransientModel):
         'wizard_id',
         string='Temp',
         readonly=True,
-        default='_get_default_temp'
+        default=lambda s: s._get_default_temp()
     )
 
     @api.multi
@@ -40,13 +40,14 @@ class bank_balance_computation_wizard(models.TransientModel):
             return False
         return True
 
-    _constraints = [
-        (_check_duration,
-            'Error!\nThe start date of a fiscal year must precede its end date.',
-            ['date_start', 'date_stop'])
-    ]
+    # _constraints = [
+    #     (_check_duration,
+    #         'Error!\nThe start date of a fiscal year must precede its end date.',
+    #         ['date_start', 'date_stop'])
+    # ]
 
     @api.multi
+    @api.depends('date_start', 'date_stop')
     def _get_default_temp(
         self,
         target_moves='posted',
@@ -65,15 +66,14 @@ class bank_balance_computation_wizard(models.TransientModel):
         if target_moves == 'posted':
             args.append(('move_id.state', '=', target_moves))
         for bank_account_id in account_obj.browse(bank_account_ids):
-            journal_item_ids = journal_item_obj.search([
-                ('account_id', '=', bank_account_id.id)] + args)
+            journal_item_ids = journal_item_obj.search([('account_id', '=', bank_account_id.id)] + args)
             balance_ccr = balance_bcr = 0.00
             for journal_item_id in journal_item_obj.browse(journal_item_ids):
                 if journal_item_id.credit:
                     balance_ccr -= journal_item_id.credit
                 else:
                     balance_ccr += journal_item_id.debit
-                if bank_account_id.currency_id.id:
+                if bank_account_id.currency_id:
                     balance_bcr += journal_item_id.amount_currency
                 else:
                     if journal_item_id.credit:
@@ -83,12 +83,18 @@ class bank_balance_computation_wizard(models.TransientModel):
             temp.append((0, 0, {
                 'bank_name_id': bank_account_id.id,
                 'balance_in_company_currency': balance_ccr,
-                'company_currency_id': bank_account_id.company_id.currency_id.id,
+                'company_currency_id': bank_account_id.company_id.currency_id,
                 'balance_in_bank_currency': balance_bcr,
-                'bank_currency_id': bank_account_id.currency_id and bank_account_id.currency_id.id or bank_account_id.company_id.currency_id.id,
-                'bank_currency_id': bank_account_id.currency_id and bank_account_id.currency_id.id or bank_account_id.company_id.currency_id.id,
+                'bank_currency_id': bank_account_id.currency_id and bank_account_id.currency_id or bank_account_id.company_id.currency_id,
+                'bank_currency_id': bank_account_id.currency_id and bank_account_id.currency_id or bank_account_id.company_id.currency_id,
             }))
         return temp
+
+    # _defaults = {
+    #     'target_moves' : 'posted',
+    #     'state' : 'draft',
+    #     'temp' : _get_default_temp,
+    # }
 
     @api.multi
     def filter_bank_balance(self):
@@ -126,6 +132,13 @@ class bank_balance_computation_wizard(models.TransientModel):
             'nodestroy': True,
         }
 
+
+    @api.constrains('date_start', 'date_stop')
+    def _check_duration(self):
+        for i in self:
+            if i.date_start > i.date_stop:
+                raise exceptions.ValidationError(_("Error!\nThe start date of a fiscal year must precede its end date."))
+
 # end of bank_balance_computation_wizard()
 
 
@@ -133,12 +146,18 @@ class bank_balances_line(models.TransientModel):
     _name = "bank.balances.line"
     _description = "Bank Balances Line"
 
-    wizard_id = fields.Many2one('bank.balance.computation.wizard', 'Wizard')
-    bank_name_id = fields.Many2one('account.account', 'Bank Name')
-    balance_in_company_currency = fields.Float('Balance (CCR)')
-    company_currency_id = fields.Many2one('res.currency', 'Company Currency')
-    balance_in_bank_currency = fields.Float('Balance (BCR)')
-    bank_currency_id = fields.Many2one('res.currency', 'Bank Currency')
+    wizard_id = fields.Many2one(
+        'bank.balance.computation.wizard',
+        string='Wizard'
+    )
+    bank_name_id = fields.Many2one('account.account', string='Bank Name')
+    balance_in_company_currency = fields.Float(string='Balance (CCR)')
+    company_currency_id = fields.Many2one(
+        'res.currency',
+        string='Company Currency'
+    )
+    balance_in_bank_currency = fields.Float(string='Balance (BCR)')
+    bank_currency_id = fields.Many2one('res.currency', string='Bank Currency')
 
 
 # end of bank_balances_line()

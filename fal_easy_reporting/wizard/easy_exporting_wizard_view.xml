@@ -9,13 +9,13 @@
                     <group>
                         <group>
                             <field name="file_format" class="fal_file_format" />
-                            <field name="model_id" on_change="onchange_model_id(model_id)"/>
+                            <field name="model_id"/>
                             <field name="resource" invisible="1" class="fal_resource" />
-                            <field name="template_id" domain="[('resource', '=', resource)]" on_change="onchange_template_id(template_id)" attrs="{'invisible':[('model_id', '=', False)]}" />
+                            <field name="template_id" domain="[('resource', '=', resource)]"  attrs="{'invisible':[('model_id', '=', False)]}" />
                             <field name="temp" invisible="1" class="fal_temp" />
-                            <field name="filter_ids" domain="[('model_id', '=', resource)]" widget="many2many_tags" on_change="onchange_filter_ids(filter_ids, from_date, to_date, resource)" attrs="{'invisible':[('model_id', '=', False)]}" />
-                            <field name="from_date" attrs="{'required': [('to_date','!=',False)], 'invisible':[('model_id', '=', False)]}" on_change="onchange_filter_ids(filter_ids, from_date, to_date, resource)" />
-                            <field name="to_date" attrs="{'required': [('from_date','!=',False)], 'invisible':[('model_id', '=', False)]}" on_change="onchange_filter_ids(filter_ids, from_date, to_date, resource)" />
+                            <field name="filter_ids" domain="[('model_id', '=', resource)]" widget="many2many_tags" attrs="{'invisible':[('model_id', '=', False)]}" />
+                            <field name="from_date" attrs="{'required': [('to_date','!=',False)], 'invisible':[('model_id', '=', False)]}"/>
+                            <field name="to_date" attrs="{'required': [('from_date','!=',False)], 'invisible':[('model_id', '=', False)]}"/>
                             <field name="temp_domain" invisible="1" class="fal_temp_domain" />
                         </group>
                     </group>

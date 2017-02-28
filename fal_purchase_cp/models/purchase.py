@@ -17,7 +17,7 @@ class purchase_order(models.Model):
     )
 
     @api.multi
-    def onchange_partner_id(self,part):
+    def onchange_partner_id(self, part):
         res = super(purchase_order, self).\
             onchange_partner_id(part)
         partner = self.env['res.partner'].\

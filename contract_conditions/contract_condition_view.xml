@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
 
         <record id="view_fwa_contract_condition_tree" model="ir.ui.view">
@@ -12,20 +12,24 @@
                 </tree>
             </field>
         </record>
-        
+
         <record id="view_fwa_contract_condition_form" model="ir.ui.view">
             <field name="name">fwa.contract.condition.form</field>
             <field name="model">contract.condition</field>
             <field name="arch" type="xml">
                 <form string="Contract Condition">
-                    <group>
-                        <field name="name" colspan="4" />
-                        <field name="content" colspan="4" />
-                    </group>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="content"/>
+                            </group>
+                        </group>
+                    </sheet>
                 </form>
             </field>
         </record>
-        
+
         <record id="view_fwa_contract_condition_tree_action" model="ir.actions.act_window">
             <field name="name">Contract Conditions</field>
             <field name="type">ir.actions.act_window</field>
@@ -39,7 +43,7 @@
               </p>
             </field>
         </record>
-            
+
         <menuitem action="view_fwa_contract_condition_tree_action" id="fal_menu_contract_condition_purchase"
             parent="purchase.menu_purchase_config"
             sequence="1" />
@@ -47,10 +51,10 @@
         <menuitem action="view_fwa_contract_condition_tree_action" id="fal_menu_contract_condition_account"
             parent="account.menu_finance_configuration"
             sequence="1" />
-            
+
         <menuitem action="view_fwa_contract_condition_tree_action" id="fal_menu_contract_condition_sale"
             parent="base.menu_administration"
             sequence="1" />
-        
+
     </data>
-</openerp>
+</odoo>

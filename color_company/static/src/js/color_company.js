@@ -1,7 +1,7 @@
 openerp.color_company = function (instance) {
     var QWeb = instance.web.qweb,
         _t = instance.web._t;
-    
+
     //add company color
     instance.web.WebClient.include({
         show_application: function() {
