@@ -27,5 +27,6 @@ class res_users(models.Model):
     _inherit = 'res.users'
 
     # Custom Function Section
+    @api.model
     def change_current_company(self, company_id):
         return self.write({'company_id': company_id})

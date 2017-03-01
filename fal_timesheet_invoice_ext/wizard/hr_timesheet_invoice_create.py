@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import fields, models, api, _
-from openerp.exceptions import UserError
+from odoo.exceptions import UserError
 
 
 class hr_timesheet_invoice_create(models.TransientModel):
@@ -61,7 +61,6 @@ class hr_timesheet_invoice_create(models.TransientModel):
         list_view_id = imd.xmlid_to_res_id('account.invoice_tree')
         form_view_id = imd.xmlid_to_res_id('account.invoice_form')
 
-
         return {
             'name': action.name,
             'help': action.help,
@@ -70,8 +69,7 @@ class hr_timesheet_invoice_create(models.TransientModel):
             'target': action.target,
             'context': action.context,
             'res_model': action.res_model,
-            'domain' : "[('id', 'in', %s)]" % invs
+            'domain': "[('id', 'in', %s)]" % invs
         }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
-

@@ -48,7 +48,7 @@ class account_invoice(models.Model):
                 if context.get('wizard_data_date',False) and payment.payment_date <= context.get('wizard_data_date',False):
                     ctx['date'] = payment.payment_date
                     ctx['check_move_validity'] = False
-                    aml_obj = self.pool.get('account.move.line')
+                    aml_obj = self.env['account.move.line']
                     debit, credit, amount_currency, currency_id = aml_obj.compute_amount_fields(payment.amount, payment.currency_id, payment.company_id.currency_id, context=ctx)
                     amount_paid = 0
                     if invoice.type in ['out_invoice', 'in_refund']:

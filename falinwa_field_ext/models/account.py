@@ -17,14 +17,13 @@ class account_invoice(models.Model):
         return result.keys()
 
     @api.multi
+    @api.depends('payment_ids')
     def _get_effective_payment_dates(self):
-        result = {}
         for invoice in self:
             temp = []
             for payment in invoice.payment_ids:
                 temp.append(payment.payment_date)
-            result[invoice.id] = ";".join(temp)
-        return result
+        invoice.fal_effective_payment_dates = ";".join(temp)
 
     fal_risk_level = fields.Integer(
         string='Risk Level',

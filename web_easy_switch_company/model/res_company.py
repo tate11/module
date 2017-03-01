@@ -34,9 +34,9 @@ class res_company(models.Model):
 
     # Fields function Section
     @api.multi
-    def _get_logo_topbar(self, ids, _field_name, _args):
-        result = dict.fromkeys(ids, False)
-        for record in self.browse(ids):
+    def _get_logo_topbar(self):
+        result = dict.fromkeys(False)
+        for record in self:
             size = (48, 48)
             result[record.id] = image_resize_image(
                 record.partner_id.image, size)

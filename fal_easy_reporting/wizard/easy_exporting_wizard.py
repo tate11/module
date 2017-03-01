@@ -43,7 +43,7 @@ class easy_exporting_wizard(models.TransientModel):
         default='Excel'
     )
 
-    @api.onchange
+    # @api.onchange('model_id')
     def onchange_model_id(self, model_id):
         res = {}
         model_obj = self.env['ir.model']
@@ -65,7 +65,7 @@ class easy_exporting_wizard(models.TransientModel):
             }
         return res
 
-    @api.onchange
+    # @api.onchange('template_id')
     def onchange_template_id(self, template_id):
         res = {}
         export_obj = self.env['ir.exports']
@@ -78,7 +78,6 @@ class easy_exporting_wizard(models.TransientModel):
             res['value'] = {'temp': out}
         return res
 
-    @api.onchange
     def onchange_filter_ids(self, filter_ids, from_date, to_date, resource):
         res = {}
         filter_obj = self.env['ir.filters']

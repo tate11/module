@@ -65,10 +65,10 @@ class bank_balance_computation_wizard(models.TransientModel):
             args.append(('date', '<=', date_stop))
         if target_moves == 'posted':
             args.append(('move_id.state', '=', target_moves))
-        for bank_account_id in account_obj.browse(bank_account_ids):
+        for bank_account_id in bank_account_ids:
             journal_item_ids = journal_item_obj.search([('account_id', '=', bank_account_id.id)] + args)
             balance_ccr = balance_bcr = 0.00
-            for journal_item_id in journal_item_obj.browse(journal_item_ids):
+            for journal_item_id in journal_item_ids:
                 if journal_item_id.credit:
                     balance_ccr -= journal_item_id.credit
                 else:

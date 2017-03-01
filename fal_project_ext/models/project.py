@@ -14,8 +14,7 @@ class project(models.Model):
     def _get_type_common(self):
         ids = self.env['project.task.type'].search([('case_default', '=', 1)])
         if self.get('default_project_opportunities', False):
-            ids = self.env['project.task.type'].\
-                search([('project_opportunities_default', '=', 1)])
+            ids = self.env['project.task.type'].search([('project_opportunities_default', '=', 1)])
         return ids
 
 # end of project()

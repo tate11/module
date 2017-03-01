@@ -18,8 +18,25 @@ class account_asset_asset(models.Model):
     _name = 'account.asset.asset'
     _inherit = 'account.asset.asset'
 
-    def _compute_board_amount(self, i, residual_amount, amount_to_depr, undone_dotation_number, posted_depreciation_line_ids, total_days, depreciation_date):
-        res = super(account_asset_asset, self)._compute_board_amount(i, residual_amount, amount_to_depr, undone_dotation_number, posted_depreciation_line_ids, total_days, depreciation_date)
+    def _compute_board_amount(
+        self,
+        i,
+        residual_amount,
+        amount_to_depr,
+        undone_dotation_number,
+        posted_depreciation_line_ids,
+        total_days,
+        depreciation_date
+    ):
+        res = super(account_asset_asset, self)._compute_board_amount(
+            i,
+            residual_amount,
+            amount_to_depr,
+            undone_dotation_number,
+            posted_depreciation_line_ids,
+            total_days,
+            depreciation_date
+        )
         if self.prorata and self.simple_prorata:
             res = 0
             if i == undone_dotation_number:
@@ -46,6 +63,7 @@ class account_asset_asset(models.Model):
         string='Closing Date',
         help="The Closing Date",
         compute='_fal_closing_date',
+        store=True
     )
 
     @api.onchange('category_id')

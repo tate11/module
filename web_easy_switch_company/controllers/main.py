@@ -20,8 +20,8 @@
 #
 #############################################################################
 import openerp
-import odoo as http
-from odoo.http import request
+import openerp.http as http
+from openerp.http import request
 
 
 class WebEasySwitchCompanyController(http.Controller):

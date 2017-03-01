@@ -10,12 +10,20 @@ class hr_timesheet_invoice_factor(models.Model):
     _description = "Invoice Rate"
     _order = 'factor'
 
-    name = fields.Char('Internal Name', required=True, translate=True)
-    customer_name = fields.Char('Name', help="Label for the customer")
-    factor = fields.Float(
-        'Discount (%)',
+    name = fields.Char(
+        string='Internal Name',
         required=True,
-        help="Discount in percentage")
+        translate=True
+    )
+    customer_name = fields.Char(
+        string='Name',
+        help="Label for the customer"
+    )
+    factor = fields.Float(
+        string='Discount (%)',
+        required=True,
+        help="Discount in percentage"
+    )
 
 # end of hr_timesheet_invoice_factor()
 
