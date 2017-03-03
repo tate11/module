@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_order_tree_fal_gc" model="ir.ui.view">
+            <field name="name">sale.order.tree.fal.gc</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="amount_total" position="before">
+                        <field name="commercial_partner_id" invisible="1" />
+                        <field name="fal_parent_company" invisible="0" />
+                    </field>
+                </data>
+            </field>
+        </record>
+
+        <record id="view_quotation_tree_fal_gc" model="ir.ui.view">
+            <field name="name">quotation.order.tree.fal.gc</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="amount_total" position="before">
+                        <field name="commercial_partner_id" invisible="1" />
+                        <field name="fal_parent_company" invisible="0" />
+                    </field>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>
