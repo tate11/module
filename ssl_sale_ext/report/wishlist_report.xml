@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <template id="external_layout_header_wishlist">
+        <div class="header">
+            <div class="row zero_min_height">
+                <div class="col-xs-12">
+                    <div style="border-bottom: 1px solid black; padding-bottom: 10px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8" name="company_address">
+                    <h4><b><span t-field="company.partner_id.name"/></b></h4>
+                    <span t-field="company.partner_id.street"></span><br/>
+                    <span t-field="company.partner_id.street2"></span><br/>
+                    <span t-field="company.partner_id.city"></span><br/>
+                    <span t-field="company.partner_id.country_id"></span>
+                    <!-- <div t-field="company.partner_id"
+                        t-field-options='{"widget": "contact", "fields": ["address"], "no_marker": false}' style="text-transform: uppercase; border:1px solid black; "
+                        /> -->
+                </div>
+                <div class="col-xs-4 pull-right" style='line-height:7px'>
+                    <img src="ssl_sale_ext/static/src/img/logo.png" class="img img-responsive" style="max-height: 45px; margin-top: 10px; margin-bottom:8px; "/>
+                    <div t-if="company.id == 5 or company.id == 3" class="pull-right" style='text-align:right; font-size:12px'>
+                        <p>东莞星平日用品有限公司</p>
+                        <p>东莞市常平镇桥沥村担水坳工业区</p>
+                        <p>Tel: 0769 82826555</p>
+                        <p>Fax:0769 82821617</p>
+                        <p>Email: contact@super-silicone.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+    </template>
+
+    <template id="wishlist_layout">
+        <!-- Multicompany -->
+        <t t-if="not o and doc">
+            <t t-set="o" t-value="doc"/>
+        </t>
+        <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id"></t>
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+            <t t-set="company" t-value="res_company"></t>
+        </t>
+
+        <t t-call="ssl_sale_ext.external_layout_header_wishlist" />
+        <t t-raw="0" />
+        <t t-call="report.external_layout_footer" />
+    </template>
+
+    <template id="report_saleorder_document_pipeline">
+            <!-- Multicompany -->
+            <t t-if="not o and doc">
+                <t t-set="o" t-value="doc"/>
+            </t>
+            <t t-if="o and 'company_id' in o">
+                <t t-set="company" t-value="o.company_id"></t>
+            </t>
+            <t t-if="not o or not 'company_id' in o">
+                <t t-set="company" t-value="res_company"></t>
+            </t>
+        <t t-call="report.external_layout_footer" />
+        <t t-call="ssl_sale_ext.wishlist_layout">
+           <t t-foreach="docs" t-as="doc">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+            <div class="page">
+                <div class="oe_structure"/>
+                <h2 t-if="company.id == 4" class="text-center btn-success">
+                    <span>Wishlist</span>
+                    <span t-field="doc.fal_wishlist_number" class="pull-right" style="margin-right: 10px;"/>
+                </h2>
+                <h2 t-if="company.id == 5" class="text-center btn-info">
+                    <span>Wishlist</span>
+                    <span t-field="doc.fal_wishlist_number" class="pull-right" style="margin-right: 10px;"/>
+                </h2>
+                <h2 t-if="company.id == 1 or company.id == 3" class="text-center btn-danger">
+                    <span>Wishlist</span>
+                    <span t-field="doc.fal_wishlist_number" class="pull-right" style="margin-right: 10px;"/>
+                </h2>
+                <br/>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <strong>TO :</strong>
+                        <h4><strong><span t-field="doc.partner_id.name"/></strong></h4>
+                        <div t-field="doc.partner_id"
+                            t-field-options='{"widget": "contact", "fields": ["address",  "phone", "fax"], "no_marker": true, "phone_icons": true}'/>
+                    </div>
+                    <div class="col-xs-5 col-xs-offset-1">
+                    	<strong>SHIPPING :</strong>
+                        <h4><strong><span t-field="doc.partner_id.name"/></strong></h4>
+                        <div t-field="doc.partner_id"
+                            t-field-options='{"widget": "contact", "fields": ["address", "phone", "fax"], "no_marker": true}' />
+                    </div>
+                </div>
+    			<br/>
+
+                <table style="border: none; line-height: 18px; margin-top: 10px; width:100%; text-transform:uppercase">
+                    <tr>
+                        <td width="20%">Date Ordered</td>
+                        <td>: </td>
+                        <td width="10%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%">Valid Until</td>
+                        <td>: <span t-field="doc.date_deadline"/></td>
+                    </tr>
+                    <tr>
+                        <td>Sales Person</td>
+                        <td>: <span t-field="doc.user_id.name"/></td>
+                    </tr>
+                </table>
+                <br/>
+
+                <!-- Is there a discount on at least one line? -->
+                <!-- <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/> -->
+                <table class="table table-bordered">
+                    <thead style="text-transform:uppercase;background-color: #EEF0F0;">
+                        <tr>
+                            <th width="10%" rowspan="2">Product Image</th>
+                            <th width="10%" rowspan="2">Ref No.</th>
+                            <th width="30%" rowspan="2">Description</th>
+                            <t t-if="get_header_length()">
+                                <th class="text-center" t-att-colspan="get_header_length()">
+                                    Unit FOB price USD
+                                </th>
+                            </t>
+                            <th class="text-right" width="10%" rowspan="2">Remarks</th>
+                        </tr>
+                        <tr>
+                            <t t-if="get_header_length()">
+                                <t t-foreach="get_header()" t-as="head">
+                                    <th class="text-right">
+                                        <t t-esc="head"/>
+                                    </th>
+                                </t>
+                            </t>
+                        </tr>
+                   </thead>
+                   <tbody class="sale_tbody" style="text-size:10px">
+                        <t t-foreach="get_value()" t-as="l">
+                            <tr>
+                                <td>
+                                   <span t-field="l[0].image" t-field-options='{"widget": "image","class": "oe_avatar"}'/>
+                                </td>
+                                <td>
+                                   <span t-field="l[0].product_id.default_code"/>
+                                   (<span t-field="l[0].product_id.fal_old_ref"/>)
+                                </td>
+                                <td>
+                                   <span t-field="l[0].name"/>
+                                </td>
+                                <t t-foreach="l[1]" t-as="i">
+                                    <td class="text-right">
+                                        <span t-if="i[1]!='empty'" t-esc="i[1]"/>
+                                    </td>
+                                </t>
+                                <td class="text-right">
+                                    <span t-field="l[0].remark_attr_id"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+
+                <table style="border: none; line-height: 18px; margin-top: 10px; width:100%; text-transform:uppercase">
+                    <tr>
+                        <td width="15%">Payment Terms</td>
+                        <td width="1%">:</td>
+                        <td width="32%"><span t-field="doc.partner_id.fal_payment_term_id.name"/></td>
+                        <td width="4%"></td>
+                        <td width="15%">Payment Mean</td>
+                        <td width="1%">:</td>
+                        <td width="32%"><span t-field="doc.partner_id.fal_payment_mean_id.name"/></td>
+                    </tr>
+                    <tr>
+                        <td width="15%">Deposit Term</td>
+                        <td width="1%">:</td>
+                        <td width="32%"><span t-field="doc.partner_id.fal_deposit_term_id.name"/></td>
+                        <td width="4%"></td>
+                        <td width="15%">Incoterm</td>
+                        <td width="1%">:</td>
+                        <td width="32%"><span t-field="doc.partner_id.fal_incoterm_id.name"/></td>
+                    </tr>
+                </table>
+                <br/>
+
+                <table>
+                    <tr>
+                        <td width="10%">REMARKS : </td>
+                        <td width="90%"><span t-field="doc.description"/></td>
+                    </tr>
+                </table>
+            </div>
+        </t>
+        </t>
+    </template>
+    <report
+        id="report_sale_order_wishlist"
+        string="Quotation / Order Pipeline"
+        model="crm.lead"
+        report_type="qweb-pdf"
+        name="ssl_sale_ext.report_saleorder_document_pipeline"
+        file="ssl_sale_ext.report_saleorder_document_pipeline"
+    />
+    </data>
+</odoo>

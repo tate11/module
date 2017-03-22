@@ -1,0 +1,14 @@
+<odoo>
+    <record id="partner_form_view_modification_supersilicone" model="ir.ui.view">
+        <field name="name">partner_form_view_modification_supersilicone</field>
+        <field name="model">res.partner</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="product.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <field name="property_product_pricelist" position="after">
+                <field name="fal_payment_term_id"/>
+                <field name="fal_incoterm_id"/>
+            </field>
+        </field>
+    </record>
+</odoo>

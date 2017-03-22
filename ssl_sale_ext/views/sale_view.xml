@@ -1,0 +1,65 @@
+<odoo>
+    <record id="moving_the_incoterm_to_top" model="ir.ui.view">
+        <field name="name">moving_the_incoterm_to_top</field>
+        <field name="model">sale.order</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="sale_stock.view_order_form_inherit_sale_stock"/>
+        <field name="arch" type="xml">
+            <field name="incoterm" position="replace"/>
+            <field name="payment_term_id" position="after">
+                <field name="incoterm" widget="selection" groups="base.group_user"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="margin_percentage_ssl" model="ir.ui.view">
+        <field name="name">margin_percentage_ssl</field>
+        <field name="model">sale.order</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="sale_margin.sale_margin_sale_order"/>
+        <field name="arch" type="xml">
+            <field name="margin" position="after">
+                <field name="fal_margin_percentage" groups="base.group_user"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_order_form_sale_ext" model="ir.ui.view">
+        <field name="name">view_order_form_sale_ext</field>
+        <field name="model">sale.order</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="client_order_ref" position="replace"/>
+            <field name="partner_shipping_id" position="after">\
+                <field name="client_order_ref"/>
+                <field name="fal_port_departure" />
+                <field name="fal_port_destination"/>
+            </field>
+            <xpath expr="//button[@name='print_quotation'][1]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='print_quotation'][2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="ssl_sale_ext_view_order_form" model="ir.ui.view">
+        <field name="name">ssl_sale_ext_view_order_form</field>
+        <field name="model">sale.order</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="sale_order_dates.view_order_form_inherit_sale_stock_inherit_sale_order_dates"/>
+        <field name="arch" type="xml">
+            <field name="requested_date" position="replace"/>
+            <field name="validity_date" position="after">
+                <field name="requested_date"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="sale.action_quotations" model="ir.actions.act_window">
+        <field name="domain">[('state', 'in', ('draft', 'sent', 'cancel'))]</field>
+    </record>
+
+</odoo>

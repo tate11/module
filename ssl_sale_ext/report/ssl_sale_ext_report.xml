@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <template id="ssl_layout">
+        <!-- Multicompany -->
+        <t t-if="not o and doc">
+            <t t-set="o" t-value="doc"/>
+        </t>
+        <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id"></t>
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+            <t t-set="company" t-value="res_company"></t>
+        </t>
+
+        <t t-call="ssl_sale_ext.external_layout_header_ssl" />
+        <t t-raw="0" />
+        <t t-call="report.external_layout_footer" />
+    </template>
+
+    <template id="external_layout_header_ssl">
+        <div class="header">
+            <div class="row zero_min_height">
+                <div class="col-xs-12">
+                    <div style="border-bottom: 1px solid black; padding-bottom: 10px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8" name="company_address">
+                    <h4><b><span t-field="company.partner_id.name"/></b></h4>
+                    <div t-if="company.partner_id.street"><span t-field="company.partner_id.street"></span><br/></div>
+                    <div t-if="company.partner_id.street2"><span t-field="company.partner_id.street2"></span><br/></div>
+                    <!-- <div t-if="company.partner_id.city"><span t-field="company.partner_id.city"></span><br/></div> -->
+                    <span t-field="company.partner_id.country_id"></span>
+                    <!-- <div t-field="company.partner_id"
+                        t-field-options='{"widget": "contact", "fields": ["address"], "no_marker": false}' style="text-transform: uppercase; border:1px solid black; "
+                        /> -->
+                </div>
+                <div class="col-xs-4 pull-right" style='line-height:7px'>
+                    <img src="ssl_sale_ext/static/src/img/logo.png" class="img img-responsive" style="max-height: 45px; margin-top: 10px; margin-bottom:8px; "/>
+                    <div t-if="company.id == 5 or company.id == 3" class="pull-right" style='text-align:right; font-size:12px'>
+                        <p>东莞星平日用品有限公司</p>
+                        <p>东莞市常平镇桥沥村担水坳工业区</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="report_saleorder_document_ssl">
+        <t t-call="ssl_sale_ext.ssl_layout">
+            <!-- Multicompany -->
+            <t t-if="not o and doc">
+                <t t-set="o" t-value="doc"/>
+            </t>
+            <t t-if="o and 'company_id' in o">
+                <t t-set="company" t-value="o.company_id"></t>
+            </t>
+            <t t-if="not o or not 'company_id' in o">
+                <t t-set="company" t-value="res_company"></t>
+            </t>
+        <t t-call="report.external_layout_footer" />
+           <t t-foreach="docs" t-as="doc">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+            <div class="page">
+                <div class="oe_structure"/>
+                <h2 t-if="company.fal_code == 'X'" class="btn-success">
+                    <span t-if="doc.state in ['draft', 'sent', 'cancel']">Quotation</span>
+                    <span t-if="doc.state in ['sale', 'done']">Sale Order</span>
+                    <span t-field="doc.name" class="pull-right" style="margin-right: 10px;"/>
+                </h2>
+                <h2 t-if="company.fal_code == 'S'" class="btn-info">
+                    <span t-if="doc.state in ['draft', 'sent', 'cancel']">Quotation</span>
+                    <span t-if="doc.state in ['sale', 'done']">Sale Order</span>
+                    <span t-field="doc.name" class="pull-right" style="margin-right: 10px;"/>
+                </h2>
+                <h2 t-if="company.fal_code == 'E' or company.fal_code == G" class="btn-danger">
+                    <span t-if="doc.state in ['draft', 'sent', 'cancel']" style="text-transform:uppercase;margin-left:10px">Quotation</span>
+                    <span t-if="doc.state in ['sale', 'done']">Sale Order</span>
+                    <span t-field="doc.name" class="pull-right" style="margin-right: 10px;"/>
+                </h2>
+                <br/>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <strong>TO :</strong>
+                        <h4><strong><span t-field="doc.partner_invoice_id.name"/></strong></h4>
+                        <div t-field="doc.partner_invoice_id"
+                            t-field-options='{"widget": "contact", "fields": ["address", "phone"], "no_marker": true, "phone_icons": true}'/>
+                    </div>
+                    <div class="col-xs-5 col-xs-offset-1">
+                        <strong>SHIPPING :</strong>
+                        <h4><strong><span t-field="doc.partner_shipping_id.name"/></strong></h4>
+                        <div t-field="doc.partner_shipping_id"
+                            t-field-options='{"widget": "contact", "fields": ["address", "phone"], "no_marker": true}' />
+                    </div>
+                </div>
+                <br/>
+                <table style="border: none; line-height: 18px; margin-top: 10px; width:100%; text-transform:uppercase">
+                    <tr>
+                        <td width="">Request ETD : <span t-field="doc.requested_date" t-field-options='{"format": "MM/d/y"}'/></td>
+                        <td width=""></td>
+                        <td width=""></td>
+                        <td width="">Payment Terms : <span t-field="doc.payment_term_id.name"/></td>
+                        <td width=""></td>
+                    </tr>
+                    <tr>
+                        <td width="">Date Ordered : <span t-field="doc.date_order" t-field-options='{"format": "MM/d/y"}'/></td>
+                        <td width=""></td>
+                        <td width=""></td>
+                        <td width="">Deposit Term : <span t-field="doc.fal_deposit_term_id.name"/></td>
+                        <td width=""></td>
+                    </tr>
+                    <tr>
+                        <td width="">Client Order : <span t-field="doc.client_order_ref"/></td>
+                        <td width=""></td>
+                        <td width=""></td>
+                        <td width="">Payment Mean : <span t-field="doc.fal_payment_mean_id.name"/></td>
+                        <td width=""></td>
+                    </tr>
+                    <tr>
+                        <td width="">Sales Person : <span t-field="doc.user_id.name"/></td>
+                        <td width=""></td>
+                        <td width=""></td>
+                        <td width="">Incoterm : <span t-field="doc.incoterm.name"/></td>
+                        <td width=""></td>
+                    </tr>
+                </table>
+                <br/>
+
+                <!-- Is there a discount on at least one line? -->
+                <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>
+
+                <table class="table table-bordered">
+                    <thead style="text-transform:uppercase;background-color: #EEF0F0;">
+                        <tr>
+                            <th>#</th>
+                            <th width="12%">Client Ref</th>
+                            <th width="10%">Reference</th>
+                            <th width="20%">Description</th>
+                            <th class="text-right" width="10%">Quantity</th>
+                            <th class="text-right" width="10%">Unit Price</th>
+                            <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line" width="5%">Disc.</th>
+                            <!-- <th class="text-right" width="10%">Tax</th> -->
+                            <th class="text-right" width="10%">Amount</th>
+                        </tr>
+                   </thead>
+                   <tbody class="sale_tbody" style="text-size:10px">
+                        <t t-foreach="doc.order_line" t-as="l">
+                            <tr t-if="l.product_uom_qty">
+                                <td>
+                                    <span t-esc="l_index + 1" />
+                                </td>
+                                <td>
+                                   <span t-field="l.product_id.fal_client_ref"/>
+                                </td>
+                                <td>
+                                   <span t-field="l.product_id.default_code"/>
+                                   (<span t-field="l.product_id.product_tmpl_id.fal_old_ref"/>)
+                                </td>
+                                <td>
+                                   <span t-field="l.name"/><br/>
+                                   <!-- <t t-foreach="l.product_id.fal_variant_line_ids" t-as="m">
+                                     <span t-field="m.attribute_id.name"/> : <span t-field="m.attribute_value_id.name"/><br/>
+                                   </t> -->
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="l.product_uom_qty"/>
+                                    <span groups="product.group_uom" t-field="l.product_uom"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="l.price_unit"
+                                        t-field-options='{"widget": "monetary", "display_currency": "doc.pricelist_id.currency_id"}'/>
+                                </td>
+                                <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
+                                    <span t-field="l.discount"/>
+                                </td>
+                                <!-- <td class="text-right" style="border-right: 1px solid black">
+                                    <span t-field="l.tax_id.name"/>
+                                </td> -->
+                                <td class="text-right">
+                                    <span t-field="l.price_subtotal"
+                                        t-field-options='{"widget": "monetary", "display_currency": "doc.pricelist_id.currency_id"}'/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+
+                <div class="row" name="total" style="margin-bottom:30px">
+                    <div class="col-xs-8 pull-left">
+                        <table>
+                            <tr>
+                                <td width="22%">Departure </td>
+                                <td>: <span t-field="doc.fal_port_departure"/></td>
+                            </tr>
+                            <tr>
+                                <td width="22%">Destination </td>
+                                <td>: <span t-field="doc.fal_port_destination"/></td>
+                            </tr>
+                            <tr>
+                                <td>Remarks </td>
+                                <td style="text-align:justify">: <span t-field="doc.note"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-xs-4 pull-right">
+                        <table class="table table-condensed">
+                            <!-- <tr class="border-black">
+                                <td><strong>Total Without Taxes</strong></td>
+                                <td class="text-right">
+                                    <span t-field="doc.amount_untaxed"
+                                        t-field-options='{"widget": "monetary", "display_currency": "doc.pricelist_id.currency_id"}'/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Taxes</td>
+                                <td class="text-right">
+                                    <span t-field="doc.amount_tax"
+                                        t-field-options='{"widget": "monetary", "display_currency": "doc.pricelist_id.currency_id"}'/>
+                                </td>
+                            </tr> -->
+                            <tr class="border-black">
+                                <td><strong>Total</strong></td>
+                                <td class="text-right">
+                                    <span t-field="doc.amount_total"
+                                        t-field-options='{"widget": "monetary", "display_currency": "doc.pricelist_id.currency_id"}'/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><i><span t-esc="doc.amount_to_text(doc.amount_total, 'USD')"/></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- <div style="margin-bottom:100px"></div> -->
+                <div class="row" t-if="company.id == 3">
+                    <div class="col-xs-6">
+                       <table>
+                           <tr>
+                               <td><strong>BANK</strong> : HongKong &amp; Shanghai Banking Corporation Ltd</td>
+                           </tr>
+                           <tr>
+                               <td><strong>BANK Address</strong> : Tsim Sha Tsui Branch <br/> 82-84 Nathan Road, Kowloon, Hong Kong</td>
+                           </tr>
+                           <tr>
+                               <td><strong>ACCOUNT No</strong> : <strong>004-652-00738-838</strong></td>
+                           </tr>
+                           <tr>
+                               <td><strong>SWIFT CODE</strong> : HSBC-HKHH-HKH</td>
+                           </tr>
+                           <tr>
+                               <td><strong>BANK CODE</strong> : #004</td>
+                           </tr>
+                           <tr>
+                               <td><strong>COMPANY</strong> : EASY FACTORY</td>
+                           </tr>
+                       </table>
+                    </div>
+                    <div class="col-xs-5 col-xs-offset-1">
+                        <p>Prepared by,</p>
+                        <img src="ssl_sale_ext/static/src/img/EF_stamp.png" alt="" height="125" width="250" />
+                    </div>
+                </div>
+                <div class="row" t-if="company.id == 5">
+                    <div class="col-xs-6">
+                       <table>
+                           <tr>
+                               <td><strong>BANK</strong> : CHINA MERCHANTS BANK,CHANGPING SUB-BR.</td>
+                           </tr>
+                           <tr>
+                               <td><strong>BANK Address</strong> : NO.101 JIA MEI GARDEN,CHANGPING STREET,CHANGPING TOWN,DONGGUAN CITY</td>
+                           </tr>
+                           <tr>
+                               <td><strong>ACCOUNT No</strong> : <strong>769903338532511</strong></td>
+                           </tr>
+                           <tr>
+                               <td><strong>SWIFT CODE</strong> : CMBCCNBS195</td>
+                           </tr>
+                           <tr>
+                               <td><strong>BANK CODE</strong> : </td>
+                           </tr>
+                           <tr>
+                               <td><strong>COMPANY</strong> : 东莞星平日用品有限公司</td>
+                           </tr>
+                       </table>
+                    </div>
+                    <div class="col-xs-5 col-xs-offset-1">
+                        <p>Prepared by,</p>
+                        <img src="ssl_sale_ext/static/src/img/SSL_stamp.jpg" alt="" height="155" width="200" />
+                    </div>
+                </div>
+            </div>
+        </t>
+        </t>
+    </template>
+    <report
+        id="report_sale_order_ssl"
+        string="Quotation / Order"
+        model="sale.order"
+        report_type="qweb-pdf"
+        name="ssl_sale_ext.report_saleorder_document_ssl"
+        file="ssl_sale_ext.report_saleorder_document_ssl"
+    />
+    </data>
+</odoo>
