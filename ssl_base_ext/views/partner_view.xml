@@ -1,0 +1,33 @@
+<odoo>
+    <record id="partner_view_supersilicone" model="ir.ui.view">
+        <field name="name">partner_view_supersilicone</field>
+        <field name="model">res.partner</field>
+        <field name="type">tree</field>
+        <field name="inherit_id" ref="fal_partner_qualification.view_partner_tree_fal_partner_qualification"/>
+        <field name="arch" type="xml">
+            <field name="phone" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="email" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="user_id" position="attributes">
+                <attribute name="invisible">0</attribute>
+            </field>
+            <field name="display_name" position="before">
+                <field name="ref"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field name="fal_related_company_ids"/>
+            </field>
+        </field>
+    </record>
+</odoo>

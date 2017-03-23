@@ -1,0 +1,117 @@
+<odoo>
+    <data>
+
+        <!-- For views in Sales ⟹ Products -->
+        <record id="fal_view_product_template_ssl_base" model="ir.ui.view">
+            <field name="name">fal_view_product_template_ssl_base</field>
+            <field name="model">product.template</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <field name="default_code" position="after">
+                    <field name="fal_internal_name"/>
+                </field>
+                <field name="attribute_line_ids" position="attributes">
+                    <attribute name="groups">base.group_no_one</attribute>
+                </field>
+            </field>
+        </record>
+
+        <!-- For "Product" on Purchase Order -->
+        <record id="fal_view_product_normal_form_ssl_base" model="ir.ui.view">
+            <field name="name">fal_view_product_normal_form_ssl_base</field>
+            <field name="model">product.product</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <field name="default_code" position="after">
+                    <field name="fal_internal_name"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- For product description on Product Notebook -->
+        <record id="fal_product_desc_ext" model="ir.ui.view">
+            <field name="name">fal_product_desc_ext</field>
+            <field name="model">product.template</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <field name="type" position="before">
+                    <field name="description"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- For Display name concatenation in Products (Kanban View) -->
+        <record id="fal_conc_product_kanban" model="ir.ui.view">
+            <field name="name">fal_conc_product_template_kanban</field>
+            <field name="model">product.template</field>
+            <field name="type">kanban</field>
+            <field name="inherit_id" ref="product.product_template_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_kanban_details']/strong/field[@name='name']" position="before">
+                    <span t-if="record.fal_old_ref.value"><field name="fal_old_ref"/> - </span>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_variants_manual_ssl" model="ir.ui.view">
+            <field name="name">product_variants_manual_ssl</field>
+            <field name="model">product.template</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="fal_product_variants_manual.create_manual_product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <button name="create_variants_manual" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </button>
+            </field>
+        </record>
+
+        <!-- For Display name concatenation in Products Variants (Kanban View) -->
+        <record id="fal_conc_product_product_kanban" model="ir.ui.view">
+            <field name="name">fal_conc_product_product_kanban</field>
+            <field name="model">product.product</field>
+            <field name="type">kanban</field>
+            <field name="inherit_id" ref="product.product_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_kanban_details']/strong/field[@name='name']" position="before">
+                    <span t-if="record.fal_old_ref.value"><field name="fal_old_ref"/> - </span>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="contacts.action_contacts_view_kanban" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+        </record>
+
+        <record id="contacts.action_contacts_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="0"/>
+        </record>
+
+        <record id="base.action_partner_form_view1" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+        </record>
+
+        <record id="base.action_partner_tree_view1" model="ir.actions.act_window.view">
+            <field name="sequence" eval="0"/>
+        </record>
+
+        <record id="base.action_partner_supplier_form" model="ir.actions.act_window">
+            <field name="view_mode">tree,kanban,form</field>
+        </record>
+
+        <record id="base.action_partner_customer_form" model="ir.actions.act_window">
+            <field name="view_mode">tree,kanban,form</field>
+        </record>
+
+        <record id="product.product_template_action" model="ir.actions.act_window">
+            <field name="view_id" ref="product.product_template_tree_view"/>
+        </record>
+
+        <record id="purchase.product_normal_action_puchased" model="ir.actions.act_window">
+            <field name="view_mode">tree,kanban,form</field>
+        </record>
+
+    </data>
+</odoo>
