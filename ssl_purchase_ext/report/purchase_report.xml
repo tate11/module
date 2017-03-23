@@ -121,7 +121,7 @@
                     </tr>
                     <tr>
                         <td width="3%">Request Date</td>
-                        <td width="5%">: <span t-field="doc.fal_partner_request_date"/></td>
+                        <td width="5%">: <span t-field="doc.fal_partner_request_date" t-field-options='{"format": "MM/d/y"}'/></td>
                         <td width="5%"></td>
                         <td width="3%">Incoterm</td>
                         <td width="5%">: <span t-field="doc.partner_id.fal_incoterm_id.name"/></td>
@@ -132,60 +132,113 @@
                 <!-- Is there a discount on at least one line? -->
                 <!-- <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/> -->
 
-                <table class="table table-bordered">
-                    <thead style="text-transform:uppercase;background-color: #EEF0F0;">
-                        <tr>
-                            <th width="5%"  style="text-align:center;">#</th>
-                            <th width="12%">Client Ref</th>
-                            <th width="10%">Our Ref</th>
-                            <th width="30%">Description</th>
-                            <th class="text-right" width="10%">Quantity</th>
-                            <th class="text-right" width="17%">Unit Price($)</th>
-                            <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line" width="5%">Disc.(%)</th>
-                            <!-- <th class="text-right" width="10%">Tax</th> -->
-                            <th class="text-right" width="10%">Amount($)</th>
-                        </tr>
-                   </thead>
-                   <tbody class="invoice_tbody" style="text-size:10px">
-                        <t t-foreach="doc.order_line" t-as="l">
-                            <!-- t-if="l.product_uom_qty" -->
+                <div t-if="doc.partner_id.fal_related_company_ids.fal_code != 'S'">
+                    <table class="table table-bordered">
+                        <thead style="text-transform:uppercase;background-color: #EEF0F0;">
                             <tr>
-                                <td style="text-align:center;">
-                                    <span t-esc="l_index + 1" />
-                                </td>
-                                <td>
-                                   <span t-field="l.product_id.fal_client_ref"/>
-                                </td>
-                                <td>
-                                   <span t-field="l.product_id.default_code"/>
-                                   (<span t-field="l.product_id.fal_old_ref"/>)
-                                </td>
-                                <td>
-                                   <span t-field="l.name"/><br/>
-                                   <!-- <t t-foreach="l.product_id.fal_variant_line_ids" t-as="m">
-                                     <span t-field="m.attribute_id.name"/> : <span t-field="m.attribute_value_id.name"/><br/>
-                                   </t> -->
-                                </td>
-                                <td class="text-right">
-                                    <span t-field="l.product_qty"/>
-                                </td>
-                                <td class="text-right">
-                                    <span t-field="l.price_unit"/>
-                                </td>
-                                <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
-                                    <span t-field="l.discount"/>
-                                </td>
-                                <!-- <td class="text-right" style="border-right: 1px solid black">
-                                    <span t-field="l.invoice_line_tax_ids.name"/>
-                                </td> -->
-                                <td class="text-right">
-                                    <span t-field="l.price_subtotal"
-                                        t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
-                                </td>
+                                <th width="5%"  style="text-align:center;">#</th>
+                                <th width="12%">Client Ref</th>
+                                <th width="10%">Our Ref</th>
+                                <th width="30%">Description</th>
+                                <th class="text-right" width="10%">Quantity</th>
+                                <th class="text-right" width="17%">Unit Price</th>
+                                <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line" width="5%">Disc.(%)</th>
+                                <th class="text-right" width="10%">Amount</th>
                             </tr>
-                        </t>
-                    </tbody>
-                </table>
+                       </thead>
+                       <tbody class="invoice_tbody" style="text-size:10px">
+                            <t t-foreach="doc.order_line" t-as="l">
+                                <tr>
+                                    <td style="text-align:center;">
+                                        <span t-esc="l_index + 1" />
+                                    </td>
+                                    <td>
+                                       <span t-field="l.product_id.fal_client_ref"/>
+                                    </td>
+                                    <td>
+                                       <span t-field="l.product_id.default_code"/>
+                                       (<span t-field="l.product_id.fal_old_ref"/>)
+                                    </td>
+                                    <td>
+                                       <span t-field="l.name"/><br/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.product_qty"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.price_unit"
+                                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                    </td>
+                                    <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
+                                        <span t-field="l.discount"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.price_subtotal"
+                                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div t-if="doc.partner_id.fal_related_company_ids.fal_code == 'S' and company.fal_code == 'E'">
+                    <table class="table table-bordered">
+                        <thead style="text-transform:uppercase;background-color: #EEF0F0;">
+                            <tr>
+                                <th width="5%"  style="text-align:center;">#</th>
+                                <th width="12%">Client Ref</th>
+                                <th width="10%">Our Ref</th>
+                                <th width="30%">Description</th>
+                                <th class="text-right" width="10%">Quantity</th>
+                                <!-- <th class="text-right" width="17%">Unit Price</th> -->
+                                <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line" width="5%">Disc.(%)</th>
+                                <!-- <th class="text-right" width="10%">Tax</th> -->
+                                <!-- <th class="text-right" width="10%">Amount</th> -->
+                            </tr>
+                       </thead>
+                       <tbody class="invoice_tbody" style="text-size:10px">
+                            <t t-foreach="doc.order_line" t-as="l">
+                                <!-- t-if="l.product_uom_qty" -->
+                                <tr>
+                                    <td style="text-align:center;">
+                                        <span t-esc="l_index + 1" />
+                                    </td>
+                                    <td>
+                                       <span t-field="l.product_id.fal_client_ref"/>
+                                    </td>
+                                    <td>
+                                       <span t-field="l.product_id.default_code"/>
+                                       (<span t-field="l.product_id.fal_old_ref"/>)
+                                    </td>
+                                    <td>
+                                       <span t-field="l.name"/><br/>
+                                       <!-- <t t-foreach="l.product_id.fal_variant_line_ids" t-as="m">
+                                         <span t-field="m.attribute_id.name"/> : <span t-field="m.attribute_value_id.name"/><br/>
+                                       </t> -->
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.product_qty"/>
+                                    </td>
+                                    <!-- <td class="text-right">
+                                        <span t-field="l.price_unit"
+                                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                    </td>
+                                    <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
+                                        <span t-field="l.discount"/>
+                                    </td> -->
+                                    <!-- <td class="text-right" style="border-right: 1px solid black">
+                                        <span t-field="l.invoice_line_tax_ids.name"/>
+                                    </td> -->
+                                    <!-- <td class="text-right">
+                                        <span t-field="l.price_subtotal"
+                                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                    </td> -->
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
 
                 <div class="row" name="total" style="margin-bottom:30px">
                     <div class="col-xs-8 pull-left">
@@ -204,38 +257,40 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="col-xs-4 pull-right">
-                        <table class="table table-border">
-                            <!-- <tr class="border-black">
-                                <td><strong>Total Without Taxes</strong></td>
-                                <td class="text-right">
-                                    <span t-field="doc.amount_untaxed"
-                                        t-field-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Taxes</td>
-                                <td class="text-right">
-                                    <span t-field="doc.amount_tax"
-                                        t-field-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/>
-                                </td>
-                            </tr> -->
-                            <tr class="border-black">
-                                <td><strong>Total</strong></td>
-                                <td class="text-right">
-                                    <span t-field="doc.amount_total"
-                                        t-field-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2"><i><span t-esc="doc.amount_to_text(doc.amount_total, '$')"/></i></td>
-                            </tr>
-                        </table>
+                    <div t-if="doc.partner_id.fal_related_company_ids.fal_code != 'S'">
+                       <div class="col-xs-4 pull-right">
+                            <table class="table table-border">
+                                <!-- <tr class="border-black">
+                                    <td><strong>Total Without Taxes</strong></td>
+                                    <td class="text-right">
+                                        <span t-field="doc.amount_untaxed"
+                                            t-field-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Taxes</td>
+                                    <td class="text-right">
+                                        <span t-field="doc.amount_tax"
+                                            t-field-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/>
+                                    </td>
+                                </tr> -->
+                                <tr class="border-black">
+                                    <td><strong>Total</strong></td>
+                                    <td class="text-right">
+                                        <span t-field="doc.amount_total"
+                                            t-field-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><i><span t-esc="doc.amount_to_text(doc.amount_total, '$')"/></i></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
                 <!-- <div style="margin-bottom:100px"></div> -->
-                <div class="row" t-if="company.id == 3">
+                <div class="row" t-if="company.fal_code == 'E'">
                     <div class="col-xs-6">
                        <table>
                            <tr>
@@ -263,7 +318,7 @@
                         <img src="ssl_account_ext/static/src/img/EF_stamp.png" alt="" height="125" width="250" />
                     </div>
                 </div>
-                <div class="row" t-if="company.id == 5">
+                <div class="row" t-if="company.fal_code == 'S'">
                     <div class="col-xs-6">
                        <table>
                            <tr>
