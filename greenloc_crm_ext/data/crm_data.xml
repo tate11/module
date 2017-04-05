@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Sequence for lead -->
+        <record id="crm_lead_seq" model="ir.sequence">
+            <field name="name">CRM Lead sequence</field>
+            <field name="code">crm.lead</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+        </record>
+
+        <!-- Lost Reason -->
+        <record id="lost_reason_4" model="crm.lost.reason">
+            <field name="name">Not Interested</field>
+            <field name="active">1</field>
+        </record>
+        <record id="lost_reason_5" model="crm.lost.reason">
+            <field name="name">Lodger</field>
+            <field name="active">1</field>
+        </record>
+        <record id="lost_reason_6" model="crm.lost.reason">
+            <field name="name">Not compatible</field>
+            <field name="active">1</field>
+        </record>
+        <record id="lost_reason_7" model="crm.lost.reason">
+            <field name="name">Others</field>
+            <field name="active">1</field>
+        </record>
+
+        <!-- Opportunity Stage -->
+        <record id="greenloc_lead_workflow_1" model="crm.stage">
+            <field name="name">Affected</field>
+            <field name="on_change">1</field>
+            <field name="probability">20</field>
+        </record>
+        <record id="greenloc_lead_workflow_2" model="crm.stage">
+            <field name="name">Appointment Confirmed</field>
+            <field name="on_change">1</field>
+            <field name="probability">40</field>
+        </record>
+        <record id="greenloc_lead_workflow_3" model="crm.stage">
+            <field name="name">Verbal Aggrement</field>
+            <field name="on_change">1</field>
+            <field name="probability">60</field>
+        </record>
+        <record id="greenloc_lead_workflow_4" model="crm.stage">
+            <field name="name">Signature Incomplete</field>
+            <field name="on_change">1</field>
+            <field name="probability">80</field>
+        </record>
+        <record id="greenloc_lead_workflow_5" model="crm.stage">
+            <field name="name">RDV VT</field>
+        </record>
+        <record id="greenloc_lead_workflow_6" model="crm.stage">
+            <field name="name">L3 Ok</field>
+        </record>
+
+        <!-- Cron to Get Universign Document -->
+        <record id="get_universign_doc_cron" model="ir.cron">
+          <field name="name">get.universign.doc.cron</field>
+          <field name="active" eval="True"/>
+          <field name="user_id" ref="base.user_root"/>
+          <field name="interval_number">5</field>
+          <field name="interval_type">minutes</field>
+          <field name="numbercall">-1</field>
+          <field name="doall" eval="False"/>
+          <field name="model">crm.lead</field>
+          <field name="function">cron_receive_universign</field>
+          <field name="args">()</field>
+        </record>
+
+        <!-- Fetch PDF Email from Greenloc -->
+         <record model="ir.actions.server" id="fetch_lead_pdf_greenloc">
+            <field name="name">Fetch PDF Email from Greenloc</field>
+            <field name="model_id" ref="model_crm_lead"/>
+            <field name="code">
+                action = env['crm.lead'].fetch_pdf_email_from_greenloc()
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+
+        <record id="crm_docs_upload_signed_wizard" model="ir.ui.view">
+            <field name="name">crm.docs.upload.signed.wizard.form</field>
+            <field name="model">crm.docs.upload.signed</field>
+            <field name="arch" type="xml">
+                <form string="Upload Signed Document">
+                    <group>
+                        <field name="docs" filename="docs_name" placeholder="Choose a file to import..."/>
+                        <field name="docs_name" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button name="action_uploads" string="Upload" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_crm_docs_upload_signed_wizard" model="ir.actions.act_window">
+            <field name="name">Upload Signed Document</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.docs.upload.signed</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="crm_docs_upload_signed_wizard"/>
+            <field name="target">new</field>
+        </record>
+
+</odoo>

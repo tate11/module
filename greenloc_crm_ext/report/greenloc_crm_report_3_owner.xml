@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_3_owner_document">
+    <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+    <div class="page">
+        <style>
+            dl { width: 100% }
+            dt { float: left; width: 100%; overflow: hidden; white-space: nowrap }
+            dd { float: left; width: 0%; overflow: hidden }
+
+            dt span:after { content: " ..............................................................................................................................................................................................................................................................." }
+
+            span{
+                text-transform: uppercase;
+            }
+        </style>
+        <div class="oe_structure"/>
+
+        <div class="text-right" style="font-size:75%">
+            <span t-esc="docs.name"/>
+        </div>
+
+        <h3 class="text-center">
+            ANNEXE 3. <br/>
+            IDENTIFICATIONS COMPLEMENTAIRES
+        </h3>
+
+        <div class="text-center">
+            <p>
+                (En cas de pluralité de titulaires de droits réels sur le BIEN ou de propriétaire personne morale)
+            </p>
+        </div>
+
+        <div style="text-align: justify; text-justify: inter-word; margin-bottom:30px">
+            <p>
+                Dans tous les cas de pluralité de titulaires de droits réels sur le BIEN, comme pour le cas où il appartiendrait à une ou plusieurs personnes morales, leur identification séparée suit.
+            </p>
+
+            <p>
+                Par la suite, chacune de ces personnes sera également incluse dans la désignation générique et au singulier ici retenue à son sujet (à savoir, selon le cas : le « BAILLEUR » ou le « LOCATAIRE ». Toutes s’engagement solidairement et indivisiblement au profit du PRENEUR, au titre des présentes dont ce document n’est qu’une annexe.
+            </p>
+        </div>
+
+        <h4 style="margin-top:10px" class="text-left">
+            I. Autres personnes physiques parties aux Présentes
+        </h4>
+
+        <div style="text-align: justify; text-justify: inter-word;">
+            <p>
+                Pour les personnes physiques, le cas échéant, leur identification est ici précédée de l’indication manuscrite de la qualité particulière de l’intéressé, selon le cas : époux X, épouse Y, partenaire de X, partenaire de Y, propriétaire indivis, usufruitier, nu-propriétaire, bénéficiaire d’un droit d’usage, bénéficiaire d’un droit de chasse, propriétaire d’un fonds bénéficiant d’une servitude, société [ou association, ou fondation, etc.], associé de tel groupement non personnalisé, etc.
+            </p>
+        </div>
+
+        <div>
+            <p  >
+                <strong><span t-esc="docs._context['partner_title']"/> <span t-esc="docs._context['partner_firstname']"/> <span t-esc="docs._context['partner_lastname']"/></strong>
+            </p>
+        </div>
+
+        <div>
+            <ul style="list-style: none;">
+                <li>Né(e) le <strong><span  t-esc="docs._context['partner_birthday']"/></strong> à <strong><span  t-esc="docs._context['partner_city_birthday']"/></strong></li>
+                <li>De nationalité <strong><span  t-esc="docs._context['partner_birthday']"/></strong></li>
+                <li>Demeurant à <strong><span  t-esc="docs._context['partner_city']"/></strong></li>
+                <li>Qui déclare être <strong><span  t-esc="docs._context['partner_marital_status']"/></strong></li>
+            </ul>
+        </div>
+
+        <div>
+            <p>
+                Qualité particulière de l’intéressé(e): CO-BAILLEUR - <span  t-field="doc.fal_ownership"/>
+            </p>
+        </div>
+
+        <h4 class="text-left">
+            II. Autres personnes morales parties aux présentes
+        </h4>
+
+        <div>
+            <p>
+                <dl>
+
+                    <dt><span style="font-weight:normal">Raison sociale :</span></dt><dd/>
+
+                    <dt><span style="font-weight:normal">Type de groupement :</span></dt><dd/>
+
+                    <dt><span style="font-weight:normal">Capital social :</span></dt><dd/>
+
+                    <dt><span style="font-weight:normal">Siège social :</span></dt><dd/>
+
+                    <dt><span style="font-weight:normal">Lieu d’enregistrement ou d’immatriculation :</span></dt><dd/>
+
+                    <dt><span style="font-weight:normal">Numéro d’enregistrement ou d’immatriculation :</span></dt><dd/>
+
+                    <dt><span style="font-weight:normal">Représenté par M. ou Mme</span></dt><dd/>
+
+                    <dt><span style="font-weight:normal">Né(e) le ................................................ à</span></dt><dd/>
+
+                    <dt style="margin-bottom:20px"><span style="font-weight:normal">Demeurant à</span></dt><dd/>
+
+                </dl>
+            </p>
+        </div>
+        <br/><br/>
+
+        <div>
+            <p>
+                Qui déclare agir en qualité de (rayer les mentions inutiles) :
+            </p>
+
+            <p>
+                Mandataire légal, <br/>
+                Mandataire statutaire <br/>
+                Mandataire conventionnel, en vertu d’un pouvoir en date du ............................................................................ ,
+                joint en annexe aux Présentes et donné par M................................., agissant en qualité de dirigeant social en fonction à la date de ce pouvoir, <br/>
+                Qualité particulière de la personne morale (mention manuscrite précitée) (le BAILLEUR ou LOCATAIRE)
+            </p>
+        </div>
+
+        <div class="text-right">
+            <p  >
+                <strong><span t-esc="docs._context['partner_firstname']"/> <span t-esc="docs._context['partner_lastname']"/></strong>
+            </p>
+        </div>
+
+        <div class="oe_structure"/>
+    </div>
+</template>
+
+
+<template id="report_3_owner">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="greenloc_crm_ext.report_3_owner_document" t-lang="doc.partner_id.lang"/>
+        </t>
+    </t>
+</template>
+</odoo>

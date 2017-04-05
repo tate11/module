@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- In the main res.partner Form -->
+        <record id="res_partner_form_greenloc" model="ir.ui.view">
+            <field name="name">res_partner_form_greenloc</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <!-- Add greenloc specific field -->
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="fal_marital_status"/>
+                    <field name="fal_wedding_contract"/>
+                    <field name="fal_is_owner" attrs="{'invisible' : [('type', 'not in', ['contact','other'])]}"/>
+                    <field name="fal_is_lodger" attrs="{'invisible' : [('type', 'not in', ['contact','other'])]}"/>
+                </xpath>
+                <xpath expr="//field[@name='function']" position="before">
+                    <field name="fal_birthday"/>
+                    <field name="fal_birth_place"/>
+                    <field name="fal_birth_department"/>
+                    <field name="fal_birth_nationality"/>
+                    <field name="lead_id" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="fal_parent_id_relation_type" attrs="{'invisible' : ['|',('parent_id', '=', False),('type', 'not in', ['contact','other'])]}"/>
+                </xpath>
+                <xpath expr="//notebook/page[1]/field[@name='child_ids']/form//field[@name='title']" position="after">
+                    <field name="fal_parent_id_relation_type" attrs="{'invisible' : [('type', 'not in', ['contact','other'])]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- In the simple res.partner Form -->
+        <record id="res_partner_simplified_form_greenloc" model="ir.ui.view">
+            <field name="name">res_partner_simplified_form_greenloc</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_partner_simple_form"/>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <!-- Add greenloc specific field -->
+                <xpath expr="//field[@name='function']" position="before">
+                    <field name="fal_birthday"/>
+                    <field name="fal_birth_place"/>
+                    <field name="fal_birth_department"/>
+                    <field name="fal_birth_nationality"/>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="fal_parent_id_relation_type" attrs="{'invisible' : ['|',('parent_id', '=', False),('type', 'not in', ['contact','other'])]}"/>
+                    <field name="fal_marital_status"/>
+                    <field name="fal_wedding_contract"/>
+                    <field name="fal_is_owner" attrs="{'invisible' : [('type', 'not in', ['contact','other'])]}"/>
+                    <field name="fal_is_lodger" attrs="{'invisible' : [('type', 'not in', ['contact','other'])]}"/>
+                </xpath>
+            </field>
+        </record>
+
+  </data>
+</openerp>

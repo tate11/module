@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!-- Paper Format -->
+        <record id="report.paperformat_euro" model="report.paperformat">
+            <field name="margin_top">25</field>
+            <field name="margin_bottom">25</field>
+            <field name="margin_left">25</field>
+            <field name="margin_right">25</field>
+        </record>
+
+        <!-- Add Record -->
+        <report
+            id="report_crm_contract"
+            string="Contrat De Bail Civil"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_contract"
+            name="greenloc_crm_ext.report_contract"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+        <report
+            id="report_crm_3_lodger"
+            string="Annexe 3 - Lodger"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_3_lodger"
+            name="greenloc_crm_ext.report_3_lodger"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+        <report
+            id="report_crm_3_owner"
+            string="Annexe 3 - Owner"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_3_owner"
+            name="greenloc_crm_ext.report_3_owner"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+        <report
+            id="report_crm_6_married_multiple"
+            string="Annexe 6 - Married Multiple Owner"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_6_married_multiple"
+            name="greenloc_crm_ext.report_6_married_multiple"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+        <report
+            id="report_crm_6_married_one"
+            string="Annexe 6 - Married One Owner"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_6_married_one"
+            name="greenloc_crm_ext.report_6_married_one"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+        <report
+            id="report_crm_6_widower_multiple"
+            string="Annexe 6 - Single-Widower Multiple Owner"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_6_widower_multiple"
+            name="greenloc_crm_ext.report_6_widower_multiple"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+        <report
+            id="report_crm_6_widower_one"
+            string="Annexe 6 - Single-Widower One Owner"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_6_widower_one"
+            name="greenloc_crm_ext.report_6_widower_one"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+		<report
+            id="report_crm_8_married_multiowner"
+            string="Annexe - 8 - Married Multiowner"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_8_2"
+            name="greenloc_crm_ext.report_8_2"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+        <report
+            id="report_crm_8_married_oneowner"
+            string="Annexe - 8 - Married One Owner"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_8_1"
+            name="greenloc_crm_ext.report_8_1"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+        <report
+            id="report_crm_8_singlewidow_multiowner"
+            string="Annexe - 8 - Single Widower Multi Owner"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_8_3"
+            name="greenloc_crm_ext.report_8_3"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+        <report
+            id="report_crm_8_singlewidow_1owner"
+            string="Annexe - 8 - Single Widower One Owner"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_8_4"
+            name="greenloc_crm_ext.report_8_4"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+        <report
+            id="report_crm_7"
+            string="Annexe - 7 - LEVEE D’OPTION DE BAIL"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_7_levee"
+            name="greenloc_crm_ext.report_7_levee"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+        <report
+            id="report_crm_9"
+            string="Annexe - 9"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_9"
+            name="greenloc_crm_ext.report_9"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+        <report
+            id="report_crm_10"
+            string="Annexe - 10"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_10"
+            name="greenloc_crm_ext.report_10"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+        <!-- New Report -->
+        <report
+            id="report_universign_single_no_lodger"
+            string="GREENLOC UNIVERSIGN Single No Lodger"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_single_no_lodger"
+            name="greenloc_crm_ext.report_single_no_lodger"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+        <report
+            id="report_universign_single_with_lodger"
+            string="GREENLOC UNIVERSIGN Single With Lodger"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_single_with_lodger"
+            name="greenloc_crm_ext.report_single_with_lodger"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+        <report
+            id="report_universign_multi_no_lodger"
+            string="GREENLOC UNIVERSIGN Multi No Lodger"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_multi_no_lodger"
+            name="greenloc_crm_ext.report_multi_no_lodger"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+        <report
+            id="report_universign_multi_with_lodger"
+            string="GREENLOC UNIVERSIGN Multi With Lodger"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_multi_with_lodger"
+            name="greenloc_crm_ext.report_multi_with_lodger"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+        <!-- New L3 Report -->
+        <report
+            id="report_universign_l3_single_no_lodger"
+            string="GREENLOC UNIVERSIGN L3 Single No Lodger"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_l3_single_no_lodger"
+            name="greenloc_crm_ext.report_l3_single_no_lodger"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+        <report
+            id="report_universign_l3_single_with_lodger"
+            string="GREENLOC UNIVERSIGN L3 Single With Lodger"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_l3_single_with_lodger"
+            name="greenloc_crm_ext.report_l3_single_with_lodger"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+        <report
+            id="report_universign_l3_multi_no_lodger"
+            string="GREENLOC UNIVERSIGN L3 Multi No Lodger"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_l3_multi_no_lodger"
+            name="greenloc_crm_ext.report_l3_multi_no_lodger"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+        <report
+            id="report_universign_l3_multi_with_lodger"
+            string="GREENLOC UNIVERSIGN L3 Multi With Lodger"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            file="greenloc_crm_ext.report_l3_multi_with_lodger"
+            name="greenloc_crm_ext.report_l3_multi_with_lodger"
+            menu="False"
+            paperformat="report.paperformat_euro"
+        />
+
+    </data>
+</odoo>

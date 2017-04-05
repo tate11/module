@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Lead to Affected -->
+        <record id="lead_to_affected_email" model="mail.template">
+            <field name="name">Lead to Affected Greenloc</field>
+            <field name="model_id" ref="greenloc_crm_ext.model_crm_lead"/>
+            <field name="email_from">noreply@green-loc.fr</field>
+            <field name="email_to">
+                ${object.email_from},
+            </field>
+            <field name="auto_delete" eval="False"/>
+            <field name="subject"><![CDATA[${object.name}]]></field>
+            <field name="body_html">
+                <![CDATA[
+                <div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777"> <img src="http://green-loc.fr/img/Greenloc_opportunity_header.jpg" class="pull-left" style="float:left;vertical-align:middle;border-image-repeat:initial;border-image-outset:initial;border-image-width:initial;border-image-slice:initial;border-image-source:initial;border-left-color:initial;border-bottom-color:initial;border-right-color:initial;border-top-color:initial;border-left-style:initial;border-bottom-style:initial;border-right-style:initial;border-top-style:initial;border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-top-width:0px;width: 100%;" data-original-title="" title="" aria-describedby="tooltip199849"><br> Reference: ${object.name} <br><br><br><br><br>${object.title.name} ${object.contact_lastname}<br><br><div style="text-align: justify;">Suite à notre conversation téléphonique, nous tenons à vous remercier pour la confiance que vous nous avez accordée et l’accueil que vous nous avez réservé.<br>&nbsp;<br>Comme nous l’avons vu ensemble lors de notre entretien, vous êtes éligible au programme Greenloc, sous réserve de validation de la visite technique. Pour rappel, le projet GREENLOC est basé sur un système locatif de toiture.<br><br>En contrepartie de cette location, GREENLOC installe <b style="font-weight:bold;">GRATUITEMENT</b> une micro-centrale photovoltaïque sur votre toit et s’engage à vous reverser un revenu locatif de <b style="font-weight:bold;">400€ par an</b>, indépendamment du volume d’énergie produit par la centrale.<br><br>L’étude de faisabilité, l’installation, les raccordements et l’entretien <b style="font-weight:bold;">pendant 20 ans</b> seront à notre charge.<br><br></div></div><div style="padding: 0px; width: 600px; margin: auto; background: center top / 100% repeat rgb(255, 255, 255);"><div style="color: rgb(119, 119, 119); text-align: justify;">Vous trouverez en pièces jointes, le contrat de location pré-rempli avec les informations que vous nous avez communiquées ainsi que ses annexes.<br><br>Toute l'équipe GREENLOC reste à votre entière  disposition, pour plus d'informations, nous vous invitons à consulter notre site <a href="http://www.green-loc.fr" style="text-decoration:none;color:rgb(124, 123, 173);background-color:transparent;">www.green-loc.fr</a><a href="http://www.green-loc.fr" style="text-decoration:none;color:rgb(124, 123, 173);background-color:transparent;"><br></a><a href="http://www.green-loc.fr" style="text-decoration:none;color:rgb(124, 123, 173);background-color:transparent;"><br></a>Durant les prochains jours, notre chargé d'études vous contactera afin de valider définitivement votre candidature.<br><br>Vous en souhaitant bonne réception,<br><br>Bien cordialement,<br><br></div><div style="text-align: justify;"><br><div style="color: rgb(119, 119, 119); text-align: right;"><span style="font-family: inherit; font-size: initial; font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial;">${object.user_id.name}</span><br><br><br>L'équipe GREENLOC</div><div style="text-align: right;"><div style="text-align: left;"><br><img src="http://www.green-loc.fr/img/Greenloc_opportunity_footer.png" class="pull-left" style="float:left;vertical-align:middle;border-image-repeat:initial;border-image-outset:initial;border-image-width:initial;border-image-slice:initial;border-image-source:initial;border-left-color:initial;border-bottom-color:initial;border-right-color:initial;border-top-color:initial;border-left-style:initial;border-bottom-style:initial;border-right-style:initial;border-top-style:initial;border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-top-width:0px;width: 100%;" data-original-title="" title=""><br></div></div></div></div>
+                ]]></field>
+        </record>
+
+    </data>
+</odoo>

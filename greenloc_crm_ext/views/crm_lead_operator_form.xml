@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="crm_phone_operator_form_view_lead_greenloc" model="ir.ui.view">
+            <field name="name">crm_phone_operator_form_view_lead_greenloc</field>
+            <field name="type">form</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Account">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="contact_name" />
+                            </group>
+                            <group>
+                                <field name="contact_lastname" />
+                            </group>
+                        </group>
+                        <group>
+                            <field name="name" placeholder="We can Hide this later with default value"/>
+                            <group string="Contact Address">
+                                <label for="street" string="Address"/>
+                                <div class="o_address_format">
+                                    <field name="street" placeholder="Street..." class="o_address_street"/>
+                                    <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                    <field name="city" placeholder="City" class="o_address_city"/>
+                                    <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}"/>
+                                    <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                    <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                                </div>
+                                <field name="email_from" />
+                                <field name="phone" />
+                            </group>
+                            <group string="Installation Address">
+                                <field name="fal_is_dia"/>
+                                <label for="fal_dia_street" string="Address" attrs="{'invisible': [('fal_is_dia', '=', False)]}"/>
+                                <div class="o_address_format" attrs="{'invisible': [('fal_is_dia', '=', False)]}">
+                                    <field name="fal_dia_street" placeholder="Street..." class="o_address_street"/>
+                                    <field name="fal_dia_street2" placeholder="Street 2..." class="o_address_street"/>
+                                    <field name="fal_dia_city" placeholder="City" class="o_address_city"/>
+                                    <field name="fal_dia_state" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}"/>
+                                    <field name="fal_dia_zip" placeholder="ZIP" class="o_address_zip"/>
+                                    <field name="fal_dia_country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                                </div>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Technical Informations">
+                                <group>
+                                    <label for="fal_roof_surface"/>
+                                    <div class="o_row">
+                                        <field name="fal_roof_surface"/> <span>m<sup>2</sup></span>
+                                        <a href="http://solargis.info/imaps/" target="_blank">Go To Solargis</a>
+                                    </div>
+                                </group>
+                                <group>
+                                    <label for="fal_sun_eyes_tools"/>
+                                    <div class="o_row">
+                                        <field name="fal_sun_eyes_tools"/> <span>hours</span>
+                                        <a href="http://solargis.info/pvplanner/?#tl=Google:hybrid&amp;bm=satellite" target="_blank">Go To Suneyes Tools</a>
+                                    </div>
+                                </group>
+                                <group>
+                                    <field name="fal_france_building"/>
+                                </group>
+                            </page>
+                            <page string="Personal Informations">
+                                <group>
+                                    <field name="fal_marital_status"/>
+                                    <field name="fal_wedding_contract"/>
+                                </group>
+                                <separator string="Contacts &amp; Addresses" colspan="4"/>
+                                <field name="fal_partner_child_ids" mode="kanban" context="{'default_parent_id': active_id, 'default_type': 'other'}" >
+                                    <kanban>
+                                        <field name="color"/>
+                                        <field name="fal_parent_id_relation_type"/>
+                                        <field name="name"/>
+                                        <field name="title"/>
+                                        <field name="type"/>
+                                        <field name="email"/>
+                                        <field name="parent_id"/>
+                                        <field name="is_company"/>
+                                        <field name="fal_is_owner"/>
+                                        <field name="fal_is_lodger"/>
+                                        <field name="function"/>
+                                        <field name="phone"/>
+                                        <field name="street"/>
+                                        <field name="street2"/>
+                                        <field name="zip"/>
+                                        <field name="city"/>
+                                        <field name="country_id"/>
+                                        <field name="mobile"/>
+                                        <field name="fax"/>
+                                        <field name="state_id"/>
+                                        <field name="image"/>
+                                        <field name="lang"/>
+                                        <templates>
+                                            <t t-name="kanban-box">
+                                                <t t-set="color" t-value="kanban_color(record.color.raw_value)"/>
+                                                <div t-att-class="color + (record.title.raw_value == 1 ? ' oe_kanban_color_alert' : '') + ' oe_kanban_global_click'">
+                                                    <a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right"/>
+                                                    <div class="o_kanban_image">
+                                                        <img t-if="record.image.raw_value" t-att-src="'data:image/png;base64,'+record.image.raw_value"/>
+                                                        <t t-if="!record.image.raw_value">
+                                                            <img t-if="record.type.raw_value === 'delivery'" t-att-src='_s + "/base/static/src/img/truck.png"'/>
+                                                            <img t-if="record.type.raw_value === 'invoice'" t-att-src='_s + "/base/static/src/img/money.png"'/>
+                                                            <t t-if="record.type.raw_value !== 'invoice' &amp;&amp; record.type.raw_value !== 'delivery'">
+                                                                <img t-if="record.is_company.raw_value === true" t-att-src='_s + "/base/static/src/img/company_image.png"'/>
+                                                                <img t-if="record.is_company.raw_value === false" t-att-src='_s + "/base/static/src/img/avatar.png"'/>
+                                                            </t>
+                                                        </t>
+                                                    </div>
+                                                    <div class="oe_kanban_details">
+                                                        <field name="name"/>
+                                                        <div t-if="record.function.raw_value"><field name="function"/></div>
+                                                        <div t-if="record.email.raw_value"><field name="email"/></div>
+                                                        <div t-if="record.fal_is_owner.raw_value">Owner</div>
+                                                        <div t-if="record.fal_is_lodger.raw_value">Lodger</div>
+                                                        <div t-if="record.fal_parent_id_relation_type.raw_value"><field name="fal_parent_id_relation_type"/></div>
+                                                        <div t-if="record.type.raw_value != 'contact'">
+                                                            <div>
+                                                                <field name="zip"/>
+                                                                <field name="city"/>
+                                                            </div>
+                                                            <field t-if="record.state_id.raw_value" name="state_id"/>
+                                                            <field name="country_id"/>
+                                                        </div>
+                                                        <div t-if="record.phone.raw_value">Phone: <field name="phone"/></div>
+                                                        <div t-if="record.mobile.raw_value">Mobile: <field name="mobile"/></div>
+                                                        <div t-if="record.fax.raw_value">Fax: <field name="fax"/></div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </templates>
+                                    </kanban>
+                                    <form string="Contact / Address">
+                                        <sheet>
+                                            <field name="type" required="1" widget="radio" options="{'horizontal': true}" invisible="1"/>
+                                            <group>
+                                                <group>
+                                                    <field name="fal_parent_id_relation_type"/>
+                                                </group>
+                                                <group>
+                                                    <field name="fal_is_owner"/>
+                                                    <field name="fal_is_lodger"/>
+                                                </group>
+                                            </group>
+                                            <hr/>
+                                            <group>
+                                                <div class="oe_edit_only" colspan="2">
+                                                    <field name="is_company" invisible="True"/>
+                                                    <group attrs="{'invisible': [('is_company', '=', True)]}">
+                                                        <group>
+                                                            <field name="lastname" attrs="{'required': [('type', '=', 'contact'), ('firstname', '=', False), ('is_company', '=', False)]}"/>
+                                                        </group>
+                                                        <group>
+                                                            <field name="firstname" attrs="{'required': [('type', '=', 'contact'), ('firstname', '=', False), ('is_company', '=', False)]}"/>
+                                                        </group>
+                                                    </group>
+                                                    <field name="title" placeholder="e.g. Mr."
+                                                        attrs="{'invisible': [('type','&lt;&gt;', ['contact','other'])]}"/>
+                                                </div>
+                                            </group>
+                                            <group>
+                                                <group attrs="{'invisible': [('type','=', 'contact')]}">
+                                                    <label for="street" string="Address"/>
+                                                    <div>
+                                                        <div class="o_address_format" name="div_address">
+                                                            <field name="street" placeholder="Street..." class="o_address_street"/>
+                                                            <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                                            <field name="city" placeholder="City" class="o_address_city"/>
+                                                            <field name="state_id" class="o_address_state" placeholder="State" options='{"no_open": True}' context="{'country_id': country_id, 'zip': zip}"/>
+                                                            <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                                            <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>
+                                                        </div>
+                                                    </div>
+                                                </group>
+                                                <group>
+                                                    <field name="name" string="Contact Name" attrs="{'readonly': [('is_company', '=', False)],
+                                                     'required': [('is_company', '=', True)]}" invisible="1"/>
+                                                    <field name="fal_marital_status" />
+                                                    <field name="fal_birthday"/>
+                                                    <field name="fal_birth_place"/>
+                                                    <field name="fal_birth_department"/>
+                                                    <field name="fal_birth_nationality"/>
+                                                    <field name="function" placeholder="e.g. Sales Director"
+                                                        attrs="{'invisible': [('type','&lt;&gt;', ['contact','other'])]}"/>
+                                                    <field name="email"/>
+                                                    <field name="phone" widget="phone"/>
+                                                    <field name="mobile" widget="phone"/>
+                                                    <field name="comment" placeholder="internal note..."/>
+                                                </group>
+                                            </group>
+                                            <field name="supplier" invisible="True"/>
+                                            <field name="customer" invisible="True"/>
+                                            <field name="lang" invisible="True"/>
+                                            <field name="image" invisible="True"/>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_crm_phone_operator_lead_greenloc" model="ir.actions.act_window">
+            <field name="name">Phone Operator Form</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_id" ref="greenloc_crm_ext.crm_phone_operator_form_view_lead_greenloc"/>
+            <field name="target">new</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <menuitem id="menu_crm_phone_operator_lead_greenloc" name="Phone Operator" parent="" action="greenloc_crm_ext.action_crm_phone_operator_lead_greenloc" web_icon="website_sign,static/description/icon.png" groups="base.group_erp_manager"/>
+
+  </data>
+</openerp>

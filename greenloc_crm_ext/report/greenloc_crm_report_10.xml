@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+<template id="report_10_document">
+    <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+    <div class="page">
+        <style>
+            span{
+                text-transform: uppercase;
+            }
+        </style>
+    	<div class="oe_structure"/>
+
+        <div class="text-right" style="font-size:75%">
+            <span t-esc="docs.name"/>
+        </div>
+        <h3 class="text-center">
+            Reproduction du texte intégral des articles L. 121-23, L. 121-24, L. 121-25 et L. 121-26 du Code de la consommation
+        </h3>
+        <div style="text-align:justify; ">
+            « Si vous annulez votre commande, comme la loi vous le permet dans les conditions ci-après reproduites, vous pouvez utiliser le formulaire détachable ci-contre » :
+        </div>
+
+        <hr/>
+
+        [_____________________________________________________________________]
+
+        <div style="text-align:justify; ">
+            <p>
+                « Si vous annulez votre commande, comme la loi vous le permet dans les conditions ci-après reproduites, vous pouvez utiliser le formulaire détachable ci-contre » :
+            </p>
+        </div>
+
+        <div style="text-align:justify; ">
+            <p>
+                <strong>Article L. 121-23 du Code de la consommation</strong>
+            </p>
+            <p>
+                Les opérations visées à l'article L. 121-21 doivent faire l'objet d'un contrat dont un exemplaire doit être remis au client au moment de la conclusion de ce contrat et comporter, à peine de nullité, les mentions suivantes :
+            </p>
+            <p>
+                <ol style="margin-left:15px; ">
+                    <li>
+                        Noms du fournisseur et du démarcheur ;
+                    </li>
+                    <li>
+                        Adresse du fournisseur ;
+                    </li>
+                    <li>
+                        Adresse du lieu de conclusion du contrat ;
+                    </li>
+                    <li>
+                        Désignation précise de la nature et des caractéristiques des biens offerts ou des services proposés ;
+                    </li>
+                    <li>
+                        Conditions d'exécution du contrat, notamment les modalités et le délai de livraison des biens, ou d'exécution de la prestation de services ;
+                    </li>
+                    <li>
+                        Prix global à payer et modalités de paiement ; en cas de vente à tempérament ou de vente à crédit, les formes exigées par la réglementation sur la vente à crédit, ainsi que le taux nominal de l'intérêt et le taux effectif global de l'intérêt déterminé dans les conditions prévues à l'article L. 313-1 ;
+                    </li>
+                    <li>
+                        Faculté de renonciation prévue à l'article L. 121-25, ainsi que les conditions d'exercice de cette faculté et, de façon apparente, le texte intégral des articles L. 121-23, L. 121-24, L. 121-25 et L. 121-26.
+                    </li>
+                </ol>
+            </p>
+        </div>
+
+        <div style="text-align:justify; ">
+            <p>
+                <strong>Article L. 121-24 du Code de la consommation</strong>
+            </p>
+            <p>
+                Le contrat visé à l'article L. 121-23 doit comprendre un formulaire détachable destiné à faciliter l'exercice de la faculté de renonciation dans les conditions prévues à l'article L. 121-25. Un décret en Conseil d'Etat précisera les mentions devant figurer sur ce formulaire.<br/>
+                Ce contrat ne peut comporter aucune clause attributive de compétence. <br/>
+                Tous les exemplaires du contrat doivent être signés et datés de la main même du client.
+            </p>
+        </div>
+
+        <div style="text-align:justify; ">
+            <p>
+                <strong>Article L. 121-25 du Code de la consommation</strong>
+            </p>
+            <p>
+                Dans les sept jours, jours fériés compris, à compter de la commande ou de l'engagement d'achat, le client a la faculté d'y renoncer par lettre recommandée avec accusé de réception. Si ce délai expire normalement un samedi, un dimanche ou un jour férié ou chômé, il est prorogé jusqu'au premier jour ouvrable suivant.<br/>
+                Toute clause du contrat par laquelle le client abandonne son droit de renoncer à sa commande ou à son engagement d'achat est nulle et non avenue.<br/>
+                Le présent article ne s'applique pas aux contrats conclus dans les conditions prévues à l'article L. 121-27.<br/>
+            </p>
+        </div>
+
+        <div style="text-align:justify; ">
+            <p>
+                <strong>Article L. 121-26 du Code de la consommation</strong>
+            </p>
+            <p>
+                Avant l'expiration du délai de réflexion prévu à l'article L. 121-25, nul ne peut exiger ou obtenir du client, directement ou indirectement, à quelque titre ni sous quelque forme que ce soit une contrepartie quelconque ni aucun engagement ni effectuer des prestations de services de quelque nature que ce soit.<br/>
+                Toutefois, la souscription à domicile d'abonnement à une publication quotidienne et assimilée, au sens de l'article 39 bis du code général des impôts, n'est pas soumise aux dispositions de l'alinéa précédent dès lors que le consommateur dispose d'un droit de résiliation permanent, sans frais ni indemnité, assorti du remboursement, dans un délai de quinze jours, des sommes versées au prorata de la durée de l'abonnement restant à courir. <br/>
+                En outre, les engagements ou ordres de paiement ne doivent pas être exécutés avant l'expiration du délai prévu à l'article L. 121-25 et doivent être retournés au consommateur dans les quinze jours qui suivent sa rétractation. Les dispositions du deuxième alinéa s'appliquent aux souscriptions à domicile proposées par les associations et entreprises agréées par l'Etat ayant pour objet la fourniture de services mentionnés à l'article L. 129-1 du code du travail sous forme d'abonnement.
+            </p>
+        </div>
+
+        <div style="text-align:justify; ">
+            <p>
+                <strong style="text-transform: uppercase;   ">SI VOUS ANNULEZ VOTRE COMMANDE, VOUS POUVEZ UTILISER LE FORMULAIRE DETACHABLE SE TROUVANT EN DERNIERES PAGES DU BAIL CIVIL</strong>
+            </p>
+            <p>
+                Conformément à la loi Informatique et Libertés, vous disposez d’un droit d’accès et de rectification des données vous concernant dont nous sommes seuls destinataires.
+            </p>
+        </div>
+
+    </div>
+</template>
+
+
+<template id="report_10">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="greenloc_crm_ext.report_10_document" t-lang="doc.partner_id.lang"/>
+        </t>
+    </t>
+</template>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_greenloc_crm_lead_docs_sign_attachment_user,greenloc.crm.lead.docs.sign.attachment.user,greenloc_crm_ext.model_greenloc_crm_lead_docs_sign_attachment,base.group_user,1,1,1,1
+access_greenloc_crm_universign_user,greenloc.crm.universign.user,greenloc_crm_ext.model_greenloc_crm_universign,base.group_user,1,1,1,1
+access_greenloc_crm_roof_information_user,greenloc.crm.roof.information.user,greenloc_crm_ext.model_greenloc_crm_roof_information,base.group_user,1,1,1,1
+access_greenloc_crm_lead_technical_visit_user,greenloc.crm.lead.technical.visit.user,greenloc_crm_ext.model_greenloc_crm_lead_technical_visit,base.group_user,1,1,1,1

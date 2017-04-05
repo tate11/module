@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Register JS -->
+        <template id="greenloc_field_ext_asset" name="greenloc field ext asset" inherit_id="web.assets_backend">
+                <xpath expr="." position="inside">
+                    <script type="text/javascript" src="/greenloc_crm_ext/static/src/js/greenloc.js"></script>
+                </xpath>
+        </template>
+
+        <record id="crm_case_form_view_oppor_greenloc" model="ir.ui.view">
+            <field name="name">crm_case_form_view_oppor_greenloc</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <!-- Stage id not clickable -->
+                <xpath expr="//form/header/field[@name='stage_id']" position="attributes">
+                    <attribute name="clickable"></attribute>
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+
+                <!-- Add phone Call Button -->
+                <xpath expr="//field[@name='phone']" position="replace">
+                    <label for="phone" string="Phone"/>
+                    <div>
+                        <field name="phone" widget="phone" class="oe_inline"/>
+                        <button name="action_phone_call" string="Call" type="object" class="oe_link" attrs="{'invisible': [('phone', '=', False)]}"/>
+                    </div>
+                    <label for="mobile" string="Mobile"/>
+                    <div>
+                        <field name="mobile" widget="phone" class="oe_inline"/>
+                        <button name="action_mobile_call" string="Call" type="object" class="oe_link" attrs="{'invisible': [('mobile', '=', False)]}"/>
+                    </div>
+                </xpath>
+
+                <!-- Hide create button -->
+                <xpath expr="//form" position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+
+                <!-- Hide Log activity button, meeting button -->
+                <xpath expr="//form/header/button[@name='%(crm.crm_activity_log_action)d']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/div[@name='button_box']/button[@name='action_schedule_meeting']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Add action button -->
+                <xpath expr="//form/header/button[@name='action_set_won']" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|', ('active','=',False), ('probability', '!=', 80)]}</attribute>
+                    <attribute name="groups">sales_team.group_sale_manager</attribute>
+                </xpath>
+                <xpath expr="//form/header/button[@name='action_set_won']" position="before">
+                    <button name="action_set_opportunity_new" string="No Response" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('active','=',False), ('probability', '!=', 20)]}"/>
+                    <button name="action_set_prev_stage" string="Prev Stage" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('active','=',False), ('probability', '&lt;=', 20)]}"/>
+                    <button name="action_set_next_stage" string="Next Stage" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('active','=',False), ('probability', '&gt;=', 80)]}"/>
+                    <button name="action_set_rdvvt_stage" string="RDV VT" type="object" class="oe_highlight" attrs="{'invisible': ['|', '|', ('active','=',False), ('probability', '!=', 100), ('fal_is_rdvvt', '=', True)]}" groups="sales_team.group_sale_manager"/>
+                    <button name="action_set_rdvvt_to_won__stage" string="Cancel RDV VT" type="object" class="oe_highlight" attrs="{'invisible': ['|', '|', ('active','=',False), ('probability', '!=', 100), ('fal_is_rdvvt', '=', False)]}" groups="sales_team.group_sale_manager"/>
+                    <button name="action_set_l3_to_rdvvt_stage" string="Cancel L3" type="object" class="oe_highlight" attrs="{'invisible': ['|', '|', ('active','=',False), ('probability', '!=', 100), ('fal_is_l3', '=', False)]}" groups="sales_team.group_sale_manager"/>
+                </xpath>
+
+                <!-- Hide too many informations on page contact information -->
+                <xpath expr="//notebook/page[@name='lead']/group/group[2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[@name='lead']/group/group[3]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[@name='lead']/group/group[4]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!-- Remove mobile field Put it beside Phone-->
+                <xpath expr="//notebook/page[@name='lead']/group/group[2]/field[@name='mobile']" position="replace">
+                </xpath>
+
+                <!-- Add sequence field -->
+                <xpath expr="//sheet/div[@name='button_box']" position="after">
+                    <label for="fal_sequence" string="Sequence"/>
+                    <field name="fal_sequence" readonly="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='tag_ids']" position="after">
+                    <field name="fal_no_of_recall"/>
+                    <field name="fal_is_complex"/>
+                    <field name="fal_is_rdvvt" invisible="1"/>
+                    <field name="fal_is_l3" invisible="1"/>
+                </xpath>
+
+                <!-- Add button to send contract -->
+                <xpath expr="//field[@name='stage_id']" position="before">
+                    <button name="generate_documents" string="Generate Documents" type="object" confirm="This will generate all necessary documents and Integrate with universign, are you sure?" attrs="{'invisible': [('fal_is_complex','=', True)]}"/>
+                </xpath>
+
+                <!-- Hide amount and percentage in opportunity -->
+                <xpath expr="//h2[@class='o_row']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Add Different Installation Address -->
+                <xpath expr="//div[@class='o_address_format']" position="after">
+                    <label for="fal_dia_street" string="Installation Address"/>
+                    <div class="o_address_format">
+                        <field name="fal_dia_street" placeholder="Street..." class="o_address_street"/>
+                        <field name="fal_dia_street2" placeholder="Street 2..." class="o_address_street"/>
+                        <field name="fal_dia_city" placeholder="City" class="o_address_city"/>
+                        <field name="fal_dia_state" class="o_address_state" placeholder="State" options='{"no_open": True}'/>
+                        <field name="fal_dia_zip" placeholder="ZIP" class="o_address_zip"/>
+                        <field name="fal_dia_country_id" placeholder="Country" class="o_address_country" options="{'no_open': True, 'no_create': True}"/>
+                    </div>
+                    <label for="fal_dia_date_localization" invisible="1" string="Geolocation"/>
+                    <div>
+                        <div>
+                            <span class="oe_inline" invisible="1"> ( On  </span>
+                            <field name="fal_dia_date_localization" nolabel="1" class="oe_inline" invisible="1"/>
+                            <span> Lat : </span>
+                            <field name="fal_dia_partner_latitude" nolabel="1" class="oe_inline"/>
+                            <span> ;  Long:  </span>
+                            <field name="fal_dia_partner_longitude" nolabel="1" class="oe_inline"/>
+                            <span invisible="1">) </span>
+                        </div>
+                        <button
+                            string="Geolocate"
+                            name="lead_geo_localize"
+                            colspan="2"
+                            icon="fa-check"
+                            type="object"/>
+                    </div>
+                </xpath>
+
+                <!-- Hide page internal_note-->
+                <xpath expr="//notebook/page[1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- In Lead give recall reason and email status -->
+                <xpath expr="//field[@name='team_id']" position="after">
+                    <field name="fal_lead_origin"/>
+                </xpath>
+
+                <!-- Add Quality Person, Validator Person -->
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="fal_quality_user_id"/>
+                    <field name="fal_salesperson_user_id"/>
+                </xpath>
+
+                <!-- Add Contact Page -->
+                <xpath expr="//notebook/page[1]" position="before">
+                    <page string="Personal informations" autofocus="autofocus">
+                        <group>
+                            <field name="fal_marital_status"/>
+                            <field name="fal_wedding_contract"/>
+                        </group>
+                        <separator string="Contacts &amp; Addresses" colspan="4"/>
+                        <field name="fal_partner_child_ids" mode="kanban" context="{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id}">
+                            <kanban>
+                                <field name="color"/>
+                                <field name="fal_parent_id_relation_type"/>
+                                <field name="name"/>
+                                <field name="title"/>
+                                <field name="type"/>
+                                <field name="email"/>
+                                <field name="parent_id"/>
+                                <field name="is_company"/>
+                                <field name="fal_is_owner"/>
+                                <field name="fal_is_lodger"/>
+                                <field name="function"/>
+                                <field name="phone"/>
+                                <field name="street"/>
+                                <field name="street2"/>
+                                <field name="zip"/>
+                                <field name="city"/>
+                                <field name="country_id"/>
+                                <field name="mobile"/>
+                                <field name="fax"/>
+                                <field name="state_id"/>
+                                <field name="image"/>
+                                <field name="lang"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <t t-set="color" t-value="kanban_color(record.color.raw_value)"/>
+                                        <div t-att-class="color + (record.title.raw_value == 1 ? ' oe_kanban_color_alert' : '') + ' oe_kanban_global_click'">
+                                            <a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right"/>
+                                            <div class="o_kanban_image">
+                                                <img t-if="record.image.raw_value" t-att-src="'data:image/png;base64,'+record.image.raw_value"/>
+                                                <t t-if="!record.image.raw_value">
+                                                    <img t-if="record.type.raw_value === 'delivery'" t-att-src='_s + "/base/static/src/img/truck.png"'/>
+                                                    <img t-if="record.type.raw_value === 'invoice'" t-att-src='_s + "/base/static/src/img/money.png"'/>
+                                                    <t t-if="record.type.raw_value !== 'invoice' &amp;&amp; record.type.raw_value !== 'delivery'">
+                                                        <img t-if="record.is_company.raw_value === true" t-att-src='_s + "/base/static/src/img/company_image.png"'/>
+                                                        <img t-if="record.is_company.raw_value === false" t-att-src='_s + "/base/static/src/img/avatar.png"'/>
+                                                    </t>
+                                                </t>
+                                            </div>
+                                            <div class="oe_kanban_details">
+                                                <field name="name"/>
+                                                <div t-if="record.function.raw_value"><field name="function"/></div>
+                                                <div t-if="record.email.raw_value"><field name="email"/></div>
+                                                <div t-if="record.fal_is_owner.raw_value">Owner</div>
+                                                <div t-if="record.fal_is_lodger.raw_value">Lodger</div>
+                                                <div t-if="record.fal_parent_id_relation_type.raw_value"><field name="fal_parent_id_relation_type"/></div>
+                                                <div t-if="record.type.raw_value != 'contact'">
+                                                    <div>
+                                                        <field name="street"/>
+                                                        <field name="street2"/>
+                                                    </div>
+                                                    <div>
+                                                        <field name="zip"/>
+                                                        <field name="city"/>
+                                                    </div>
+                                                    <field t-if="record.state_id.raw_value" name="state_id"/>
+                                                    <field name="country_id"/>
+                                                </div>
+                                                <div t-if="record.phone.raw_value">Phone: <field name="phone"/></div>
+                                                <div t-if="record.mobile.raw_value">Mobile: <field name="mobile"/></div>
+                                                <div t-if="record.fax.raw_value">Fax: <field name="fax"/></div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                            <form string="Contact / Address">
+                                <sheet>
+                                    <field name="type" required="1" widget="radio" options="{'horizontal': true}"/>
+                                    <hr/>
+                                    <group>
+                                        <group attrs="{'invisible': [('type','=', 'contact')]}">
+                                            <label for="street" string="Address"/>
+                                            <div>
+                                                <div class="o_address_format" name="div_address">
+                                                    <field name="street" placeholder="Street..." class="o_address_street"/>
+                                                    <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                                    <field name="city" placeholder="City" class="o_address_city"/>
+                                                    <field name="state_id" class="o_address_state" placeholder="State" options='{"no_open": True}' context="{'country_id': country_id, 'zip': zip}"/>
+                                                    <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                                    <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>
+                                                </div>
+                                            </div>
+                                            <label for="date_localization" invisible="1" string="Geolocation"/>
+                                            <div>
+                                                <div>
+                                                    <span class="oe_inline" invisible="1"> ( On  </span>
+                                                    <field name="date_localization" invisible="1" nolabel="1" class="oe_inline"/>
+                                                    <span> Lat : </span>
+                                                    <field name="partner_latitude" nolabel="1" class="oe_inline"/>
+                                                    <span> ;  Long:  </span>
+                                                    <field name="partner_longitude" nolabel="1" class="oe_inline"/>
+                                                    <span invisible="1">) </span>
+                                                </div>
+                                                <button
+                                                    string="Geolocate"
+                                                    name="geo_localize"
+                                                    colspan="2"
+                                                    icon="fa-check"
+                                                    type="object"/>
+                                            </div>
+                                        </group>
+                                        <group>
+                                            <field name="name" string="Contact Name" attrs="{'readonly': [('is_company', '=', False)],
+                                             'required': [('is_company', '=', True)]}"/>
+                                             <div class="oe_edit_only" colspan="2">
+                                              <field name="is_company" invisible="True"/>
+                                              <group attrs="{'invisible': [('is_company', '=', True)]}">
+                                                  <field name="lastname" attrs="{'required': [('type', '=', 'contact'), ('firstname', '=', False), ('is_company', '=', False)]}"/>
+                                                  <field name="firstname" attrs="{'required': [('type', '=', 'contact'), ('firstname', '=', False), ('is_company', '=', False)]}"/>
+                                              </group>
+                                            </div>
+                                            <field name="title" placeholder="e.g. Mr."
+                                                attrs="{'invisible': [('type','not in', ['contact','other'])]}"/>
+                                            <field name="fal_parent_id_relation_type" attrs="{'invisible' : [('type', 'not in', ['contact','other'])]}"/>
+                                            <field name="fal_marital_status" />
+                                            <field name="fal_is_owner" attrs="{'invisible' : [('type', 'not in', ['contact','other'])]}"/>
+                                            <field name="fal_is_lodger" attrs="{'invisible' : [('type', 'not in', ['contact','other'])]}"/>
+                                            <field name="fal_birthday"/>
+                                            <field name="fal_birth_place"/>
+                                            <field name="fal_birth_department"/>
+                                            <field name="fal_birth_nationality"/>
+                                            <field name="function" placeholder="e.g. Sales Director"
+                                                attrs="{'invisible': [('type','not in', ['contact','other'])]}"/>
+                                            <field name="email"/>
+                                            <field name="phone" widget="phone"/>
+                                            <field name="mobile" widget="phone"/>
+                                            <field name="comment" placeholder="internal note..."/>
+                                        </group>
+                                    </group>
+                                    <field name="supplier" invisible="True"/>
+                                    <field name="customer" invisible="True"/>
+                                    <field name="lang" invisible="True"/>
+                                    <field name="image" invisible="True"/>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page name="technical_informations" string="Technical Informations">
+                        <separator string="Reserved for Quality Service Team" colspan="4"/>
+                        <group>
+                            <label for="fal_roof_surface"/>
+                            <div class="o_row">
+                                <field name="fal_roof_surface" /> <span>m<sup>2</sup></span>
+                                <a href="https://www.geoportail.gouv.fr/" target="_blank">Go To Solargis</a>
+                            </div>
+                        </group>
+                        <group>
+                            <label for="fal_sun_eyes_tools"/>
+                            <div class="o_row">
+                                <field name="fal_sun_eyes_tools" /> <span>hours</span>
+                                <a href="http://solargis.info/pvplanner/?#tl=Google:hybrid&amp;bm=satellite" target="_blank">Go To Suneyes Tools</a>
+                            </div>
+                        </group>
+                        <div>
+                            <label for="fal_roof_information_ids"/>
+                            <field name="fal_roof_information_ids"/>
+                        </div>
+                        <group invisible="1">
+                            <!-- Roof surface and suneyes tool are hidden because maybe we don't need it anymore-->
+                            <field name="fal_sun_eyes_tools_pdf" filename="fal_sun_eyes_tools_pdf_fname" invisible="1"/>
+                            <field name="fal_sun_eyes_tools_pdf_fname" invisible="1" class="oe_inline oe_right"/>
+                        </group>
+                        <group>
+                            <field name="fal_root_surface_pdf" filename="fal_root_surface_pdf_fname"/>
+                            <field name="fal_root_surface_pdf_fname" invisible="1" class="oe_inline oe_right"/>
+                            <field name="fal_solargis_csv" filename="fal_solargis_csv_fname"/>
+                            <field name="fal_solargis_csv_fname" invisible="1" class="oe_inline oe_right"/>
+                        </group>
+                        <group>
+                            <label for="fal_france_building"/>
+                            <div class="o_row">
+                                <field name="fal_france_building"/>
+                                <a href="http://atlas.patrimoines.culture.fr/atlas/trunk/index.php" target="_blank">Go To Website</a>
+                            </div>
+                            <field name="fal_section"/>
+                            <field name="fal_parcel_no"/>
+                        </group>
+                        <group>
+                            <label for="fal_contenance_1"/>
+                            <div class="o_row">
+                                <field name="fal_contenance_1"/> <span>ha</span>
+                                <field name="fal_contenance_2"/> <span>are</span>
+                                <field name="fal_contenance_3"/> <span>m<sup>2</sup></span>
+                            </div>
+                            <field name="fal_place_says" invisible="1"/>
+                            <field name="fal_goods"/>
+                            <field name="fal_ownership"/>
+                        </group>
+                        <group>
+                            <label for="fal_model_1_pdf"/>
+                            <div class="o_row">
+                                <field name="fal_model_1_pdf" filename="fal_model_1_pdf_fname"/>
+                                <field name="fal_model_1_pdf_fname" invisible="1" class="oe_inline oe_right"/>
+                                <!-- <a href="https://www.geoportail.gouv.fr/" target="_blank">Go To Model 1 Website</a> -->
+                            </div>
+                        </group>
+                        <group>
+                            <label for="fal_cadastre_pdf"/>
+                            <div class="o_row">
+                                <field name="fal_cadastre_pdf" filename="fal_cadastre_pdf_fname"/>
+                                <field name="fal_cadastre_pdf_fname" invisible="1" class="oe_inline oe_right"/>
+                                <a href="https://www.cadastre.gouv.fr/" target="_blank">Go To Cadastre</a>
+                            </div>
+                        </group>
+                        <group>
+                            <field name="fal_quality_team_notes"/>
+                        </group>
+                    </page>
+                    <page string="Technical Visit">
+                        <group>
+                            <field name="technician_id"/>
+                        </group>
+                        <field name="fal_technical_visit_ids" />
+                    </page>
+                    <page string="Communications">
+                        <field name="fal_mail_ids" />
+                    </page>
+                    <!-- Hide until next development because we will use universign -->
+                    <page string="Documents Sign">
+                        <field name="fal_document_signature_ids" />
+                        <field name="fal_crm_universign_ids" groups="base.group_erp_manager">
+                            <tree>
+                                <field name="fal_universign_url" groups="base.group_erp_manager"/>
+                                <field name="fal_universign_id" groups="base.group_erp_manager"/>
+                                <field name="fal_universign_doc_received" groups="base.group_erp_manager"/>
+                                <field name="fal_universign_doc_failed" groups="base.group_erp_manager"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <field name="fal_universign_url" groups="base.group_erp_manager"/>
+                                    <field name="fal_universign_id" groups="base.group_erp_manager"/>
+                                    <field name="fal_universign_doc_received" groups="base.group_erp_manager"/>
+                                    <field name="fal_universign_doc_failed" groups="base.group_erp_manager"/>
+                                    <field name="fal_universign_login" groups="base.group_erp_manager"/>
+                                    <field name="fal_universign_server" groups="base.group_erp_manager"/>
+                                    <field name="fal_universign_type" groups="base.group_erp_manager"/>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook/page[2]" position="attributes">
+                    <attribute name="string">Address Information</attribute>
+                </xpath>
+                <!-- In Opporunity after lost reason, we give another text for lost reason detail (supposed to use it when lost reason is other) -->
+                <xpath expr="//field[@name='lost_reason']" position="after">
+                    <field name="fal_lost_reason" attrs="{'invisible': [('active', '=', True)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Remove create button in crm.leads -->
+        <record id="crm_case_tree_view_oppor_greenloc" model="ir.ui.view">
+            <field name="name">crm_case_form_view_oppor_greenloc</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="crm_case_kanban_view_oppor_greenloc" model="ir.ui.view">
+            <field name="name">crm_case_kanban_view_oppor_greenloc</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <xpath expr="//kanban" position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="crm_case_form_view_leads_greenloc" model="ir.ui.view">
+            <field name="name">crm_case_form_view_leads_greenloc</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <!-- Hide create button -->
+                <xpath expr="//form" position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+
+                <!-- Add Skip Lead2Opportunity button -->
+                <xpath expr="//form/header" position="inside">
+                    <button name="action_set_to_draft_lead_stage" string="Set to Draft" type="object" class="oe_highlight" help="Convert to Draft" attrs="{'invisible': ['|', ('active','=',False), ('fal_lead_stage', 'in', ['draft'])]}" groups="greenloc_crm_ext.group_greenloc_quality,greenloc_crm_ext.group_greenloc_salesperson"/>
+                    <button name="action_set_to_new_lead_stage" string="Set to New" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('active','=',False), ('fal_lead_stage', 'in', ['new','to_control','affected'])]}"/>
+                    <button name="action_set_to_control_lead_stage" string="Set to Control" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('active','=',False), ('fal_lead_stage', 'in', ['draft','to_control','affected'])]}" groups="greenloc_crm_ext.group_greenloc_quality,greenloc_crm_ext.group_greenloc_salesperson"/>
+                    <button name="action_set_to_affected_lead_stage" string="Set to Affected" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('active','=',False), ('fal_lead_stage', 'in', ['draft', 'new','affected'])]}" groups="greenloc_crm_ext.group_greenloc_quality,greenloc_crm_ext.group_greenloc_salesperson"/>
+                    <button name="action_fast_convert_to_opportunity" string="Convert To Opportunity" type="object" class="oe_highlight" help="Convert to Opportunity (Fast Version)" attrs="{'invisible': ['|', ('active','=',False), ('fal_lead_stage', '!=', 'affected')]}" groups="greenloc_crm_ext.group_greenloc_quality,greenloc_crm_ext.group_greenloc_salesperson"/>
+                    <button name="%(crm.crm_lead_lost_action)d" string="Mark Lost" type="action" class="oe_highlight" context="{'default_lead_id': active_id, 'view_form_source': 'lead'}" attrs="{'invisible': ['|', ('active','=',False), ('fal_lead_stage', '!=', 'affected')]}" groups="greenloc_crm_ext.group_greenloc_quality,greenloc_crm_ext.group_greenloc_salesperson"/>
+                    <button name="re_send_model1_mail" string="Re-send model1 mail" type="object" confirm="This will send model1 request, are you sure?"/>
+                    <field name="fal_lead_stage" widget="statusbar" clickable="" attrs="{'invisible': [('active', '=', False)]}" readonly="1"/>
+                </xpath>
+
+                <!--Hide standard lead2opportunity option -->
+                <xpath expr="//form/header/button[@name='%(crm.action_crm_lead2opportunity_partner)d']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Add phone Call Button -->
+                <xpath expr="//field[@name='phone']" position="replace">
+                    <label for="phone" string="Phone"/>
+                    <div>
+                        <field name="phone" widget="phone" class="oe_inline"/>
+                        <button name="action_phone_call" string="Call" type="object" class="oe_link" attrs="{'invisible': [('phone', '=', False)]}"/>
+                    </div>
+                </xpath>
+
+                <!-- Add sequence field -->
+                <xpath expr="//sheet/div[@name='button_box']" position="after">
+                    <label for="fal_sequence" string="Sequence"/>
+                    <field name="fal_sequence" readonly="1"/>
+                </xpath>
+
+                <!-- In Lead give recall reason and email status -->
+                <xpath expr="//field[@name='team_id']" position="after">
+                    <field name="fal_lead_origin"/>
+                    <field name="fal_recall_reason"/>
+                    <field name="fal_send_email_customer"/>
+                    <field name="fal_send_email_other"/>
+                </xpath>
+
+                <!-- Add Lost in Lead and Complex Flag-->
+                <xpath expr="//field[@name='tag_ids']" position="after">
+                    <field name="fal_is_complex"/>
+                    <field name="lost_reason" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <field name="fal_lost_reason" attrs="{'invisible': [('active', '=', True)]}"/>
+                </xpath>
+
+                <!-- Add Different Installation Address -->
+                <xpath expr="//div[@class='o_address_format']" position="after">
+                    <label for="fal_dia_street" string="Installation Address"/>
+                    <div class="o_address_format">
+                        <field name="fal_dia_street" placeholder="Street..." class="o_address_street"/>
+                        <field name="fal_dia_street2" placeholder="Street 2..." class="o_address_street"/>
+                        <field name="fal_dia_city" placeholder="City" class="o_address_city"/>
+                        <field name="fal_dia_state" class="o_address_state" placeholder="State" options='{"no_open": True}'/>
+                        <field name="fal_dia_zip" placeholder="ZIP" class="o_address_zip"/>
+                        <field name="fal_dia_country_id" placeholder="Country" class="o_address_country" options="{'no_open': True, 'no_create': True}"/>
+                    </div>
+                    <label for="fal_dia_date_localization" invisible="1" string="Installation Address Geolocation"/>
+                    <div>
+                        <div>
+                            <span class="oe_inline" invisible="1"> ( On  </span>
+                            <field name="fal_dia_date_localization" nolabel="1" class="oe_inline" invisible="1"/>
+                            <span> Lat : </span>
+                            <field name="fal_dia_partner_latitude" nolabel="1" class="oe_inline"/>
+                            <span> ;  Long:  </span>
+                            <field name="fal_dia_partner_longitude" nolabel="1" class="oe_inline"/>
+                            <span invisible="1">) </span>
+                        </div>
+                        <button
+                            string="Geolocate"
+                            name="lead_geo_localize"
+                            colspan="2"
+                            icon="fa-check"
+                            type="object"/>
+                    </div>
+                </xpath>
+
+                <!-- Show customer field for all user -->
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                    <attribute name="groups"></attribute>
+                </xpath>
+
+                <!-- Hide page internal_note and extre info -->
+                <xpath expr="//notebook/page[1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Add Quality Person, Validator Person -->
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="fal_quality_user_id"/>
+                    <field name="fal_salesperson_user_id"/>
+                </xpath>
+
+                <!-- Add Contact Page -->
+                <xpath expr="//notebook" position="inside">
+                    <page string="Personal informations" autofocus="autofocus">
+                        <group>
+                            <field name="fal_marital_status"/>
+                            <field name="fal_wedding_contract"/>
+                        </group>
+                        <separator string="Contacts &amp; Addresses" colspan="4"/>
+                        <field name="fal_partner_child_ids" mode="kanban" context="{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id}">
+                            <kanban>
+                                <field name="color"/>
+                                <field name="fal_parent_id_relation_type"/>
+                                <field name="name"/>
+                                <field name="title"/>
+                                <field name="type"/>
+                                <field name="email"/>
+                                <field name="parent_id"/>
+                                <field name="is_company"/>
+                                <field name="fal_is_owner"/>
+                                <field name="fal_is_lodger"/>
+                                <field name="function"/>
+                                <field name="phone"/>
+                                <field name="street"/>
+                                <field name="street2"/>
+                                <field name="zip"/>
+                                <field name="city"/>
+                                <field name="country_id"/>
+                                <field name="mobile"/>
+                                <field name="fax"/>
+                                <field name="state_id"/>
+                                <field name="image"/>
+                                <field name="lang"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <t t-set="color" t-value="kanban_color(record.color.raw_value)"/>
+                                        <div t-att-class="color + (record.title.raw_value == 1 ? ' oe_kanban_color_alert' : '') + ' oe_kanban_global_click'">
+                                            <a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right"/>
+                                            <div class="o_kanban_image">
+                                                <img t-if="record.image.raw_value" t-att-src="'data:image/png;base64,'+record.image.raw_value"/>
+                                                <t t-if="!record.image.raw_value">
+                                                    <img t-if="record.type.raw_value === 'delivery'" t-att-src='_s + "/base/static/src/img/truck.png"'/>
+                                                    <img t-if="record.type.raw_value === 'invoice'" t-att-src='_s + "/base/static/src/img/money.png"'/>
+                                                    <t t-if="record.type.raw_value !== 'invoice' &amp;&amp; record.type.raw_value !== 'delivery'">
+                                                        <img t-if="record.is_company.raw_value === true" t-att-src='_s + "/base/static/src/img/company_image.png"'/>
+                                                        <img t-if="record.is_company.raw_value === false" t-att-src='_s + "/base/static/src/img/avatar.png"'/>
+                                                    </t>
+                                                </t>
+                                            </div>
+                                            <div class="oe_kanban_details">
+                                                <field name="name"/>
+                                                <div t-if="record.function.raw_value"><field name="function"/></div>
+                                                <div t-if="record.email.raw_value"><field name="email"/></div>
+                                                <div t-if="record.fal_is_owner.raw_value">Owner</div>
+                                                <div t-if="record.fal_is_lodger.raw_value">Lodger</div>
+                                                <div t-if="record.fal_parent_id_relation_type.raw_value"><field name="fal_parent_id_relation_type"/></div>
+                                                <div t-if="record.type.raw_value != 'contact'">
+                                                    <div>
+                                                        <field name="street"/>
+                                                        <field name="street2"/>
+                                                    </div>
+                                                    <div>
+                                                        <field name="zip"/>
+                                                        <field name="city"/>
+                                                    </div>
+                                                    <field t-if="record.state_id.raw_value" name="state_id"/>
+                                                    <field name="country_id"/>
+                                                </div>
+                                                <div t-if="record.phone.raw_value">Phone: <field name="phone"/></div>
+                                                <div t-if="record.mobile.raw_value">Mobile: <field name="mobile"/></div>
+                                                <div t-if="record.fax.raw_value">Fax: <field name="fax"/></div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                            <form string="Contact / Address">
+                                <sheet>
+                                    <field name="type" required="1" widget="radio" options="{'horizontal': true}"/>
+                                    <hr/>
+                                    <group>
+                                        <group attrs="{'invisible': [('type','=', 'contact')]}">
+                                            <label for="street" string="Address"/>
+                                            <div>
+                                                <div class="o_address_format" name="div_address">
+                                                    <field name="street" placeholder="Street..." class="o_address_street"/>
+                                                    <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                                    <field name="city" placeholder="City" class="o_address_city"/>
+                                                    <field name="state_id" class="o_address_state" placeholder="State" options='{"no_open": True}' context="{'country_id': country_id, 'zip': zip}"/>
+                                                    <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                                    <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>
+                                                </div>
+                                            </div>
+                                            <label for="date_localization" invisible="1" string="Installation Address Geolocation"/>
+                                            <div>
+                                                <div>
+                                                    <span class="oe_inline" invisible="1"> ( On  </span>
+                                                    <field name="date_localization" invisible="1" nolabel="1" class="oe_inline"/>
+                                                    <span> Lat : </span>
+                                                    <field name="partner_latitude" nolabel="1" class="oe_inline"/>
+                                                    <span> ;  Long:  </span>
+                                                    <field name="partner_longitude" nolabel="1" class="oe_inline"/>
+                                                    <span invisible="1">) </span>
+                                                </div>
+                                                <button
+                                                    string="Geolocate"
+                                                    name="geo_localize"
+                                                    colspan="2"
+                                                    icon="fa-check"
+                                                    type="object"/>
+                                            </div>
+                                        </group>
+                                        <group>
+                                            <field name="name" string="Contact Name" attrs="{'readonly': [('is_company', '=', False)],
+                                             'required': [('is_company', '=', True)]}"/>
+                                             <div class="oe_edit_only" colspan="2">
+                                              <field name="is_company" invisible="True"/>
+                                              <group attrs="{'invisible': [('is_company', '=', True)]}">
+                                                  <field name="lastname" attrs="{'required': [('type', '=', 'contact'), ('firstname', '=', False), ('is_company', '=', False)]}"/>
+                                                  <field name="firstname" attrs="{'required': [('type', '=', 'contact'), ('firstname', '=', False), ('is_company', '=', False)]}"/>
+                                              </group>
+                                            </div>
+                                            <field name="title" placeholder="e.g. Mr."
+                                                attrs="{'invisible': [('type','not in', ['contact','other'])]}"/>
+                                            <field name="fal_parent_id_relation_type" attrs="{'invisible' : [('type', 'not in', ['contact','other'])]}"/>
+                                            <field name="fal_marital_status" />
+                                            <field name="fal_is_owner" attrs="{'invisible' : [('type', 'not in', ['contact','other'])]}"/>
+                                            <field name="fal_is_lodger" attrs="{'invisible' : [('type', 'not in', ['contact','other'])]}"/>
+                                            <field name="fal_birthday"/>
+                                            <field name="fal_birth_place"/>
+                                            <field name="fal_birth_department"/>
+                                            <field name="fal_birth_nationality"/>
+                                            <field name="function" placeholder="e.g. Sales Director"
+                                                attrs="{'invisible': [('type','not in', ['contact','other'])]}"/>
+                                            <field name="email"/>
+                                            <field name="phone" widget="phone"/>
+                                            <field name="mobile" widget="phone"/>
+                                            <field name="comment" placeholder="internal note..."/>
+                                        </group>
+                                    </group>
+                                    <field name="supplier" invisible="True"/>
+                                    <field name="customer" invisible="True"/>
+                                    <field name="lang" invisible="True"/>
+                                    <field name="image" invisible="True"/>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                    <page name="technical_informations" string="Technical Informations">
+                        <separator string="Reserved for Quality Service Team" colspan="4"/>
+                        <group>
+                            <label for="fal_roof_surface"/>
+                            <div class="o_row">
+                                <field name="fal_roof_surface" /> <span>m<sup>2</sup></span>
+                                <a href="https://www.geoportail.gouv.fr/" target="_blank">Go To Solargis</a>
+                            </div>
+                        </group>
+                        <group>
+                            <label for="fal_sun_eyes_tools"/>
+                            <div class="o_row">
+                                <field name="fal_sun_eyes_tools" /> <span>hours</span>
+                                <a href="http://solargis.info/pvplanner/?#tl=Google:hybrid&amp;bm=satellite" target="_blank">Go To Suneyes Tools</a>
+                            </div>
+                        </group>
+                        <div>
+                            <label for="fal_roof_information_ids"/>
+                            <field name="fal_roof_information_ids"/>
+                        </div>
+                        <group invisible="1">
+                            <!-- Roof surface and suneyes tool are hidden because maybe we don't need it anymore-->
+                            <field name="fal_sun_eyes_tools_pdf" filename="fal_sun_eyes_tools_pdf_fname" invisible="1"/>
+                            <field name="fal_sun_eyes_tools_pdf_fname" invisible="1" class="oe_inline oe_right"/>
+                        </group>
+                        <group>
+                            <field name="fal_root_surface_pdf" filename="fal_root_surface_pdf_fname"/>
+                            <field name="fal_root_surface_pdf_fname" invisible="1" class="oe_inline oe_right"/>
+                            <field name="fal_solargis_csv" filename="fal_solargis_csv_fname"/>
+                            <field name="fal_solargis_csv_fname" invisible="1" class="oe_inline oe_right"/>
+                        </group>
+                        <group>
+                            <label for="fal_france_building"/>
+                            <div class="o_row">
+                                <field name="fal_france_building"/>
+                                <a href="http://atlas.patrimoines.culture.fr/atlas/trunk/index.php" target="_blank">Go To Website</a>
+                            </div>
+                            <field name="fal_section"/>
+                            <field name="fal_parcel_no"/>
+                        </group>
+                        <group>
+                            <label for="fal_contenance_1"/>
+                            <div class="o_row">
+                                <field name="fal_contenance_1"/> <span>ha</span>
+                                <field name="fal_contenance_2"/> <span>are</span>
+                                <field name="fal_contenance_3"/> <span>m<sup>2</sup></span>
+                            </div>
+                            <field name="fal_place_says" invisible="1"/>
+                            <field name="fal_goods"/>
+                            <field name="fal_ownership"/>
+                        </group>
+                        <group>
+                            <label for="fal_model_1_pdf"/>
+                            <div class="o_row">
+                                <field name="fal_model_1_pdf" filename="fal_model_1_pdf_fname"/>
+                                <field name="fal_model_1_pdf_fname" invisible="1" class="oe_inline oe_right"/>
+                                <!-- <a href="https://www.geoportail.gouv.fr/" target="_blank">Go To Model 1 Website</a> -->
+                            </div>
+                        </group>
+                        <group>
+                            <label for="fal_cadastre_pdf"/>
+                            <div class="o_row">
+                                <field name="fal_cadastre_pdf" filename="fal_cadastre_pdf_fname"/>
+                                <field name="fal_cadastre_pdf_fname" invisible="1" class="oe_inline oe_right"/>
+                                <a href="https://www.cadastre.gouv.fr/" target="_blank">Go To Cadastre</a>
+                            </div>
+                        </group>
+                        <group>
+                            <field name="fal_quality_team_notes"/>
+                        </group>
+                    </page>
+                    <page string="Technical Visit">
+                        <group>
+                            <field name="technician_id"/>
+                        </group>
+                        <field name="fal_technical_visit_ids" />
+                    </page>
+                    <page string="Communications">
+                        <field name="fal_mail_ids" />
+                    </page>
+                    <!-- Not show document sign in leads -->
+                    <page string="Documents Sign" invisible="1">
+                        <field name="fal_document_signature_ids" />
+                        <field name="fal_crm_universign_ids" groups="base.group_erp_manager">
+                            <tree>
+                                <field name="fal_universign_url" groups="base.group_erp_manager"/>
+                                <field name="fal_universign_id" groups="base.group_erp_manager"/>
+                                <field name="fal_universign_doc_received" groups="base.group_erp_manager"/>
+                                <field name="fal_universign_doc_failed" groups="base.group_erp_manager"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <field name="fal_universign_url" groups="base.group_erp_manager"/>
+                                    <field name="fal_universign_id" groups="base.group_erp_manager"/>
+                                    <field name="fal_universign_doc_received" groups="base.group_erp_manager"/>
+                                    <field name="fal_universign_doc_failed" groups="base.group_erp_manager"/>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Remove create button in crm.leads -->
+        <record id="crm_case_tree_view_leads_greenloc" model="ir.ui.view">
+            <field name="name">crm_case_form_view_leads_greenloc</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <!-- Add greenloc specific field -->
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Hide call button for now. This is temporary-->
+        <!-- Can't be used in community -->
+        <!-- <record id="crm_case_form_view_oppor_greenloc_temporary" model="ir.ui.view">
+            <field name="name">crm_case_form_view_leads_greenloc_temporary</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="crm_voip.lead_button_voip_view"/>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/div[@name='button_box']/button[@name='log_new_phonecall']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/div[@name='button_box']/button[@name='create_custom_call_in_queue']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record> -->
+
+        <!-- Custom Action for Access Right Purpose -->
+        <!-- Operator Lead Menu -->
+
+        <record model="ir.actions.act_window" id="greenloc_crm_lead_operator">
+            <field name="name">Leads</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('fal_lead_stage','=','draft'),'|', ('type','=','lead'), ('type','=',False)]</field>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('crm.crm_case_tree_view_leads')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('greenloc_crm_ext.crm_case_form_view_leads_greenloc')}),]"/>
+            <field name="search_view_id" ref="crm.view_crm_case_leads_filter"/>
+            <field name="context">{
+                    'default_type':'lead',
+                    'search_default_type': 'lead',
+                    'needaction_menu_ref': 'crm.menu_crm_opportunities',
+                    'search_default_to_process':1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p>
+                    Use leads if you need a qualification step before creating an
+                    opportunity or a customer. It can be a business card you received,
+                    a contact form filled in your website, or a file of unqualified
+                    prospects you import, etc.
+                </p><p>
+                    Once qualified, the lead can be converted into a business
+                    opportunity and/or a new customer in your address book.
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+            id="greenloc_menu_crm_leads_operator"
+            name="Operator Leads"
+            parent="sales_team.menu_sales"
+            sequence="1"
+            action="greenloc_crm_ext.greenloc_crm_lead_operator"
+            groups="greenloc_crm_ext.group_greenloc_operator"/>
+
+        <!-- Menu for quality Team -->
+        <record model="ir.actions.server" id="affect_greenloc_crm_lead_quality">
+            <field name="name">Affect Quality Leads</field>
+            <field name="model_id" ref="model_crm_lead"/>
+            <field name="code">
+                action = env['crm.lead'].affect_lead_quality()
+            </field>
+        </record>
+
+        <menuitem
+            id="greenloc_menu_affect_crm_leads_quality"
+            name="Affect Quality Leads"
+            parent="sales_team.menu_sales"
+            sequence="1"
+            action="greenloc_crm_ext.affect_greenloc_crm_lead_quality"
+            groups="greenloc_crm_ext.group_greenloc_quality"/>
+
+        <!-- Menu for Validator Team -->
+        <record model="ir.actions.act_window" id="greenloc_crm_lead_salesperson">
+            <field name="name">Salesperson Pipeline</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('probability','not in', [10, 100]), ('type','=','opportunity'), '|', ('fal_salesperson_user_id','=', uid), ('fal_salesperson_user_id','=', False)]</field>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('crm.crm_case_tree_view_oppor')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('greenloc_crm_ext.crm_case_form_view_oppor_greenloc')}),]"/>
+            <field name="view_id" ref="greenloc_crm_ext.crm_case_form_view_oppor_greenloc"/>
+            <field name="search_view_id" ref="crm.view_crm_case_opportunities_filter"/>
+            <field name="context">{
+                    'default_type': 'opportunity',
+                    'default_user_id': uid,
+                }
+            </field>
+            <field name="help" type="html">
+                <p>
+                    Odoo helps you keep track of your sales pipeline to follow
+                    up potential sales and better forecast your future revenues.
+                </p><p>
+                    You will be able to plan meetings and phone calls from
+                    opportunities, convert them into quotations, attach related
+                    documents, track all discussions, and much more.
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+            id="greenloc_menu_crm_opportunity_salesperson"
+            name="Validator Opportunity"
+            parent="sales_team.menu_sales"
+            sequence="1"
+            action="greenloc_crm_ext.greenloc_crm_lead_salesperson"
+            groups="greenloc_crm_ext.group_greenloc_salesperson"/>
+
+        <record model="ir.actions.server" id="affect_greenloc_crm_lead_salesperson">
+            <field name="name">Affect Validatory Opportunity</field>
+            <field name="model_id" ref="model_crm_lead"/>
+            <field name="code">
+                action = env['crm.lead'].affect_opportunity_salesperson()
+            </field>
+        </record>
+
+        <menuitem
+            id="greenloc_menu_affect_crm_opporunity_salesperson"
+            name="Affect Validatory Opportunity"
+            parent="sales_team.menu_sales"
+            sequence="2"
+            action="greenloc_crm_ext.affect_greenloc_crm_lead_salesperson"
+            groups="greenloc_crm_ext.group_greenloc_salesperson"/>
+
+  </data>
+</openerp>

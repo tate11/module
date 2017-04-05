@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+<template id="report_7_document">
+    <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+    <div class="page">
+        <style>
+            span{
+                text-transform: uppercase;
+            }
+        </style>
+        <div class="oe_structure"/>
+
+        <div class="text-right" style="font-size:75%">
+            <span t-esc="docs.name"/>
+        </div>
+
+        <h3 class="text-center">
+            ANNEXE 7. <br/>
+            LEVEE D’OPTION DE BAIL
+
+        </h3>
+
+        <div style="padding-bottom:10px;">
+           <strong>A l’attention de :</strong>
+        </div>
+
+        <div t-if="doc.partner_id" style="padding-bottom:10px;text-align:justify;">
+			<strong><span style="text-transform: capitalize;" t-field="doc.contact_name"/> <span style="text-transform: capitalize;" t-field="doc.contact_lastname"/></strong>
+            dénommé(e) le « BAILLEUR » dans un contrat de bail (le « BAIL »), en date du <strong><span t-field="doc.fal_last_date_signature_request"/></strong>, formé avec la société dénommée <strong>GREENLOC</strong> (le « PRENEUR »), et donc une copie est annexée aux présentes.
+        </div>
+        <div style="padding-bottom:10px; text-align:justify; ">
+        	En vertu de cet acte, le PRENEUR est titulaire du BAIL, pour une durée commençant à la réalisation de conditions suspensives et pour une durée de dix (10) ans et six (6) mois.
+        </div>
+        <div style="padding-bottom:10px; text-align:justify; ">
+        	Au cas présent, les effets de ce BAIL sont nés le <strong><span t-field="doc.fal_last_date_signature_request"/></strong>. En conséquence, le BAIL pourrait venir à expiration le <strong><span t-esc="docs._context['date_plus_10_years']"/></strong>.
+      </div>
+      <div style="padding-bottom:25px; text-align:justify; ">
+      Cependant, en vertu de l’Article 4.2 du BAIL, ci-après rappelé que :
+      </div>
+      <div style="padding-bottom:10px; text-align:justify; font-style:italic; ">
+      	« Le BAILLEUR, en tant que promettant, consent irrévocablement et définitivement un nouveau bail (le « <strong>NOUVEAU BAIL</strong> ») au PRENEUR, ce que le PRENEUR accepte en tant que promesse.
+      </div>
+      <div style="padding-bottom:10px; text-align:justify; font-style:italic; ">
+      Le NOUVEAU BAIL, portant sur l’EMPLACEMENT, sera identique en tout point au présent BAIL, à l’exception (i) de sa durée qui est fixée alors pour une période de dix (10) ans à compter de sa prise d’effet et (ii) de l’absence de CONDITIONS RESOLUTOIRES. Le loyer ainsi applicable sera identique au loyer qui sera perçu par le BAILLEUR en application de l’<strong>Article 6</strong>.
+      </div>
+      <div style="padding-bottom:10px; text-align:justify; font-style:italic; ">
+      Le BAILLEUR ne peut révoquer cette promesse. En cas d’inexécution, les PARTIES écartent l’article 1142 du Code civil, afin que la formation du NOUVEAU BAIL, issu de la levée d’option, puisse être judiciairement constatée le cas échéant
+      </div>
+      <div style="padding-bottom:10px; text-align:justify; font-style:italic; ">
+      L’option ainsi ouverte au PRENEUR ne pourra être exercée par ce dernier que dans l’année qui précède la DATE DE FIN DU BAIL et au plus tard dans les trois (3) mois qui précèdent la DATE DE FIN DU BAIL.
+      </div>
+      <div style="padding-bottom:10px; text-align:justify; font-style:italic; ">
+        En cas de levée de cette option, le NOUVEAU BAIL prendra effet à compter de la veille de la DATE DE FIN DU BAIL.
+       </div>
+       <div style="padding-bottom:10px; text-align:justify; font-style:italic; ">
+       La levée d‘option devra se faire par exploit d’huissier ou par lettre recommandée avec accusé réception envoyé par le PRENEUR au BAILLEUR à l’adresse de ce dernier telle qu’indiquée en première page des présentes. En cas de non levée d’option par le PRENEUR dans le délai imparti ci-dessus, le BAIL prendra automatiquement fin à la DATE DE FIN DU BAIL
+       </div>
+       <div style="padding-bottom:25px; text-align:justify; font-style:italic; ">
+       A titre purement probatoire, en cas de levée d’option et si bon semble au PRENEUR, ce dernier peut adresser au BAILLEUR un avenant pour constater par écrit qu’un nouveau bail a été formé, que le BAILLEUR s’oblige à dater, signer et à retourner un exemplaire au PRENEUR, étant rappelé que LE NOUVEAU BAIL sera en tout état de cause valablement formé du seul fait de la levée d’option du PRENEUR selon le mécanisme ci-dessus décrit. »
+
+       </div>
+       <div style="padding-bottom:10px; text-align:justify;  ">
+       En vertu de la faculté qui lui est ainsi offerte, le PRENEUR informe par la présente le BAILLEUR de ce qu’il lève l’option précitée.
+
+       </div>
+       <div style="padding-bottom:10px; text-align:justify;  ">
+       En conséquence, un NOUVEAU BAIL se forme entre le PRENEUR et le BAILLEUR. Ses effets commenceront, ainsi que sa durée, à compter de la veille de la date de fin du BAIL actuellement en cours, soit le <strong><span t-esc="docs._context['date_plus_10_years_min_1_days']"/></strong>. Ce nouveau BAIL a un régime identique au précédent, hormis sa durée, prévue pour être de dix (10) ans à compter de la date ci-dessus. Ce nouveau BAIL viendra ainsi à échéance le <strong><span t-esc="docs._context['date_plus_20_years']"/></strong>
+       </div>
+       <div style="padding-bottom:10px; text-align:justify;  ">
+       Les présentes sont établies à des fins purement probatoires, pour constater par écrit, daté et signé entre les Parties, le nouveau BAIL entre elles, déjà formé par la levée d’option du PRENEUR.
+       </div>
+       <div style="padding-bottom:10px; text-align:justify;  ">
+       Fait en autant d’exemplaires originaux 2, tous identiques, que de Parties, plus un remis au PRENEUR, s’il décidait de faire enregistrer les présentes à ses propres frais, afin de leur conférer date certaine.
+       </div>
+       <div style="padding-bottom:30px; page-break-inside:avoid">
+	       <strong>Le BAILLEUR,</strong><br/>
+			   A <strong><span style="text-transform: capitalize;" t-field="doc.city"/></strong><br/>
+			<strong><span style="text-transform: capitalize;" t-field="doc.contact_name"/> <span style="text-transform: capitalize;" t-field="doc.contact_lastname"/></strong><br/>
+        </div>
+
+    	<div style="margin-top:80px">
+	       <strong>Le PRENEUR,</strong><br/>
+			 A Paris, le <strong><span t-field="doc.fal_last_date_signature_request"/></strong><br/>
+			<strong>Greenloc,</strong>
+            </div>
+    	</div>
+</template>
+
+
+<template id="report_7_levee">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="greenloc_crm_ext.report_7_document" t-lang="doc.partner_id.lang"/>
+        </t>
+    </t>
+</template>
+</odoo>

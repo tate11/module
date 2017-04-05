@@ -1,0 +1,1984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_single_with_lodger_document">
+    <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+    <div class="page">
+        <style>
+            dl { width: 100% }
+            dt { float: left; width: 100%; overflow: hidden; white-space: nowrap }
+            dd { float: left; width: 0%; overflow: hidden }
+
+            dt span:after { content: " ..............................................................................................................................................................................................................................................................." }
+
+            span{
+                text-transform: uppercase;
+            }
+            p
+            {
+                font-family: "Calibri";
+                font-size: 10pt;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+
+            h2
+            {
+                font-family: "Calibri";
+            }
+
+            h4
+            {
+                font-family: "Calibri";
+            }
+
+            h5
+            {
+                font-family: "Calibri";
+            }
+
+            ul{
+                font-family: "Calibri";
+                font-size: 10pt;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+
+            ol{
+                font-family: "Calibri";
+                font-size: 10pt;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+        </style>
+        <div class="oe_structure"/>
+
+        <img src='http://www.green-loc.fr/img/Greenloc_opportunity_cover.jpg' width='695' height='1000'/>
+
+        <p style="page-break-after:always;">   </p>
+
+        <div class="text-right" style="font-size:75%">
+            <span t-esc="docs.name"/>
+        </div>
+
+        <img src='http://www.green-loc.fr/img/Greenloc_contract_header-1.png'/>
+
+        <p class="text-center" style="color:#2f1fa4" >
+            <b>
+                Cette notice n’est pas un contrat
+                <br/>
+                Elle atteste simplement que les informations ci-dessous ont été remises à ses signataires
+            </b>
+        </p>
+
+        <div class="text-center" style="background-colod:green;color:green">
+            <h4 class="text-center">
+                <b>
+                    L’ESSENTIEL DU CONTRAT FONCIER QUI VOUS EST PROPOSE :
+                </b>
+            </h4>
+            <h4 class="text-center">
+                <b>
+                    LOUEZ VOTRE TOITURE ET BENEFICIEZ D’UN REVENU RECURRENT
+                </b>
+            </h4>
+        </div>
+
+        <div style="text-align: justify; text-justify: inter-word; margin-bottom:30px">
+            <p>
+                Il vous est proposé d’entrer dans un contrat de bail civil, dans la perspective d’un projet photovoltaïque en toiture de bâtiment. Il est donc important que vous soyez informé(e) de l’essentiel de ce contrat, avec la SOCIETE GREENLOC, Société par Actions Simplifiée au capital de 40.000 euros, dont le siège social est à 89 rue Réaumur, 75 002 PARIS, identifiée sous le numéro SIREN 800 075 004 et immatriculée au Registre du Commerce et des Sociétés de la ville de PARIS ou toute société qui s’y substituerait et qui reprendrait dans l’intégralité les droits et obligations issus du contrat de bail.
+            </p>
+            <p>
+                Les accords contenus dans le document (le BAIL) qui vous est remis pour examen, portent sur :
+            </p>
+            <ul style="margin-bottom: 15px">
+                <li>
+                    <p>
+                        <b>Un bail civil</b>: sur un bien vous appartenant et plus particulièrement en toiture du bâtiment au-dessus des liteaux, à l’intérieur du bâtiment, l’espace nécessaire aux câblages, au tableau électrique et aux onduleurs et en tréfonds du terrain jusqu’à la limite de propriété pour le raccordement au réseau public de distribution d’électricité, vous consentez à un bail civil d’une durée de DIX années, dont les effets naissent dès la conclusion du BAIL.
+                    </p>
+                    <p>
+                        Le BAIL convenu permet à la SOCIETE de construire sur l’emplacement loué une centrale photovoltaïque d’une puissance comprise entre 8,5 et 9 kWc (la CENTRALE telle que définie dans le BAIL), librement, et d’être propriétaire de ces constructions le temps du Bail.
+                    </p>
+                    <p>
+                        Le BAIL peut prendre fin si, dans les VINGT QUATRE (24) mois de sa conclusion, certains éléments se produisaient. Ces événements sont prévus à l’article 5 « DATE DU BAIL – CONDITIONS RESOLUTOIRES » du BAIL. Ces conditions dites « résolutoires » étant prévues au bénéfice de la SOCIETE, la SOCIETE peut renoncer à ce que l’effet résolutoire se produise, dans les DEUX (2) mois de la survenance de l’événement.
+                    </p>
+                    <p>
+                        Dans le BAIL vous trouverez les caractéristiques principales du bail civil. Il s’agit notamment du loyer annuel d’un montant de QUATRE CENTS (400) euros, à compter du raccordement de la CENTRALE que la SOCIETE réalise et des modalités de paiement du loyer.
+                    </p>
+                    <p>
+                        La SOCIETE maintient la CENTRALE en bon état d’entretien courant et de réparation d’usage pendant la durée du BAIL, à ses frais et responsabilité, sauf si l’intervention est rendue nécessaire par un fait imputable au propriétaire ou à son éventuel locataire.
+                    </p>
+                    <p>
+                        Le LOCATAIRE, le cas échéant, renonce à invoquer tout droit de jouissance et de jouir seul de l’emplacement loué, au profit de la SOCIETE ou toute personne venant dans ses droits.
+                        Plus largement, il s’engage à ne pas invoquer contre son propriétaire la garantie, d’éviction ou de jouissance paisible, à raison de l’exécution du BAIL.
+                    </p>
+                    <p>
+                        Le propriétaire est tenu de délivrer à la SOCIETE l’EMPLACEMENT loué ; avec le LOCATAIRE le cas échéant, ils sont aussi tenus d’entretenir le BIEN, afin de permettre à la SOCIETE la pleine jouissance de l’emplacement à l’usage pour lequel il a été loué ; d’effectuer sur le BIEN toutes les réparations qui peuvent devenir nécessaires, tout en ne menaçant jamais l’intégrité ou le fonctionnement de la CENTRALE.
+                    </p>
+                    <p>
+                        Le BAIL prévoit également un droit d’accès aux personnes, véhicules et engins au profit de la SOCIETE pour les besoins de la construction et de l’entretien de la CENTRALE moyennant un préavis prévu au BAIL, ainsi qu’une obligation de préservation de l’Emplacement loué contre les ombres.
+                        Le LOCATAIRE, le cas échéant, s’engage à ne pas faire obstacle aux droits de la SOCIETE ou toute personne venant à ses droits.
+                    </p>
+                    <p>
+                        Enfin, le BAIL prévoit que l’accession de la CENTRALE (telle que définie dans le BAIL) au propriétaire est différée à la fin du BAIL sauf pour le propriétaire à user de la faculté de résilier par anticipation le BAIL à compter de la quatrième année moyennant le versement à la SOCIETE d’une indemnité de rupture dégressive au fur et à mesure de l’avancement du BAIL et fixée en Annexe 6.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>Deux promesses unilatérales de baux civils</b> : le propriétaire consent d’ores et déjà à la SOCIETE  deux nouveaux baux civils, successifs. Ces deux baux sont identiques au BAIL à l’exception de la Durée du troisième bail civil réduite à HUIT (8) années pleines et entières.
+                    </p>
+                    <p>
+                        La SOCIETE peut lever l’option de bail pour chacun de ces deux nouveaux baux. Elle en informe à chaque fois le propriétaire au plus tard trois mois avant la fin du bail en cours.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <p style="page-break-after:always;">   </p>
+
+        <h2 class="text-center" style="margin-bottom: 20px">
+            <b>
+                CONTRAT DE BAIL SOUS CONDITIONS RESOLUTOIRES
+            </b>
+        </h2>
+
+        <p>
+            <b>
+                ENTRE LES SOUSSIGNES :
+            </b>
+        </p>
+
+        <p>
+            <b>
+                DESIGNATION DES PARTIES :
+            </b>
+        </p>
+
+        <p>
+            D’UNE PART :
+        </p>
+
+        <!-- Main Owner -->
+        <ol style="margin-left: 50px">
+            <li>
+                <p class="uppercase" >
+                        <span t-if="doc.partner_id.title.name">
+                            Titre: <span t-field="doc.partner_id.title.name"/> <br/>
+                        </span>
+                        <span t-if="doc.contact_name">
+                            Prénom: <span t-field="doc.contact_name"/> <br/>
+                        </span>
+                        <span t-if="doc.contact_lastname">
+                            Nom: <span t-field="doc.contact_lastname"/> <br/>
+                        </span>
+                        <span t-if="doc.partner_id.fal_birthday or doc.partner_id.fal_birth_place">
+                            Date de naissance:
+                            <span t-if="doc.partner_id.fal_birthday">
+                                <span t-field="doc.partner_id.fal_birthday"/>
+                            </span>
+                            <span t-if="doc.partner_id.fal_birth_place">
+                                à <span t-field="doc.partner_id.fal_birth_place"/>
+                            </span>
+                            <br/>
+                        </span>
+                        <span t-if="doc.partner_id.fal_birth_nationality">
+                            Nationalité: <span t-field="doc.partner_id.fal_birth_nationality"/> <br/>
+                        </span>
+                        <span t-if="doc.partner_id.function">
+                            Fonction: <span t-field="doc.partner_id.function"/> <br/>
+                        </span>
+                        <span t-if="doc.fal_marital_status">
+                            Status Marital: <span t-field="doc.fal_marital_status"/> <br/>
+                        </span>
+                        <span t-if="doc.street or doc.street2 or doc.zip or doc.city">
+                            Adresse: <span t-field="doc.street"/> <span t-field="doc.street2"/> <span t-field="doc.zip"/> <span t-field="doc.city"/> <br/>
+                        </span>
+                        <span t-if="doc.phone or doc.mobile">
+                            Téléphone:
+                            <span t-if="doc.phone">
+                                <span t-field="doc.phone"/>
+                            </span>
+                            <span t-if="doc.mobile">
+                                / <span t-field="doc.mobile"/>
+                            </span>
+                            <br/>
+                        </span>
+                        <span t-if="doc.email_from">
+                            Courriel: <span t-field="doc.email_from"/>
+                        </span>
+                </p>
+            </li>
+        </ol>
+
+        <h5 class="text-right">
+            <b>
+                Ci-après dénommé le « BAILLEUR »
+            </b>
+        </h5>
+
+        <p>
+            D’AUTRE PART :
+        </p>
+
+        <p style="margin-left: 50px">
+            Greenloc<br/>
+            Société par actions simplifiée au capital de 40000€<br/>
+            Immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro<br/>800 075 004<br/>
+            89 rue Réaumur 75002 Paris<br/>
+            Représentée par son Président, Monsieur Moïse Marciano
+        </p>
+
+        <h5 class="text-right">
+            <b>
+                Ci-après dénommé le « PRENEUR »
+            </b>
+        </h5>
+
+        <p>
+            Le BAILLEUR et le PRENEUR seront ci-après dénommés individuellement la « PARTIES » et ensemble les « PARTIES ».
+        </p>
+
+        <!-- Lodger -->
+        <ol>
+            <t t-foreach="doc.fal_partner_child_ids" t-as="l">
+                <t t-if="l.fal_is_lodger">
+                    <li>
+                        <p class="uppercase" >
+                                <span t-if="l.title.name">
+                                    Titre: <span t-field="l.title.name"/> <br/>
+                                </span>
+                                <span t-if="l.firstname">
+                                    Prénom: <span t-field="l.firstname"/> <br/>
+                                </span>
+                                <span t-if="l.lastname">
+                                    Nom: <span t-field="l.lastname"/> <br/>
+                                </span>
+                                <span t-if="l.fal_birthday or l.fal_birth_place">
+                                    Date de naissance:
+                                    <span t-if="l.fal_birthday">
+                                        <span t-field="l.fal_birthday"/>
+                                    </span>
+                                    <span t-if="l.fal_birth_place">
+                                        à <span t-field="l.fal_birth_place"/>
+                                    </span>
+                                    <br/>
+                                </span>
+                                <span t-if="l.fal_birth_nationality">
+                                    Nationalité: <span t-field="l.fal_birth_nationality"/> <br/>
+                                </span>
+                                <span t-if="l.function">
+                                    Fonction: <span t-field="l.function"/> <br/>
+                                </span>
+                                <span t-if="l.fal_marital_status">
+                                    Status Marital: <span t-field="l.fal_marital_status"/> <br/>
+                                </span>
+                                <span t-if="l.street or l.street2 or l.zip or l.city">
+                                    Adresse: <span t-field="l.street"/> <span t-field="l.street2"/> <span t-field="l.zip"/> <span t-field="l.city"/> <br/>
+                                </span>
+                                <span t-if="l.phone or l.mobile">
+                                    Téléphone:
+                                    <span t-if="l.phone">
+                                        <span t-field="l.phone"/>
+                                    </span>
+                                    <span t-if="l.mobile">
+                                        / <span t-field="l.mobile"/>
+                                    </span>
+                                    <br/>
+                                </span>
+                                <span t-if="l.email">
+                                    Courriel: <span t-field="l.email"/>
+                                </span>
+                        </p>
+                    </li>
+                </t>
+            </t>
+        </ol>
+
+        <h5 class="text-right">
+            <b>
+                Ci-après dénommé le « LOCATAIRE »
+            </b>
+        </h5>
+
+        <p>
+            Intervenant aux présentes en qualité de LOCATAIRE de tout ou partie du BIEN
+        </p>
+
+        <h5 class="text-center">
+            *<br/>
+            **
+        </h5>
+
+        <h5>
+            <b>
+                ARTICLE 1 – QUALIFICATION – JOUISSANCE PAR LE PRENEUR
+            </b>
+        </h5>
+
+        <p>
+            Le présent accord vaut bail au sens des articles 1709 et s. du Code civil, sauf les dérogations ci-après (ci-après dénommé le «<b>BAIL</b>»).
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 2 – DROITS SUR LE BIEN ET LE BATIMENT
+            </b>
+        </h5>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                2.1. Définition du BIEN et du BATIMENT
+            </b>
+        </h5>
+
+        <p>
+            Le BAILLEUR est propriétaire d’un terrain (le «<b> BIEN </b>»)est constitué sur lequel se trouve un bâtiment (ci-après dénommé le «<b> BATIMENT </b>»), situés commune de  <b><span t-esc="docs._context['dia_city']"/></b> (<b><span t-esc="docs._context['dia_zip']"/></b>) le tout figurant à la matrice cadastrale de ladite commune comme suit :
+        </p>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Préfixe / Section</th>
+                    <th>Numéro</th>
+                    <th>Lieudit ou voie</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b><span t-field="doc.fal_section"/></b></td>
+                    <td><b><span t-field="doc.fal_parcel_no"/></b></td>
+                    <td><b><span t-esc="docs._context['dia_street']"/> <span t-esc="docs._context['dia_street2']"/> <span t-esc="docs._context['dia_zip']"/> <span t-esc="docs._context['dia_city']"/></b></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Le BIEN et le BATIMENT sont localisés sur l’<b>Annexe 1</b>.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                2.2. Droits du BAILLEUR sur le BIEN et le BATIMENT
+            </b>
+        </h5>
+
+        <p>
+            Le BAILLEUR déclare être propriétaire du BIEN et DU BATIMENT.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                2.3. Situation locative du BIEN et du BATIMENT
+            </b>
+        </h5>
+
+        <p>
+            Le BIEN et le BATIMENT sont libres de toute occupation.
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 3 – OBJET DU BAIL
+            </b>
+        </h5>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                3.1 Définition de l’EMPLACEMENT
+            </b>
+        </h5>
+
+        <p>
+            Les différents espaces ci-dessous sont loués au PRENEUR :
+        </p>
+
+        <ul style="margin-left: 30px">
+            <li>des espaces situées en toiture et au-dessus des liteaux du BATIMENT </li>
+            <li>des espaces situés à l’intérieur du BATIMENT nécessaires au passage de câbles, au tableau électrique et aux onduleurs</li>
+            <li>des espaces situés à l’extérieur du BATIMENT entre la limite extérieure du BATIMENT et la limite de propriété du BIEN en tréfonds, pour le câblage, et en surface, en bordure de la voie publique.</li>
+        </ul>
+
+        <p>
+            Ces différents espaces sont nommés l’ «<b> EMPLACEMENT </b>».
+        </p>
+
+        <p>
+            L’EMPLACEMENT est précisé selon les plans contenus à l’<b>Annexe 1</b>.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                3.2 L’EMPLACEMENT donné à BAIL
+            </b>
+        </h5>
+
+        <p>
+            Aux termes des présentes, le BAILLEUR donne à BAIL au PRENEUR qui l’accepte l’EMPLACEMENT ainsi défini, tel qu’il se poursuit et comporte avec ses accessoires et dépendances, sans aucune exception ni réserve.
+        </p>
+
+        <p>
+            En dehors de l’EMPLACEMENT, le BATIMENT et le BIEN sont libres du BAIL.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                3.3 Cantonnement des droits du LOCATAIRE – engagements du LOCATAIRE
+            </b>
+        </h5>
+
+        <p>
+            Pour permettre les présentes, le LOCATAIRE renonce à invoquer tout droit de jouissance et de jouir seul, sur l’EMPLACEMENT (ci-après), au profit du PRENEUR.
+        </p>
+
+        <p>
+            Le LOCATAIRE s’engage plus largement à ne pas invoquer, contre le BAILLEUR, la garantie, d’éviction ou de jouissance paisible, à raison de l’exécution des présentes.
+        </p>
+
+        <p>
+            Le LOCATAIRE s’engage, enfin, à ne pas faire obstacle aux droits que le PRENEUR tire des présentes.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                3.4 Destination contractuelle
+            </b>
+        </h5>
+
+        <p>
+            L’EMPLACEMENT est donné à BAIL au PRENEUR à usage exclusif d’installation, de construction et exploitation par le PRENEUR d’une centrale photovoltaïque en toiture du BATIMENT, d’une puissance comprise entre <b>8,5</b> et <b>9 kWc</b>.
+        </p>
+
+        <p>
+            Toutefois, est déterminante du consentement des PARTIES et des LOCATAIRES(S) aux présentes la possibilité de procéder aux travaux d’installation et de construction d’une centrale photovoltaïque sur l’EMPLACEMENT selon le détail suivant :
+        </p>
+
+        <ul style="margin-left: 30px">
+            <li>En toiture du BATIMENT :</li>
+            <ul style="margin-left: 20px">
+                <li>
+                    la totalité ou une partie de la toiture existante au-dessus des liteaux sera enlevée et déposée ;
+                </li>
+                <li>
+                    en lieu et place seront installés des modules photovoltaïques monocristallins ou polycristallins  assurant une fonction d’étanchéité et intégrés au bâti, ainsi que tous accessoires nécessaires au bon fonctionnement desdits modules
+                </li>
+            </ul>
+            <li>
+                à l’intérieur du BATIMENT : seront installés des câblages, le tableau électrique et des onduleurs, ainsi que tous accessoires nécessaires à leur bon fonctionnement
+            </li>
+            <li>
+                entre la limite extérieure du BATIMENT et la limite de propriété du BIEN :
+            </li>
+            <ul style="margin-left: 20px">
+                <li>en tréfonds, des câblages seront installés </li>
+                <li>
+                    en surface, à la limite de propriété du BIEN et en bordure de la voie publique, un poste de raccordement sera installé
+                </li>
+            </ul>
+            <li>ainsi que tous accessoires nécessaires à leur bon fonctionnement</li>
+        </ul>
+
+        <p>
+            et ce, de telle sorte que la centrale photovoltaïque en toiture du BATIMENT, d’une puissance comprise entre <b>8,5</b> et <b>9 kWc</b> se compose en définitive de modules photovoltaïques,, d’un système d’intégration au bâti, d’onduleurs, des équipements de transformation en BT, permettant l’évacuation de la totalité de l’énergie produite vers le réseau public de tout gestionnaire habilité, d’un tableau électrique; de câblages ; d’un poste de raccordement au réseau public ;
+        </p>
+
+        <p>
+            L’ensemble est appelé «<b> CENTRALE </b>». Son coût de préparation et de réalisation est d’environ TRENTE-TROIS MILLE SIX CENTS (33.600) € T.T.C.
+        </p>
+
+        <p>
+            Le BAILLEUR et le LOCATAIRE sont informés et acceptent que la réalisation de la CENTRALE, conformément aux plans de l’<b>Annexe 1 et 7</b>, ait un impact, notamment visuel, et ils s’interdisent toute prétention de ce fait.
+        </p>
+
+        <p>
+            Le PRENEUR jouit de l’EMPLACEMENT en bon professionnel, sans commettre ni souffrir qu’il y soit fait des dégâts ou des dégradations en dehors des travaux de la CENTRALE. Le BAILLEUR et le LOCATAIRE sont pleinement informés de ces travaux (<b>Articles 8</b> et <b>9</b>), à la réalisation et aux conséquences desquels ils consentent en acceptant les présentes.
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 4 – ÉTAT DE L’IMMEUBLE et ETAT DES LIEUX
+            </b>
+        </h5>
+
+        <p>
+            Après la visite technique préalable aux travaux de réalisation de la CENTRALE et avant le début des travaux, il est réalisé un état des lieux du BATIMENT et du BIEN en autant d’exemplaires que de PARTIES et le cas échéant de LOCATAIRE(S), pour constater son état général et constater les éventuelles dégradations existantes avant la réalisation des travaux et, ce, afin de prévenir toute contestation ultérieure entre les PARTIES. Cet état des lieux est signé et daté par chacune des PARTIES et, le cas échéant, chacun des LOCATAIRE(S), tous s’engageant à conserver ses exemplaires, <b>Annexe 8</b>.
+        </p>
+
+        <p>
+            Sur la base de cet état des lieux, en cas de dégradations ou d’atteintes au BATIMENT ou au BIEN et qui trouverait son origine manifeste dans les travaux d’installation et de construction de la CENTRALE, à défaut de prise en charge des réparations par l’assureur, le PRENEUR s’engage à les faire réparer à ses frais exclusifs dans un délai de TROIS (3) mois au plus tard à compter de la fin des travaux.
+        </p>
+
+        <p>
+            A la fin effective des travaux, il est établi un état des lieux, valant constatation de l’état initial de l’EMPLACEMENT en autant d’exemplaires que de PARTIES et le cas échéant de LOCATAIRE(S). Il porte sur l’état des espaces compris dans l’EMPLACEMENT, ainsi que de ceux qui l’entourent directement au sein du BATIMENT et du BIEN. Cet état des lieux est signé et daté par chacune des PARTIES et, le cas échéant, chacun des LOCATAIRE(S), tous s’engageant à conserver ses exemplaires, <b>Annexe 9</b>.
+        </p>
+
+        <p>
+            Sous la réserve de l’exactitude des déclarations faites par le BAILLEUR et le LOCATAIRE (<b>Articles 15</b> et <b>16</b>), le PRENEUR prend l’EMPLACEMENT dans l’état ainsi constaté.
+        </p>
+
+        <p>
+            La constatation d’éventuelles atteintes au BIEN et / ou au BATIMENT est reportée après la fin de tous travaux du PRENEUR.
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 5 – DURÉE
+            </b>
+        </h5>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                5.1. Durée du BAIL
+            </b>
+        </h5>
+
+        <p>
+            Elle est fixée à DIX (10) ans. Le décompte commence à la DATE DU BAIL définie <b>Article 6.1</b>. Le BAIL s’arrête à la fin du dernier jour de sa durée  («<b>DATE DE FIN</b>») sans formalité ni indemnité, de part ou d’autre.
+        </p>
+
+        <p>
+            Le BAIL peut également être résilié par anticipation après le quatrième anniversaire de la DATE DU BAIL, par application des <b>Articles 14.2</b> ou <b>14.3</b>.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                5.2. Promesses de nouveaux baux bail
+            </b>
+        </h5>
+
+        <p>
+            En consentant aux présentes, le BAILLEUR consent à deux promesses de bail civil successives. Ces promesses figurent en annexes des présentes.
+        </p>
+
+        <p>
+            Chaque bail promis est appelé, dans la suite des présentes, le «<b> NOUVEAU BAIL </b>».
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 6 – DATE DU BAIL – CONDITIONS RÉSOLUTOIRES
+            </b>
+        </h5>
+
+        <p style="margin-left: 30px">
+            <b>6.1.</b> Le BAIL commence à la date à laquelle toutes les PARTIES et le cas échéant le LOCATAIRE ont signé les présentes («<b>DATE DU BAIL</b>»)
+        </p>
+
+        <p style="margin-left: 30px">
+            <b>6.2.</b> Le BAIL prend fin si, dans les VINGT QUATRE (24) mois suivant la DATE DU BAIL, se produisait l’un, quelconque, des événements suivants («<b>CONDITIONS RÉSOLUTOIRES</b>») :
+        </p>
+
+        <p>
+            * la production d’une note de renseignements d’urbanisme (ou d’un certificat d’urbanisme) révélant tout obstacle, servitude ou charge de nature à empêcher juridiquement ou matériellement le projet du PRENEUR ;
+        </p>
+        <p>
+            * l’obtention d’un relevé hors formalités démontrant la présence de privilège, hypothèque, crédit-bail, contentieux, commandement ou dénonciation de saisie, interdiction de louer, réserve de droit de retour affectant le BIEN ;
+        </p>
+        <p>
+            * la non-obtention par le PRENEUR de l’ensemble des autorisations administratives irrévocables et définitives, nécessaires à l’édification de la CENTRALE ;
+        </p>
+        <p>
+            * l’absence de production par le BAILLEUR d’une copie d’une attestation d’assurance confirmant que le BIEN est assuré ;
+        </p>
+        <p>
+            * la non-obtention d’une Proposition de Raccordement (PDR) d’un montant maximal de DEUX MILLE CINQ CENTS (2.500) € par Enedis ou tout autre gestionnaire du réseau ;
+        </p>
+        <p>
+            * l’absence de contrat d’achat relatif à l’électricité produite par la CENTRALE.
+        </p>
+
+        <p style="margin-left: 30px">
+            <b>6.3.</b> Si l’un, quelconque, des événements ci-dessus se produisait, le PRENEUR peut renoncer à ce que l’effet résolutoire se produise, dans les DEUX (2) mois de la survenance de l’événement. Si, passé ce délai, le PRENEUR n’a pas ainsi renoncé, la résiliation du BAIL se produit alors, sans indemnité de part ni d’autre. Dans une telle hypothèse, le PRENEUR doit remettre l’EMPLACEMENT dans son état initial <b>(Article 3)</b>, dans les meilleurs délais et à ses frais.
+        </p>
+
+        <p style="margin-left: 30px">
+            <b>6.4.</b> Le PRENEUR informe le BAILLEUR dans les plus brefs délais et par LRAR de la date de raccordement de la CENTRALE, la date de ce raccordement permettant de calculer la date à laquelle le loyer devient exigible.
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 7 – LOYER
+            </b>
+        </h5>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                7.1. Principe et Montant
+            </b>
+        </h5>
+
+        <p>
+            EAprès le raccordement de la CENTRALE, le PRENEUR verse un loyer annuel au BAILLEUR, à la date anniversaire de ce raccordement (la «<b> DATE DE PAIEMENT </b>»). En cas de NOUVEAU BAIL, la date d’échéance du loyer ne change pas.<br/>
+            Ce loyer annuel est fixé à <b>QUATRE CENTS  (400)</b> euros.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                7.2. Règles de paiement
+            </b>
+        </h5>
+
+        <p>
+            Le loyer est payable annuellement, à terme échu, dans un délai de trente (30) jours suivant la DATE DE PAIEMENT. Le paiement a lieu par virement bancaire ou par chèque, sur le compte désigné par le BAILLEUR.<br/>
+            <br/>
+            En tout état de cause, la DATE DE PAIEMENT du premier loyer doit intervenir au plus tard dans un délai maximal de vingt-quatre (24) mois à compter de la DATE DU BAIL. Ce délai s’explique au regard de l’obligation du PRENEUR de commencer l’édification de la CENTRALE dans un délai maximal de DIX-HUIT (18) mois à compter de la DATE DU BAIL prévue à l’article 7.3 ci-dessous.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                7.3.  Privilège de bailleur
+            </b>
+        </h5>
+
+        <p>
+            Le BAILLEUR bénéficie du privilège du bailleur d’immeuble (article 2332 du Code civil). Cependant, dans le cas où le projet du PRENEUR aurait été financé totalement ou partiellement par des tiers, le BAILLEUR s’engage à ne pas invoquer ce privilège au détriment de ces tiers. Dans cette mesure, le BAILLEUR renonce ainsi expressément à l’exercice de son privilège mobilier.
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 8 – TRAVAUX, ACCESSION et OPTION D’ACHAT
+            </b>
+        </h5>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                8.1. Autorisation des travaux.
+            </b>
+        </h5>
+
+        <p>
+            Le BAILLEUR et le LOCATAIRE autorisent expressément le PRENEUR à édifier la CENTRALE. Ils consentent ainsi  à ce que le PRENEUR : remplace la couverture existante, sur la zone d’implantation des modules et de leur support ; prenne appui sur le BATIMENT et puisse procéder à des accroches ; fasse courir gaines et chemins de câbles le long des murs extérieurs et/ou intérieurs du BATIMENT et dans le sous-sol du BIEN ; installe un local technique sécurisé si nécessaire, comprenant onduleurs et tableau électrique, sur le BIEN, y compris avec une interconnexion à la mise à la terre du BIEN ; si le BIEN n’a pas de prise de terre actuelle, installe une prise de terre ; installe un point d’injection dans le réseau public de distribution d’électricité de l’énergie produite par la CENTRALE, ce point pouvant être situé soit au lieu où se trouvent actuellement les compteurs dans le BATIMENT, soit en limite du BIEN ; réalise une tranchée pour relier par des câbles les modules au poste de livraison ; ainsi que, plus généralement, procède à tous travaux accessoires, nécessaires à la réalisation de la CENTRALE.
+        </p>
+
+        <p>
+            Avant l’ouverture de chantier, le BAILLEUR et le LOCATAIRE s’engagent à informer le PRENEUR de toute installation souterraine (notamment de drainage et de canalisation) sur le BIEN, le BAILLEUR reconnaissant au PRENEUR le droit d’effectuer à ses seuls frais tous travaux de modification ou d’aménagement desdites installations, sans en affecter les fonctionnalités au-delà de la période de tels travaux.
+        </p>
+
+        <p>
+            Pendant la durée des travaux, le BAILLEUR et le LOCATAIRE s’obligent à laisser le PRENEUR (ses dirigeants, son personnel, ou tout intervenant ayant contracté à l’effet d’intervenir, sous la responsabilité du PRENEUR) avoir accès au BIEN, laissant à disposition l’espace nécessaire à la réalisation de ces travaux (stockage, stationnement, échafaudage, etc.), sous réserve du respect par le PRENEUR d’un préavis raisonnable.
+        </p>
+
+        <p>
+            Pour ces différents travaux, le PRENEUR fait son affaire personnelle de l’accomplissement des formalités administratives. Le BAILLEUR lui donne tous pouvoirs. A cet effet le BAILLEUR, en sa qualité de propriétaire du BIEN, donne mandat au PRENEUR de déposer toute demande d’autorisation de travaux et/ou à accomplir toute formalité relative au raccordement et/ou à l’exploitation de la CENTRALE sur son BIEN. Ainsi, en signant les présentes, le BAILLEUR confirme ce pouvoir qu’il donne au PRENEUR.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                8.2. – Réalisation de la CENTRALE
+            </b>
+        </h5>
+
+        <p>
+            Les travaux de la CENTRALE emportent l’installation de ce qui suit :
+        </p>
+
+        <p>
+            - en toiture « utile » du BATIMENT : l’ensemble des modules, leur câblage et le système d’intégration des modules. Par toiture utile on entend la surface de toit sur laquelle seront apposés les modules photovoltaïques.
+        </p>
+
+        <p>
+            * l’onduleur destiné à transformer la production photovoltaïque en courant alternatif
+        </p>
+
+        <p>
+            * le compteur mesurant l’électricité produite et vendue si pas en limite de propriété
+
+        </p>
+
+        <p>
+            * un tableau général BT contentant entre autre des cellules de protection et d’inter-sectionnement
+        </p>
+
+        <p>
+            * une barrette de terre qui sera reliée par le PRENEUR à la terre générale du BIEN (existante ou à créer par le BAILLEUR)
+        </p>
+
+        <p>
+            * dispositif de communication (type modem / Webdyn / autre)
+        </p>
+
+        <p>
+            * des notices d’utilisation des composants, et un cahier des visites
+        </p>
+
+        <p>
+            - en limite de propriété du BIEN ou jusqu’aux compteurs actuellement présents dans le BATIMENT ou ailleurs sur le BIEN, un point de raccordement au réseau public de distribution d’électricité (point d’injection) constitué de cellules de couplage et de protection assurant la mise en sécurité de l’installation vis-à-vis du réseau.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                8.3. Exécution des travaux
+            </b>
+        </h5>
+
+        <p>
+            Le PRENEUR s’engage à commencer l’édification de la CENTRALE dans un délai maximal de dix-huit (18) mois à compter de la DATE DU BAIL.
+        </p>
+
+        <p>
+            Le délai de construction doit être comparable avec ceux de la profession. Il pourra être suspendu en cas de survenance d’un évènement indépendant de la volonté du PRENEUR et faisant obstacle à la poursuite des travaux.
+        </p>
+
+        <p>
+            Le PRENEUR notifie au BAILLEUR et au LOCATAIRE l’ouverture de chantier, ainsi que l’achèvement de la CENTRALE (accessoires compris).
+        </p>
+
+        <p>
+            Le PRENEUR a seul la qualité de maître de l’ouvrage et est le seul qualifié pour donner les instructions nécessaires à la poursuite des travaux et pour prononcer la réception de la CENTRALE.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                8.4. Accession différée
+            </b>
+        </h5>
+
+        <p>
+            Le BAILLEUR et le LOCATAIRE s’interdisent d’intervenir de quelque manière que ce soit sur la CENTRALE. Ils reconnaissent qu’elle est la propriété exclusive du PRENEUR aussi longtemps que le PRENEUR a la jouissance de l’EMPLACEMENT. Il est ici convenu que cette jouissance cesse à la fin du dernier jour du dernier BAIL. A la fin de la jouissance, la CENTRALE devient, par accession et dans l’état où elle se trouve alors, de plein droit la propriété du BAILLEUR. Le BAILLEUR fait alors son affaire personnelle de la continuation de l’exploitation de la CENTRALE et de toutes taxes, contributions et impositions lui incombant alors ou pouvant être occasionnées par cette accession.
+        </p>
+
+        <p>
+            Conformément à l’intention des PARTIES, si, pour quelque raison que ce soit, l’<b>Article 8.4</b> ne pouvait recevoir la qualification de clause d’accession différée, le BAILLEUR s’engage irrévocablement à ne pas se prévaloir des dispositions des articles 551 à 553 et 555 du Code civil, s’interdisant ainsi de prétendre à la propriété de la CENTRALE, pendant toute la durée du BAIL ou le cas échéant pendant toute la durée de tout NOUVEAU BAIL. Parallèlement, le BAILLEUR et le LOCATAIRE s’engagent à ne pas demander la démolition ou l’enlèvement de tout ou partie de la CENTRALE. Le présent alinéa est autonome, conformément au consentement des PARTIES ainsi que du LOCATAIRE.
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 9 – EXPLOITATION ET ENTRETIEN DE LA CENTRALE
+            </b>
+        </h5>
+
+        <p>
+            Une fois la CENTRALE raccordée, le PRENEUR exploite seul la CENTRALE,
+        </p>
+
+        <p>
+            Sous réserve des dispositions des deux paragraphes suivants, le PRENEUR maintient la CENTRALE en bon état d’entretien courant et de réparation d’usage pendant la durée du BAIL, à ses frais et responsabilité, sauf si l’intervention est rendue nécessaire par un fait imputable au BAILLEUR ou au LOCATAIRE. Le BAILLEUR demeure responsable de l’entretien de la toiture et plus généralement du BIEN hors la CENTRALE.
+        </p>
+
+        <p>
+            Le PRENEUR est tenu de faire procéder à toutes les interventions de maintenance sur la CENTRALE. Pour toute opération de maintenance préventive, il prévient le BAILLEUR et le LOCATAIRE, par tous moyens, au moins trois (3) jours ouvrés avant leur date prévue, étant ici précisé que les visites ont lieu autant que de besoin. Pour les opérations de maintenance curative, ainsi qu’en cas d’urgence, le PRENEUR préviendra le BAILLEUR et le LOCATAIRE, par tous moyens, sans délai pour la réalisation de toutes interventions nécessaires.
+        </p>
+
+        <p>
+            Pendant la durée du BAIL ou de tout NOUVEAU BAIL, le BAILLEUR et le LOCATAIRE s’obligent à laisser le PRENEUR et/ou tout entrepreneur qu’il désignerait, avoir accès libre au BIEN et au BATIMENT, pour toute opération de maintenance préventive ou curative et de laisser à disposition l’espace nécessaire à la réalisation de ces travaux (incluant emplacement de stockage, de stationnement, utilisation d’échafaudage, etc.), sous réserve du respect par le PRENEUR d’un préavis raisonnable.
+        </p>
+
+
+        <h5>
+            <b>
+                ARTICLE 10 – DISPOSITION
+            </b>
+        </h5>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                10.1. Disposition du BAIL par le PRENEUR
+
+            </b>
+        </h5>
+
+        <p>
+            ULe PRENEUR peut conférer à des tiers la jouissance de l’EMPLACEMENT et de la CENTRALE, notamment par voie de sous-location, pour une durée n’excédant pas la durée restant à courir du BAIL ou de tout NOUVEAU BAIL. En tout état de cause, à l’expiration du BAIL ou de tout NOUVEAU BAIL, quelle qu’en soit la cause, toute convention consentie sur l’EMPLACEMENT et la CENTRALE par le PRENEUR ou ses ayants cause prend fin automatiquement.
+        </p>
+
+        <p>
+            Pour ce qui concerne spécifiquement la cession du BAIL (ou de tout NOUVEAU BAIL), il est convenu que le PRENEUR y procède librement. Ainsi, le consentement du BAILLEUR et du LOCATAIRE porte aussi sur cette libre cession. Le BAILLEUR et le LOCATAIRE en sont informés sans délai. Le cessionnaire est directement engagé envers le BAILLEUR et le LOCATAIRE, libérant corrélativement le cédant, à la date à laquelle la cession est portée à leur connaissance. Le BAILLEUR et le LOCATAIRE l’acceptent aussi en consentant aux présentes.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                10.2. Disposition du BIEN et/ou de l’EMPLACEMENT par le BAILLEUR
+            </b>
+        </h5>
+
+        <p>
+            En cas de disposition ou de transfert, à quelque titre et pour quelque cause que ce soit, des droits du BAILLEUR sur le BIEN et / ou le BATIMENT, il est convenu entre les PARTIES :
+        </p>
+
+        <p>
+            <b>1)</b> à la condition que le PRENEUR ait fait donner date certaine au BAIL ou à tout NOUVEAU BAIL (article 1377 du Code civil) il s’impose à tout nouveau titulaire du BIEN et / ou du BATIMENT, conformément à l’article 1743 du Code civil. Tout bail de moins de douze (12) ans, dont la date est certaine, s’impose en effet au nouveau titulaire des lieux loués, notamment, sans limitation : en cas de vente, d’adjudication, d’apport, d’échange, de donation, de division, de scission, de fusion, de saisie, de démembrement, etc. En outre, tout bail s’impose aux héritiers (universels ou à titre universel) du bailleur personne physique ;
+        </p>
+
+        <p>
+            <b>2)</b> néanmoins, pour concrétiser ces principes, et ce, peu important que le présent BAIL ou tout NOUVEAU BAIL ait date certaine ou non, le BAILLEUR s’engage à titre de résultat à l’acceptation des présentes et à leur parfaite exécution par toute personne venant dans ses droits relativement au BIEN et / au BATIMENT, notamment ses ayants cause à quelque titre que ce soit et pour quelque cause que ce soit. A cet effet, le BAILLEUR s’engage à : porter les présentes à la connaissance de ces personnes préalablement à tout transfert à leur profit ; à recueillir la preuve de leur engagement de les respecter intégralement ; à faire annexer à tout acte de transfert une copie des présentes et de cet engagement.
+        </p>
+
+        <p>
+            Le BAILLEUR s’engage par ailleurs à notifier au PRENEUR dans les meilleurs délais tout événement-translatif de propriété du BIEN et / ou du BATIMENT, notamment en cas de vente, succession, donation, démembrement de propriété, changement d’état civil (mariage, divorce, nouveau mariage, la conclusion ou la rupture d’un pacte civil de solidarité) et/ou toute éventuelle mesure prise par un tiers en vue de la saisie du BIEN, de la vente publique du BIEN ou tout autre mesure d’exécution forcée prise par un tiers ayant pour effet le transfert de propriété du BIEN.
+        </p>
+
+        <p>
+            Par extension, le BAILLEUR qui voudrait permettre à un tiers d’utiliser tout ou partie du BIEN et / ou du BATIMENT (par bail, prêt, etc.), en dehors de l’EMPLACEMENT, s’oblige, préalablement à tout accord avec ce tiers, à porter à sa connaissance l’existence des présentes, à en conserver la preuve, le BAILLEUR s’engageant à titre de résultat à l’acceptation des conséquences des présentes par ce tiers, ainsi que du plein respect par ledit tiers des droits et équipements du PRENEUR. Le BAILLEUR obtient également de ce tiers un engagement écrit en ce sens. A cette occasion, il impose au tiers de prendre le même engagement en cas de sous-contrat (sous-location, par exemple).
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 11 – ENGAGEMENTS DU BAILLEUR ET DU LOCATAIRE
+            </b>
+        </h5>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                11.1 Engagement généraux
+            </b>
+        </h5>
+
+        <p>
+           Le BAILLEUR est tenu de délivrer au PRENEUR l’EMPLACEMENT loué.
+        </p>
+
+        <p>
+           Le BAILLEUR et le LOCATAIRE sont à l’égard du PRENEUR tenus  d’entretenir le BIEN et le BATIMENT, afin de permettre au PRENEUR la pleine jouissance de l’EMPLACEMENT à l’usage pour lequel il a été loué ; d’effectuer sur le BIEN et le BATIMENT toutes les réparations qui peuvent devenir nécessaires, tout en ne menaçant jamais l’intégrité ou le fonctionnement de la CENTRALE ; d’informer le PRENEUR par écrit dans les trente (30) jours calendaires de tout fait ou acte, de tout changement ou modification concernant le BIEN et/ ou le BATIMENT, en fournissant tous les éléments (documents officiels, etc.) garantissant le maintien des droits du PRENEUR au titre du présent BAIL ou de tout NOUVEAU BAIL.
+        </p>
+
+        <p>
+            Par ailleurs, le BAILLEUR garantit le PRENEUR contre tous les vices ou défauts du BIEN et / ou du BATIMENT ainsi que de l’EMPLACEMENT qui pourrait affecter l’exploitation de la CENTRALE quand bien même le BAILLEUR ne les aurait pas connus lors de la conclusion du BAIL.
+        </p>
+
+        <p>
+            En cas de contradiction entre ces engagements généraux du BAILLEUR et du LOCATAIRE (<b>Article 11.1</b>) et ses engagements particuliers (<b>Article 11.2</b>), et leurs engagements particuliers prévalent.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                11.2 Engagements particuliers
+            </b>
+        </h5>
+
+        <p>
+            Le BAILLEUR et le LOCATAIRE s’interdisent, directement ou indirectement, d’intervenir de quelque manière que ce soit sur la CENTRALE (accessoires compris).
+        </p>
+
+        <p>
+            Le BAILLEUR et le LOCATAIRE s’interdisent notamment toute action ou inaction de nature à porter atteinte à la stabilité de la CENTRALE (accessoires compris), ainsi que, plus largement, de faire et/ou de laisser faire quoi que ce soit, qui puisse constituer un obstacle matériel, juridique ou économique au projet possible du PRENEUR, dans sa réalisation ou sa rentabilité, et sans préjudice des éventuels recours prévus par la loi.
+        </p>
+
+        <p>
+            Le BAILLEUR et le LOCATAIRE s’interdisent, directement ou indirectement, d’accorder à tout tiers des droits susceptibles de nuire au projet du PRENEUR, ainsi que d’autoriser un tiers à procéder à ce qui leur est défendu.
+        </p>
+
+        <p>
+            Si le BAILLEUR et/ou le LOCATAIRE envisageaient la réalisation de travaux/interventions sur le BIEN et/ ou sur le BATIMENT, susceptibles d’avoir un impact négatif sur la CENTRALE, notamment relatifs aux murs porteurs, à la charpente, ou, sur les parties de sa toiture non comprises dans l’EMPLACEMENT, relatifs à toute implantation ou modification d’antennes, paraboles, relais, conduits, cheminées, tours, chemins de câbles, ouvertures, chéneaux et, plus largement, accidents de toiture, le BAILLEUR et/ou le LOCATAIRE doivent (i) en informer préalablement le PRENEUR et dans un délai suffisant pour permettre au PRENEUR de considérer ladite demande, (ii) faire valider préalablement les travaux/interventions par un bureau d’études afin que ce dernier établisse toute préconisation technique imposée par la situation, (iii) faire suivre les travaux/interventions par un architecte agréé et (iv) faire attester la conformité des travaux/interventions par un bureau de contrôle et (v) être assurés par des polices couvrant les responsabilités légales leur incombant dans ce cadre.
+        </p>
+
+        <p>
+            Si le BAILLEUR et/ou le LOCATAIRE envisageaient simplement de se rendre à l’intérieur de l’EMPLACEMENT, pour des cas d’urgence, ils devraient en informer sans délai le PRENEUR et tenir compte de toute règle de sécurité électrique applicable à la CENTRALE (accessoire compris), dont le respect est impérieux.
+        </p>
+
+        <p>
+            En outre, le BAILLEUR et/ou le LOCATAIRE ne doivent intervenir sur aucun câble ni sur aucun accessoire de la CENTRALE.
+        </p>
+
+
+        <h5>
+            <b>
+                ARTICLE 12 – DROITS ACCESSOIRES DU PRENEUR
+            </b>
+        </h5>
+
+        <p>
+            Outre ceux qui précèdent, des droits sont attribués au PRENEUR accessoirement à sa créance de jouissance sur l’EMPLACEMENT, pour les besoins de la construction, de l’exploitation et de la maintenance de la CENTRALE, sur les seules parties du BIEN et/ ou du BATIMENT nécessaires à cet effet et qui ne seraient pas incluses dans l’EMPLACEMENT.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                12.1. Droit de faire passer des réseaux (canalisation, lignes électriques et toutes lignes souterraines)
+            </b>
+        </h5>
+
+        <p>
+            Sur le BIEN et / ou le BATIMENT, le PRENEUR a le droit de faire passer des réseaux : le long du BATIMENT ; sur le sol ; en sous-sol à une profondeur d’au moins cinquante (50) centimètres. Le PRENEUR peut donc installer et poser des lignes souterraines, notamment des câbles électriques d’alimentation et d’évacuation de l’énergie électrique, des câbles de mesures et de commande, d’autres câbles de télécommunication, des câbles électroniques de type fibre optique, téléphoniques ou télématiques et, le cas échéant, de raccordement au service des eaux et, plus généralement, de toute tuyauterie.
+        </p>
+
+        <p>
+            Afin de procéder à ces installations et de pouvoir les entretenir, le PRENEUR se voit reconnaître : tous droits d’accès au BIEN et au BATIMENT, et la possibilité d’intervenir sur les zones où ces réseaux se trouvent.
+        </p>
+
+        <p>
+            Avant la réalisation des travaux d’implantation, la localisation de ces zones donne lieu à un relevé et à l’établissement d’un plan, en deux exemplaires, que le BAILLEUR date et signe, et dont l’un lui est ensuite remis. Ce document vaut acceptation par le BAILLEUR de l’implantation prévue
+        </p>
+
+        <p>
+            Après réalisation des travaux de construction de la CENTRALE, le PRENEUR adresse sans délai au BAILLEUR un plan de recollement, par LRAR. Ce plan prévaut sur tout plan antérieur.
+        </p>
+
+        <p>
+            Chacune des PARTIES en conserve un exemplaire et le communique à toute personne venant ensuite dans ses droits ou pouvant être concernée par la localisation de la CENTRALE.
+        </p>
+
+        <p>
+            Pendant la durée de ce droit accessoire, et sauf autorisation préalable et expresse du PRENEUR, aucune action susceptible d’endommager les canalisations, câbles électriques, tuyauteries et autres lignes souterraines sur leur parcours ne doit être entreprise, que ce soit par le BAILLEUR, le LOCATAIRE ou, plus généralement, par toute personne dont le BAILLEUR ou le LOCATAIRE répond ou à qui il ferait appel ou avec qui il serait contractuellement lié.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                12.2. Droit d’accès (personnes, véhicules, engins, installations, etc.).
+            </b>
+        </h5>
+
+        <p>
+            En dehors des situations exprimées à l’Article 8.3 et l’Article 9, sous réserve de respecter un délai de prévenance de sept (7) jours calendaires, le PRENEUR a le droit d’accéder au BIEN et au BATIMENT en tous temps et aux heures ouvrables, et/ou de faire passer toutes personnes, engin, véhicule, aux fins de construction, d’exploitation, de contrôle, de nettoyage, de maintien, d’expertise, de remplacement, de rénovation, de modification, d’agrandissement de la CENTRALE. En cas d’urgence, le délai de prévenance est écarté afin que le PRENEUR puisse réaliser les opérations nécessaires sans délai.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                12.3. Préservation de l’emplacement contre les ombres.
+            </b>
+        </h5>
+
+        <p>
+            Le BAILLEUR et le LOCATAIRE s’interdisent de créer ou de laisser se développer sur le BIEN et le BATIMENT tout obstacle à la diffusion du rayonnement solaire sur l’EMPLACEMENT et, plus généralement, de faire quoi que ce soit qui serait susceptible de faire obstacle au fonctionnement optimum de la CENTRALE, sauf sur autorisation expresse et préalable du PRENEUR. Après mise en demeure de procéder à l’enlèvement sous huitaine restée infructueuse, le PRENEUR peut faire détruire l’obstacle, aux frais remboursés du BAILLEUR.
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 13 – ENGAGEMENTS DIVERS
+            </b>
+        </h5>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                13.1. Engagements du PRENEUR
+            </b>
+        </h5>
+
+        <p>
+            Le PRENEUR doit être assuré au titre du « bris de machine » et le demeurer pour toute la durée du BAIL ou de tout NOUVEAU BAIL, contre les dommages que la CENTRALE subirait. Il doit aussi être assuré pour sa responsabilité civile. Le PRENEUR doit également vérifier que tous les entrepreneurs qu’il charge de la maintenance de la CENTRALE sont assurés par des polices couvrant leurs garanties et responsabilités légales, ainsi que leur responsabilité contractuelle et professionnelle, et que ces derniers assurent le PRENEUR en qualité d’assuré additionnel. Ces entrepreneurs fournissent au PRENEUR tous documents attestant qu’ils sont à jour du paiement de leurs primes. A première demande du BAILLEUR, le PRENEUR lui communique lesdits documents.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                13.2. Engagements du BAILLEUR et du LOCATAIRE.
+            </b>
+        </h5>
+
+        <p>
+            Pour toute la durée du BAIL, le BAILLEUR et le LOCATAIRE doivent être assurés contre les dommages que le BIEN et le BATIMENT subirait (à l’exception de la CENTRALE). Le BAILLEUR et le LOCATAIRE doivent attester de ces garanties et de leur maintien, à première demande du PRENEUR.
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 14 – RÉSILIATION
+            </b>
+        </h5>
+
+        <p>
+            Compte tenu de ce que le processus de signature des présentes peut être doublé par la signature d’un second document identique aux présentes à l’occasion de la visite technique. Ce second acte vient entériner les informations relatives à l’identité du BAILLEUR et du LOCATAIRE ainsi que leurs droits sur le BIEN et le BATIMENT.
+        </p>
+
+        <p>
+            En ce cas, les PARTIES conviennent d’ores et déjà que la signature du second document met fin au premier. La signature du second acte intervient dans un délai de deux (2) mois après la signature du premier.
+
+        </p>
+
+        <p>
+            A l’occasion du second acte, le délai de réalisation des conditions résolutoires et la durée du BAIL sont recalés et recommencent au jour de la seconde signature des présentes par l'ensemble des PARTIES, cette date devenant alors la DATE DU BAIL.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                14.1. Résiliation pour inexécution
+            </b>
+        </h5>
+
+        <p>
+            A défaut de paiement d’une (1) échéance de loyer par le PRENEUR, et trois (3) mois après un commandement de payer délivré par huissier resté sans effet, le BAILLEUR aura la faculté, si bon lui semble, de résilier le BAIL, par LRAR adressée au PRENEUR, sans préjudice des dommages et intérêts que le BAILLEUR pourrait, le cas échéant, réclamer au PRENEUR. Outre le cas particulier du défaut de paiement, le BAIL peut être judiciairement résilié, à la demande de l’une des PARTIES en cas d’inexécution par l’autre Partie de ses engagements, pourvu que cette inexécution ait des conséquences graves, trois (3) mois après une mise en demeure d’exécuter adressée par LRAR et restée infructueuse. Les dispositions qui précèdent excluent, selon l’intention des PARTIES, l’application de l’article 1226 du Code civil
+        </p>
+
+        <p>
+            Dans le cas où le projet du PRENEUR aurait été financé totalement ou partiellement par des tiers (et pourvu qu’il en ait informé le BAILLEUR, lui indiquant à cette occasion notamment l’identité de ces tiers), aucune demande de résiliation n’est recevable avant l’expiration d’un délai de SIX (6) mois à partir de la date à laquelle une copie de la mise en demeure adressée au PRENEUR aura été envoyée par LRAR à ces créanciers et dans la mesure où aucun d’eux ne notifierait au BAILLEUR son engagement ferme d’entrer dans les droits et obligations du PRENEUR ou d’y faire entrer un tiers, joint à l’engagement ferme du repreneur de réparer tout préjudice causé par le PRENEUR antérieurement.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                14.2. Résiliation unilatérale pour convenance, par le BAILLEUR
+            </b>
+        </h5>
+
+        <p>
+            Hors toute inexécution du PRENEUR, le BAILLEUR peut résilier le BAIL de manière anticipée dans les conditions ci-dessous, sans motif particulier, moyennant le paiement préalable au PRENEUR d’une indemnité de rupture dont le montant est fixé <b>Annexe 6</b>.
+        </p>
+
+        <p>
+            Après paiement effectif, le BAILLEUR accède à la propriété de la CENTRALE (accessoires compris). Sur demande du BAILLEUR, les contrats sous-jacents permettant la maintenance et l’exploitation de la CENTRALE peuvent lui être transférés (à défaut, ces contrats sont résiliés par le PRENEUR, à ses frais).
+        </p>
+
+        <p>
+            La faculté de résiliation unilatérale offerte au BAILLEUR par cet <b>Article 14.2</b> ne peut intervenir qu’à compter du quatrième anniversaire de la DATE DU BAIL et elle requiert que le BAILLEUR envoie, au minimum un (1) mois avant la prochaine date anniversaire de la DATE DU BAIL, une LRAR au PRENEUR indiquant sans équivoque sa volonté de résilier le BAIL et d’accéder à la CENTRALE.
+        </p>
+
+        <p>
+            La résiliation prend alors effet à compter du versement effectif, sur le compte du PRENEUR, de l’indemnité susmentionnée (et précisée <b>Annexe 6</b>), laquelle doit avoir lieu sans délai.
+        </p>
+
+        <p>
+            En cas de résiliation du BAIL par application de cet <b>Article 14.2</b>, le PRENEUR se charge de procéder aux démarches permettant le transfert des droits électriques permettant la vente de l’électricité de la CENTRALE dans les meilleurs délais, et le BAILLEUR fait son affaire de toutes taxes et impositions lui incombant alors.
+        </p>
+
+        <p>
+            En tout état de cause, dans le cas où le projet du PRENEUR aurait été financé totalement ou partiellement par des tiers (et pourvu qu’il en ait informé le BAILLEUR, lui indiquant à cette occasion notamment l’identité de ces tiers), aucune demande de résiliation ne pourra prendre effet avant l’expiration d’un délai de SIX (6) mois à partir de la date à laquelle une copie de LRAR adressée au PRENEUR aura été envoyée par LRAR à ces créanciers et dans la mesure où aucun d’eux ne notifierait au BAILLEUR son engagement ferme d’entrer dans les droits et obligations du PRENEUR ou d’y faire entrer un tiers.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                14.3. Résiliation unilatérale pour convenance, par le PRENEUR
+            </b>
+        </h5>
+
+        <p>
+            Hors toute inexécution du BAILLEUR, le PRENEUR peut résilier le BAIL de manière anticipée et sans motif particulier, tous les ans à compter du quatrième anniversaire de la DATE DU BAIL et à condition que le PRENEUR envoie, au minimum un (1) mois avant la prochaine date anniversaire de la DATE DU BAIL, une LRAR au BAILLEUR indiquant sans équivoque sa volonté de résilier le BAIL. Dans ce cas, le PRENEUR, à titre d’indemnité de rupture, laisse la propriété de la CENTRALE accéder sans indemnité au BAILLEUR (accessoire compris). Sur demande du BAILLEUR, les contrats sous-jacents permettant la maintenance et l’exploitation de la CENTRALE peuvent lui être transférés (à défaut, ces contrats sont résiliés par le PRENEUR, à ses frais). Le PRENEUR se charge de procéder aux démarches permettant le transfert des droits électriques permettant la vente de l’électricité de la CENTRALE dans les meilleurs délais, et le BAILLEUR fait son affaire de toutes taxes et impositions lui incombant alors.
+        </p>
+
+        <p>
+            En tout état de cause, dans le cas où le projet du PRENEUR aurait été financé totalement ou partiellement par des tiers, la résiliation à la demande du PRENEUR ne pourra prendre effet qu’une fois qu’une copie de la LRAR adressé au BAILLEUR aura été envoyée par LRAR à ces créanciers et que ceux-ci l’ont acceptée.
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 15 - DÉCLARATIONS DES PARTIES
+            </b>
+        </h5>
+
+        <p>
+            Chacune des PARTIES et le LOCATAIRE déclarent :
+        </p>
+
+        <ul style="margin-bottom: 15px">
+            <li>
+                Disposer de sa pleine capacité sans aucune restriction et de toutes les autorisations, délibérations ou habilitations pour consentir ou intervenir aux présentes
+            </li>
+            <li>
+                Ne pas avoir fait, ni ne faire, ni n’être – à sa connaissance – susceptible de faire l'objet de mesures visées au Livre VI du Code de commerce relatif aux difficultés des entreprises et portant sur la procédure de conciliation, la sauvegarde, le redressement et la liquidation judiciaire et qu'aucune mesure visant à obtenir la nomination d'un mandataire ad hoc, d'un conciliateur, d'un administrateur judiciaire ou d'un liquidateur en application des textes susvisés, n'est susceptible d'être introduite par un tiers
+            </li>
+            <li>
+                N’être concernée par aucune demande en nullité ou dissolution
+            </li>
+            <li>
+                Que les éléments relatés dans son identification sont exacts
+            </li>
+            <li>
+                Que la signature des présentes ne contrevient à aucun contrat ou engagement auquel elle est partie, ni à aucune loi, réglementation ou décision administrative, judiciaire ou arbitrale qui lui est opposable et dont le non-respect pourrait faire obstacle ou avoir une incidence contraire à la bonne exécution des engagements nés des présentes. Spécialement, en y consentant, elle ne contrevient à aucun engagement contracté au bénéfice d’autrui
+            </li>
+            <li>
+                Que rien, dans sa situation, n’est de nature à faire obstacle aux présentes ou à en remettre en cause la validité ou l’efficacité
+            </li>
+        </ul>
+
+        <p>
+            Le représentant de chaque PARTIE et du LOCATAIRE déclare n’avoir fait l’objet d’aucune interdiction de diriger, gérer, administrer ou contrôler une personne morale.
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 16 - DÉCLARATIONS DU BAILLEUR
+            </b>
+        </h5>
+
+        <p>
+            Le BAILLEUR est le seul et unique propriétaire / titulaire de droits réels sur le / du BIEN et du BATIMENT. Le BAILLEUR, qui reconnait connaître parfaitement le BIEN et le BATIMENT déclare en outre qu’aucun élément relatif à ce BIEN ou à ce BATIMENT n’est susceptible d’affecter le projet du PRENEUR. A cet effet, le BAILLEUR déclare notamment que :
+        </p>
+
+        <ul style="margin-bottom: 15px">
+            <li>
+                aucune servitude incompatible avec le projet du PRENEUR ne grève le BIEN ou le BATIMENT
+            </li>
+            <li>
+                il n’est consenti sur l’EMPLACEMENT aucun droit autre que celui résultant des présentes, l’EMPLACEMENT le BIEN étant ainsi libre, de toute occupation, licite ou illicite, précaire ou durable
+            </li>
+            <li>
+                il a communiqué au PRENEUR l’existence de toutes cavités souterraines, même remblayées, creusées par l’homme ou naturelles, dans le sous-sol du BIEN dont il aurait connaissance
+            </li>
+            <li>
+                le BIEN ou le BATIMENT n’a jamais été inondé ou fait l’objet d’une coulée de boue ou d’un mouvement de terrain
+            </li>
+            <li>
+                le BIEN ou le BATIMENT n’a fait l’objet d’aucun remblai (terre, déchets, débris, etc.)
+            </li>
+            <li>
+                le BIEN ou le BATIMENT ne fait pas l’objet, tant en demande qu’en défense, d’une procédure en cours (notamment pour raisons de servitude, troubles de voisinage, délimitation de limite parcellaire, remembrement, expropriation, constitution de réserve foncière etc.) et n’est pas susceptible de donner lieu à une telle procédure
+            </li>
+            <li>
+                aucun sinistre n’y a jamais été déclaré, qui aurait notamment donné lieu au versement d’une indemnité en application de l’article L. 125-2 ou L. 128-2 du Code des assurances
+            </li>
+            <!--  -->
+            <li>
+                le PRENEUR renonce au bénéfice de la production d’un Etat des Risques naturels miniers et technologiques
+            </li>
+            <li>
+                aucune charge hypothécaire et aucun privilège ne grève le BIEN ni le BATIMENT ni aucune saisie (ou déclaration de saisie), aucune interdiction d’aliéner ou aucun droit de retour ne s’y applique
+            </li>
+            <!--  -->
+            <li>
+                il n’a pas acquis le BIEN ou le BATIMENT par voie d’échange, de donation ou par vente dans les deux (2) années qui précèdent la date de signature des présentes
+            </li>
+            <li>
+                le BIEN ou le BATIMENT ne fait l’objet d’aucune demande en nullité, en résolution/résiliation ou, plus généralement, en anéantissement des droits du BAILLEUR
+            </li>
+        </ul>
+
+        <p>
+            En cas de changement de la situation du BIEN ou du BATIMENT, le BAILLEUR s’engage à informer le PRENEUR sans délai.
+        </p>
+
+        <h5>
+            <b>
+                ARTICLE 17 – CONTRIBUTIONS, IMPÔTS et TAXES
+            </b>
+        </h5>
+
+        <p>
+            Pendant toute la durée du BAIL, et pendant tout NOUVEAU BAIL, le PRENEUR acquitte les impôts, contributions, taxes et redevances de toute nature, présents ou à venir, auxquels les travaux et aménagement de raccordement seront ou pourront être assujettis, du fait de l’installation de la CENTRALE.
+        </p>
+
+        <p>
+            Pendant toute la durée du bail, et pendant tout NOUVEAU BAIL, le BAILLEUR et/ou le LOCATAIRE acquittera les impôts, contributions, taxes et redevances de toute nature, présents ou à venir concernant le BIEN et le BATIMENT et auxquels le BAILLEUR et/ou le LOCATAIRE était assujetti avant la mise en place de la CENTRALE.
+        </p>
+
+        <p>
+            En conséquence, le PRENEUR n’est tenu à l’égard du BAILLEUR ou du LOCATAIRE d’aucune charge exigible à raison de la CET (CFE et CFAE) ou de tout autre impôt ou taxe actuel ou futur concernant le BIEN ou le BATIMENT.
+        </p>
+
+        <h5>
+            <b>
+                Art. 18 - DISPOSITIONS GÉNÉRALES
+            </b>
+        </h5>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                18.1. Sauvegarde générale.
+            </b>
+        </h5>
+
+        <p>
+            Les intitulés des Articles des présentes n’en constituent pas une partie intégrante. Ils sont seulement exprimés dans un souci de clarté et de simplicité. Ils ne pourront ainsi pas être interprétés, en cas d’ambiguïté, d’obscurité, d’équivocité ou d’apparente lacune, comme ayant une quelconque signification ou possédant un sens propre.
+        </p>
+
+        <p>
+            En présence d’une disposition annulable, les PARTIES s’engagent d’ores et déjà à la remplacer par une disposition valable d’une portée équivalente, si possible, au plan du résultat économique et reflétant le but qu’elles assignaient aux présentes lors de leur formation.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                18.2. Élection de domicile.
+            </b>
+        </h5>
+
+        <p>
+            Pour l’exécution des présentes et de leurs suites, les PARTIES élisent domicile en leur domicile ou siège respectif, tels qu’indiqués en première page. Si ces informations venaient à être modifiées, la PARTIE concernée en informerait sans délai l’autre PARTIE par LRAR contenant les nouvelles coordonnées de la PARTIE concernée.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                18.3. Médiation
+            </b>
+        </h5>
+
+        <p>
+            Dans le cas où le BAILLEUR (ou le LOCATAIRE) est une personne physique n’agissant pas dans le cadre de son activité professionnelle, il est ici indiqué que, préalablement à toute saisine d’une juridiction et conformément aux dispositions de l’article L. 111-1 du Code de la consommation, il est possible de recourir à un médiateur de la consommation dans les conditions prévues au Titre Ier du Livre VI du Code de la consommation.
+        </p>
+
+        <h5 style="margin-left: 30px">
+            <b>
+                18.4. Valeur contractuelle des annexes.
+            </b>
+        </h5>
+
+        <p>
+            Les annexes font partie intégrante des présentes. Le consentement, exprimé ci-dessous, vaut donc, tant pour le corps des présentes, que pour ces annexes, les PARTIES se libérant, conformément au droit, d’avoir à parapher chaque page de ces annexes.
+        </p>
+
+        <p>
+            Ainsi, par exemple, en signant les présentes, le BAILLEUR et le LOCATAIRE expriment leurs consentements aux <b>Annexes 4</b> et <b>5</b>. Cette signature exprime également le consentement du BAILLEUR au mandat évoqué <b>article 8.1</b>.
+        </p>
+
+        <p>
+            Annexe 1 :  Plan du BIEN et de l’EMPLACEMENT
+        </p>
+
+        <p>
+            Annexe 2 :  Extrait cadastral et Relevé de propriété
+        </p>
+
+        <p>
+            Annexe 3 :  Carte d’identité du propriétaire ou copie de la pièce d’identité (ou k bis en cas de propriété d’une personne morale)
+        </p>
+
+        <p>
+            Annexe 4 :  Promesse de bail civil
+        </p>
+
+        <p>
+            Annexe 5 :  Seconde promesse de bail civil
+        </p>
+
+        <p>
+            Annexe 6 :  Indemnité de rupture fixée en vertu de l’article 14.2
+        </p>
+
+        <p>
+            Annexe 7 :  Visuel prévisionnel (cette annexe sera établie entre les PARTIES ultérieurement à la signature des présentes ce qui est expressément accepté)
+        </p>
+
+        <p>
+            Annexe 8 :  Etat avant travaux (cette annexe sera établie entre les PARTIES ultérieurement à la signature des présentes ce qui est expressément accepté)
+        </p>
+
+        <p>
+            Annexe 9 :  Etat des lieux de l’EMPLACEMENT (cette annexe sera établie entre les PARTIES ultérieurement à la signature des présentes ce qui est expressément accepté)
+        </p>
+
+        <p>
+            Annexe 10 :  Formulaire de rétractation
+        </p>
+
+        <p style="page-break-after:always;">   </p>
+
+        <h5 class="text-center" style='border: 1px solid black;padding:20px'>
+            <b>
+                ANNEXE 4 - PROMESSE UNILATERALE DE BAIL CIVIL
+            </b>
+        </h5>
+
+        <p>Entre</p>
+
+        <!-- Main Partner -->
+        <ol style="margin-left: 50px">
+            <li>
+                <p class="uppercase" >
+                        <span t-if="doc.partner_id.title.name">
+                            Titre: <span t-field="doc.partner_id.title.name"/> <br/>
+                        </span>
+                        <span t-if="doc.contact_name">
+                            Prénom: <span t-field="doc.contact_name"/> <br/>
+                        </span>
+                        <span t-if="doc.contact_lastname">
+                            Nom: <span t-field="doc.contact_lastname"/> <br/>
+                        </span>
+                        <span t-if="doc.street or doc.street2 or doc.zip or doc.city">
+                            Adresse: <span t-field="doc.street"/> <span t-field="doc.street2"/> <span t-field="doc.zip"/> <span t-field="doc.city"/> <br/>
+                        </span>
+                </p>
+            </li>
+        </ol>
+
+        <p>Le «<b> BAILLEUR </b>»</p>
+
+        <p>Et</p>
+
+        <p style="margin-left: 50px">
+            Greenloc<br/>
+            Société par actions simplifiée au capital de 40000€<br/>
+            Immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro 800 075 004<br/>
+            89 rue Réaumur 75002 Paris<br/>
+            Représentée par son Président, Monsieur Moïse Marciano
+        </p>
+
+        <p>Le «<b> PRENEUR </b>»</p>
+
+        <p>Et en intervention</p>
+
+        <!-- Lodger -->
+        <ol style="margin-left: 50px">
+            <t t-foreach="doc.fal_partner_child_ids" t-as="l">
+                <t t-if="l.fal_is_lodger">
+                    <li>
+                        <p class="uppercase" >
+                                <span t-if="l.title.name">
+                                    Titre: <span t-field="l.title.name"/> <br/>
+                                </span>
+                                <span t-if="l.firstname">
+                                    Prénom: <span t-field="l.firstname"/> <br/>
+                                </span>
+                                <span t-if="l.lastname">
+                                    Nom: <span t-field="l.lastname"/> <br/>
+                                </span>
+                                <span t-if="l.street or l.street2 or l.zip or l.city">
+                                    Adresse:
+                                    <span t-field="l.street"/> <span t-field="l.street2"/> <span t-field="l.zip"/> <span t-field="l.city"/> <br/>
+                                </span>
+                        </p>
+                    </li>
+                </t>
+            </t>
+        </ol>
+
+        <p>Le «<b> LOCATAIRE </b>»</p>
+
+        <p>Ensemble, les «<b> PARTIES </b>»</p>
+
+        <h5>
+            <b>
+                <u>PREAMBULE</u>
+            </b>
+        </h5>
+
+        <p>A la date des présentes, le PRENEUR a pour projet l’installation d’une centrale photovoltaïque d’une puissance comprise entre 8,5 et 9 KWc ainsi que ces accessoires (la «<b> CENTRALE </b>») sur un terrain appartenant au BAILLEUR (le «<b> BIEN </b>»).</p>
+
+        <p>A cet effet, les PARTIES sont convenues d’un bail civil d’une durée de DIX (10) années (le «<b> BAIL </b>»), à compter de son point départ tel que précisée à l’article 6.1 du BAIL (la «<b> DATE DU BAIL </b>»), en annexe duquel figurent les présentes.</p>
+
+        <p>Ce BAIL porte sur divers espaces situées en toiture d’un bâtiment appartenant au BAILLEUR, situé sur le BIEN (le «<b> BATIMENT </b>»), au-dessus des liteaux, l’emplacement des modules assurant une fonction d’étanchéité ; à l’intérieur du BATIMENT, pour les câblages, le tableau électrique et les onduleurs ; entre le BATIMENT et la limite du BIEN, en tréfonds pour les câblages et en surface, en bordure de la voie publique pour le poste de raccordement. Ces espaces sont dénommés l’ «<b> EMPLACEMENT </b>».</p>
+
+        <p>Le LOCATAIRE est titulaire d’un bail fondant son occupation de tout ou partie du BIEN et / ou du BATIMENT, et a renoncé aux droits en résultant au bénéfice du PRENEUR aux termes du BAIL.</p>
+
+        <p>Or, le  PRENEUR devrait pouvoir vendre l’énergie  produite par la CENTRALE au-delà de ces dix premières années.</p>
+
+        <p>C’est ainsi que les PARTIES conviennent des présentes, dont l’objet est de permettre un nouveau bail entre elles, pour couvrir la suite de l’exploitation de la CENTRALE, si bon semble au PRENEUR.</p>
+
+        <p>Sauf autrement stipulé aux présentes, les termes figurant en majuscule ont la signification qui leur est donnée au BAIL.</p>
+
+
+        <h5>
+            <b>
+                <u>PROMESSE UNILATERALE DE BAIL CIVIL</u>
+            </b>
+        </h5>
+
+        <p>
+            <i>Objet</i><br/>
+            Le BAILLEUR, en tant que promettant, consent irrévocablement et définitivement un bail civil (appelé «NOUVEAU BAIL», par référence à celui qui le précède entre les mêmes PARTIES).
+        </p>
+
+        <p>
+            Le LOCATAIRE y consent identiquement, dans la mesure de ses droits. Le PRENEUR l’accepte en tant que promesse.
+        </p>
+
+        <p>
+            Le NOUVEAU BAIL porte sur l’EMPLACEMENT. Cet EMPLACEMENT est identique en tout point à celui loué au titre du BAIL (étant indiqué que l’EMPLACEMENT comporte une partie la CENTRALE, dont la jouissance ne cesse pas d’être exclusivement celle du PRENEUR, entre le bail précédent et le NOUVEAU BAIL).
+        </p>
+
+        <p>
+            Le NOUVEAU BAIL confère au PRENEUR des droits identiques à ceux convenus au titre du BAIL.
+        </p>
+
+        <p>
+            Les obligations mises à la charge du PRENEUR au titre du BAIL sont également identiques à celles résultant du NOUVEAU BAIL.
+        </p>
+
+        <p>
+            Plus généralement, à l’exception des articles 6.2 et 6.3 du BAIL relatifs aux conditions résolutoires stipulées aux termes du BAIL, et de ce qui suit, les conditions d’exercice du NOUVEAU BAIL sont identiques à celles du BAIL. Toutes clauses et conditions du BAIL qui ne seraient pas rappelées ci-après, demeureront ainsi pleinement applicables afin de régir les relations des PARTIES dans le cadre des présentes
+        </p>
+
+        <p>
+            <i>Durée du NOUVEAU BAIL</i><br/>
+            Le NOUVEAU BAIL est consenti pour une durée de DIX (10) années à compter de sa prise d’effet, à l’instant de raison qui précède la fin du BAIL.
+        </p>
+
+        <p>
+            <i>Loyer du NOUVEAU BAIL</i><br/>
+            Le loyer annuel est fixé à QUATRE CENTS (400) euros.
+        </p>
+
+        <p>
+            Les règles de paiement du loyer du NOUVEAU BAIL sont identiques à celles du BAIL.
+        </p>
+
+        <p>
+            A l’identique également, dans les cas où le projet du PRENEUR a été financé totalement ou partiellement par des tiers, le BAILLEUR s’engage à ne pas invoquer le privilège de bailleur d’immeuble (article 2332 du Code civil) dont il bénéficie au détriment de ces tiers, dès lors que le PRENEUR l’a informé de l’identité de ces tiers.
+        </p>
+
+        <p>
+            <i>Changement de cocontractant</i><br/>
+            Le BAILLEUR et le LOCATAIRE consentent au PRENEUR la faculté de transférer le NOUVEAU BAIL à un tiers, que ce soit par cession de bail, sous-location ou tout autre moyen. Tout nouveau bénéficiaire est engagé directement envers le BAILLEUR et le LOCATAIRE à l’exécuter, dans toutes ses conditions, ce qui libère corrélativement le PRENEUR, à la date à laquelle cette disposition leur a été notifiée par LRAR, ce que le BAILLEUR et le LOCATAIRE acceptent aussi.
+        </p>
+
+        <p>
+            En cas de modification dans la propriété du BIEN et / ou du BATIMENT (vente, apport, échange, démembrement, constitution d’une servitude ou de plusieurs, etc.) au cours du NOUVEAU BAIL, le BAILLEUR s’engage à titre de résultat à l’acceptation du NOUVEAU BAIL et à sa parfaite exécution par toute personne venant dans ses droits relativement au BIEN et / au BATIMENT, notamment ses ayants cause à quelque titre que ce soit et pour quelque cause que ce soit. A cet effet, le BAILLEUR s’engage à porter le NOUVEAU BAIL à la connaissance de ces personnes préalablement à tout transfert à leur profit ; à recueillir la preuve de leur engagement de les respecter intégralement ; à faire annexer à tout acte de transfert une copie du NOUVEAU BAIL et de cet engagement.
+        </p>
+
+        <p>
+            En cas de changement de LOCATAIRE, le BAILLEUR et le LOCATAIRE s’engagent à titre de résultat à faire reprendre le NOUVEAU BAIL par tout nouveau locataire et se portent fort de la signature par ce dernier d’une promesse unilatérale de bail telle qu’annexée au BAIL.
+        </p>
+
+        <h5>
+            <b>
+                <u>RENONCIATION A L’EXERCICE DE DROIT</u>
+            </b>
+        </h5>
+
+        <p>
+            A l’instar des engagements qu’il prend au titre du BAIL, le LOCATAIRE renonce, irrévocablement et définitivement à invoquer tout droit de jouissance et de jouir seul, sur l’EMPLACEMENT, au profit du PRENEUR dans le cadre du NOUVEAU BAIL. Le LOCATAIRE s’engage plus largement à ne pas invoquer contre le BAILLEUR, la garantie d’éviction ou de jouissance paisible, à raison de l’exécution du NOUVEAU BAIL et ce, sans aucune indemnité à l’encontre de l’une ou l’autre des PARTIES En cas de changement de LOCATAIRE, le BAILLEUR et le LOCATAIRE s’engagent à titre de résultat à ce que le nouveau locataire renonce de la même manière, irrévocablement et définitivement à invoquer tout droit de jouissance et de jouir seul, sur l’EMPLACEMENT, au profit du PRENEUR.
+        </p>
+
+        <h5>
+            <b>
+                <u>REGIME DE LA PROMESSE</u>
+            </b>
+        </h5>
+
+        <p>
+            <i>Durée de la promesse</i><br/>
+            La promesse est prévue pour durer DIX (10) années à compter de la DATE DU BAIL.
+        </p>
+
+        <p>
+            <i>Levée d’option</i><br/>
+            Le PRENEUR a la faculté de lever l’option avant le terme des présentes. S’il exerce l’option de NOUVEAU BAIL, le PRENEUR informe le BAILLEUR et, le cas échéant, le LOCATAIRE au plus tard TROIS (3) mois avant la fin du BAIL en cours, la première présentation d’une LRAR à cet effet faisant foi entre les PARTIES. Après levée d‘option, les effets commencent à être exigibles à l’instant de raison qui précède la fin du BAIL.
+        </p>
+
+        <p>
+            L’exécution des présentes ainsi que celle du contrat de BAIL sont nécessaires à une même opération d’exploitation par le PRENEUR d’une centrale photovoltaïque installée par le PRENEUR sur le BIEN et le BATIMENT, ce dont toutes les PARTIES déclarent être informées et ce à quoi elles consentent. Il est expressément convenu que l’exécution du contrat de BAIL est une condition déterminante du consentement des PARTIES aux présentes. Par conséquent, en cas de disparition du contrat de BAIL par l’effet d’une résiliation, de la mise en jeu de la clause résolutoire ou pour toute autre cause, les présentes deviendraient caduques en exécution  de l’article 1186 du Code civil, ce que les PARTIES acceptent expressément, reconnaissant qu’alors un de ses éléments essentiels aurait disparu.
+        </p>
+
+        <p>
+            En cas d’inexécution, la carence ou la difficulté ayant été constatée, l’article 1124 du Code civil s’applique permettant de forcer la partie défaillante. L’article 1221 nouveau du Code civil ne peut y faire obstacle, compte tenu de ce que ni le BAILLEUR, ni le LOCATAIRE ne sont essentiellement tenus d’un engagement de « faire », chacun reconnaissant que rien, dans la promesse à laquelle ils consentement (dans la mesure de leurs droits respectifs) n’est d’une nature « impossible » ou « manifestement disproportionné entre son coût pour son débiteur son intérêt pour son créancier » (au sens de l’article 1221 précité).
+        </p>
+
+        <p>
+            En cas de levée d’option, le PRENEUR peut adresser au BAILLEUR et, le cas échéant, au LOCATAIRE, un document à signer, à titre probatoire, pour constater la formation d’un NOUVEAU BAIL. Le BAILLEUR et le LOCATAIRE s’obligent à dater, signer et retourner un exemplaire au PRENEUR. Il est cependant rappelé que tout NOUVEAU BAIL est valablement formé par la seule levée d’option du PRENEUR.
+        </p>
+
+        <p>
+            <i>Préservation de la Promesse</i><br/>
+            Par application de l’article 1124 du Code civil, ni le BAILLEUR, ni le LOCATAIRE, ne peuvent revenir sur leur consentement le temps des présentes.
+        </p>
+
+        <p>
+            Le BAILLEUR et le LOCATAIRE s’engagent à ne rien faire directement ou indirectement qui puisse nuire aux intérêts du PRENEUR et de son projet.
+        </p>
+
+        <p>
+            Ils s’engagent aussi à informer le PRENEUR par écrit sans délai de tout fait ou acte, de tout changement ou modification concernant le BIEN ou LE BATIMENT (que ce soit matériellement ou juridiquement), en tout ou partie, en fournissant tous les éléments garantissant le maintien des droits que le PRENEUR peut tirer de la Promesse.
+        </p>
+
+        <p>
+            Le PRENEUR se réserve le droit de demander en justice la sanction de tous actes contraires à ses droits et de mettre en œuvre toute action susceptible de préserver ces droits.
+        </p>
+
+        <h5>
+            <b>
+                <u>DECLARATION DES PARTIES</u>
+            </b>
+        </h5>
+
+        <p>
+            Tant sur leur capacité que sur le BIEN et le BATIMENT, les PARTIES se réfèrent aux déclarations qu’elles ont faites au titre du BAIL et se libèrent d’avoir à en rappeler le contenu, les PARTIES déclarant en être pleinement informées.
+        </p>
+
+        <h5>
+            <b>
+                <u>DISPOSITIONS GENERALES</u>
+            </b>
+        </h5>
+
+        <p>
+            <i>Election de domicile</i><br/>
+            Pour l’exécution des présentes et de leurs suites, les PARTIES élisent domicile en leur domicile ou siège respectif, tels qu’indiqués en première page. Si ces informations venaient à être modifiées, la PARTIE concernée en informerait sans délai l’autre PARTIE par LRAR contenant les nouvelles coordonnées de la PARTIE concernée.
+        </p>
+
+        <p>
+            <i>Médiation</i><br/>
+            Dans le cas où le BAILLEUR (ou le LOCATAIRE) est une personne physique n’agissant pas dans le cadre de son activité professionnelle, il est ici indiqué que, préalablement à toute saisine d’une juridiction et conformément aux dispositions de l’article L. 111-1 du Code de la consommation, il est possible de recourir à un médiateur de la consommation dans les conditions prévues au Titre Ier du Livre VI du Code de la consommation.
+        </p>
+
+        <p>
+            <i>Divisibilité – Modifications </i><br/>
+            Si une ou plusieurs des stipulations de la Promesse devait être tenues pour inefficaces, non valables ou non écrites à la suite d’une décision de justice exécutoire, les autres stipulations n’en demeureraient pas moins valables et efficaces dans les limites posées par l’article 1184 du Code civil. En ce cas, les PARTIES s’efforcent de bonne foi de substituer aux dispositions non valables ou inefficaces toutes autres stipulations de nature à maintenir l’équilibre économique des présentes.
+        </p>
+
+        <p>
+            <i>Confidentialité</i><br/>
+            Les PARTIES s’engagent à assurer la stricte confidentialité envers tout tiers du contenu du présent contrat, sauf dans la mesure imposée par les textes en vigueur, par une décision de justice passée en force de chose jugée ou au profit d’un professionnel tenu au secret en vertu des règles de sa profession (notaire, huissier, avocat, comptable).
+        </p>
+
+        <p>
+            Fait en autant que de PARTIES, remis au PRENEUR
+        </p>
+
+        <p>
+            La signature du BAIL par les PARTIES vaut signature des présentes, qui en sont une des annexes.
+        </p>
+
+        <p style="page-break-after:always;">   </p>
+
+        <h5 class="text-center" style='border: 1px solid black;padding:20px'>
+            <b>
+                ANNEXE 5 - PROMESSE UNILATERALE DE BAIL CIVIL
+            </b>
+        </h5>
+
+        <p>Entre</p>
+
+        <!-- Main Partner -->
+        <ol style="margin-left: 50px">
+            <li>
+                <p class="uppercase" >
+                        <span t-if="doc.partner_id.title.name">
+                            Titre: <span t-field="doc.partner_id.title.name"/> <br/>
+                        </span>
+                        <span t-if="doc.contact_name">
+                            Prénom: <span t-field="doc.contact_name"/> <br/>
+                        </span>
+                        <span t-if="doc.contact_lastname">
+                            Nom: <span t-field="doc.contact_lastname"/> <br/>
+                        </span>
+                        <span t-if="doc.street or doc.street2 or doc.zip or doc.city">
+                            Adresse: <span t-field="doc.street"/> <span t-field="doc.street2"/> <span t-field="doc.zip"/> <span t-field="doc.city"/> <br/>
+                        </span>
+                </p>
+            </li>
+        </ol>
+
+        <p>Le «<b> BAILLEUR </b>»</p>
+
+        <p>Et</p>
+
+        <p style="margin-left: 50px">
+            Greenloc<br/>
+            Société par actions simplifiée au capital de 40000€<br/>
+            Immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro 800 075 004<br/>
+            89 rue Réaumur 75002 Paris<br/>
+            Représentée par son Président, Monsieur Moïse Marciano
+        </p>
+
+        <p>Le «<b> PRENEUR </b>»</p>
+
+        <p>Et en intervention</p>
+
+        <!-- Lodger -->
+        <ol style="margin-left: 50px">
+            <t t-foreach="doc.fal_partner_child_ids" t-as="l">
+                <t t-if="l.fal_is_lodger">
+                    <li>
+                        <p class="uppercase" >
+                                <span t-if="l.title.name">
+                                    Titre: <span t-field="l.title.name"/> <br/>
+                                </span>
+                                <span t-if="l.firstname">
+                                    Prénom: <span t-field="l.firstname"/> <br/>
+                                </span>
+                                <span t-if="l.lastname">
+                                    Nom: <span t-field="l.lastname"/> <br/>
+                                </span>
+                                <span t-if="l.street or l.street2 or l.zip or l.city">
+                                    Adresse:
+                                    <span t-field="l.street"/> <span t-field="l.street2"/> <span t-field="l.zip"/> <span t-field="l.city"/> <br/>
+                                </span>
+                        </p>
+                    </li>
+                </t>
+            </t>
+        </ol>
+
+        <p>Le «<b> LOCATAIRE </b>»</p>
+
+        <p>Ensemble, les «<b> PARTIES </b>»</p>
+
+        <h5>
+            <b>
+                <u>PREAMBULE</u>
+            </b>
+        </h5>
+
+        <p>A la date des présentes, le PRENEUR a pour projet l’installation d’une centrale photovoltaïque d’une puissance comprise entre 8,5 et 9 KWc, ainsi que ces accessoires (la «<b> CENTRALE </b>») sur un terrain appartenant au BAILLEUR (le «<b> BIEN </b>»).</p>
+
+        <p>A cet effet, les PARTIES sont convenues d’un premier bail civil d’une durée de DIX (10) années (le «<b> BAIL </b>»).</p>
+
+        <p>En suite de ce bail, un nouveau bail a été formé pour permettre au PRENEUR d’exploiter la CENTRALE au-delà des DIX (10) premières années (le «<b> DEUXIEME BAIL </b>»). Il a pris effet un instant de raison avant la fin de ce premier bail.</p>
+
+        <p>Ces deux baux ont porté identiquement sur divers espaces situées en toiture d’un bâtiment appartenant au BAILLEUR, situé sur le BIEN (le «<b> BATIMENT </b>»), au-dessus des liteaux, l’emplacement des modules assurant une fonction d’étanchéité ; à l’intérieur du BATIMENT, pour les câblages, le tableau électrique et les onduleurs ; entre le BATIMENT et la limite du BIEN, en tréfonds pour les câblages et en surface, en bordure de la voie publique pour le poste de raccordement. Ces espaces sont dénommés l’ «<b> EMPLACEMENT </b>».</p>
+
+        <p>Le LOCATAIRE est titulaire d’un bail fondant son occupation de tout ou partie du BIEN et / ou du BATIMENT, et a renoncé aux droits en résultant au bénéfice du PRENEUR aux termes du BAIL puis du NOUVEAU BAIL.</p>
+
+        <p>Or, l’évolution possible du marché laisse envisager aux PARTIES qu’il pourrait être encore intéressant pour le BAILLEUR et le PRENEUR que leur relation se poursuive encore, à l’occasion d’un troisième bail. A cette occasion, le BAILLEUR continuerait à percevoir un loyer, tandis que le PRENEUR pourrait prolonger l’exploitation de la CENTRALE.</p>
+
+        <p>C’est ainsi que les PARTIES conviennent des présentes, dont l’objet est de permettre un nouveau bail à cet effet, si bon semble au PRENEUR.</p>
+
+        <p>Sauf autrement stipulé aux présentes, les termes figurant en majuscule ont la signification qui leur est donnée au BAIL.</p>
+
+        <h5>
+            <b>
+                <u>PROMESSE UNILATERALE DE BAIL CIVIL</u>
+            </b>
+        </h5>
+
+        <p>
+            <i>Objet</i><br/>
+            Le BAILLEUR, en tant que promettant, consent irrévocablement et définitivement un bail civil (appelé «<b> NOUVEAU BAIL </b>», pour le distinguer de celui qui le précède entre les mêmes PARTIES).
+        </p>
+
+        <p>
+            Le LOCATAIRE y consent identiquement, dans la mesure de ses droits. Le PRENEUR l’accepte en tant que promesse.
+        </p>
+
+        <p>
+            Le NOUVEAU BAIL porte sur l’EMPLACEMENT. Cet EMPLACEMENT est identique en tout point à celui loué au titre des deux autres baux qui ont pu le précéder (étant indiqué que l’EMPLACEMENT comporte une partie la CENTRALE, dont la jouissance ne cesse pas d’être exclusivement celle du PRENEUR, entre le bail précédent et le NOUVEAU BAIL).
+        </p>
+
+        <p>
+            Le NOUVEAU BAIL confère au PRENEUR des droits identiques à ceux convenus au titre des deux baux précédents.
+        </p>
+
+        <p>
+            Le NOUVEAU BAIL oblige les PARTIES de la même manière que les précédents baux entre elles, à l’exception de ce qui suit.
+        </p>
+
+        <p>
+            Le NOUVEAU BAIL emporte des modalités d’exercice identiques à celles qui régissait les baux précédents entre elles, à l’exception des articles 6.2 et 6.3 du BAIL relatifs aux conditions résolutoires stipulées aux termes du BAIL, et de ce qui suit.<br/>
+            Toutes clauses et conditions du BAIL qui ne seraient pas rappelées ci-après, demeureront ainsi pleinement applicables afin de régir les relations des PARTIES dans le cadre des présentes.
+        </p>
+
+        <p>
+            <i>Durée du NOUVEAU BAIL</i><br/>
+            Le NOUVEAU BAIL est consenti pour une durée de HUIT (8) années pleines à compter de sa prise d’effet, fixée à l’instant de raison qui précède la fin du bail précédent.
+        </p>
+
+        <p>
+            <i>Loyer</i><br/>
+            Le PRENEUR verse un loyer annuel au BAILLEUR, à la date anniversaire du raccordement de la CENTRALE, telle qu’elle est fixée entre elles depuis leur premier bail.
+        </p>
+
+        <p>Le montant du loyer annuel est fixé à QUATRE CENTS (400) euros.</p>
+
+        <p>
+            Les règles de paiement du loyer du NOUVEAU BAIL sont identiques à celles des précédents baux entre les PARTIES.
+        </p>
+
+        <p>
+            A l’identique également, dans les cas où le projet du PRENEUR a été financé totalement ou partiellement par des tiers, le BAILLEUR s’engage à ne pas invoquer le privilège de bailleur d’immeuble (article 2332 du Code civil) dont il bénéficie au détriment de ces tiers, dès lors que le PRENEUR l’a informé de l’identité de ces tiers.
+        </p>
+
+        <p>
+            <i>Changement de cocontractant</i><br/>
+            Le BAILLEUR et le LOCATAIRE consentent au PRENEUR la faculté de transférer le NOUVEAU BAIL à un tiers, que ce soit par cession de bail, sous-location ou tout autre moyen. Tout nouveau bénéficiaire est engagé directement envers le BAILLEUR et le LOCATAIRE à l’exécuter, dans toutes ses conditions, ce qui libère corrélativement le PRENEUR, à la date à laquelle cette disposition leur a été notifiée par LRAR, ce que le BAILLEUR et le LOCATAIRE acceptent aussi.
+        </p>
+
+        <p>
+            En cas de modification dans la propriété du BIEN et / ou du BATIMENT (vente, apport, échange, démembrement, constitution d’une servitude ou de plusieurs, etc.) au cours du NOUVEAU BAIL, le BAILLEUR s’engage à titre de résultat à l’acceptation du NOUVEAU BAIL et à sa parfaite exécution par toute personne venant dans ses droits relativement au BIEN et / au BATIMENT, notamment ses ayants cause à quelque titre que ce soit et pour quelque cause que ce soit. A cet effet, le BAILLEUR s’engage à porter le NOUVEAU BAIL à la connaissance de ces personnes préalablement à tout transfert à leur profit ; à recueillir la preuve de leur engagement de les respecter intégralement ; à faire annexer à tout acte de transfert une copie du NOUVEAU BAIL et de cet engagement.
+        </p>
+
+        <p>
+            En cas de changement de LOCATAIRE, le BAILLEUR et le LOCATAIRE s’engagent à titre de résultat à faire reprendre le NOUVEAU BAIL par tout nouveau locataire et se portent fort de la signature par ce dernier d’une promesse unilatérale de bail telle qu’annexée au BAIL.
+        </p>
+
+        <h5>
+            <b>
+                <u>RENONCIATION A L’EXERCICE DE DROIT</u>
+            </b>
+        </h5>
+
+        <p>
+            A l’instar des engagements qu’il prend au titre du BAIL et du SECOND BAIL, le LOCATAIRE renonce, irrévocablement et définitivement à invoquer tout droit de jouissance et de jouir seul, sur l’EMPLACEMENT, au profit du PRENEUR dans le cadre du NOUVEAU BAIL. Le LOCATAIRE s’engage plus largement à ne pas invoquer contre le BAILLEUR, la garantie d’éviction ou de jouissance paisible, à raison de l’exécution du NOUVEAU BAIL et ce, sans aucune indemnité à l’encontre de l’une ou l’autre des PARTIES En cas de changement de LOCATAIRE, le BAILLEUR et le LOCATAIRE s’engagent à titre de résultat à ce que le nouveau locataire renonce de la même manière, irrévocablement et définitivement à invoquer tout droit de jouissance et de jouir seul, sur l’EMPLACEMENT, au profit du PRENEUR.
+        </p>
+
+        <h5>
+            <b>
+                <u>REGIME DE LA PROMESSE</u>
+            </b>
+        </h5>
+
+        <p>
+            <i>Durée de la promesse</i><br/>
+            La promesse est prévue pour durer VINGT (20) années à compter du point de départ du BAIL dont cette promesse a été une annexe, les PARTIES se libérant de le rappeler ici.
+        </p>
+
+        <p>
+            <i>Levée d’option</i><br/>
+            Le PRENEUR a la faculté de lever l’option avant le terme des présentes.
+        </p>
+
+        <p>
+            S’il exerce l’option de NOUVEAU BAIL, le PRENEUR informe le BAILLEUR et, le cas échéant, le LOCATAIRE au plus tard TROIS (3) mois avant la fin du SECOND BAIL en cours,, la première présentation d’une LRAR à cet effet faisant foi entre les PARTIES. Après levée d‘option, les effets commencent à être exigibles à l’instant de raison qui précède la fin du SECOND BAIL.
+        </p>
+
+        <p>
+            L’exécution des présentes ainsi que celle du contrat de BAIL et du SECOND BAIL sont nécessaires à une même opération d’exploitation par le PRENEUR d’une centrale photovoltaïque installée par le PRENEUR sur le BIEN et le BATIMENT, ce dont toutes les PARTIES déclarent être informées et ce à quoi elles consentent. Il est expressément convenu que l’exécution du contrat de BAIL puis du SECOND BAIL est une condition déterminante du consentement des PARTIES aux présentes. Par conséquent, en cas de disparition du contrat de BAIL ou du SECOND BAIL par l’effet d’une résiliation, de la mise en jeu de la clause résolutoire ou pour toute autre cause, les présentes deviendraient caduques en exécution  de l’article 1186 du Code civil, ce que les PARTIES acceptent expressément, reconnaissant qu’alors un de ses éléments essentiels aurait disparu.
+        </p>
+
+        <p>
+            En cas d’inexécution, la carence ou la difficulté ayant été constatée, l’article 1124 du Code civil s’applique permettant de forcer la partie défaillante. L’article 1221 nouveau du Code civil ne peut y faire obstacle, compte tenu de ce que ni le BAILLEUR, ni le LOCATAIRE ne sont essentiellement tenus d’un engagement de « faire », chacun reconnaissant que rien, dans la promesse à laquelle ils consentement (dans la mesure de leurs droits respectifs) n’est d’une nature « impossible » ou « manifestement disproportionné entre son coût pour son débiteur son intérêt pour son créancier » (au sens de l’article 1221 précité).
+        </p>
+
+        <p>
+            En cas de levée d’option, le PRENEUR peut adresser au BAILLEUR et, le cas échéant, au LOCATAIRE, un document à signer, à titre probatoire, pour constater la formation d’un NOUVEAU BAIL. Le BAILLEUR et le LOCATAIRE s’obligent à dater, signer et retourner un exemplaire au PRENEUR. Il est cependant rappelé que tout NOUVEAU BAIL est valablement formé par la seule levée d’option du PRENEUR.
+        </p>
+<!--  -->
+
+        <p>
+            <i>Préservation des présentes</i><br/>
+            Par application de l’article 1124 du Code civil, ni le BAILLEUR, ni le LOCATAIRE, ne peuvent revenir sur leur consentement le temps des présentes.
+        </p>
+
+        <p>
+            Le BAILLEUR et le LOCATAIRE s’engagent à ne rien faire directement ou indirectement qui puisse nuire aux intérêts du PRENEUR et de son projet.
+        </p>
+
+        <p>
+            Ils s’engagent aussi à informer le PRENEUR par écrit sans délai de tout fait ou acte, de tout changement ou modification concernant le BIEN ou le BATIMENT (que ce soit matériellement ou juridiquement), en tout ou partie, en fournissant tous les éléments garantissant le maintien des droits que le PRENEUR peut tirer des présentes.
+        </p>
+
+        <p>
+            Le PRENEUR se réserve le droit de demander en justice la sanction de tous actes contraires à ses droits et de mettre en œuvre toute action susceptible de préserver ces droits.
+        </p>
+
+        <h5>
+            <b>
+                <u>DECLARATION DES PARTIES</u>
+            </b>
+        </h5>
+
+        <p>
+            Tant sur leur capacité que sur le BIEN et le BATIMENT, les PARTIES se réfèrent aux déclarations qu’elles ont faites au titre du BAIL et se libèrent d’avoir à en rappeler le contenu, les PARTIES déclarant en être pleinement informées.
+        </p>
+
+        <h5>
+            <b>
+                <u>DISPOSITIONS GENERALES</u>
+            </b>
+        </h5>
+
+        <p>
+            <i>Election de domicile</i><br/>
+            Pour l’exécution des présentes et de leurs suites, les PARTIES élisent domicile en leur domicile ou siège respectif, tels qu’indiqués en première page. Si ces informations venaient à être modifiées, la PARTIE concernée en informerait sans délai l’autre PARTIE par LRAR contenant les nouvelles coordonnées de la PARTIE concernée.
+        </p>
+
+        <p>
+            <i>Médiation</i><br/>
+            Dans le cas où le BAILLEUR (ou le LOCATAIRE) est une personne physique n’agissant pas dans le cadre de son activité professionnelle, il est ici indiqué que, préalablement à toute saisine d’une juridiction et conformément aux dispositions de l’article L. 111-1 du Code de la consommation, il est possible de recourir à un médiateur de la consommation dans les conditions prévues au Titre Ier du Livre VI du Code de la consommation.
+        </p>
+
+        <p>
+            <i>Divisibilité – Modifications</i><br/>
+            Si une ou plusieurs des stipulations des présentes devait être tenues pour inefficaces, non valables ou non écrites à la suite d’une décision de justice exécutoire, les autres stipulations n’en demeureraient pas moins valables et efficaces dans les limites posées par l’article 1184 du Code civil. En ce cas, les PARTIES s’efforcent de bonne foi de substituer aux dispositions non valables ou inefficaces toutes autres stipulations de nature à maintenir l’équilibre économique des présentes.
+        </p>
+
+        <p>
+            <i>Confidentialité</i><br/>
+            Les PARTIES s’engagent à assurer la stricte confidentialité envers tout tiers du contenu du présent contrat, sauf dans la mesure imposée par les textes en vigueur, par une décision de justice passée en force de chose jugée ou au profit d’un professionnel tenu au secret en vertu des règles de sa profession (notaire, huissier, avocat, comptable).
+        </p>
+
+        <p>
+            Fait en autant que de PARTIES.
+        </p>
+
+        <p>
+            La signature du BAIL par les PARTIES vaut signature des présentes, qui en sont une des annexes.
+        </p>
+
+        <p style="page-break-after:always;">   </p>
+
+        <h5 class="text-center" style='border: 1px solid black;padding:20px'>
+            <b>
+                ANNEXE 6 - INDEMNITE DE RUPTURE FIXEE EN VERTU DE L’ARTICLE 14.2.
+            </b>
+        </h5>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class='text-right'>année</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td> Montant € (TTC, TVA 20%) par centrale de 8,5 à 9 kWc
+                    </td>
+                    <td>23541</td>
+                    <td>22318</td>
+                    <td>21193</td>
+                    <td>20067</td>
+                    <td>18930</td>
+                    <td>17771</td>
+                    <td>16585</td>
+                    <td>15421</td>
+                    <td>14270</td>
+                </tr>
+                <tr>
+                    <td>Montant € (HT) par centrale de 8,5 à 9 kWc
+                    </td>
+                    <td>19618</td>
+                    <td>18598</td>
+                    <td>17661</td>
+                    <td>16723</td>
+                    <td>15775</td>
+                    <td>14809</td>
+                    <td>13821</td>
+                    <td>12851</td>
+                    <td>11892</td>
+                </tr>
+                </tbody>
+            </table>
+<!--  -->
+            <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class='text-right'>année</th>
+                    <th>13</th>
+                    <th>14</th>
+                    <th>15</th>
+                    <th>16</th>
+                    <th>17</th>
+                    <th>18</th>
+                    <th>19</th>
+                    <th>20</th>
+                    <th>21</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td> Montant € (TTC, TVA 20%) par centrale de 8,5 à 9 kWc
+                    </td>
+                    <td>13086</td>
+                    <td>11849</td>
+                    <td>10554</td>
+                    <td>9198</td>
+                    <td>7779</td>
+                    <td>6294</td>
+                    <td>4739</td>
+                    <td>3111</td>
+                    <td>2271</td>
+                </tr>
+                <tr>
+                    <td>Montant € (HT) par centrale de 8,5 à 9 kWc
+                    </td>
+                    <td>10905</td>
+                    <td>9874</td>
+                    <td>8795</td>
+                    <td>7665</td>
+                    <td>6483</td>
+                    <td>5245</td>
+                    <td>3949</td>
+                    <td>2593</td>
+                    <td>1893</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class='text-right'>année</th>
+                    <th>22</th>
+                    <th>23</th>
+                    <th>24</th>
+                    <th>25</th>
+                    <th>26</th>
+                    <th>27</th>
+                    <th>28</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td> Montant € (TTC, TVA 20%) par centrale de 8,5 à 9 kWc
+                    </td>
+                    <td>1658</td>
+                    <td>1210</td>
+                    <td>908</td>
+                    <td>726</td>
+                    <td>581</td>
+                    <td>465</td>
+                    <td>372</td>
+                </tr>
+                <tr>
+                    <td>Montant € (HT) par centrale de 8,5 à 9 kWc
+                    </td>
+                    <td>1382</td>
+                    <td>1009</td>
+                    <td>756</td>
+                    <td>605</td>
+                    <td>484</td>
+                    <td>387</td>
+                    <td>310</td>
+                </tr>
+                </tbody>
+            </table>
+        <p style="page-break-after:always;">   </p>
+
+        <h5 class="text-center" style='border: 1px solid black;padding:20px'>
+            <b>
+                ANNEXE 10 – FORMULAIRE DE RETRACTATION
+            </b>
+        </h5>
+
+        <p>
+            <i>Compte tenu des dispositions de l’article L. 221-2(12°), le Bailleur ne bénéficie pas du délai de rétractation prévu à l’article L221-18. Toutefois et à titre purement commercial et sans équivoque, le PRENEUR accorde au BAILLEUR un délai de QUINZE (15) jours pour se rétracter. Cette rétractation suit les conditions précisées ci-après.</i>
+        </p>
+
+
+        <p><b>Rétractation</b></p>
+
+        <p>Vous avez le droit de vous rétracter du présent contrat sans donner de motif dans un délai de quinze (15) jours à compter de la DATE DU BAIL.</p>
+
+        <p>Le délai de rétractation expire quinze (15) jours après la DATE DU BAIL.</p>
+
+        <p>Pour exercer le droit de rétractation, vous devez nous notifier votre décision de rétractation au présent contrat au moyen d'une déclaration dénuée d'ambiguïté (par exemple, lettre envoyée par la poste, télécopie ou courrier électronique), à l’adresse suivante :</p>
+
+        <p class='text-center'>A l’attention de GREENLOC, 89 rue Réaumur, 75 002 PARIS</p>
+
+        <p class='text-center'>Adresse mail : contact@green-loc.fr</p>
+
+        <p>
+            Vous pouvez utiliser le modèle de formulaire de rétractation mais ce n'est pas obligatoire.
+        </p>
+        <p>
+            Pour que le délai de rétractation soit respecté, il suffit que vous transmettiez votre communication relative à l'exercice du droit de rétractation avant l'expiration du délai de rétractation.
+        </p>
+
+        <p><b>Effets de rétractation</b></p>
+        <p>
+            En cas de rétractation de votre part au présent contrat, le BAIL et ses annexes deviendront caduques.
+        </p>
+
+        <p><b>Exemple de formulaire de rétractation</b></p>
+
+        <div class='text-center'>
+
+            <p>(Compléter et renvoyer le présent formulaire uniquement si vous souhaitez vous rétracter du contrat.)</p>
+
+            <p>
+                A l'attention de : <b>GREENLOC, 89 rue Réaumur, 75 002 PARIS</b>
+            </p>
+
+            <p><b>Adresse mail : contact@green-loc.fr</b></p>
+
+        </div>
+
+        <p>Je/nous (*) vous notifie/notifions (*) par la présente ma/notre (*) rétractation du contrat portant sur la location de toiture :</p>
+        <p>Contrat conclu le (*) :</p>
+        <p>Nom du (des) bailleur(s) :</p>
+        <p>Adresse du (des) bailleur(s) :</p>
+        <p>
+            Signature du (des) bailleur(s) (uniquement en cas de notification du présent formulaire sur papier)
+        </p>
+        <p>Date :</p>
+
+
+        <p style="page-break-after:always;">   </p>
+
+        <h2 class="text-center" style='border: 1px solid black;padding:20px'>
+            <b>
+                Signatures du DIP et du Bail civil sous conditions résolutoire et ses Annexes
+            </b>
+        </h2>
+
+
+        <div class="oe_structure"/>
+    </div>
+</template>
+
+
+<template id="report_single_with_lodger">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="greenloc_crm_ext.report_single_with_lodger_document" t-lang="doc.partner_id.lang"/>
+        </t>
+    </t>
+</template>
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="greenloc_crm_roof_information_form" model="ir.ui.view">
+            <field name="name">greenloc.crm.roof.information.form</field>
+            <field name="type">form</field>
+            <field name="model">greenloc.crm.roof.information</field>
+            <field name="arch" type="xml">
+                <form string="Roof Information">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="crm_lead_id"/>
+                            <field name="roof_surface"/>
+                            <field name="sun_eyes_tools"/>
+                            <field name="sun_eyes_tools_pdf" filename="sun_eyes_tools_pdf_fname"/>
+                            <field name="sun_eyes_tools_pdf_fname" invisible="1" class="oe_inline oe_right"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="greenloc_crm_roof_information_tree" model="ir.ui.view">
+            <field name="name">greenloc.crm.roof.information.tree</field>
+            <field name="type">tree</field>
+            <field name="model">greenloc.crm.roof.information</field>
+            <field name="arch" type="xml">
+                <tree string="Roof Information" editable="bottom">
+                    <field name="name"/>
+                    <field name="crm_lead_id" invisible="1"/>
+                    <field name="roof_surface"/>
+                    <field name="sun_eyes_tools"/>
+                    <field name="sun_eyes_tools_pdf" filename="sun_eyes_tools_pdf_fname"/>
+                    <field name="sun_eyes_tools_pdf_fname" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+  </data>
+</openerp>

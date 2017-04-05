@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="greenloc_crm_lead_docs_sign_attachment_form" model="ir.ui.view">
+            <field name="name">greenloc.crm.lead.docs.sign.attachment.form</field>
+            <field name="type">form</field>
+            <field name="model">greenloc.crm.lead.docs.sign.attachment</field>
+            <field name="arch" type="xml">
+                <form string="Account">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="inactive"/>
+                        </group>
+                        <notebook>
+                            <page string="Initial Documents">
+                                <group>
+                                    <field name="initial_doc_id_binary" filename="initial_doc_id_fname" readonly="1"/>
+                                    <field name="initial_doc_id_fname" invisible="1" class="oe_inline oe_right"/>
+                                </group>
+                                <separator string="Document Logs"/>
+                                <field name="initial_doc_ids"/>
+                            </page>
+                            <page string="Signed Documents">
+                                <group>
+                                    <field name="signed_doc_id_binary" filename="signed_doc_id_fname" readonly="1"/>
+                                    <field name="signed_doc_id_fname" invisible="1" class="oe_inline oe_right"/>
+                                </group>
+                                <button name="%(greenloc_crm_ext.action_crm_docs_upload_signed_wizard)d" string="Upload Document" type="action" help="Upload Document" class="oe_highlight"/>
+                                <separator string="Document Logs"/>
+                                <field name="signed_doc_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="greenloc_crm_lead_docs_sign_attachment_tree" model="ir.ui.view">
+            <field name="name">greenloc.crm.lead.docs.sign.attachment.tree</field>
+            <field name="type">tree</field>
+            <field name="model">greenloc.crm.lead.docs.sign.attachment</field>
+            <field name="arch" type="xml">
+                <tree string="Account">
+                    <field name="name"/>
+                    <field name="initial_doc_id"/>
+                    <field name="signed_doc_id"/>
+                    <field name="inactive"/>
+                </tree>
+            </field>
+        </record>
+
+  </data>
+</openerp>

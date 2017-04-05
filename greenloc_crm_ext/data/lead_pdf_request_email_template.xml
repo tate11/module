@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Lead PDF request email -->
+        <record id="lead_pdf_request_email" model="mail.template">
+            <field name="name">Lead PDF request email Greenloc</field>
+            <field name="model_id" ref="greenloc_crm_ext.model_crm_lead"/>
+            <field name="email_from">envoimodel1@green-loc.fr</field>
+            <field name="email_to">
+                model1.greenloc@gmail.com
+            </field>
+            <field name="auto_delete" eval="False"/>
+            <field name="subject"><![CDATA[${object.name}]]></field>
+            <field name="body_html">
+                <![CDATA[
+                <p style="margin:0px 0px 9px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;">&nbsp;</p><p style="margin:0px 0px 9px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;">Prénom: ${object.contact_name} </p><p style="margin:0px 0px 9px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;">Nom: ${object.contact_lastname}</p><p style="margin:0px 0px 9px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;">Rue: ${object.fal_dia_street}</p><p style="margin:0px 0px 9px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;">Complément: ${object.fal_dia_street2}</p><p style="margin:0px 0px 9px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;">Code postal: ${object.fal_dia_zip}</p><p style="margin:0px 0px 9px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;">Ville: ${object.fal_dia_city}</p><p style="margin:0px 0px 9px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;">Téléphone : ${object.phone}</p><p style="margin:0px 0px 9px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;">Mobile : ${object.mobile}</p><p style="margin:0px 0px 9px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;">N° de parcelle : ${fal_parcel_no}</p>
+                ]]></field>
+        </record>
+
+    </data>
+</odoo>

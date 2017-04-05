@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="greenloc_crm_technical_visit_form" model="ir.ui.view">
+            <field name="name">greenloc.crm.technical.visit.form</field>
+            <field name="type">form</field>
+            <field name="model">greenloc.crm.lead.technical.visit</field>
+            <field name="arch" type="xml">
+                <form string="Technical Visit">
+                    <sheet>
+                        <group>
+                            <field name="date"/>
+                            <field name="vt_realised"/>
+                            <field name="vt_validated"/>
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="greenloc_crm_technical_visit_tree" model="ir.ui.view">
+            <field name="name">greenloc.crm.technical.visit.tree</field>
+            <field name="type">tree</field>
+            <field name="model">greenloc.crm.lead.technical.visit</field>
+            <field name="arch" type="xml">
+                <tree string="Technical Visit" editable="bottom">
+                    <field name="date"/>
+                    <field name="vt_realised"/>
+                    <field name="vt_validated"/>
+                    <field name="notes"/>
+                </tree>
+            </field>
+        </record>
+
+  </data>
+</openerp>

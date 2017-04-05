@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_l3_single_with_lodger_document">
+    <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+    <div class="page">
+        <style>
+            dl { width: 100% }
+            dt { float: left; width: 100%; overflow: hidden; white-space: nowrap }
+            dd { float: left; width: 0%; overflow: hidden }
+
+            dt span:after { content: " ..............................................................................................................................................................................................................................................................." }
+
+            span{
+                text-transform: uppercase;
+            }
+            p
+            {
+                font-family: "Calibri";
+                font-size: 10pt;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+
+            h2
+            {
+                font-family: "Calibri";
+            }
+
+            h4
+            {
+                font-family: "Calibri";
+            }
+
+            h5
+            {
+                font-family: "Calibri";
+            }
+
+            ul{
+                font-family: "Calibri";
+                font-size: 10pt;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+
+            ol{
+                font-family: "Calibri";
+                font-size: 10pt;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+        </style>
+        <div class="oe_structure"/>
+
+        <img src='http://www.green-loc.fr/img/Greenloc_opportunity_cover.jpg' width='695' height='1000'/>
+
+        <p style="page-break-after:always;">   </p>
+
+        <div class="text-right" style="font-size:75%">
+            <span t-esc="docs.name"/>
+        </div>
+
+        <img src='http://www.green-loc.fr/img/Greenloc_contract_header-1.png'/>
+
+        <p class="text-center" style="color:#2f1fa4" >
+            <b>
+                Cette notice n’est pas un contrat
+                <br/>
+                Elle atteste simplement que les informations ci-dessous ont été remises à ses signataires
+            </b>
+        </p>
+
+        <div class="text-center" style="background-colod:green;color:green">
+            <h4 class="text-center">
+                <b>
+                    L3 Single With Lodger
+                </b>
+            </h4>
+            <h4 class="text-center">
+                <b>
+                    LOUEZ VOTRE TOITURE ET BENEFICIEZ D’UN REVENU RECURRENT
+                </b>
+            </h4>
+        </div>
+
+        <div class="oe_structure"/>
+    </div>
+</template>
+
+
+<template id="report_l3_single_with_lodger">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="greenloc_crm_ext.report_l3_single_with_lodger_document" t-lang="doc.partner_id.lang"/>
+        </t>
+    </t>
+</template>
+</odoo>

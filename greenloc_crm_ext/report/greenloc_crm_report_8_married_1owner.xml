@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+<template id="report_8_married_document">
+    <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+    <div class="page">
+        <style>
+            span{
+                text-transform: uppercase;
+            }
+        </style>
+        <div class="oe_structure"/>
+
+        <div class="text-right" style="font-size:75%">
+            <span t-esc="docs.name"/>
+        </div>
+
+        <h2 class="text-center">
+            ANNEXE 8. <br/>
+            MANDAT
+
+        </h2>
+
+        <div style="padding-bottom:20px">
+           <strong>Je soussigné(e),</strong>
+        </div>
+
+        <div t-if="doc.partner_id" style="padding-bottom:20px">
+			<strong><span style="text-transform: capitalize;" t-field="doc.partner_id.title.name"/> <span style="text-transform: capitalize;" t-field="doc.contact_lastname"/>
+            <span style="text-transform: capitalize;" t-field="doc.contact_name"/></strong><br/>
+			Né(e) le <strong><span t-esc="doc.partner_id.fal_birthday"/></strong>, à <strong><span t-field="doc.partner_id.fal_birth_place"/>
+			(<span t-field="doc.partner_id.fal_birth_department"/>)</strong><br/>
+			De nationalité <strong><span t-field="doc.partner_id.fal_birth_nationality.name"/></strong><br/>
+			Demeurant à <strong><span t-field="doc.city"/></strong><br/>
+        </div>
+        <div style="padding-bottom:30px">
+
+            	Qui déclare être : marié (e) et uni à son conjoint sous le régime matrimonial suivant : <strong><span t-field="doc.fal_wedding_contract"/></strong>
+        </div>
+        <div style="padding-bottom:12px">
+           <p> 	Dénommé(s) dans le corps des Présentes le « <strong>BAILLEUR</strong> ».</p>
+        	<p>
+            Le Propriétaire déclare que la parcelle est un bien : <strong><span style="text-transform: capitalize;" t-field="doc.fal_goods"/></strong>
+            </p>
+            <p>
+            Il déclare également : en être seul propriétaire.
+            </p>
+        </div>
+        <div style="text-align:justify; padding-bottom:30px">
+        	<p>
+        		En cas de droits réels multiples sur les parcelles, tous ses propriétaires (lato sensu) s’engagent, en vertu des Présentes, solidairement et indivisiblement entre elles et avec un fermier. L’identification séparée de chacun des propriétaires (lato sensu) des parcelles est précisée ci-avant (<strong><em>Annexe n° 3</em></strong>). Par la suite, chacune de ces personnes sera également incluse dans la désignation générique et au singulier ici retenue à son sujet : le « <strong>Propriétaire</strong> »
+        	</p>
+        	<p>
+        		Donne pouvoir au PRENEUR GREENLOC, ou toute autre personne physique ou morale de son choix de procéder à toute formalité nécessaires soit au raccordement de la CENTRALE (telle que définie dans les présentes dont ce document n’est qu’une annexe), soit à l’obtention des droits électriques nécessaires à son fonctionnement ou à l’achat par tout organisme agréé de l’électricité qu’elle pourrait produire
+        	</p>
+        </div>
+        <div style="padding-bottom:30px">
+        	Fait le <strong><span t-field="doc.fal_last_date_signature_request"/></strong>, à <strong><span t-field="doc.city"/></strong> et en 2 exemplaires originaux
+        </div>
+        <div>
+        	<strong>Le BAILLEUR (au titre des présentes)</strong><br/>
+			<span style="text-transform: capitalize; font-weight:bold;" t-field="doc.contact_name"/> <span style="text-transform: capitalize; font-weight:bold;" t-field="doc.contact_lastname"/><br/>
+        </div>
+
+        <div class="oe_structure"/>
+    </div>
+</template>
+
+
+<template id="report_8_1">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="greenloc_crm_ext.report_8_married_document" t-lang="doc.partner_id.lang"/>
+        </t>
+    </t>
+</template>
+</odoo>

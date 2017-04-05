@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+<template id="report_9_document">
+    <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+    <div class="page">
+        <style>
+            span{
+                text-transform: uppercase;
+            }
+        </style>
+    	<div class="oe_structure"/>
+
+        <div class="text-right" style="font-size:75%">
+            <span t-esc="docs.name"/>
+        </div>
+        <h3 class="text-center">
+            ANNEXE 9. <br/>
+            INDEMNITE DE RUPTURE FIXE EN VERTU DE L’ARTICLE 14.2.
+        </h3>
+        <table class="table table-bordered">
+        <thead>
+        	<tr>
+        		<th class='col-md-2'>année</th>
+        		<th>4</th>
+        		<th>5</th>
+        		<th>6</th>
+        		<th>7</th>
+        		<th>8</th>
+        		<th>9</th>
+        		<th>10</th>
+        		<th>11</th>
+        		<th>12</th>
+        		<th>13</th>
+        		<th>14</th>
+        		<th>15</th>
+        		<th>16</th>
+        		<th>17</th>
+        		<th>18</th>
+        		<th>19</th>
+        		<th>20</th>
+        	</tr>
+        	</thead>
+        	<tbody>
+        	<tr>
+        		<td class='col-md-2'> Montant en euro (TTC) pour centrale de 9 kWc
+        		</td>
+        		<td>23541</td>
+        		<td>22318</td>
+        		<td>21193</td>
+        		<td>20067</td>
+        		<td>18930</td>
+        		<td>17771</td>
+        		<td>16585</td>
+        		<td>15421</td>
+        		<td>14270</td>
+        		<td>13086</td>
+        		<td>11849</td>
+        		<td>10554</td>
+        		<td>9198</td>
+        		<td>7779</td>
+        		<td>6294</td>
+        		<td>4739</td>
+        		<td>3111</td>
+        	</tr>
+        	<tr>
+        		<td style="width:15%; text-align:right"> Montant en euro (TTC) pour centrale de 6 kWc
+        		</td>
+        		<td>15565</td>
+        		<td>14739</td>
+        		<td>13993</td>
+        		<td>13248</td>
+        		<td>12496</td>
+        		<td>11730</td>
+        		<td>10946</td>
+        		<td>10178</td>
+        		<td>9418</td>
+        		<td>8637</td>
+        		<td>7821</td>
+        		<td>6967</td>
+        		<td>6073</td>
+        		<td>5137</td>
+        		<td>4158</td>
+        		<td>3133</td>
+        		<td>2060</td>
+        	</tr>
+        	</tbody>
+        </table>
+
+    </div>
+</template>
+
+
+<template id="report_9">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="greenloc_crm_ext.report_9_document" t-lang="doc.partner_id.lang"/>
+        </t>
+    </t>
+</template>
+</odoo>

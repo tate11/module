@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_l3_single_no_lodger_document">
+	<t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+	<div class="page">
+		<style>
+			dl { width: 100% }
+			dt { float: left; width: 100%; overflow: hidden; white-space: nowrap }
+			dd { float: left; width: 0%; overflow: hidden }
+
+			dt span:after { content: " ..............................................................................................................................................................................................................................................................." }
+
+			span{
+				text-transform: uppercase;
+			}
+			p
+            {
+                font-family: "Calibri";
+                font-size: 10pt;
+                text-align: justify;
+                text-justify: inter-word;
+                padding-bottom: 10px;
+            }
+
+            h2
+            {
+                font-family: "Calibri";
+            }
+
+            h4
+            {
+                font-family: "Calibri";
+            }
+
+            h5
+            {
+                font-family: "Calibri";
+            }
+
+            ul{
+                font-family: "Calibri";
+                font-size: 10pt;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+
+            ol{
+                font-family: "Calibri";
+                font-size: 10pt;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+		</style>
+		<div class="oe_structure"/>
+
+		<img src='http://www.green-loc.fr/img/Greenloc_opportunity_cover.jpg' width='695' height='1000'/>
+
+		<p style="page-break-after:always;">   </p>
+
+		<div class="text-right" style="font-size:75%">
+			<span t-esc="docs.name"/>
+		</div>
+
+		<img src='http://www.green-loc.fr/img/Greenloc_contract_header-1.png'/>
+
+		<p class="text-center" style="color:#2f1fa4" >
+			<b>
+				Cette notice n’est pas un contrat
+				<br/>
+				Elle atteste simplement que les informations ci-dessous ont été remises à ses signataires
+			</b>
+		</p>
+
+		<div class="text-center" style="background-colod:green;color:green">
+            <h4 class="text-center">
+                <b>
+                    L3 Single No lodger
+                </b>
+            </h4>
+            <h4 class="text-center">
+                <b>
+                    LOUEZ VOTRE TOITURE ET BENEFICIEZ D’UN REVENU RECURRENT
+                </b>
+            </h4>
+        </div>
+
+        <div style="text-align: justify; text-justify: inter-word; margin-bottom:30px">
+            <p>
+                Il vous est proposé d’entrer dans un contrat de bail civil, dans la perspective d’un projet photovoltaïque en toiture de bâtiment. Il est donc important que vous soyez informé(e) de l’essentiel de ce contrat, avec la SOCIETE GREENLOC, Société par Actions Simplifiée au capital de 40.000 euros, dont le siège social est à 89 rue Réaumur, 75 002 PARIS, identifiée sous le numéro SIREN 800 075 004 et immatriculée au Registre du Commerce et des Sociétés de la ville de PARIS ou toute société qui s’y substituerait et qui reprendrait dans l’intégralité les droits et obligations issus du contrat de bail.
+            </p>
+            <p>
+                Les accords contenus dans le document (le BAIL) qui vous est remis pour examen, portent sur : 
+            </p>
+            <ul style="margin-bottom: 15px">
+                <li>
+                    <p>
+                        <b>Un bail civil</b>: sur un bien vous appartenant et plus particulièrement en toiture du bâtiment au-dessus des liteaux, à l’intérieur du bâtiment, l’espace nécessaire aux câblages, au tableau électrique et aux onduleurs et en tréfonds du terrain jusqu’à la limite de propriété pour le raccordement au réseau public de distribution d’électricité, vous consentez à un bail civil d’une durée de DIX années, dont les effets naissent dès la conclusion du BAIL. 
+                    </p>
+                    <p>
+                        Le BAIL convenu permet à la SOCIETE de construire sur l’emplacement loué une centrale photovoltaïque d’une puissance comprise entre 8,5 et 9 kWc (la CENTRALE telle que définie dans le BAIL), librement, et d’être propriétaire de ces constructions le temps du Bail.
+                    </p>
+                    <p>
+                        Le BAIL peut prendre fin si, dans les VINGT QUATRE (24) mois de sa conclusion, certains éléments se produisaient. Ces événements sont prévus à l’article 5 « DATE DU BAIL – CONDITIONS RESOLUTOIRES » du BAIL. Ces conditions dites « résolutoires » étant prévues au bénéfice de la SOCIETE, la SOCIETE peut renoncer à ce que l’effet résolutoire se produise, dans les DEUX (2) mois de la survenance de l’événement.
+                    </p>
+                    <p>
+                        Dans le BAIL vous trouverez les caractéristiques principales du bail civil. Il s’agit notamment du loyer annuel d’un montant de QUATRE CENTS (400) euros, à compter du raccordement de la CENTRALE que la SOCIETE réalise et des modalités de paiement du loyer. 
+                    </p>
+                    <p>
+                        La SOCIETE maintient la CENTRALE en bon état d’entretien courant et de réparation d’usage pendant la durée du BAIL, à ses frais et responsabilité, sauf si l’intervention est rendue nécessaire par un fait imputable au propriétaire ou à son éventuel locataire.
+                    </p>
+                    <p>
+                        Le LOCATAIRE, le cas échéant, renonce à invoquer tout droit de jouissance et de jouir seul de l’emplacement loué, au profit de la SOCIETE ou toute personne venant dans ses droits.<br/> 
+                        Plus largement, il s’engage à ne pas invoquer contre son propriétaire la garantie, d’éviction ou de jouissance paisible, à raison de l’exécution du BAIL. 
+                    </p>
+                    <p>
+                        Le propriétaire est tenu de délivrer à la SOCIETE l’EMPLACEMENT loué ; avec le LOCATAIRE le cas échéant, ils sont aussi tenus d’entretenir le BIEN, afin de permettre à la SOCIETE la pleine jouissance de l’emplacement à l’usage pour lequel il a été loué ; d’effectuer sur le BIEN toutes les réparations qui peuvent devenir nécessaires, tout en ne menaçant jamais l’intégrité ou le fonctionnement de la CENTRALE.
+                    </p>
+                    <p>
+                        Le BAIL prévoit également un droit d’accès aux personnes, véhicules et engins au profit de la SOCIETE pour les besoins de la construction et de l’entretien de la CENTRALE moyennant un préavis prévu au BAIL, ainsi qu’une obligation de préservation de l’Emplacement loué contre les ombres.
+                        Le LOCATAIRE, le cas échéant, s’engage à ne pas faire obstacle aux droits de la SOCIETE ou toute personne venant à ses droits.
+                    </p>
+                    <p>
+                        Enfin, le BAIL prévoit que l’accession de la CENTRALE (telle que définie dans le BAIL) au propriétaire est différée à la fin du BAIL sauf pour le propriétaire à user de la faculté de résilier par anticipation le BAIL à compter de la quatrième année moyennant le versement à la SOCIETE d’une indemnité de rupture dégressive au fur et à mesure de l’avancement du BAIL et fixée en Annexe 6.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>Deux promesses unilatérales de baux civils</b> :le propriétaire consent d’ores et déjà à la SOCIETE  deux nouveaux baux civils, successifs. Ces deux baux sont identiques au BAIL à l’exception de la Durée du troisième bail civil réduite à HUIT (8) années pleines et entières.
+                        La SOCIETE peut lever l’option de bail pour chacun de ces deux nouveaux baux. Elle en informe à chaque fois le propriétaire au plus tard trois mois avant la fin du bail en cours.
+                    </p>
+                    <p>
+                        Le propriétaire déclare avoir été informé de ce que  l’installation de la CENTRALE sur l’EMPLACEMENT devra être déclarée par ses soins auprès de son assureur.
+                    </p>
+                    <p>
+                        Compte tenu de l’article L. 221-2 (12°) du Code de la consommation, le Bailleur ne bénéficie pas du délai de rétractation prévu à l’article L. 221-18 dudit code. Toutefois et à titre purement commercial et sans équivoque, la SOCIETE accorde au propriétaire un délai de QUINZE (15) jours pour se rétracter. Cette rétractation s’exercera en utilisant le formulaire de rétractation prévu à cet effet et figurant à l’Annexe 10  du contrat de bail sous conditions résolutoires ou par une déclaration dénuée d’ambiguïté.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <p style="page-break-after:always;">   </p>
+
+        <h2 class="text-center" style="margin-bottom: 20px">
+            <b>
+                CONTRAT DE BAIL SOUS CONDITIONS RESOLUTOIRES
+            </b>
+        </h2>
+
+        <p>
+            <b>
+                ENTRE LES SOUSSIGNES :
+            </b>
+        </p>
+
+        <p>
+            <b>
+                DESIGNATION DES PARTIES :
+            </b>
+        </p>
+
+        <p>
+            D’UNE PART :
+        </p>
+
+        <!-- data need to pass -->
+        <!--
+            1.CIVILITÉ : $$_title-owner_$$
+            PRÉNOM : $$_firstname-owner_$$
+            NOM : $$_lastname-owner_$$
+            DATE DE NAISSANCE : $$_fal_birthday-owner_$$ À $$_city_birth-owner_$$
+            NATIONALITÉ : $$_fal_birth_nationality-owner_$$
+            PROFESSION : $$_job-owner_$$
+            ETAT CIVIL : $$_marital_status-owner_$$
+            ADRESSE : $$_street1-owner_$$ $$_street2-owner _$$ $$_zip_code-owner _$$ $$_city-owner_$$
+            TÉLÉPHONE / PORTABLE : $$_phone-owner_$$ / $$_mobilephone-owner_$$
+            MAIL : $$_mail-owner_$$
+
+            2.CIVILITÉ : $$_title-co-owner_$$
+            PRÉNOM : $$_firstname-co-owner _$$
+            NOM : $$_lastname-co-owner _$$
+            DATE DE NAISSANCE : $$_fal_birthday-co-owner _$$ À $$_city_birth-co-owner _$$
+            NATIONALITÉ : $$_fal_birth_nationality-co-owner _$$
+            PROFESSION : $$_job-co-owner _$$
+            ETAT CIVIL : $$_marital_status-co-owner _$$
+            ADRESSE : $$_street1_-co-owner $$ $$_street2-co-owner _$$ $$_zip_code-co-owner_$$ $$_city-co-owner _$$
+            TÉLÉPHONE / PORTABLE : $$_phone-co-owner _$$ / $$_mobilephone-co-owner _$$
+            MAIL : $$_mail-co-owner _$$
+            Représentée par $$_title-owner_$$ $$_firstname-owner_$$ $$_lastname-owner_$$, en suite d’un mandat en date du $$_signature-L1_date$$
+
+                    X    CIVILITÉ : $$_title-co-owner_$$
+            PRÉNOM : $$_firstname-co-owner _$$
+            NOM : $$_lastname-co-owner _$$
+            DATE DE NAISSANCE : $$_fal_birthday-co-owner _$$ À $$_city_birth-co-owner _$$
+            NATIONALITÉ : $$_fal_birth_nationality-co-owner _$$
+            PROFESSION : $$_job-co-owner _$$
+            ETAT CIVIL : $$_marital_status-co-owner _$$
+            ADRESSE : $$_street1_-co-owner $$ $$_street2-co-owner _$$ $$_zip_code-co-owner_$$ $$_city-co-owner _$$
+            TÉLÉPHONE / PORTABLE : $$_phone-co-owner _$$ / $$_mobilephone-co-owner _$$
+            MAIL : $$_mail-co-owner _$$
+            Représentée par $$_title-owner_$$ $$_firstname-owner_$$ $$_lastname-owner_$$, en suite d’un mandat en date du $$_signature-L1_date$$ -->
+
+        <h5 class="text-right">
+            <b>
+                Ci-après dénommé le « BAILLEUR »
+            </b>
+        </h5>
+
+        <p>
+            D’AUTRE PART :
+        </p>
+
+        <p style="margin-left: 50px">
+            Greenloc<br/>
+            Société par actions simplifiée au capital de 40000€<br/>
+            Immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro<br/>800 075 004<br/>
+            89 rue Réaumur 75002 Paris<br/>
+            Représentée par son Président, Monsieur Moïse Marciano
+        </p>
+
+        <h5 class="text-right">
+            <b>
+                Ci-après dénommé le « PRENEUR »
+            </b>
+        </h5>
+
+        <p>
+            Le BAILLEUR et le PRENEUR seront ci-après dénommés individuellement la « PARTIE » et ensemble les « PARTIES ».
+        </p>
+
+        <h5 class="text-center">
+            *<br/>
+            **
+        </h5>
+        <div style='text-align: justify; text-justify: inter-word;'>
+            <h5>
+                <b>
+                    ARTICLE 1 – QUALIFICATION – JOUISSANCE PAR LE PRENEUR
+                </b>
+            </h5>
+
+            <p>
+                Le présent accord vaut bail au sens des articles 1709 et s. du Code civil, sauf les dérogations ci-après (ci-après dénommé le «<b>BAIL</b>»).
+            </p>
+
+            <h5>
+                <b>
+                    ARTICLE 2 – DROITS SUR LE BIEN ET LE BATIMENT
+                </b>
+            </h5>
+
+            <h5 style="margin-left: 30px">
+                <b>
+                    2.1. Définition du BIEN et du BATIMENT
+                </b>
+            </h5>
+
+            <p>
+                Le BAILLEUR est propriétaire d’un terrain (le «<b> BIEN </b>»)est constitué sur lequel se trouve un bâtiment (ci-après dénommé le «<b> BATIMENT </b>»), situés commune de  <b><span t-esc="docs._context['dia_city']"/></b> (<b><span t-esc="docs._context['dia_zip']"/></b>) le tout figurant à la matrice cadastrale de ladite commune comme suit :
+            </p>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Préfixe / Section</th>
+                        <th>Numéro</th>
+                        <th>Lieudit ou voie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b><!-- <span t-field="doc.fal_section"/> --></b></td>
+                    <td><b><!-- <span t-field="doc.fal_parcel_no"/> --></b></td>
+                    <td><b><!-- <span t-esc="docs._context['dia_street']"/> <span t-esc="docs._context['dia_street2']"/> <span t-esc="docs._context['dia_zip']"/> <span t-esc="docs._context['dia_city']"/> --></b></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                Le BIEN et le BATIMENT sont localisés sur l’<b>Annexe 1</b>.
+            </p>
+
+            <h5 style="margin-left: 30px">
+                <b>
+                    2.2. Droits du BAILLEUR sur le BIEN et le BATIMENT
+                </b>
+            </h5>
+
+            <p>
+                Le BAILLEUR déclare être propriétaire du BIEN et DU BATIMENT.
+            </p>
+
+            <h5 style="margin-left: 30px">
+                <b>
+                    2.3. Situation locative du BIEN et du BATIMENT
+                </b>
+            </h5>
+
+            <p>
+                Le BIEN et le BATIMENT sont libres de toute occupation.
+            </p>
+
+            <!--  -->
+
+            <h5>
+                <b>
+                    ARTICLE 3 – OBJET DU BAIL 
+                </b>
+            </h5>
+
+            <h5 style="margin-left: 30px">
+                <b>
+                    3.1 Définition de l’EMPLACEMENT
+                </b>
+            </h5>
+
+            <p>
+                Les différents espaces ci-dessous sont loués au PRENEUR :
+            </p>
+
+            <ul style="margin-left: 30px">
+                <li>des espaces situés en toiture et au-dessus des liteaux du BATIMENT </li>
+                <li>des espaces situés à l’intérieur du BATIMENT nécessaires au passage de câbles, au tableau électrique et aux onduleurs</li>
+                <li>des espaces situés à l’extérieur du BATIMENT entre la limite extérieure du BATIMENT et la limite de propriété du BIEN en tréfonds, pour le câblage, et en surface, en bordure de la voie publique.</li>
+            </ul>
+
+            <p>
+                Ces différents espaces sont nommés l’ «<b> EMPLACEMENT </b>».
+            </p>
+
+            <p>
+                L’EMPLACEMENT est précisé selon les plans contenus à l’<b>Annexe 1</b>.
+            </p>
+
+            <h5 style="margin-left: 30px">
+                <b>
+                    3.2 L’EMPLACEMENT donné à BAIL
+                </b>
+            </h5>
+
+            <p>
+                Aux termes des présentes, le BAILLEUR donne à BAIL au PRENEUR qui l’accepte l’EMPLACEMENT ainsi défini, tel qu’il se poursuit et comporte avec ses accessoires et dépendances, sans aucune exception ni réserve.
+            </p>
+
+            <p>
+                En dehors de l’EMPLACEMENT, le BATIMENT et le BIEN sont libres du BAIL.
+            </p>
+
+            <h5 style="margin-left: 30px">
+                <b>
+                    3.3 Destination contractuelle
+                </b>
+            </h5>
+
+            <p>
+                L’EMPLACEMENT est donné à BAIL au PRENEUR à usage exclusif d’installation, de construction et exploitation par le PRENEUR d’une centrale photovoltaïque en toiture du BATIMENT, d’une puissance comprise entre <b>8,5</b> et <b>9 kWc</b>.
+            </p>
+
+            <p>
+                Toutefois, est déterminante du consentement des PARTIES aux présentes la possibilité de procéder aux travaux d’installation et de construction d’une centrale photovoltaïque sur l’EMPLACEMENT selon le détail suivant :
+            </p>
+
+            <ul style="margin-left: 30px">
+                <li>En toiture du BATIMENT :</li>
+                <ul style="margin-left: 20px">
+                    <li>
+                        la totalité ou une partie de la toiture existante au-dessus des liteaux sera enlevée et déposée ;
+                    </li>
+                    <li>
+                        en lieu et place seront installés des modules photovoltaïques monocristallins ou polycristallins  assurant une fonction d’étanchéité et intégrés au bâti, ainsi que tous accessoires nécessaires au bon fonctionnement desdits modules
+                    </li>
+                </ul>
+                <li>
+                    à l’intérieur du BATIMENT : seront installés des câblages, le tableau électrique et des onduleurs, ainsi que tous accessoires nécessaires à leur bon fonctionnement
+                </li>
+                <li>
+                    entre la limite extérieure du BATIMENT et la limite de propriété du BIEN :
+                </li>
+                <ul style="margin-left: 20px">
+                    <li>en tréfonds, des câblages seront installés </li>
+                    <li>
+                        en surface, à la limite de propriété du BIEN et en bordure de la voie publique, un poste de raccordement sera installé
+                    </li>
+                </ul>
+                <li>ainsi que tous accessoires nécessaires à leur bon fonctionnement</li>
+            </ul>
+
+            <p>
+                et ce, de telle sorte que la centrale photovoltaïque en toiture du BATIMENT, d’une puissance comprise entre <b>8,5</b> et <b>9 kWc</b> se compose en définitive de modules photovoltaïques,, d’un système d’intégration au bâti, d’onduleurs, des équipements de transformation en BT, permettant l’évacuation de la totalité de l’énergie produite vers le réseau public de tout gestionnaire habilité, d’un tableau électrique; de câblages ; d’un poste de raccordement au réseau public ;
+            </p>
+
+            <p>
+                L’ensemble est appelé «<b> CENTRALE </b>». Son coût de préparation et de réalisation est d’environ TRENTE-TROIS MILLE SIX CENTS (33.600) € T.T.C.
+            </p>
+
+            <p>
+                Le BAILLEUR est informé et accepte que la réalisation de la CENTRALE, conformément aux plans de l’<b>Annexe 1 et 7</b>, ait un impact, notamment visuel, et il s’interdit toute prétention de ce fait.
+            </p>
+
+            <p>
+                Le PRENEUR jouit de l’EMPLACEMENT en bon professionnel, sans commettre ni souffrir qu’il y soit fait des dégâts ou des dégradations en dehors des travaux de la CENTRALE. Le BAILLEUR est pleinement informé de ces travaux (<b>Articles 8</b> et <b>9</b>), à la réalisation et aux conséquences desquels il consent en acceptant les présentes.
+            </p>
+        </div>
+
+
+
+        <div class="oe_structure"/>
+    </div>
+</template>
+
+
+<template id="report_l3_single_no_lodger">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="greenloc_crm_ext.report_l3_single_no_lodger_document" t-lang="doc.partner_id.lang"/>
+        </t>
+    </t>
+</template>
+</odoo>

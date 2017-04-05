@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Add Universign User -->
+        <record id="res_users_form_greenloc" model="ir.ui.view">
+            <field name="name">res_users_form_greenloc</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <!-- Add greenloc specific field -->
+                <xpath expr="//notebook/page[2]/group[2]" position="after">
+                    <group string="Universign">
+                        <field name="fal_universign_login"/>
+                        <field name="fal_universign_password" password="1"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+  </data>
+</openerp>

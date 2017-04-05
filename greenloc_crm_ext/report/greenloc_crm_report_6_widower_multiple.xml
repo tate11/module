@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_6_widower_multiple_document">
+    <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+    <div class="page">
+        <style>
+            span{
+                text-transform: uppercase;
+            }
+        </style>
+        <div class="oe_structure"/>
+
+        <div class="text-right" style="font-size:75%">
+            <span t-esc="docs.name"/>
+        </div>
+
+        <h2 class="text-center">
+            ANNEXE 6. <br/>
+            AUTORISATION D’EDIFICATION
+        </h2>
+
+        <div style="padding-bottom:20px">
+           <strong>Je soussigné(e),</strong>
+        </div>
+
+        <p>
+            <strong>
+                <span t-field="doc.partner_id.title.name"/>
+                <span t-field="doc.contact_name"/>
+                <span t-field="doc.contact_lastname"/>
+            </strong>
+
+            <br/>
+
+            Né(e) le <strong><span t-field="doc.partner_id.fal_birthday"/></strong>, à <strong><span t-field="doc.partner_id.fal_birth_place"/> (<span t-field="doc.partner_id.fal_birth_department"/>)</strong>
+
+            <br/>
+
+            De nationalité <strong><span t-field="doc.partner_id.fal_birth_nationality.name"/></strong>
+
+            <br/>
+
+            Demeurant à <strong><span t-field="doc.partner_id.city"/></strong>
+        </p>
+
+        <div style="padding-bottom:30px">Qui déclare être : <strong><span t-field="doc.fal_marital_status"/></strong></div>
+
+
+        <div style="padding-bottom:12px">
+            <p>dénommé(s) dans le corps des Présentes le <strong>« BAILLEUR »</strong>.</p>
+            <p>Le Propriétaire déclare que la parcelle est un bien : <strong><span t-field="doc.fal_goods"/></strong></p>
+            <p>Il déclare également  être titulaire d’un droit réel sur lui avec d’autres : <strong><span t-field="doc.fal_ownership"/></strong></p>
+        </div>
+        <div style="text-align:justify; padding-bottom:30px">
+            <p align="justify">En cas de droits réels multiples sur les parcelles, tous ses propriétaires (lato sensu) s’engagent, en vertu des Présentes, solidairement et indivisiblement entre elles et avec un fermier. L’identification séparée de chacun des propriétaires (lato sensu) des parcelles est précisée ci-avant <strong>(Annexe n° 3)</strong>. Par la suite, chacune de ces personnes sera également incluse dans la désignation générique et au singulier ici retenue à son sujet : le <strong>« Propriétaire »</strong>.</p>
+
+            <p><strong>Autorise le PRENEUR GREENLOC, ou toute autre personne physique ou morale de son choix, sur les parcelles désignées ci-dessous :</strong></p>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th rowspan="2"><span class="text-center">Commune(s)</span></th>
+                <th colspan="3"><span class="text-center">Contenance</span></th>
+                <th rowspan="2"><span class="text-center">Section(s)</span></th>
+                <th rowspan="2"><span class="text-center">N° Parcelle(s)</span></th>
+                <th rowspan="2"><span class="text-center">Lieux-Dits (facultatif)</span></th>
+              </tr>
+              <tr>
+                <th><span class="text-center">ha</span></th>
+                <th><span class="text-center">are</span></th>
+                <th><span class="text-center">m2</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span t-field="doc.fal_dia_city"/></td>
+                <td><span t-field="doc.fal_contenance_1"/></td>
+                <td><span t-field="doc.fal_contenance_2"/></td>
+                <td><span t-field="doc.fal_contenance_3"/></td>
+                <td><span t-field="doc.fal_section"/></td>
+                <td><span t-field="doc.fal_parcel_no"/></td>
+                <td><span t-field="doc.fal_place_says"/></td>
+              </tr>
+              <tr>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+              </tr>
+              <tr>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+              </tr>
+              <tr>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+              </tr>
+              <tr>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+              </tr>
+              <tr>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+              </tr>
+              <tr>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+              </tr>
+              <tr>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+              </tr>
+              <tr>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+                <td><span/></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <p><strong>- à déposer une ou plusieurs déclarations de travaux ou demande de permis de construire,<br/>- à réaliser des passages de câbles souterrains.
+        </strong></p>
+
+        <p>Fait le <strong><span t-field="doc.fal_last_date_signature_request"/></strong>, à <strong><span t-field="doc.city"/></strong> et en 2 exemplaires originaux </p>
+
+        <div style="margin-top:65px">
+            <strong>
+                Le BAILLEUR (au titre des présentes)<br/>
+                <span t-field="doc.contact_name"/>
+                <span t-field="doc.contact_lastname"/><br/>
+            </strong>
+        </div>
+
+        <div class="oe_structure"/>
+    </div>
+</template>
+
+
+<template id="report_6_widower_multiple">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="greenloc_crm_ext.report_6_widower_multiple_document" t-lang="doc.partner_id.lang"/>
+        </t>
+    </t>
+</template>
+</odoo>
