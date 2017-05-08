@@ -1,0 +1,55 @@
+<odoo>
+
+    <record model='ir.ui.view' id='stock_move_form_view'>
+        <field name='name'>Stock Move Form Inherit</field>
+        <field name='model'>stock.move</field>
+        <field name='inherit_id' ref='stock.view_move_picking_form'/>
+        <field name='arch' type='xml'>
+            <data>
+                <field name="product_id" position="after">
+                    <field name="fal_old_ref"/>
+                </field>
+            </data>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='view_move_picking_tree_ssl_fal'>
+        <field name='name'>view_move_picking_tree_ssl_fal</field>
+        <field name='model'>stock.move</field>
+        <field name='inherit_id' ref='stock.view_move_picking_tree'/>
+        <field name='arch' type='xml'>
+            <data>
+                <field name="product_id" position="after">
+                    <field name="fal_old_ref"/>
+                </field>
+                <field name="state" position="after">
+                    <button name="show_bom_structure" string="Show BOM Structure" type="object" icon="fa-list"/>
+                </field>
+            </data>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='stock_picking_inherit_form'>
+        <field name='name'>stock_picking_inherit_form</field>
+        <field name='model'>stock.picking</field>
+        <field name='inherit_id' ref='stock.view_picking_form'/>
+        <field name='arch' type='xml'>
+            <data>
+                <xpath expr="//field[@name='pack_operation_product_ids']/tree/field[@name='product_id']" position="after">
+                    <field name="fal_old_ref"/>
+                </xpath>
+                <xpath expr="//field[@name='pack_operation_product_ids']/tree/button[@name='show_details']" position="after">
+                    <button name="show_bom_structure" string="Show BOM Structure" type="object" icon="fa-list"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <act_window name="Create Invoice"
+        res_model="account.invoice"
+        src_model="stock.picking"
+        key2="client_action_multi"
+        view_mode="form" target="new"
+        view_type="form"
+        id="act_create_invoice_ssl" />
+</odoo>

@@ -30,6 +30,10 @@
         'inter_company_rules',
         'purchase',
         'fal_company_code',
+        'fal_sale_order_sequence',
+        'contacts',
+        'fal_product_template_bom',
+        'fal_account_invoice_sequence'
     ],
     'data': [
         'views/partner_view.xml',

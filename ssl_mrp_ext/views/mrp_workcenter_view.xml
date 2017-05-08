@@ -1,0 +1,37 @@
+<odoo>
+    <record id="workcenter_productivity_timesheet_on_workcenter_fal" model="ir.ui.view">
+        <field name="name">workcenter_productivity_timesheet_on_workcenter_fal</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="mrp.mrp_workcenter_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[1]" position="after">
+                <page string="Time Tracking" groups="mrp.group_mrp_manager">
+                    <field name="time_ids" readonly="1">
+                        <tree>
+                            <field name="fal_production_id"/>
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                            <field name="duration" widget="float_time"/>
+                            <field name="user_id"/>
+                            <field name="loss_id" string="Efficiency"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <group>
+                                    <field name="date_start"/>
+                                    <field name="date_end"/>
+                                    <field name="duration" widget="float_time"/>
+                                </group>
+                                <group>
+                                    <field name="user_id"/>
+                                    <field name="loss_id"/>
+                                </group>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -8,6 +8,10 @@
             <field name="incoterm" position="replace"/>
             <field name="payment_term_id" position="after">
                 <field name="incoterm" widget="selection" groups="base.group_user"/>
+                <field name="fal_purchase_doc" attrs="{'invisible': [('fal_company_code', '!=', 'E')]}" readonly="1"/>
+                <field name="fal_easy_sale_order" attrs="{'invisible': [('fal_company_code', '!=', 'S')]}" readonly="1"/>
+                <field name="fal_easy_sale_client_ref" attrs="{'invisible': [('fal_company_code', '!=', 'S')]}" readonly="1"/>
+                <field name="fal_company_code" invisible="1"/>
             </field>
         </field>
     </record>
@@ -31,16 +35,28 @@
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
             <field name="client_order_ref" position="replace"/>
+            <field name="user_id" position="replace"/>
             <field name="partner_shipping_id" position="after">\
                 <field name="client_order_ref"/>
-                <field name="fal_port_departure" />
-                <field name="fal_port_destination"/>
+                <field name="user_id" required="1"/>
+                <field name="fal_port_departure" required="1"/>
+                <field name="fal_port_destination" required="1"/>
             </field>
             <xpath expr="//button[@name='print_quotation'][1]" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
             <xpath expr="//button[@name='print_quotation'][2]" position="attributes">
                 <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="after">
+                <field name="fal_old_ref"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='customer_lead']" position="after">
+                <button name="show_bom_structure" string="Show BOM Structure" type="object" icon="fa-list"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="before">
+                <field name="fal_pcs_unit"/>
+                <field name="fal_price_pcs"/>
             </xpath>
         </field>
     </record>
@@ -61,5 +77,47 @@
     <record id="sale.action_quotations" model="ir.actions.act_window">
         <field name="domain">[('state', 'in', ('draft', 'sent', 'cancel'))]</field>
     </record>
+
+    <record id="view_order_tree_fal_ssl" model="ir.ui.view">
+        <field name="name">view_order_tree_fal_ssl</field>
+        <field name="model">sale.order</field>
+        <field name="type">tree</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="fal_quotation_number"/>
+            </field>
+        </field>
+    </record>
+
+    <menuitem action="sale.action_orders_to_invoice"
+            id="menu_sale_order_invoice_fal_ssl" parent="account.menu_finance_entries"
+            sequence="1"/>
+
+    <record id="action_sale_order_line_fal_ssl" model="ir.actions.act_window">
+        <field name="name">Sales Order Lines</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order.line</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem action="action_sale_order_line_fal_ssl"
+            id="sale_order_line_fal_ssl" parent="sales_team.menu_sales"
+            sequence="99"/>
+
+    <record id="action_product_supplier_info_fal_ssl" model="ir.actions.act_window">
+        <field name="name">Supplier Info</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.supplierinfo</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem action="action_product_supplier_info_fal_ssl"
+            id="product_supplier_info_fal_ssl" parent="sales_team.menu_sales"
+            sequence="100" groups="base.group_no_one"/>
 
 </odoo>

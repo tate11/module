@@ -1,0 +1,15 @@
+<odoo>
+
+    <record id="view_wizard_ext_fal_ssl" model="ir.ui.view">
+        <field name="name">view_wizard_ext_fal_ssl</field>
+        <field name="inherit_id" ref="fal_sale_product_variants.fal_sale_order_prod_select_form_view"/>
+        <field name="model">fal.prod.select.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <xpath expr="//group/field[@name='barcode']" position="after">
+                <field name="fal_pcs_unit"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

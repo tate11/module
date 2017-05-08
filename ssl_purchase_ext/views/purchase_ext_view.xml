@@ -7,8 +7,11 @@
         <field name="inherit_id" ref="purchase.purchase_order_form"/>
         <field name="arch" type="xml">
             <field name="currency_id" position="after">
-                <field name="fal_port_departure" />
-                <field name="fal_port_destination"/>
+                <field name="fal_easy_sale_client_ref" string="ECO Customer Ref." attrs="{'invisible': [('fal_company_code', '!=', 'E')]}" readonly="1"/>
+                <field name="fal_sale_user_id" required="1" string="Salesperson"/>
+                <field name="fal_port_departure" required="1"/>
+                <field name="fal_port_destination" required="1"/>
+                <field name="fal_company_code" invisible="1"/>
             </field>
             <xpath expr="//button[@name='print_quotation'][1]" position="attributes">
                 <attribute name="invisible">1</attribute>
@@ -16,6 +19,34 @@
             <xpath expr="//button[@name='print_quotation'][2]" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
+            <label for="date_planned" position="replace"/>
+            <xpath expr="//notebook/page[2]/group/group/div/field[@name='date_planned']/.." position="replace"/>
+            <field name="company_id" position="after">
+                <label for="date_planned"/>
+                <div>
+                    <field name="date_planned" required="1" attrs="{'readonly': [('state', 'not in', ('draft', 'sent'))]}"/>
+                    <button name="action_set_date_planned" type="object" states="draft,sent" string="Set date to all order lines" help="This changes the scheduled date of all order lines to the given date" class="fa fa-calendar o_icon_button oe_edit_only"/>
+                </div>
+            </field>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="after">
+                <field name="fal_old_ref"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_qty']" position="before">
+                <field name="fal_pcs_unit"/>
+                <field name="fal_price_pcs"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="purchase_tree_fal_ssl_ext" model="ir.ui.view">
+        <field name="name">purchase_tree_fal_ssl_ext</field>
+        <field name="model">purchase.order</field>
+        <field name="type">tree</field>
+        <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+        <field name="arch" type="xml">
+            <field name="date_planned" position="after">
+                <field name="partner_ref"/>
+            </field>
         </field>
     </record>
 </odoo>

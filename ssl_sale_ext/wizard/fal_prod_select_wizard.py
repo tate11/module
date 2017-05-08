@@ -1,10 +1,16 @@
-from odoo import models, api
+from odoo import models, api, fields
 import logging
 _logger = logging.getLogger(__name__)
 
 
 class FalProdSelectWizard(models.TransientModel):
     _inherit = 'fal.prod.select.wizard'
+
+    @api.multi
+    def get_order_line(self, product_id, sale):
+        res = super(FalProdSelectWizard, self).get_order_line(product_id, sale)
+        res['order_line'][0][2].update({'fal_pcs_unit': self.fal_pcs_unit})
+        return res
 
     @api.model
     def get_wishlist_pricelist(self, item, product):

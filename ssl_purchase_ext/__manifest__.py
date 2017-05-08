@@ -10,7 +10,6 @@
         'ssl_base_ext',
     ],
     'data': [
-        # 'report/ssl_purchase_ext_report.xml',
         'report/purchase_report.xml',
         'views/purchase_ext_view.xml',
     ],
