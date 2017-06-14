@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- views for apps category -->
+        <record id="fal_apps_category_tree" model="ir.ui.view">
+            <field name="name">fal_apps_category_tree</field>
+            <field name="model">fal.apps.category</field>
+            <field name="arch" type="xml">
+                <tree string="Apps Category">
+                    <field name="name" />
+                    <field name="code" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="fal_apps_category_form" model="ir.ui.view">
+            <field name="name">fal_apps_category_form</field>
+            <field name="model">fal.apps.category</field>
+            <field name="arch" type="xml">
+                <form string="Apps Category">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="fal_apps_category_tree_action" model="ir.actions.act_window">
+            <field name="name">Apps Category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">fal.apps.category</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a Apps Category.
+              </p><p>
+                This list of every Apps Category.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="fal_apps_category_tree_action" id="fal_menu_apps_category"
+            parent="project.menu_project_config"
+            sequence="7" />
+
+        <!-- views for history change -->
+        <record id="fal_history_change_form" model="ir.ui.view">
+            <field name="name">fal_history_change_form</field>
+            <field name="type">form</field>
+            <field name="model">fal.history.change</field>
+            <field name="arch" type="xml">
+                <form string="Change History">
+                    <sheet>
+                        <group>
+                            <field name="fal_date"/>
+                            <field name="fal_desc"/>
+                            <field name="fal_responsible"/>
+                            <field name="fal_stage"/>
+                            <field name="fal_date_deadline"/>
+                            <field name="fal_new_deadline"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="fal_history_change_tree" model="ir.ui.view">
+            <field name="name">fal_history_change_tree</field>
+            <field name="type">tree</field>
+            <field name="model">fal.history.change</field>
+            <field name="arch" type="xml">
+                <tree string="Change History">
+                    <field name="fal_date"/>
+                            <field name="fal_desc"/>
+                            <field name="fal_responsible"/>
+                            <field name="fal_stage"/>
+                            <field name="fal_date_deadline"/>
+                            <field name="fal_new_deadline"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

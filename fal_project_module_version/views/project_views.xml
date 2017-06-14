@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="fal_view_task_form2_inherited">
+            <field name="name">fal_view_task_form2_inherited</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2" />
+            <field name="arch" type="xml">
+                <field name="project_id" position="before">
+                    <field name="fal_number"/>
+                    <field name="fal_display_number"/>
+                </field>
+                <field name="user_id" position="after">
+                    <field name="fal_version"/>
+                    <field name="fal_apps_category_id"/>
+                </field>
+                <field name="sequence" position="after">
+                    <field name="fal_url" widget ="url"/>
+                </field>
+                <field name="date_deadline" position="after">
+                    <field name="fal_cust_deadline"/>
+                    <field name="fal_tech_deadline"/>
+                </field>
+                <field name="partner_id" position="after">
+                    <field name="fal_next_action_user_id"/>
+                    <field name="fal_responsible_user_id"/>
+                </field>
+                <xpath expr="//notebook/page[@name='description_page']" position="after">
+                    <page string="Change History" attrs="{'invisible': [('project_id', '=', False)]}">
+                        <field name="fal_change_ids" context="{'default_project_id': project_id}">
+                            <tree editable="bottom" string="Change History" default_order="date">
+                                <field name="fal_date"/>
+                                <field name="fal_desc"/>
+                                <field name="fal_responsible"/>
+                                <field name="fal_stage"/>
+                                <field name="fal_date_deadline"/>
+                                <field name="fal_new_deadline"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
